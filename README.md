@@ -1,2 +1,2 @@
-# itvcheck
-Directorio ITV para checkitv.es
+# ITVCheck
+Directorio de estaciones ITV en España.
