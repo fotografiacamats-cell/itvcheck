@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ITVcheck es un portal independiente para ayudar a conductores a entender y pasar la ITV. Información basada en la normativa oficial española.">
+<title>Sobre nosotros | ITVcheck</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
+<script>
+function loadScripts(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-T1PZZHFJ4E';s.async=true;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});gtag('js',new Date());gtag('config','G-T1PZZHFJ4E');var a=document.createElement('script');a.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7947218272068445';a.async=true;a.crossOrigin='anonymous';document.head.appendChild(a);}
+if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="canonical" href="https://itvcheck.es/sobre-nosotros">
+</head>
+<body>
+<div id="cookieBanner"><p>Utilizamos cookies para mejorar tu experiencia y mostrar anuncios de Google AdSense. <a href="politica-cookies" style="color:#FACC15;">Más información</a></p><button onclick="aceptarCookies()">Aceptar</button><button class="reject" onclick="rechazarCookies()">Rechazar</button></div>
+<header><a href="index" class="logo">ITV<span>check</span></a><button class="hamburger" onclick="toggleMenu()">☰</button><nav id="menu"><a href="index">Inicio</a><a href="guias">Guías</a><a href="mecanica">Mecánica DIY</a><a href="itv-por-comunidad">CCAA</a><a href="contacto">Contacto</a><a href="politica-cookies">Cookies</a></nav></header>
+
+<div class="container">
+<h1>Sobre ITVcheck</h1>
+<p>ITVcheck es un proyecto digital independiente creado para ayudar a los conductores españoles a entender, preparar y pasar la Inspección Técnica de Vehículos (ITV) sin sorpresas.</p>
+
+<h2>Nuestra misión</h2>
+<p>Sabemos que la ITV es una fuente de estrés y confusión para muchos. Nuestro objetivo es desmitificar el proceso ofreciendo información clara, honesta y basada en la normativa oficial.</p>
+
+<h2>¿En qué nos basamos?</h2>
+<p>Para garantizar la máxima fiabilidad, nuestro contenido se basa directamente en el <strong>Manual de Procedimiento de Inspección de las Estaciones ITV</strong>, el <strong>Real Decreto 920/2017</strong> y las directrices de la <strong>DGT</strong>. Revisamos y actualizamos nuestras guías periódicamente para reflejar los cambios normativos.</p>
+
+<h2>¿Cómo nos financiamos?</h2>
+<p>Para que todo nuestro contenido sea gratuito, este sitio web se financia a través de dos vías:</p>
+<ul>
+<li><strong>Publicidad de Google AdSense:</strong> Anuncios discretos que no interfieren con la lectura.</li>
+<li><strong>Programa de Afiliados de Amazon:</strong> Cuando recomendamos un producto y el usuario lo compra a través de nuestro enlace, recibimos una pequeña comisión sin coste adicional para él.</li>
+</ul>
+<p>Puedes consultar todos los detalles en nuestra <a href="politica-afiliados" style="color:var(--ve);font-weight:600;">Política de Afiliados</a>.</p>
+
+<h2>Nuestro compromiso</h2>
+<ul>
+<li>No inventamos datos sobre estaciones ni precios sin fuente.</li>
+<li>No publicamos reseñas falsas.</li>
+<li>Priorizamos la claridad sobre la complejidad.</li>
+<li>Solo recomendamos productos que consideramos útiles y de calidad.</li>
+<li>Identificamos siempre los enlaces de afiliado.</li>
+</ul>
+</div>
+
+<footer>
+<p><strong>ITVcheck</strong> | Información orientativa sobre la ITV en España.</p>
+<p style="font-size:13px;color:#94A3B8;margin-top:15px;max-width:700px;margin-left:auto;margin-right:auto;">Como Afiliado de Amazon, ITVcheck gana por las compras que cumplan los requisitos aplicables.</p>
+<p style="margin-top:15px;">
+<a href="sobre-nosotros">Sobre nosotros</a> | 
+<a href="contacto">Contacto</a> | 
+<a href="aviso-legal">Aviso legal</a> | 
+<a href="politica-cookies">Cookies</a> | 
+<a href="politica-privacidad">Privacidad</a> | 
+<a href="politica-afiliados">Afiliados</a>
+</p>
+</footer>
+
+<script>
+function toggleMenu(){var n=document.getElementById('menu');n.classList.toggle('open');}
+window.onload=function(){if(localStorage.getItem('cookiesAceptadas')===null){document.getElementById('cookieBanner').style.display='block';}};
+function aceptarCookies(){localStorage.setItem('cookiesAceptadas','true');loadScripts();document.getElementById('cookieBanner').style.display='none';}
+function rechazarCookies(){localStorage.setItem('cookiesAceptadas','false');document.getElementById('cookieBanner').style.display='none';}
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+# Redirección de www a no-www
+https://www.itvcheck.es/* https://itvcheck.es/:splat 301
+
+# Redirección de /index.html a la raíz
+/index.html / 301
+
+# Redirecciones de URLs alternativas comunes
+/inicio / 301
+/home / 301
+/guias /guias.html 301
+/calculadora /cuando-me-toca-itv.html 301
+/precios /calculadora-precio-itv.html 301
+/mapa /estaciones-itv.html 301
+/checklist /checklist-itv.html 301
+/contact /contacto.html 301

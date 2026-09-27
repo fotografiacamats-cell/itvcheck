@@ -1,0 +1,365 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="38 guías paso a paso para cambiar bombillas, baterías y escobillas de los coches más vendidos en España. Ahorra hasta 120 € en el taller y pasa la ITV sin problemas.">
+<meta name="robots" content="noindex, follow">
+<title>Guías de Mecánica DIY para la ITV | ITVcheck</title>
+<link rel="canonical" href="https://itvcheck.es/mecanica">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CollectionPage","name":"Guías de Mecánica DIY para la ITV","description":"Tutoriales paso a paso para cambiar bombillas, baterías y escobillas de los coches más vendidos en España.","url":"https://itvcheck.es/mecanica"}
+</script>
+<style>
+:root{--ve:#10B981;--vd:#047857;--am:#FACC15;--ao:#EAB308;--cr:#F8FAFC;--bl:#fff;--gr:#E2E8F0;--tx:#1E293B;--tg:#64748B;--rojo:#EF4444}
+*{box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;margin:0;background:var(--cr);color:var(--tx);line-height:1.7}
+header{background:rgba(255,255,255,.9);backdrop-filter:blur(10px);padding:15px 30px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;border-bottom:1px solid var(--gr)}
+.logo{font-size:28px;font-weight:900;color:var(--ve);text-decoration:none}.logo span{color:var(--am)}
+nav{display:flex;gap:20px}nav a{color:var(--tx);text-decoration:none;font-weight:600}
+nav a:hover{color:var(--ve)}
+.hamburger{display:none;background:none;border:none;font-size:30px;cursor:pointer}
+@media(max-width:900px){.hamburger{display:block}nav{display:none;flex-direction:column;position:absolute;top:60px;left:0;width:100%;background:var(--bl);box-shadow:0 4px 10px rgba(0,0,0,0.1);padding:20px;gap:15px}nav.open{display:flex}}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--ve),var(--vd));color:#fff;padding:60px 20px 50px;text-align:center}
+.hero h1{font-size:44px;margin:0 0 12px;font-weight:900;letter-spacing:-1px}
+.hero p{font-size:19px;margin:0;opacity:.95;max-width:600px;margin:0 auto}
+.hero .stats{display:flex;justify-content:center;gap:40px;margin-top:30px;flex-wrap:wrap}
+.hero .stat{text-align:center}
+.hero .stat strong{display:block;font-size:32px;font-weight:900}
+.hero .stat span{font-size:14px;opacity:.9}
+.hero-cta{display:inline-block;margin-top:30px;background:var(--am);color:var(--tx);padding:14px 28px;border-radius:12px;font-weight:800;text-decoration:none;font-size:17px;transition:.2s}
+.hero-cta:hover{background:var(--ao);transform:translateY(-2px)}
+
+/* CONTENEDOR */
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* BUSCADOR */
+.search-section{background:var(--bl);padding:30px 0;border-bottom:1px solid var(--gr);position:sticky;top:60px;z-index:900}
+.search-box{position:relative;max-width:600px;margin:0 auto 20px}
+.search-box input{width:100%;padding:16px 20px 16px 50px;font-size:17px;border:2px solid var(--gr);border-radius:14px;background:var(--cr);transition:.2s;font-family:inherit}
+.search-box input:focus{outline:none;border-color:var(--ve);background:#fff}
+.search-box::before{content:"🔍";position:absolute;left:18px;top:50%;transform:translateY(-50%);font-size:18px;pointer-events:none}
+
+.filters{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:8px}
+.chip{background:#fff;border:2px solid var(--gr);padding:8px 16px;border-radius:999px;font-size:14px;font-weight:600;cursor:pointer;transition:.2s;color:var(--tx);font-family:inherit}
+.chip:hover{border-color:var(--ve)}
+.chip.active{background:var(--ve);border-color:var(--ve);color:#fff}
+.chip .count{opacity:.7;font-weight:400;margin-left:4px;font-size:12px}
+
+.filter-label{text-align:center;font-size:12px;color:var(--tg);text-transform:uppercase;letter-spacing:1px;font-weight:700;margin:10px 0 8px}
+
+/* GRID */
+.grid-section{padding:40px 0 80px}
+.results-info{text-align:center;color:var(--tg);font-size:14px;margin-bottom:25px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.card{background:#fff;border:1px solid var(--gr);border-radius:16px;padding:22px;text-decoration:none;color:var(--tx);transition:.25s;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 24px -6px rgba(16,185,129,.2);border-color:var(--ve)}
+.card::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:var(--ve)}
+.card[data-task="bateria"]::before{background:#3B82F6}
+.card[data-task="escobillas"]::before{background:#0EA5E9}
+.card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
+.card-icon{font-size:32px;line-height:1}
+.card-brand{font-size:12px;font-weight:800;color:var(--tg);text-transform:uppercase;letter-spacing:.5px}
+.card-model{font-size:20px;font-weight:900;margin:4px 0 0;line-height:1.2}
+.card-task{font-size:15px;color:var(--vd);font-weight:700;margin:10px 0 14px}
+.card-meta{display:flex;gap:14px;font-size:13px;color:var(--tg);margin-top:auto;padding-top:12px;border-top:1px solid var(--gr);flex-wrap:wrap}
+.card-meta span{display:flex;align-items:center;gap:4px}
+
+.empty{text-align:center;padding:60px 20px;color:var(--tg)}
+.empty strong{display:block;font-size:20px;color:var(--tx);margin-bottom:8px}
+
+/* NOSCRIPT */
+.noscript-list{max-width:800px;margin:0 auto;padding:40px 20px}
+.noscript-list h2{font-size:24px;border-left:5px solid var(--ve);padding-left:15px}
+.noscript-list ul{list-style:none;padding:0}
+.noscript-list li{padding:10px 0;border-bottom:1px solid var(--gr)}
+.noscript-list a{color:var(--ve);font-weight:600;text-decoration:none}
+
+footer{background:var(--tx);color:#fff;padding:40px 20px;text-align:center;margin-top:0}
+footer a{color:#94A3B8;text-decoration:none;margin:0 10px}
+
+@media(max-width:640px){
+ .hero h1{font-size:32px}
+ .hero{padding:40px 20px}
+ .hero .stats{gap:24px}
+ .search-section{position:static}
+}
+</style>
+</head>
+<body>
+<header>
+<a href="index" class="logo">ITV<span>check</span></a>
+<button class="hamburger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+<nav id="menu"><a href="index">Inicio</a><a href="guias">Guías</a><a href="mecanica">Mecánica DIY</a><a href="itv-por-comunidad">CCAA</a><a href="cuando-me-toca-itv">Calculadora</a><a href="estaciones-itv">Estaciones</a><a href="checklist-itv">Checklist</a><a href="contacto">Contacto</a></nav>
+</header>
+
+<section class="hero">
+ <h1>🔧 Guías de Mecánica DIY</h1>
+ <p>Aprende a cambiar bombillas, baterías y escobillas de tu coche paso a paso. Ahorra hasta 120 € en el taller y pasa la ITV sin sorpresas.</p>
+ <div class="stats">
+ <div class="stat"><strong id="statTotal">38</strong><span>guías</span></div>
+ <div class="stat"><strong>21</strong><span>marcas</span></div>
+ <div class="stat"><strong>3</strong><span>tipos de tarea</span></div>
+ </div>
+ <a href="mecanica/bombillas" class="hero-cta">💡 Guía completa: cambiar la bombilla del coche →</a>
+</section>
+
+<section class="search-section">
+ <div class="wrap">
+ <div class="search-box">
+ <input type="search" id="searchInput" placeholder="Busca por marca, modelo o tarea... (ej: Seat Ibiza, batería)" aria-label="Buscar guía">
+ </div>
+
+ <div class="filter-label">Tipo de tarea</div>
+ <div class="filters" id="taskFilters">
+ <button class="chip active" data-task="all">Todas <span class="count" id="count-all"></span></button>
+ <button class="chip" data-task="bombilla">💡 Cambiar bombilla <span class="count" id="count-bombilla"></span></button>
+ <button class="chip" data-task="bateria">🔋 Cambiar batería <span class="count" id="count-bateria"></span></button>
+ <button class="chip" data-task="escobillas">🌧️ Cambiar escobillas <span class="count" id="count-escobillas"></span></button>
+ </div>
+
+ <div class="filter-label">Marca</div>
+ <div class="filters" id="brandFilters"></div>
+ </div>
+</section>
+
+<section class="grid-section">
+ <div class="wrap">
+ <div class="results-info" id="resultsInfo"></div>
+ <div class="grid" id="grid"></div>
+ </div>
+</section>
+
+<noscript>
+<div class="noscript-list">
+ <h2>Todas las guías de mecánica DIY</h2>
+ <ul>
+ <li><a href="mecanica/dacia-sandero-cambiar-bombilla">Dacia Sandero — Cambiar bombilla</a></li>
+ <li><a href="mecanica/seat-ibiza-cambiar-bombilla">SEAT Ibiza — Cambiar bombilla</a></li>
+ <li><a href="mecanica/toyota-corolla-cambiar-bateria">Toyota Corolla — Cambiar batería</a></li>
+ <li><a href="mecanica/toyota-chr-cambiar-escobillas">Toyota C-HR — Cambiar escobillas</a></li>
+ <li><a href="mecanica/mg-zs-cambiar-bombilla">MG ZS — Cambiar bombilla</a></li>
+ <li><a href="mecanica/seat-leon-cambiar-bombilla">SEAT León — Cambiar bombilla</a></li>
+ <li><a href="mecanica/renault-clio-cambiar-bateria">Renault Clio — Cambiar batería</a></li>
+ <li><a href="mecanica/opel-corsa-cambiar-escobillas">Opel Corsa — Cambiar escobillas</a></li>
+ <li><a href="mecanica/peugeot-208-cambiar-bombilla">Peugeot 208 — Cambiar bombilla</a></li>
+ <li><a href="mecanica/hyundai-tucson-cambiar-bombilla">Hyundai Tucson — Cambiar bombilla</a></li>
+ <li><a href="mecanica/volkswagen-golf-cambiar-bombilla">Volkswagen Golf — Cambiar bombilla</a></li>
+ <li><a href="mecanica/citroen-c3-cambiar-bombilla">Citroën C3 — Cambiar bombilla</a></li>
+ <li><a href="mecanica/kia-sportage-cambiar-bateria">Kia Sportage — Cambiar batería</a></li>
+ <li><a href="mecanica/nissan-qashqai-cambiar-bombilla">Nissan Qashqai — Cambiar bombilla</a></li>
+ <li><a href="mecanica/fiat-500-cambiar-bombilla">Fiat 500 — Cambiar bombilla</a></li>
+ <li><a href="mecanica/ford-focus-cambiar-bombilla">Ford Focus — Cambiar bombilla</a></li>
+ <li><a href="mecanica/ford-fiesta-cambiar-escobillas">Ford Fiesta — Cambiar escobillas</a></li>
+ <li><a href="mecanica/renault-captur-cambiar-bateria">Renault Captur — Cambiar batería</a></li>
+ <li><a href="mecanica/renault-megane-cambiar-bombilla">Renault Megane — Cambiar bombilla</a></li>
+ <li><a href="mecanica/peugeot-2008-cambiar-bombilla">Peugeot 2008 — Cambiar bombilla</a></li>
+ <li><a href="mecanica/audi-a3-cambiar-bombilla">Audi A3 — Cambiar bombilla</a></li>
+ <li><a href="mecanica/bmw-serie-1-cambiar-bombilla">BMW Serie 1 — Cambiar bombilla</a></li>
+ <li><a href="mecanica/mercedes-clase-a-cambiar-escobillas">Mercedes Clase A — Cambiar escobillas</a></li>
+ <li><a href="mecanica/skoda-octavia-cambiar-bombilla">Skoda Octavia — Cambiar bombilla</a></li>
+ <li><a href="mecanica/skoda-fabia-cambiar-bombilla">Skoda Fabia — Cambiar bombilla</a></li>
+ <li><a href="mecanica/dacia-duster-cambiar-bombilla">Dacia Duster — Cambiar bombilla</a></li>
+ <li><a href="mecanica/toyota-yaris-cambiar-bateria">Toyota Yaris — Cambiar batería</a></li>
+ <li><a href="mecanica/kia-ceed-cambiar-bombilla">Kia Ceed — Cambiar bombilla</a></li>
+ <li><a href="mecanica/hyundai-i30-cambiar-escobillas">Hyundai i30 — Cambiar escobillas</a></li>
+ <li><a href="mecanica/toyota-rav4-cambiar-bateria">Toyota RAV4 — Cambiar batería</a></li>
+ <li><a href="mecanica/honda-civic-cambiar-bombilla">Honda Civic — Cambiar bombilla</a></li>
+ <li><a href="mecanica/fiat-tipo-cambiar-bombilla">Fiat Tipo — Cambiar bombilla</a></li>
+ <li><a href="mecanica/mini-cooper-cambiar-escobillas">Mini Cooper — Cambiar escobillas</a></li>
+ <li><a href="mecanica/volvo-xc40-cambiar-escobillas">Volvo XC40 — Cambiar escobillas</a></li>
+ <li><a href="mecanica/seat-ateca-cambiar-bombilla">SEAT Ateca — Cambiar bombilla</a></li>
+ <li><a href="mecanica/volkswagen-t-roc-cambiar-bombilla">Volkswagen T-Roc — Cambiar bombilla</a></li>
+ <li><a href="mecanica/volkswagen-polo-cambiar-bombilla">Volkswagen Polo — Cambiar bombilla</a></li>
+ <li><a href="mecanica/opel-astra-cambiar-bombilla">Opel Astra — Cambiar bombilla</a></li>
+ </ul>
+</div>
+</noscript>
+
+<footer>
+<p><strong>ITVcheck</strong> | Información orientativa sobre la ITV en España.</p>
+<p style="font-size:13px;color:#94A3B8;margin-top:15px;">Como Afiliado de Amazon, ITVcheck gana por las compras que cumplan los requisitos aplicables.</p>
+<p style="margin-top:15px;"><a href="sobre-nosotros">Sobre nosotros</a> | <a href="contacto">Contacto</a> | <a href="aviso-legal">Aviso legal</a> | <a href="politica-cookies">Cookies</a> | <a href="politica-privacidad">Privacidad</a> | <a href="politica-afiliados">Afiliados</a></p>
+</footer>
+
+<script>
+// ═══ CONFIGURACIÓN DE TAREAS ═══
+const TASKS = {
+ bombilla: { label:"Cambiar bombilla", icon:"💡", time:"15-25 min", savings:"40-60 €" },
+ bateria: { label:"Cambiar batería", icon:"🔋", time:"25-30 min", savings:"60-120 €" },
+ escobillas:{ label:"Cambiar escobillas",icon:"🌧️", time:"10-15 min", savings:"30-50 €" }
+};
+
+// ═══ BASE DE DATOS DE GUÍAS (38) ═══
+// Para añadir una guía nueva, solo añade una línea aquí.
+const GUIDES = [
+ {b:"Dacia", m:"Sandero", k:"bombilla", u:"dacia-sandero-cambiar-bombilla"},
+ {b:"SEAT", m:"Ibiza", k:"bombilla", u:"seat-ibiza-cambiar-bombilla"},
+ {b:"Toyota", m:"Corolla", k:"bateria", u:"toyota-corolla-cambiar-bateria"},
+ {b:"Toyota", m:"C-HR", k:"escobillas",u:"toyota-chr-cambiar-escobillas"},
+ {b:"MG", m:"ZS", k:"bombilla", u:"mg-zs-cambiar-bombilla"},
+ {b:"SEAT", m:"León", k:"bombilla", u:"seat-leon-cambiar-bombilla"},
+ {b:"Renault", m:"Clio", k:"bateria", u:"renault-clio-cambiar-bateria"},
+ {b:"Opel", m:"Corsa", k:"escobillas",u:"opel-corsa-cambiar-escobillas"},
+ {b:"Peugeot", m:"208", k:"bombilla", u:"peugeot-208-cambiar-bombilla"},
+ {b:"Hyundai", m:"Tucson", k:"bombilla", u:"hyundai-tucson-cambiar-bombilla"},
+ {b:"Volkswagen", m:"Golf", k:"bombilla", u:"volkswagen-golf-cambiar-bombilla"},
+ {b:"Citroën", m:"C3", k:"bombilla", u:"citroen-c3-cambiar-bombilla"},
+ {b:"Kia", m:"Sportage", k:"bateria", u:"kia-sportage-cambiar-bateria"},
+ {b:"Nissan", m:"Qashqai", k:"bombilla", u:"nissan-qashqai-cambiar-bombilla"},
+ {b:"Fiat", m:"500", k:"bombilla", u:"fiat-500-cambiar-bombilla"},
+ {b:"Ford", m:"Focus", k:"bombilla", u:"ford-focus-cambiar-bombilla"},
+ {b:"Ford", m:"Fiesta", k:"escobillas",u:"ford-fiesta-cambiar-escobillas"},
+ {b:"Renault", m:"Captur", k:"bateria", u:"renault-captur-cambiar-bateria"},
+ {b:"Renault", m:"Megane", k:"bombilla", u:"renault-megane-cambiar-bombilla"},
+ {b:"Peugeot", m:"2008", k:"bombilla", u:"peugeot-2008-cambiar-bombilla"},
+ {b:"Audi", m:"A3", k:"bombilla", u:"audi-a3-cambiar-bombilla"},
+ {b:"BMW", m:"Serie 1", k:"bombilla", u:"bmw-serie-1-cambiar-bombilla"},
+ {b:"Mercedes", m:"Clase A", k:"escobillas",u:"mercedes-clase-a-cambiar-escobillas"},
+ {b:"Skoda", m:"Octavia", k:"bombilla", u:"skoda-octavia-cambiar-bombilla"},
+ {b:"Skoda", m:"Fabia", k:"bombilla", u:"skoda-fabia-cambiar-bombilla"},
+ {b:"Dacia", m:"Duster", k:"bombilla", u:"dacia-duster-cambiar-bombilla"},
+ {b:"Toyota", m:"Yaris", k:"bateria", u:"toyota-yaris-cambiar-bateria"},
+ {b:"Kia", m:"Ceed", k:"bombilla", u:"kia-ceed-cambiar-bombilla"},
+ {b:"Hyundai", m:"i30", k:"escobillas",u:"hyundai-i30-cambiar-escobillas"},
+ {b:"Toyota", m:"RAV4", k:"bateria", u:"toyota-rav4-cambiar-bateria"},
+ {b:"Honda", m:"Civic", k:"bombilla", u:"honda-civic-cambiar-bombilla"},
+ {b:"Fiat", m:"Tipo", k:"bombilla", u:"fiat-tipo-cambiar-bombilla"},
+ {b:"Mini", m:"Cooper", k:"escobillas",u:"mini-cooper-cambiar-escobillas"},
+ {b:"Volvo", m:"XC40", k:"escobillas",u:"volvo-xc40-cambiar-escobillas"},
+ {b:"SEAT", m:"Ateca", k:"bombilla", u:"seat-ateca-cambiar-bombilla"},
+ {b:"Volkswagen", m:"T-Roc", k:"bombilla", u:"volkswagen-t-roc-cambiar-bombilla"},
+ {b:"Volkswagen", m:"Polo", k:"bombilla", u:"volkswagen-polo-cambiar-bombilla"},
+ {b:"Opel", m:"Astra", k:"bombilla", u:"opel-astra-cambiar-bombilla"}
+];
+
+// ═══ ESTADO ═══
+let state = { search:"", task:"all", brand:"all" };
+
+const grid = document.getElementById('grid');
+const resultsInfo = document.getElementById('resultsInfo');
+const searchInput = document.getElementById('searchInput');
+
+function normalize(s){return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");}
+
+// Sincroniza la URL sin recargar ni crear historial
+function syncURL(){
+ const params = new URLSearchParams();
+ if(state.search) params.set('q', state.search);
+ if(state.task !== 'all') params.set('tarea', state.task);
+ if(state.brand !== 'all') params.set('marca', state.brand);
+ const qs = params.toString();
+ const url = qs ? `?${qs}` : location.pathname;
+ history.replaceState(null, '', url);
+}
+
+// Lee los params al cargar la página
+function readURL(){
+ const params = new URLSearchParams(location.search);
+ if(params.get('q')) state.search = params.get('q');
+ if(params.get('tarea')) state.task = params.get('tarea');
+ if(params.get('marca')) state.brand = params.get('marca');
+}
+
+function render(){
+ const q = normalize(state.search.trim());
+ const filtered = GUIDES.filter(g=>{
+ const matchTask = state.task==="all" || g.k===state.task;
+ const matchBrand = state.brand==="all" || g.b===state.brand;
+ const haystack = normalize(g.b + " " + g.m + " " + TASKS[g.k].label);
+ const matchSearch = !q || haystack.includes(q);
+ return matchTask && matchBrand && matchSearch;
+ });
+
+ resultsInfo.textContent = filtered.length === GUIDES.length 
+ ? `Mostrando las ${GUIDES.length} guías` 
+ : `Mostrando ${filtered.length} de ${GUIDES.length} guías`;
+
+ if(filtered.length===0){
+ grid.innerHTML = `<div class="empty" style="grid-column:1/-1"><strong>Sin resultados</strong>Prueba con otra marca, modelo o tarea.</div>`;
+ return;
+ }
+
+ grid.innerHTML = filtered.map(g=>{
+ const t = TASKS[g.k];
+ return `<a class="card" href="mecanica/${g.u}" data-task="${g.k}">
+ <div class="card-header">
+ <div>
+ <div class="card-brand">${g.b}</div>
+ <div class="card-model">${g.m}</div>
+ </div>
+ <div class="card-icon">${t.icon}</div>
+ </div>
+ <div class="card-task">${t.label}</div>
+ <div class="card-meta">
+ <span>⏱️ ${t.time}</span>
+ <span>💰 Ahorra ${t.savings}</span>
+ </div>
+ </a>`;
+ }).join('');
+}
+
+// ═══ FILTROS ═══
+document.getElementById('taskFilters').addEventListener('click', e=>{
+ const chip = e.target.closest('.chip'); if(!chip) return;
+ document.querySelectorAll('#taskFilters .chip').forEach(c=>c.classList.remove('active'));
+ chip.classList.add('active');
+ state.task = chip.dataset.task;
+ render(); syncURL();
+});
+
+// Marcas dinámicas (solo las que tienen guía)
+const brands = [...new Set(GUIDES.map(g=>g.b))].sort((a,b)=>a.localeCompare(b,"es"));
+const brandContainer = document.getElementById('brandFilters');
+brandContainer.innerHTML = `<button class="chip active" data-brand="all">Todas</button>` +
+ brands.map(b=>{
+ const count = GUIDES.filter(g=>g.b===b).length;
+ return `<button class="chip" data-brand="${b}">${b} <span class="count">${count}</span></button>`;
+ }).join('');
+
+brandContainer.addEventListener('click', e=>{
+ const chip = e.target.closest('.chip'); if(!chip) return;
+ document.querySelectorAll('#brandFilters .chip').forEach(c=>c.classList.remove('active'));
+ chip.classList.add('active');
+ state.brand = chip.dataset.brand;
+ render(); syncURL();
+});
+
+// Búsqueda con debounce
+let debounce;
+searchInput.addEventListener('input', e=>{
+ clearTimeout(debounce);
+ debounce = setTimeout(()=>{ state.search = e.target.value; render(); syncURL(); }, 150);
+});
+
+// ═══ INICIALIZACIÓN ═══
+document.getElementById('count-all').textContent = GUIDES.length;
+Object.keys(TASKS).forEach(k=>{
+ const el = document.getElementById('count-'+k);
+ if(el) el.textContent = GUIDES.filter(g=>g.k===k).length;
+});
+
+readURL();
+
+// Sincroniza los chips visualmente con el estado de la URL
+if(state.task !== 'all'){
+ document.querySelectorAll('#taskFilters .chip').forEach(c=>{
+ c.classList.toggle('active', c.dataset.task === state.task);
+ });
+}
+if(state.brand !== 'all'){
+ document.querySelectorAll('#brandFilters .chip').forEach(c=>{
+ c.classList.toggle('active', c.dataset.brand === state.brand);
+ });
+}
+if(state.search){
+ searchInput.value = state.search;
+}
+
+render();
+</script>
+</body>
+</html>

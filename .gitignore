@@ -1,0 +1,24 @@
+# Backups de PowerShell
+_backup_*
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*~
+
+# Archivos temporales
+*.tmp
+*.bak
+*.log
+
+# Node (por si algún día se añade)
+node_modules/
+
+# Git
+.git/

@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Calcula cuánto cuesta la ITV en tu comunidad autónoma en 2026. Compara precios por tipo de vehículo y encuentra la opción más económica.">
+<title>Calculadora de Precio de la ITV 2026: Compara por CCAA | ITVcheck</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💶</text></svg>">
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});
+function loadScripts(){
+ var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-T1PZZHFJ4E';s.async=true;document.head.appendChild(s);
+ gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});
+ gtag('js',new Date());gtag('config','G-T1PZZHFJ4E');
+ var a=document.createElement('script');a.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7947218272068445';a.async=true;a.crossOrigin='anonymous';document.head.appendChild(a);
+}
+if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
+</script>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+ {"@type":"Question","name":"¿Cuánto cuesta la ITV en España en 2026?","acceptedAnswer":{"@type":"Answer","text":"El precio varía según la comunidad. En Andalucía es la más barata (desde 24€), mientras que en Madrid o País Vasco puede superar los 60€. La media nacional ronda los 40-50€."}},
+ {"@type":"Question","name":"¿Por qué varía tanto el precio entre comunidades?","acceptedAnswer":{"@type":"Answer","text":"Porque algunas comunidades tienen tarifas reguladas, mientras que otras las tienen liberalizadas y cada estación fija su precio."}},
+ {"@type":"Question","name":"¿Qué incluye el precio de la ITV?","acceptedAnswer":{"@type":"Answer","text":"El precio incluye la inspección completa, el IVA (21%) y, en algunas comunidades, la tasa de tráfico."}},
+ {"@type":"Question","name":"¿Cuánto cuesta la segunda inspección?","acceptedAnswer":{"@type":"Answer","text":"En muchas comunidades la segunda inspección es gratuita o tiene un coste reducido si vuelves dentro del plazo establecido."}}
+ ]
+}
+</script>
+<link rel="stylesheet" href="/styles.css">
+<link rel="canonical" href="https://itvcheck.es/calculadora-precio-itv">
+</head>
+<body>
+<div id="cookieBanner"><p>Utilizamos cookies para mejorar tu experiencia y mostrar anuncios de Google AdSense. <a href="politica-cookies" style="color:#FACC15;">Más información</a></p><button onclick="aceptarCookies()">Aceptar</button><button class="reject" onclick="rechazarCookies()">Rechazar</button></div>
+<a href="https://api.whatsapp.com/send?text=Estoy%20comparando%20precios%20de%20ITV%20con%20ITVcheck" target="_blank" id="whatsappBtn">💬</a>
+<header><a href="index" class="logo">ITV<span>check</span></a><button class="hamburger" onclick="toggleMenu()">☰</button><nav id="menu"><a href="index">Inicio</a><a href="guias">Guías</a><a href="mecanica">Mecánica DIY</a><a href="itv-por-comunidad">CCAA</a><a href="cuando-me-toca-itv">Calculadora</a><a href="estaciones-itv">Estaciones</a><a href="checklist-itv">Checklist</a><a href="contacto">Contacto</a></nav></header>
+
+<div class="container">
+<div class="breadcrumbs"><a href="index">Inicio</a> » <span>Calculadora de Precio ITV</span></div>
+
+<h1>Calculadora de Precio de la ITV 2026</h1>
+<div class="meta-date">
+ 📅 Última actualización: <strong>Septiembre de 2026</strong> | 🔗 Fuentes: <a href="https://www.dgt.es" target="_blank" rel="nofollow noopener">DGT</a>, boletines oficiales de las CCAA, operadores ITV autorizados.
+</div>
+
+<p>El precio de la ITV varía enormemente según la comunidad autónoma. En algunas regiones como Andalucía o Extremadura es muy económico, mientras que en Madrid o País Vasco puede triplicar ese importe. Usa esta herramienta para saber cuánto pagarás exactamente en tu caso.</p>
+
+<div class="calc-hero">
+ <h2>💶 Calcula el precio de tu ITV</h2>
+ <div class="calc-form">
+ <label for="ccaa">Comunidad autónoma</label>
+ <select id="ccaa">
+ <option value="andalucia">Andalucía</option>
+ <option value="aragon">Aragón</option>
+ <option value="asturias">Asturias</option>
+ <option value="baleares">Baleares</option>
+ <option value="canarias">Canarias</option>
+ <option value="cantabria">Cantabria</option>
+ <option value="castillayleon">Castilla y León</option>
+ <option value="castillalamancha">Castilla-La Mancha</option>
+ <option value="cataluna">Cataluña</option>
+ <option value="extremadura">Extremadura</option>
+ <option value="galicia">Galicia</option>
+ <option value="larioja">La Rioja</option>
+ <option value="madrid">Madrid</option>
+ <option value="murcia">Murcia</option>
+ <option value="navarra">Navarra</option>
+ <option value="paisvasco">País Vasco</option>
+ <option value="valencia">Comunidad Valenciana</option>
+ </select>
+
+ <label for="vehiculo">Tipo de vehículo</label>
+ <select id="vehiculo">
+ <option value="gasolina">Turismo Gasolina</option>
+ <option value="diesel">Turismo Diésel</option>
+ <option value="electrico">Turismo Eléctrico</option>
+ <option value="moto">Motocicleta</option>
+ </select>
+
+ <button onclick="calcularPrecio()">💶 Calcular precio</button>
+
+ <div id="resultado" class="result-box"></div>
+ </div>
+</div>
+
+<div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7947218272068445" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins></div>
+
+<h2>Comparativa de precios por comunidad (2026)</h2>
+<p>Estos son los precios orientativos para turismos según la comunidad autónoma. Las celdas en verde indican las tarifas más económicas y en rojo las más caras:</p>
+<table>
+<tr>
+ <th>Comunidad</th>
+ <th>Gasolina</th>
+ <th>Diésel</th>
+ <th>Eléctrico</th>
+ <th>Moto</th>
+</tr>
+<tr><td>Andalucía</td><td class="cheap">24-32 €</td><td class="cheap">26-37 €</td><td class="cheap">21 €</td><td class="cheap">25 €</td></tr>
+<tr><td>Aragón</td><td>49,56 €</td><td>60,76 €</td><td>44,16 €</td><td>34,51 €</td></tr>
+<tr><td>Asturias</td><td>45,32 €</td><td>45,32 €</td><td>45,32 €</td><td>39,27 €</td></tr>
+<tr><td>Baleares</td><td>35-48 €</td><td>51-58 €</td><td>—</td><td>19-38 €</td></tr>
+<tr><td>Canarias</td><td>42,07 €</td><td>51,44 €</td><td>—</td><td>25,62 €</td></tr>
+<tr><td>Cantabria</td><td>55,25 €</td><td>61,98 €</td><td>45,04 €</td><td>40,02 €</td></tr>
+<tr><td>Castilla y León</td><td>51,18 €</td><td>60,51 €</td><td class="cheap">41,63 €</td><td>23,03 €</td></tr>
+<tr><td>Castilla-La Mancha</td><td>44,50 €</td><td>57,23 €</td><td>—</td><td>23,30 €</td></tr>
+<tr><td>Cataluña</td><td>35-40,60 €</td><td>39-45,59 €</td><td>39,55 €</td><td>21,29 €</td></tr>
+<tr><td>Ceuta</td><td class="expensive">54,32 €</td><td class="expensive">63,66 €</td><td>—</td><td>30,62 €</td></tr>
+<tr><td>Extremadura</td><td class="cheap">33,43 €</td><td class="cheap">33,43 €</td><td class="cheap">33,43 €</td><td>25,62 €</td></tr>
+<tr><td>Galicia</td><td>43,76 €</td><td>52,30 €</td><td>38,50 €</td><td>38,50 €</td></tr>
+<tr><td>La Rioja</td><td>41,80 €</td><td>47,61 €</td><td>—</td><td>23,94 €</td></tr>
+<tr><td>Madrid</td><td class="expensive">49-58 €</td><td class="expensive">60-71 €</td><td>~50 €</td><td>~42 €</td></tr>
+<tr><td>Melilla</td><td>43,09 €</td><td>43,09 €</td><td>—</td><td>27,88 €</td></tr>
+<tr><td>Murcia</td><td>40,13 €</td><td>53,97 €</td><td>33,49 €</td><td>37,00 €</td></tr>
+<tr><td>Navarra</td><td>49,53 €</td><td>54,75 €</td><td>48,03 €</td><td>31,67 €</td></tr>
+<tr><td>País Vasco</td><td class="expensive">59,46 €</td><td class="expensive">61,56 €</td><td class="expensive">57,26 €</td><td>34,42 €</td></tr>
+<tr><td>Comunidad Valenciana</td><td>44,19 €</td><td>55,54 €</td><td class="cheap">25,05 €</td><td>18,11-26,77 €</td></tr>
+</table>
+<p style="font-size:14px; color:var(--tg);"><em>*Precios orientativos basados en tarifas oficiales 2026. Las comunidades con tarifa liberalizada (Madrid, Murcia) pueden variar según la estación. Consulta siempre la web oficial antes de acudir.</em></p>
+
+<div class="cta-box">
+ <p style="margin:0 0 10px 0;">📅 ¿Ya sabes cuándo te toca la ITV?</p>
+ <a href="cuando-me-toca-itv">Usa nuestra calculadora de fecha límite →</a>
+</div>
+
+<h2>¿Por qué varía tanto el precio?</h2>
+<p>La diferencia principal está en el modelo de cada comunidad autónoma:</p>
+<ul>
+<li><strong>Comunidades con tarifa regulada:</strong> Andalucía, Cataluña, Galicia, Extremadura. Todas las estaciones cobran lo mismo, con precios más bajos y predecibles.</li>
+<li><strong>Comunidades con tarifa liberalizada:</strong> Madrid y Murcia. Cada estación fija su precio, y la horquilla puede superar los 20 € de diferencia.</li>
+</ul>
+
+<h2>¿Qué incluye el precio de la ITV?</h2>
+<p>El importe final incluye:</p>
+<ul>
+<li>La inspección completa (luces, frenos, neumáticos, gases, carrocería, etc.).</li>
+<li>El IVA correspondiente (21%).</li>
+<li>En algunas comunidades, la tasa de tráfico (alrededor de 4 €).</li>
+</ul>
+
+<h2>Preguntas frecuentes</h2>
+<h3>¿Cuál es la comunidad más barata para pasar la ITV?</h3>
+<p>Andalucía es la más económica de España, con precios desde 24 € para turismos pequeños. Le siguen Comunidad Valenciana y Extremadura.</p>
+<h3>¿Puedo elegir la comunidad donde pasar la ITV?</h3>
+<p>Sí. Puedes pasar la ITV en cualquier estación autorizada de España, independientemente de dónde esté matriculado el vehículo. Eso sí, si tu comunidad tiene un precio muy superior, puedes desplazarte a otra más económica.</p>
+<h3>¿La segunda inspección cuesta lo mismo?</h3>
+<p>No. En muchas comunidades la segunda inspección es gratuita o tiene un coste reducido (aproximadamente el 50%). Consulta las condiciones de la estación.</p>
+
+<div class="cta-box">
+ <p style="margin:0 0 10px 0;">📍 ¿Buscas la estación más cercana?</p>
+ <a href="estaciones-itv">Busca tu estación por ciudad en Google Maps →</a>
+</div>
+
+<div class="guides-block">
+ <h3>📚 Guías relacionadas</h3>
+ <a href="cuando-me-toca-itv">📅 ¿Cuándo me toca la ITV?</a>
+ <a href="guia-luces">🔧 Qué revisar antes de pasar la ITV</a>
+ <a href="guia-documentacion">📄 Documentación obligatoria</a>
+ <a href="que-pasa-si-suspendo-la-itv">📉 Qué hacer si suspendes la ITV</a>
+ <a href="seguros-coche">🛡️ Seguros de coche</a>
+</div>
+
+<div class="other-ccaa">
+ <h3>📍 ITV por comunidades</h3>
+ <a href="itv-madrid">ITV Madrid</a>
+ <a href="itv-cataluna">ITV Cataluña</a>
+ <a href="itv-andalucia">ITV Andalucía</a>
+ <a href="itv-valencia">ITV Comunidad Valenciana</a>
+ <a href="itv-por-comunidad">Ver todas las CCAA →</a>
+</div>
+
+<a href="index" class="btn">← Volver a la página principal</a>
+</div>
+
+
+<div class="related-guides">
+<h3>📚 Enlazado interno recomendado</h3>
+<a href="cuando-me-toca-itv">📅 Calculadora de fecha</a>
+<a href="estaciones-itv">📍 Estaciones</a>
+<a href="guia-completa-itv">📚 Guía completa</a>
+<a href="checklist-itv">✅ Checklist pre-ITV</a>
+</div>
+<footer<footer>
+<p><strong>ITVcheck</strong> | Información orientativa sobre la ITV en España.</p>
+<p style="font-size:13px;color:#94A3B8;margin-top:15px;max-width:700px;margin-left:auto;margin-right:auto;">Como Afiliado de Amazon, ITVcheck gana por las compras que cumplan los requisitos aplicables.</p>
+<p style="margin-top:15px;">
+<a href="sobre-nosotros">Sobre nosotros</a> | 
+<a href="contacto">Contacto</a> | 
+<a href="aviso-legal">Aviso legal</a> | 
+<a href="politica-cookies">Cookies</a> | 
+<a href="politica-privacidad">Privacidad</a> | 
+<a href="politica-afiliados">Afiliados</a>
+</p>
+</footer>
+
+<script>
+function toggleMenu(){var n=document.getElementById('menu');n.classList.toggle('open');}
+window.onload=function(){if(localStorage.getItem('cookiesAceptadas')===null){document.getElementById('cookieBanner').style.display='block';}};
+function aceptarCookies(){localStorage.setItem('cookiesAceptadas','true');loadScripts();document.getElementById('cookieBanner').style.display='none';}
+function rechazarCookies(){localStorage.setItem('cookiesAceptadas','false');document.getElementById('cookieBanner').style.display='none';}
+
+var precios = {
+ andalucia: { gasolina: '24-32 €', diesel: '26-37 €', electrico: '21 €', moto: '25 €' },
+ aragon: { gasolina: '49,56 €', diesel: '60,76 €', electrico: '44,16 €', moto: '34,51 €' },
+ asturias: { gasolina: '45,32 €', diesel: '45,32 €', electrico: '45,32 €', moto: '39,27 €' },
+ baleares: { gasolina: '35-48 €', diesel: '51-58 €', electrico: '—', moto: '19-38 €' },
+ canarias: { gasolina: '42,07 €', diesel: '51,44 €', electrico: '—', moto: '25,62 €' },
+ cantabria: { gasolina: '55,25 €', diesel: '61,98 €', electrico: '45,04 €', moto: '40,02 €' },
+ castillayleon: { gasolina: '51,18 €', diesel: '60,51 €', electrico: '41,63 €', moto: '23,03 €' },
+ castillalamancha: { gasolina: '44,50 €', diesel: '57,23 €', electrico: '—', moto: '23,30 €' },
+ cataluna: { gasolina: '35-40,60 €', diesel: '39-45,59 €', electrico: '39,55 €', moto: '21,29 €' },
+ extremadura: { gasolina: '33,43 €', diesel: '33,43 €', electrico: '33,43 €', moto: '25,62 €' },
+ galicia: { gasolina: '43,76 €', diesel: '52,30 €', electrico: '38,50 €', moto: '38,50 €' },
+ larioja: { gasolina: '41,80 €', diesel: '47,61 €', electrico: '—', moto: '23,94 €' },
+ madrid: { gasolina: '49-58 €', diesel: '60-71 €', electrico: '~50 €', moto: '~42 €' },
+ murcia: { gasolina: '40,13 €', diesel: '53,97 €', electrico: '33,49 €', moto: '37,00 €' },
+ navarra: { gasolina: '49,53 €', diesel: '54,75 €', electrico: '48,03 €', moto: '31,67 €' },
+ paisvasco: { gasolina: '59,46 €', diesel: '61,56 €', electrico: '57,26 €', moto: '34,42 €' },
+ valencia: { gasolina: '44,19 €', diesel: '55,54 €', electrico: '25,05 €', moto: '18,11-26,77 €' }
+};
+
+var nombresCCAA = {
+ andalucia: 'Andalucía', aragon: 'Aragón', asturias: 'Asturias', baleares: 'Baleares',
+ canarias: 'Canarias', cantabria: 'Cantabria', castillayleon: 'Castilla y León',
+ castillalamancha: 'Castilla-La Mancha', cataluna: 'Cataluña', extremadura: 'Extremadura',
+ galicia: 'Galicia', larioja: 'La Rioja', madrid: 'Madrid', murcia: 'Murcia',
+ navarra: 'Navarra', paisvasco: 'País Vasco', valencia: 'Comunidad Valenciana'
+};
+
+var nombresVehiculo = {
+ gasolina: 'Turismo Gasolina', diesel: 'Turismo Diésel',
+ electrico: 'Turismo Eléctrico', moto: 'Motocicleta'
+};
+
+function calcularPrecio(){
+ var ccaa = document.getElementById('ccaa').value;
+ var vehiculo = document.getElementById('vehiculo').value;
+ var precio = precios[ccaa][vehiculo];
+ var res = document.getElementById('resultado');
+
+ res.style.display = 'block';
+ res.innerHTML =
+ '<div class="result-detail"><strong>' + nombresVehiculo[vehiculo] + '</strong> en <strong>' + nombresCCAA[ccaa] + '</strong></div>' +
+ '<div class="result-price">' + precio + '</div>' +
+ '<div class="result-detail">Precio orientativo para la ITV 2026.</div>' +
+ '<div class="result-note">*Datos basados en tarifas oficiales. Pueden variar ligeramente según la estación. Consulta la web oficial de tu comunidad antes de acudir.</div>';
+}
+</script>
+</body>
+</html>

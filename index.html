@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ITVcheck: Calcula tu ITV, compara precios oficiales por comunidad, encuentra tu estación más cercana y prepara tu coche con nuestra checklist. Guía completa y herramientas gratuitas.">
+<title>ITVcheck - Tu web inteligente para la ITV 2026</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});
+function loadScripts(){
+  var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-T1PZZHFJ4E';s.async=true;document.head.appendChild(s);
+  gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});
+  gtag('js',new Date());gtag('config','G-T1PZZHFJ4E');
+  var a=document.createElement('script');a.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7947218272068445';a.async=true;a.crossOrigin='anonymous';document.head.appendChild(a);
+}
+if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"ITVcheck","url":"https://itvcheck.es","potentialAction":{"@type":"SearchAction","target":"https://itvcheck.es/?s={search_term_string}","query-input":"required name=search_term_string"}}
+</script>
+<style>
+:root{--ve:#10B981;--vd:#047857;--am:#FACC15;--ao:#EAB308;--cr:#F8FAFC;--bl:#fff;--gr:#E2E8F0;--tx:#1E293B;--tg:#64748B;--rojo:#EF4444;--azul:#3B82F6;--morado:#8B5CF6;--rosa:#EC4899}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;margin:0;background:var(--cr);color:var(--tx);line-height:1.7}
+header{background:rgba(255,255,255,.9);backdrop-filter:blur(10px);padding:15px 30px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;border-bottom:1px solid var(--gr)}
+.logo{font-size:28px;font-weight:900;color:var(--ve);text-decoration:none}.logo span{color:var(--am)}
+nav{display:flex;gap:20px}nav a{color:var(--tx);text-decoration:none;font-weight:600;font-size:15px;transition:.3s}nav a:hover{color:var(--ve)}
+.hamburger{display:none;background:none;border:none;font-size:30px;cursor:pointer;color:var(--tx)}
+@media(max-width:900px){.hamburger{display:block}nav{display:none;flex-direction:column;position:absolute;top:60px;left:0;width:100%;background:var(--bl);box-shadow:0 4px 10px rgba(0,0,0,0.1);padding:20px;gap:15px}nav.open{display:flex}}
+.hero-wrapper{background:linear-gradient(180deg,#ECFDF5 0%,var(--cr) 100%);padding:80px 20px;text-align:center}
+.hero-tag{display:inline-block;background:var(--ve);color:white;padding:5px 15px;border-radius:50px;font-size:14px;font-weight:700;margin-bottom:20px}
+h1{font-size:64px;font-weight:900;color:var(--tx);margin:0 0 20px 0;line-height:1.1}
+h1 span{color:var(--ve)}
+.hero-sub{font-size:20px;color:var(--tg);max-width:700px;margin:0 auto 40px}
+.hero-cta{display:inline-flex;gap:15px;flex-wrap:wrap;justify-content:center}
+.btn-hero{background:var(--am);color:var(--tx);padding:16px 32px;text-decoration:none;border-radius:12px;font-weight:800;font-size:18px;transition:.3s;box-shadow:0 10px 15px -3px rgba(250,204,21,0.4)}
+.btn-hero:hover{background:var(--ao);transform:translateY(-2px)}
+.btn-hero-secondary{background:white;color:var(--ve);padding:16px 32px;text-decoration:none;border-radius:12px;font-weight:800;font-size:18px;border:2px solid var(--ve);transition:.3s}
+.btn-hero-secondary:hover{background:var(--ve);color:white}
+.container{max-width:1200px;margin:60px auto;padding:0 20px}
+.section-title{text-align:center;font-size:42px;font-weight:900;color:var(--tx);margin-bottom:10px}
+.section-sub{text-align:center;color:var(--tg);margin-bottom:50px;font-size:18px}
+.pilar-section{max-width:1200px;margin:60px auto 0;padding:0 20px}
+.pilar-card{background:linear-gradient(135deg,var(--ve),var(--vd));color:white;border-radius:24px;padding:50px 40px;text-decoration:none;display:block;transition:.3s;position:relative;overflow:hidden;box-shadow:0 20px 40px -10px rgba(16,185,129,0.3)}
+.pilar-card::before{content:'';position:absolute;top:-50%;right:-50%;width:100%;height:200%;background:radial-gradient(circle,rgba(250,204,21,.15) 0%,transparent 70%)}
+.pilar-card:hover{transform:translateY(-6px);box-shadow:0 30px 50px -10px rgba(16,185,129,0.4)}
+.pilar-tag{display:inline-block;background:var(--am);color:var(--tx);padding:6px 16px;border-radius:50px;font-size:12px;font-weight:800;margin-bottom:20px;letter-spacing:.5px;position:relative;z-index:1}
+.pilar-card h2{font-family:'Outfit',sans-serif;font-size:38px;font-weight:900;color:white;margin:0 0 15px 0;line-height:1.15;position:relative;z-index:1}
+.pilar-card p{font-size:18px;color:rgba(255,255,255,.95);margin:0 0 25px 0;max-width:750px;position:relative;z-index:1}
+.pilar-cta{display:inline-block;background:white;color:var(--vd);padding:15px 30px;border-radius:12px;font-weight:800;font-size:17px;position:relative;z-index:1;transition:.3s}
+.pilar-card:hover .pilar-cta{background:var(--am);color:var(--tx)}
+.pilar-meta{display:flex;gap:25px;flex-wrap:wrap;margin-bottom:25px;position:relative;z-index:1;font-size:14px;color:rgba(255,255,255,.85);font-weight:600}
+@media(max-width:768px){.pilar-card{padding:35px 25px}.pilar-card h2{font-size:26px}}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;margin-bottom:60px}
+.tool-card{background:var(--bl);border:2px solid var(--gr);border-radius:20px;padding:30px;text-align:center;transition:all .3s;text-decoration:none;color:var(--tx)}
+.tool-card:hover{transform:translateY(-8px);border-color:var(--ve);box-shadow:0 20px 25px -5px rgba(16,185,129,0.15)}
+.tool-icon{font-size:50px;margin-bottom:15px;display:block}
+.tool-card h3{font-size:22px;font-weight:800;margin:0 0 10px 0;color:var(--ve)}
+.tool-card p{color:var(--tg);font-size:16px;margin:0}
+.tool-card .tool-cta{display:inline-block;margin-top:15px;color:var(--tx);font-weight:800;font-size:15px}
+.novedades-section{background:linear-gradient(135deg,#FEF3C7 0%,#FDE68A 100%);border-radius:24px;padding:50px 40px;margin-bottom:60px;position:relative;overflow:hidden}
+.novedades-section::before{content:'🆕';position:absolute;top:-30px;right:-20px;font-size:180px;opacity:.1;transform:rotate(15deg)}
+.novedades-header{text-align:center;margin-bottom:40px;position:relative;z-index:1}
+.novedades-tag{display:inline-block;background:#92400E;color:white;padding:5px 15px;border-radius:50px;font-size:13px;font-weight:700;margin-bottom:15px;letter-spacing:1px}
+.novedades-header h2{font-size:38px;font-weight:900;color:#78350F;margin:0 0 10px 0}
+.novedades-header p{color:#92400E;font-size:17px;margin:0}
+.novedades-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;position:relative;z-index:1}
+.novedad-card{background:white;border-radius:16px;padding:28px;text-decoration:none;color:var(--tx);transition:.3s;box-shadow:0 4px 6px -1px rgba(0,0,0,0.05);border:2px solid transparent}
+.novedad-card:hover{transform:translateY(-5px);box-shadow:0 20px 25px -5px rgba(146,64,14,0.15);border-color:#92400E}
+.novedad-icon{font-size:42px;display:block;margin-bottom:15px}
+.novedad-card h3{font-size:20px;font-weight:800;margin:0 0 10px 0;color:#78350F;line-height:1.3}
+.novedad-card p{color:#92400E;font-size:15px;margin:0 0 12px 0}
+.novedad-cta{color:#92400E;font-weight:800;font-size:14px}
+.bento-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;margin-bottom:60px}
+.bento-card{background:var(--bl);border:1px solid var(--gr);border-radius:20px;padding:30px;text-align:left;transition:transform .3s;position:relative;overflow:hidden;text-decoration:none;color:var(--tx)}
+.bento-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:5px;background:var(--ve)}
+.bento-card:nth-child(2)::before{background:var(--am)}
+.bento-card:nth-child(3)::before{background:#3B82F6}
+.bento-card:nth-child(4)::before{background:#EC4899}
+.bento-card:nth-child(5)::before{background:var(--rojo)}
+.bento-card:nth-child(6)::before{background:#8B5CF6}
+.bento-card:hover{transform:translateY(-8px);box-shadow:0 20px 25px -5px rgba(0,0,0,0.1)}
+.bento-icon{font-size:40px;margin-bottom:15px;display:block}
+.bento-card h3{font-size:22px;font-weight:800;margin:0 0 10px 0}
+.bento-card p{color:var(--tg);font-size:16px;margin:0 0 15px 0}
+.bento-link{color:var(--ve);font-weight:800;text-decoration:none;font-size:15px}
+.afiliados-section{background:linear-gradient(135deg,var(--ve),var(--vd));border-radius:24px;padding:50px 40px;margin-bottom:60px;color:white}
+.afiliados-header{text-align:center;margin-bottom:35px}
+.afiliados-header h2{font-size:36px;font-weight:900;color:white;margin:0 0 10px 0}
+.afiliados-header p{color:rgba(255,255,255,.9);font-size:17px;margin:0}
+.afiliados-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.afiliado-card{background:white;border-radius:14px;padding:22px;text-decoration:none;color:var(--tx);transition:.3s;display:flex;flex-direction:column}
+.afiliado-card:hover{transform:translateY(-5px);box-shadow:0 20px 25px -5px rgba(0,0,0,0.2)}
+.afiliado-icon{font-size:36px;margin-bottom:12px}
+.afiliado-card h3{font-size:17px;font-weight:800;margin:0 0 8px 0;color:var(--tx);line-height:1.3}
+.afiliado-card p{color:var(--tg);font-size:14px;margin:0 0 12px 0;flex-grow:1}
+.afiliado-cta{color:var(--ve);font-weight:800;font-size:13px;margin-top:auto}
+.calc-section{background:linear-gradient(135deg,var(--ve),var(--vd));color:white;border-radius:24px;padding:50px 30px;text-align:center;margin-bottom:60px}
+.calc-section h2{color:white;font-size:36px;margin:0 0 15px 0;font-weight:900}
+.calc-section p{font-size:18px;margin:0 0 30px 0;opacity:.95}
+.calc-section .btn-hero{display:inline-block;margin:0 8px 10px}
+.calc-section .mini-link{font-size:15px;opacity:.9;margin-top:25px;display:block}
+.calc-section .mini-link a{color:var(--am);text-decoration:underline;font-weight:700}
+.info-box{background:#FEF3C7;border-left:5px solid var(--am);border-radius:12px;padding:30px;margin-bottom:60px}
+.info-box h3{margin-top:0;color:#92400E;font-size:24px}
+.info-box p{font-size:17px;margin-bottom:15px}
+.info-box a{background:var(--am);color:var(--tx);padding:12px 20px;text-decoration:none;border-radius:8px;font-weight:800;display:inline-block}
+.ad-slot{background:var(--bl);border:2px dashed var(--gr);border-radius:16px;padding:40px;text-align:center;color:var(--tg);margin:40px 0}
+footer{background:var(--tx);color:white;padding:60px 20px 20px}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;margin-bottom:40px}
+.footer-col h4{font-size:16px;margin-bottom:15px}
+.footer-col a{color:#94A3B8;text-decoration:none;display:block;margin-bottom:8px;font-size:14px;transition:.3s}
+.footer-col a:hover{color:var(--am)}
+.footer-bottom{text-align:center;border-top:1px solid rgba(255,255,255,0.1);padding-top:20px;font-size:13px;color:#94A3B8;max-width:1200px;margin:0 auto}
+#whatsappBtn{position:fixed;bottom:20px;left:20px;background:#25D366;color:#fff;padding:15px;border-radius:50%;font-size:24px;text-decoration:none;z-index:999;box-shadow:0 4px 10px rgba(0,0,0,.2)}
+#cookieBanner{position:fixed;bottom:0;left:0;right:0;background:#2d3748;color:#fff;padding:20px;text-align:center;z-index:9999;display:none;box-shadow:0 -5px 15px rgba(0,0,0,.3)}
+#cookieBanner button{background:var(--am);color:var(--tx);border:none;padding:10px 20px;margin:0 10px;border-radius:5px;cursor:pointer;font-weight:700}
+#cookieBanner button.reject{background:transparent;border:1px solid var(--am);color:var(--am)}
+#cookieBanner button.config{background:transparent;border:1px solid white;color:white}
+#scrollTopBtn{position:fixed;bottom:20px;right:20px;display:none;z-index:999;background:var(--ve);color:white;border:none;padding:15px;border-radius:50%;cursor:pointer;font-size:20px}
+@media(max-width:768px){h1{font-size:44px}.hero-wrapper{padding:60px 20px}.novedades-section,.afiliados-section{padding:35px 25px}#cookieBanner button{display:block;width:100%;margin:10px 0}}
+</style>
+<link rel="canonical" href="https://itvcheck.es/">
+</head>
+<body>
+<div id="cookieBanner">
+  <p>Utilizamos cookies para mejorar tu experiencia y mostrar anuncios de Google AdSense. <a href="politica-cookies" style="color:#FACC15;">Más información</a></p>
+  <button onclick="aceptarCookies()">Aceptar</button>
+  <button class="reject" onclick="rechazarCookies()">Rechazar</button>
+  <button class="config" onclick="window.location.href='politica-cookies'">Configurar</button>
+</div>
+
+<a href="https://api.whatsapp.com/send?text=Estoy%20mirando%20la%20web%20ITVcheck" target="_blank" id="whatsappBtn" aria-label="Contactar por WhatsApp">💬</a>
+
+<header>
+  <a href="index" class="logo">ITV<span>check</span></a>
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
+  <nav id="menu">
+    <a href="cuando-me-toca-itv">Calculadora</a>
+    <a href="calculadora-precio-itv">Precios</a>
+    <a href="estaciones-itv">Estaciones</a>
+    <a href="checklist-itv">Checklist</a>
+    <a href="guias">Guías</a>
+    <a href="mecanica">Mecánica DIY</a>
+    <a href="itv-por-comunidad">CCAA</a>
+    <a href="contacto">Contacto</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero-wrapper">
+  <span class="hero-tag">✔ Actualizado Septiembre 2026</span>
+  <h1>Pasa la ITV <span>a la primera</span> sin sorpresas</h1>
+  <p class="hero-sub">Calcula tu fecha, compara precios por comunidad, encuentra tu estación más cercana y prepara tu coche con nuestra checklist interactiva.</p>
+  <div class="hero-cta">
+    <a href="cuando-me-toca-itv" class="btn-hero">📅 Calcular mi ITV</a>
+    <a href="guia-completa-itv" class="btn-hero-secondary">📚 Leer guía completa</a>
+  </div>
+</div>
+
+<!-- GUÍA PILAR DESTACADA -->
+<div class="pilar-section">
+  <a href="guia-completa-itv" class="pilar-card">
+    <span class="pilar-tag">⭐ GUÍA DESTACADA</span>
+    <h2>Guía Completa de la ITV en España 2026</h2>
+    <p>Periodicidad, precios por comunidad, documentación obligatoria, proceso de inspección y sanciones. Actualizado con las novedades normativas de 2026, incluida la nueva instrucción de la DGT para furgonetas camper.</p>
+    <div class="pilar-meta">
+      <span>📅 Actualizado septiembre 2026</span>
+      <span>🗺️ 17 CCAA + Ceuta y Melilla</span>
+      <span>📊 Precios, plazos y sanciones oficiales</span>
+    </div>
+    <span class="pilar-cta">Leer la guía completa →</span>
+  </a>
+</div>
+
+<!-- HERRAMIENTAS -->
+<div class="container">
+  <h2 class="section-title">🛠️ Herramientas gratuitas</h2>
+  <p class="section-sub">Todo lo que necesitas para preparar tu ITV sin complicaciones.</p>
+
+  <div class="tools-grid">
+    <a href="cuando-me-toca-itv" class="tool-card">
+      <span class="tool-icon">📅</span>
+      <h3>Calculadora de fecha</h3>
+      <p>Descubre cuándo te toca pasar la ITV según tu vehículo y última inspección.</p>
+      <span class="tool-cta">Calcular ahora →</span>
+    </a>
+    <a href="calculadora-precio-itv" class="tool-card">
+      <span class="tool-icon">💶</span>
+      <h3>Comparador de precios</h3>
+      <p>Consulta cuánto cuesta la ITV en tu comunidad y compárala con las demás.</p>
+      <span class="tool-cta">Ver precios →</span>
+    </a>
+    <a href="estaciones-itv" class="tool-card">
+      <span class="tool-icon">🗺️</span>
+      <h3>Mapa de estaciones</h3>
+      <p>Encuentra la estación de ITV más cercana con nuestro mapa interactivo.</p>
+      <span class="tool-cta">Ver mapa →</span>
+    </a>
+    <a href="checklist-itv" class="tool-card">
+      <span class="tool-icon">✅</span>
+      <h3>Checklist pre-ITV</h3>
+      <p>Revisa los 25 puntos clave antes de acudir y evita un segundo viaje.</p>
+      <span class="tool-cta">Preparar mi coche →</span>
+    </a>
+  </div>
+
+  <div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7947218272068445" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins></div>
+
+  <!-- NOVEDADES 2026 -->
+  <div class="novedades-section">
+    <div class="novedades-header">
+      <span class="novedades-tag">🆕 ACTUALIZADO 2026</span>
+      <h2>Novedades que te afectan este año</h2>
+      <p>Cambios normativos, obligaciones nuevas y guías actualizadas</p>
+    </div>
+    <div class="novedades-grid">
+      <a href="baliza-v16-obligatoria" class="novedad-card">
+        <span class="novedad-icon">🚨</span>
+        <h3>Baliza V-16 conectada</h3>
+        <p>Obligatoria desde enero de 2026. Multa de 80 € si no la llevas. Comparativa real del CTAG.</p>
+        <span class="novedad-cta">Leer guía completa →</span>
+      </a>
+      <a href="itv-camper-furgonetas" class="novedad-card">
+        <span class="novedad-icon">🚐</span>
+        <h3>ITV para campers: nueva norma DGT</h3>
+        <p>Algunas furgonetas camperizadas pasan ITV cada 6 meses. Descubre si te afecta y cómo evitarlo.</p>
+        <span class="novedad-cta">Leer guía completa →</span>
+      </a>
+      <a href="guias" class="novedad-card">
+        <span class="novedad-icon">📚</span>
+        <h3>Todas las guías 2026</h3>
+        <p>Más de 80 guías organizadas por categorías: mantenimiento, mecánica, vehículos y trámites.</p>
+        <span class="novedad-cta">Ver índice de guías →</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- CATEGORÍAS -->
+  <h2 class="section-title">📚 Guías de mantenimiento</h2>
+  <p class="section-sub">Contenido verificado y actualizado para aprobar a la primera.</p>
+
+  <div class="bento-grid">
+    <a href="guia-luces" class="bento-card">
+      <span class="bento-icon">💡</span>
+      <h3>Revisión de luces</h3>
+      <p>La causa nº1 de rechazo. Evítalo en 5 minutos.</p>
+      <span class="bento-link">Leer guía →</span>
+    </a>
+    <a href="guia-neumaticos" class="bento-card">
+      <span class="bento-icon">🛞</span>
+      <h3>Neumáticos</h3>
+      <p>Mide el dibujo mínimo legal y cuándo cambiarlos.</p>
+      <span class="bento-link">Leer guía →</span>
+    </a>
+    <a href="guia-frenos" class="bento-card">
+      <span class="bento-icon">🛑</span>
+      <h3>Frenos</h3>
+      <p>El 12% de los rechazos. Aprende a revisarlos en casa.</p>
+      <span class="bento-link">Leer guía →</span>
+    </a>
+    <a href="guia-gases" class="bento-card">
+      <span class="bento-icon">💨</span>
+      <h3>Gases y emisiones</h3>
+      <p>El truco definitivo para pasar la prueba de gases.</p>
+      <span class="bento-link">Leer guía →</span>
+    </a>
+    <a href="limpiar-faros-coche" class="bento-card">
+      <span class="bento-icon">🚗</span>
+      <h3>Limpiar y restaurar faros</h3>
+      <p>Recupera la transparencia y evita el rechazo en la ITV.</p>
+      <span class="bento-link">Leer guía →</span>
+    </a>
+    <a href="guias" class="bento-card">
+      <span class="bento-icon">📚</span>
+      <h3>Ver todas las guías</h3>
+      <p>Más de 80 guías organizadas por categorías.</p>
+      <span class="bento-link">Ir al índice →</span>
+    </a>
+  </div>
+
+  <!-- MECÁNICA DIY -->
+  <h2 class="section-title">🔧 Mecánica DIY paso a paso</h2>
+  <p class="section-sub">Aprende a mantener tu coche tú mismo con nuestras guías por modelo.</p>
+
+  <div class="bento-grid">
+    <a href="mecanica" class="bento-card">
+      <span class="bento-icon">🔍</span>
+      <h3>Buscador de guías</h3>
+      <p>Más de 50 guías por coche y tarea. Encuentra la tuya en segundos.</p>
+      <span class="bento-link">Buscar guía →</span>
+    </a>
+    <a href="mecanica/bombillas" class="bento-card">
+      <span class="bento-icon">💡</span>
+      <h3>Cambiar bombillas</h3>
+      <p>Guía pilar con tipos H4, H7, HIR2 y el error que funde la bombilla.</p>
+      <span class="bento-link">Leer guía →</span>
+    </a>
+    <a href="mecanica/baterias" class="bento-card">
+      <span class="bento-icon">🔋</span>
+      <h3>Cambiar la batería</h3>
+      <p>Tipos, síntomas y proceso paso a paso en 25 minutos.</p>
+      <span class="bento-link">Leer guía →</span>
+    </a>
+    <a href="mecanica/escobillas" class="bento-card">
+      <span class="bento-icon">🌧️</span>
+      <h3>Cambiar escobillas</h3>
+      <p>Medidas exactas, tipos de anclaje y cómo hacerlo sin herramientas.</p>
+      <span class="bento-link">Leer guía →</span>
+    </a>
+  </div>
+
+  <!-- CTA CALCULADORA (sustituye la calculadora inline) -->
+  <div class="calc-section">
+    <h2>📅 ¿Cuándo me toca la ITV?</h2>
+    <p>Calcula tu próxima fecha en 5 segundos con nuestra herramienta dedicada.</p>
+    <a href="cuando-me-toca-itv" class="btn-hero">Calcular mi fecha de ITV →</a>
+    <span class="mini-link">También puedes consultar los <a href="calculadora-precio-itv">precios por comunidad</a> o el <a href="checklist-itv">checklist pre-ITV</a>.</span>
+  </div>
+
+  <!-- INFO BOX -->
+  <div class="info-box">
+    <h3>🚨 Multa por ITV caducada</h3>
+    <p>Circular sin la ITV en vigor supone una sanción económica fija de <strong>200 €</strong>, independientemente del tiempo de retraso. Si además el vehículo presenta un defecto muy grave, puede ser inmovilizado.</p>
+    <p>Si has suspendido la inspección, tienes <strong>2 meses</strong> para reparar los defectos y volver a pasar la ITV.</p>
+    <a href="que-pasa-si-suspendo-la-itv">Ver guía completa de plazos y multas →</a>
+  </div>
+
+  <div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7947218272068445" data-ad-slot="0987654321" data-ad-format="auto" data-full-width-responsive="true"></ins></div>
+
+  <!-- TRÁMITES Y SITUACIONES -->
+  <h2 class="section-title">📋 Trámites y situaciones especiales</h2>
+  <p class="section-sub">Guías específicas para casos particulares y trámites con la DGT.</p>
+  <div class="bento-grid">
+    <a href="que-pasa-si-suspendo-la-itv" class="bento-card">
+      <span class="bento-icon">📉</span>
+      <h3>Si suspendes la ITV</h3>
+      <p>Plazos, multas y cómo gestionar la segunda inspección.</p>
+      <span class="bento-link">Leer guía →</span>
+    </a>
+    <a href="como-dar-de-baja-un-coche" class="bento-card">
+      <span class="bento-icon">🗑️</span>
+      <h3>Dar de baja un coche</h3>
+      <p>Trámites en la DGT y entrega en desguace.</p>
+      <span class="bento-link">Leer guía →</span>
+    </a>
+    <a href="seguros-coche" class="bento-card">
+      <span class="bento-icon">🛡️</span>
+      <h3>Seguros de coche</h3>
+      <p>Tipos de cobertura, precios y cómo ahorrar.</p>
+      <span class="bento-link">Leer guía →</span>
+    </a>
+    <a href="itv-coches-importados" class="bento-card">
+      <span class="bento-icon">🌍</span>
+      <h3>Coches importados</h3>
+      <p>Requisitos y documentación para la primera ITV.</p>
+      <span class="bento-link">Leer guía →</span>
+    </a>
+    <a href="itv-coches-gas" class="bento-card">
+      <span class="bento-icon">⛽</span>
+      <h3>Coches GLP / GNC</h3>
+      <p>Qué revisan y qué documentación necesitas.</p>
+      <span class="bento-link">Leer guía →</span>
+    </a>
+    <a href="itv-coches-electricos" class="bento-card">
+      <span class="bento-icon">⚡</span>
+      <h3>Coches eléctricos</h3>
+      <p>Controles de alta tensión y sistema AVAS.</p>
+      <span class="bento-link">Leer guía →</span>
+    </a>
+    <a href="guia-motos" class="bento-card">
+      <span class="bento-icon">🏍️</span>
+      <h3>ITV para motos</h3>
+      <p>Los 5 puntos que revisan y cómo prepararlos.</p>
+      <span class="bento-link">Leer guía →</span>
+    </a>
+    <a href="mantenimiento-coches-electricos" class="bento-card">
+      <span class="bento-icon">🔌</span>
+      <h3>Mantenimiento de eléctricos</h3>
+      <p>La regla del 20-80 y cuidado de la batería.</p>
+      <span class="bento-link">Leer guía →</span>
+    </a>
+  </div>
+
+  <!-- SECCIÓN ACCESORIOS/AFILIADOS -->
+  <div class="afiliados-section">
+    <div class="afiliados-header">
+      <h2>🛒 Accesorios recomendados</h2>
+      <p>Los productos que analizamos y recomendamos para tu coche</p>
+    </div>
+    <div class="afiliados-grid">
+      <a href="baliza-v16-obligatoria" class="afiliado-card">
+        <span class="afiliado-icon">🚨</span>
+        <h3>Baliza V-16 conectada</h3>
+        <p>Obligatoria desde enero de 2026. La Help Flash IoT+ es la que más ilumina según el CTAG.</p>
+        <span class="afiliado-cta">Ver guía y producto →</span>
+      </a>
+      <a href="mejores-gadgets-coche" class="afiliado-card">
+        <span class="afiliado-icon">🔌</span>
+        <h3>Gadgets para el coche</h3>
+        <p>Cargador MagSafe, adaptador Android Auto, soporte de móvil y linterna LED.</p>
+        <span class="afiliado-cta">Ver guía completa →</span>
+      </a>
+      <a href="preparar-coche-viaje-largo" class="afiliado-card">
+        <span class="afiliado-icon">🛣️</span>
+        <h3>Kit de viaje largo</h3>
+        <p>Compresor, kit de emergencia, botiquín, aspirador y organizador de maletero.</p>
+        <span class="afiliado-cta">Ver guía completa →</span>
+      </a>
+      <a href="mantenimiento-coches-electricos" class="afiliado-card">
+        <span class="afiliado-icon">⚡</span>
+        <h3>Accesorios eléctricos</h3>
+        <p>Cable de carga Tipo 2, funda impermeable y kit de limpieza específico.</p>
+        <span class="afiliado-cta">Ver guía completa →</span>
+      </a>
+      <a href="limpiar-faros-coche" class="afiliado-card">
+        <span class="afiliado-icon">💡</span>
+        <h3>Kit de pulido de faros</h3>
+        <p>Recupera la transparencia de los faros y evita el rechazo en la ITV.</p>
+        <span class="afiliado-cta">Ver guía completa →</span>
+      </a>
+      <a href="mecanica/bombillas" class="afiliado-card">
+        <span class="afiliado-icon">🔧</span>
+        <h3>Cambiar la bombilla</h3>
+        <p>Guía pilar con tipos H4, H7, HIR2 y cómo hacerlo sin dañar el cristal.</p>
+        <span class="afiliado-cta">Ver guía completa →</span>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>ITVcheck</h4>
+      <p style="color:#94A3B8;font-size:14px;">Información independiente y clara para que la ITV nunca sea un problema.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Herramientas</h4>
+      <a href="cuando-me-toca-itv">Calculadora de fecha</a>
+      <a href="calculadora-precio-itv">Comparador de precios</a>
+      <a href="estaciones-itv">Buscador de estaciones</a>
+      <a href="checklist-itv">Checklist pre-ITV</a>
+    </div>
+    <div class="footer-col">
+      <h4>Guías</h4>
+      <a href="guia-completa-itv">Guía completa ITV</a>
+      <a href="guias">Todas las guías</a>
+      <a href="mecanica">Mecánica DIY</a>
+      <a href="guia-luces">Luces</a>
+      <a href="guia-neumaticos">Neumáticos</a>
+      <a href="seguros-coche">Seguros</a>
+    </div>
+    <div class="footer-col">
+      <h4>Novedades 2026</h4>
+      <a href="baliza-v16-obligatoria">Baliza V-16 obligatoria</a>
+      <a href="itv-camper-furgonetas">ITV para campers</a>
+      <a href="preparar-coche-viaje-largo">Viaje largo</a>
+      <a href="mantenimiento-coches-electricos">Mantenimiento eléctricos</a>
+      <a href="mejores-gadgets-coche">Gadgets 2026</a>
+    </div>
+    <div class="footer-col">
+      <h4>Por CCAA</h4>
+      <a href="itv-por-comunidad">Todas las comunidades</a>
+      <a href="itv-madrid">ITV Madrid</a>
+      <a href="itv-cataluna">ITV Cataluña</a>
+      <a href="itv-andalucia">ITV Andalucía</a>
+      <a href="itv-valencia">ITV Valencia</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="sobre-nosotros">Sobre nosotros</a>
+      <a href="contacto">Contacto</a>
+      <a href="aviso-legal">Aviso legal</a>
+      <a href="politica-cookies">Política de Cookies</a>
+      <a href="politica-privacidad">Política de Privacidad</a>
+      <a href="politica-afiliados">Afiliados</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 ITVcheck. Todos los derechos reservados. Última actualización: Septiembre 2026.</p>
+  </div>
+</footer>
+
+<button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
+<script>
+function toggleMenu(){var n=document.getElementById('menu');n.classList.toggle('open');}
+window.onload=function(){if(localStorage.getItem('cookiesAceptadas')===null){document.getElementById('cookieBanner').style.display='block';}};
+function aceptarCookies(){localStorage.setItem('cookiesAceptadas','true');loadScripts();document.getElementById('cookieBanner').style.display='none';}
+function rechazarCookies(){localStorage.setItem('cookiesAceptadas','false');document.getElementById('cookieBanner').style.display='none';}
+window.onscroll=function(){
+  if(document.body.scrollTop>20||document.documentElement.scrollTop>20){document.getElementById("scrollTopBtn").style.display="block";}else{document.getElementById("scrollTopBtn").style.display="none";}
+};
+function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
+</script>
+</body>
+</html>

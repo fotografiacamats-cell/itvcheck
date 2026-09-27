@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Política de cookies de ITVcheck: tipos de cookies utilizadas (Google Analytics, AdSense y afiliados de Amazon), su finalidad y cómo desactivarlas.">
+<title>Política de Cookies | ITVcheck</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
+<script>
+function loadScripts(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-T1PZZHFJ4E';s.async=true;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});gtag('js',new Date());gtag('config','G-T1PZZHFJ4E');var a=document.createElement('script');a.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7947218272068445';a.async=true;a.crossOrigin='anonymous';document.head.appendChild(a);}
+if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="canonical" href="https://itvcheck.es/politica-cookies">
+</head>
+<body>
+<div id="cookieBanner"><p>Utilizamos cookies para mejorar tu experiencia y mostrar anuncios de Google AdSense. <a href="politica-cookies" style="color:#FACC15;">Más información</a></p><button onclick="aceptarCookies()">Aceptar</button><button class="reject" onclick="rechazarCookies()">Rechazar</button></div>
+<header><a href="index" class="logo">ITV<span>check</span></a><button class="hamburger" onclick="toggleMenu()">☰</button><nav id="menu"><a href="index">Inicio</a><a href="guias">Guías</a><a href="mecanica">Mecánica DIY</a><a href="itv-por-comunidad">CCAA</a><a href="aviso-legal">Aviso legal</a><a href="politica-privacidad">Privacidad</a><a href="politica-afiliados">Afiliados</a></nav></header>
+
+<div class="container">
+<h1>Política de Cookies</h1>
+<p>Este sitio web utiliza cookies propias y de terceros para mejorar la experiencia de navegación, mostrar publicidad relevante mediante Google AdSense y gestionar el seguimiento de afiliados de Amazon. Para cumplir con el RGPD, solo cargamos estos scripts después de que aceptes explícitamente su uso.</p>
+
+<h2>Tipos de cookies utilizadas</h2>
+<table>
+<tr><th>Cookie</th><th>Tipo</th><th>Finalidad</th><th>Duración</th></tr>
+<tr><td>_ga, _gid</td><td>Analítica (Google)</td><td>Medir el tráfico del sitio de forma anónima</td><td>2 años / 24h</td></tr>
+<tr><td>IDE, DSID</td><td>Publicidad (Google)</td><td>Mostrar anuncios personalizados de AdSense</td><td>1 año</td></tr>
+<tr><td>session-token, x-main</td><td>Afiliados (Amazon)</td><td>Seguimiento de clics y compras realizadas desde nuestros enlaces</td><td>24 horas</td></tr>
+<tr><td>cookieconsent</td><td>Técnica</td><td>Recordar tu preferencia sobre cookies</td><td>1 año</td></tr>
+</table>
+
+<h2>Cookies de afiliados de Amazon</h2>
+<p>Cuando haces clic en uno de nuestros enlaces de afiliado hacia Amazon, esta plataforma instala una cookie de seguimiento en tu navegador. Esta cookie permite a Amazon saber que has llegado desde ITVcheck y asociar la compra (si la haces) a nuestra cuenta de afiliado. La cookie tiene una duración de <strong>24 horas</strong>. Si no compras nada, la cookie expira sin más consecuencias.</p>
+<p>Para más información, consulta nuestra <a href="politica-afiliados" style="color:var(--ve);font-weight:600;">Política de Afiliados</a>.</p>
+
+<h2>Cómo desactivar las cookies</h2>
+<p>Puedes configurar tu navegador para rechazar todas las cookies o para que te avise cuando se envíe una. Ten en cuenta que algunas partes del sitio pueden no funcionar correctamente si las desactivas.</p>
+<p>También puedes desactivar la publicidad personalizada de Google en <a href="https://adssettings.google.com" target="_blank" rel="nofollow noopener" style="color:var(--ve);">Configuración de anuncios</a>.</p>
+</div>
+
+<footer>
+<p><strong>ITVcheck</strong> | Información orientativa sobre la ITV en España.</p>
+<p style="font-size:13px;color:#94A3B8;margin-top:15px;max-width:700px;margin-left:auto;margin-right:auto;">Como Afiliado de Amazon, ITVcheck gana por las compras que cumplan los requisitos aplicables.</p>
+<p style="margin-top:15px;">
+<a href="sobre-nosotros">Sobre nosotros</a> | 
+<a href="contacto">Contacto</a> | 
+<a href="aviso-legal">Aviso legal</a> | 
+<a href="politica-cookies">Cookies</a> | 
+<a href="politica-privacidad">Privacidad</a> | 
+<a href="politica-afiliados">Afiliados</a>
+</p>
+</footer>
+
+<script>
+function toggleMenu(){var n=document.getElementById('menu');n.classList.toggle('open');}
+window.onload=function(){if(localStorage.getItem('cookiesAceptadas')===null){document.getElementById('cookieBanner').style.display='block';}};
+function aceptarCookies(){localStorage.setItem('cookiesAceptadas','true');loadScripts();document.getElementById('cookieBanner').style.display='none';}
+function rechazarCookies(){localStorage.setItem('cookiesAceptadas','false');document.getElementById('cookieBanner').style.display='none';}
+</script>
+</body>
+</html>

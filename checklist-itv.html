@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Checklist interactiva para preparar tu coche antes de la ITV: luces, neumáticos, frenos, documentación y más. Marca los puntos y llega a la inspección con todo listo.">
+<title>Checklist ITV 2026: Qué Revisar Antes de la Inspección | ITVcheck</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✅</text></svg>">
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});
+function loadScripts(){
+ var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-T1PZZHFJ4E';s.async=true;document.head.appendChild(s);
+ gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});
+ gtag('js',new Date());gtag('config','G-T1PZZHFJ4E');
+ var a=document.createElement('script');a.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7947218272068445';a.async=true;a.crossOrigin='anonymous';document.head.appendChild(a);
+}
+if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
+</script>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+ {"@type":"Question","name":"¿Qué debo revisar antes de pasar la ITV?","acceptedAnswer":{"@type":"Answer","text":"Antes de ir a la ITV, revisa especialmente: luces (cruce, carretera, freno, intermitentes, matrícula), neumáticos (dibujo mínimo 1,6 mm y presión correcta), frenos (discos, pastillas y líquido), limpiaparabrisas, niveles de líquidos y toda la documentación obligatoria."}},
+ {"@type":"Question","name":"¿Cuánto tiempo se tarda en preparar el coche para la ITV?","acceptedAnswer":{"@type":"Answer","text":"Una revisión básica en casa se puede hacer en 15-20 minutos. Si detectas algún defecto (bombilla fundida, neumático bajo de presión), puedes resolverlo en el momento."}},
+ {"@type":"Question","name":"¿Qué pasa si encuentro un defecto grave antes de la ITV?","acceptedAnswer":{"@type":"Answer","text":"Si detectas un defecto grave (fuga de líquido de frenos, dirección dura, etc.), no acudas a la ITV sin repararlo antes. Circular con un defecto muy grave puede suponer multa e inmovilización del vehículo."}},
+ {"@type":"Question","name":"¿Puedo pasar la ITV con un defecto leve?","acceptedAnswer":{"@type":"Answer","text":"Sí. Si el defecto es leve, la ITV será favorable pero con apercibimiento. Debes repararlo de inmediato, aunque no necesitas volver a la estación para una segunda inspección."}}
+ ]
+}
+</script>
+<link rel="stylesheet" href="/styles.css">
+<link rel="canonical" href="https://itvcheck.es/checklist-itv">
+</head>
+<body>
+<div id="cookieBanner"><p>Utilizamos cookies para mejorar tu experiencia y mostrar anuncios de Google AdSense. <a href="politica-cookies" style="color:#FACC15;">Más información</a></p><button onclick="aceptarCookies()">Aceptar</button><button class="reject" onclick="rechazarCookies()">Rechazar</button></div>
+<a href="https://api.whatsapp.com/send?text=Estoy%20preparando%20mi%20coche%20para%20la%20ITV%20con%20ITVcheck" target="_blank" id="whatsappBtn">💬</a>
+<header><a href="index" class="logo">ITV<span>check</span></a><button class="hamburger" onclick="toggleMenu()">☰</button><nav id="menu"><a href="index">Inicio</a><a href="guias">Guías</a><a href="mecanica">Mecánica DIY</a><a href="itv-por-comunidad">CCAA</a><a href="cuando-me-toca-itv">Calculadora</a><a href="calculadora-precio-itv">Precios</a><a href="estaciones-itv">Estaciones</a><a href="contacto">Contacto</a></nav></header>
+
+<div class="container">
+<div class="breadcrumbs"><a href="index">Inicio</a> » <span>Checklist Pre-ITV</span></div>
+
+<h1>Checklist ITV 2026: Qué Revisar Antes de la Inspección</h1>
+<div class="meta-date">
+ 📅 Última actualización: <strong>Septiembre de 2026</strong> | 🔗 Fuentes: <a href="https://www.dgt.es" target="_blank" rel="nofollow noopener">DGT</a>, <a href="https://www.boe.es" target="_blank" rel="nofollow noopener">BOE</a> (Real Decreto 920/2017), Manual de Procedimiento de Inspección.
+</div>
+
+<p>Una revisión previa en casa puede ahorrarte una segunda visita a la estación (y el coste asociado). Esta checklist interactiva te ayuda a verificar los puntos que más rechazos provocan en la ITV. Marca cada casilla a medida que revises tu vehículo: tu progreso se guarda automáticamente en este navegador.</p>
+
+<div class="progress-container">
+ <div class="progress-bar" id="progressBar"></div>
+ <div class="progress-text" id="progressText">0 de 25 revisados (0%)</div>
+</div>
+
+<div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7947218272068445" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins></div>
+
+<h2>🔧 Checklist de revisión</h2>
+
+<div class="checklist-section">
+ <h3>💡 Luces y señalización (la causa nº1 de rechazo)</h3>
+ <div class="check-item" onclick="toggleCheck(this,'luces1')"><input type="checkbox" id="luces1"><label for="luces1">Luces de cruce (cortas)</label></div>
+ <div class="check-item" onclick="toggleCheck(this,'luces2')"><input type="checkbox" id="luces2"><label for="luces2">Luces de carretera (largas)</label></div>
+ <div class="check-item" onclick="toggleCheck(this,'luces3')"><input type="checkbox" id="luces3"><label for="luces3">Luces de freno (todas)</label></div>
+ <div class="check-item" onclick="toggleCheck(this,'luces4')"><input type="checkbox" id="luces4"><label for="luces4">Intermitentes delanteros y traseros</label></div>
+ <div class="check-item" onclick="toggleCheck(this,'luces5')"><input type="checkbox" id="luces5"><label for="luces5">Luces de posición y matrícula</label></div>
+ <div class="check-item" onclick="toggleCheck(this,'luces6')"><input type="checkbox" id="luces6"><label for="luces6">Luces antiniebla (si dispone)</label></div>
+ <div class="check-item" onclick="toggleCheck(this,'luces7')"><input type="checkbox" id="luces7"><label for="luces7">Alineación de faros (que no deslumbren)</label></div>
+</div>
+
+<div class="checklist-section">
+ <h3>🛞 Neumáticos</h3>
+ <div class="check-item" onclick="toggleCheck(this,'neum1')"><input type="checkbox" id="neum1"><label for="neum1">Dibujo mínimo 1,6 mm en toda la superficie</label></div>
+ <div class="check-item" onclick="toggleCheck(this,'neum2')"><input type="checkbox" id="neum2"><label for="neum2">Sin cortes profundos ni bultos laterales</label></div>
+ <div class="check-item" onclick="toggleCheck(this,'neum3')"><input type="checkbox" id="neum3"><label for="neum3">Presión correcta (revisar en frío)</label></div>
+ <div class="check-item" onclick="toggleCheck(this,'neum4')"><input type="checkbox" id="neum4"><label for="neum4">Desgaste uniforme (sin irregularidades)</label></div>
+</div>
+
+<div class="checklist-section">
+ <h3>🛑 Frenos</h3>
+ <div class="check-item" onclick="toggleCheck(this,'frenos1')"><input type="checkbox" id="frenos1"><label for="frenos1">Pastillas con grosor suficiente (mín. 2 mm)</label></div>
+ <div class="check-item" onclick="toggleCheck(this,'frenos2')"><input type="checkbox" id="frenos2"><label for="frenos2">Discos sin rayaduras profundas</label></div>
+ <div class="check-item" onclick="toggleCheck(this,'frenos3')"><input type="checkbox" id="frenos3"><label for="frenos3">Líquido de frenos en su nivel</label></div>
+ <div class="check-item" onclick="toggleCheck(this,'frenos4')"><input type="checkbox" id="frenos4"><label for="frenos4">Freno de mano eficaz</label></div>
+</div>
+
+<div class="checklist-section">
+ <h3>🚗 Carrocería y visibilidad</h3>
+ <div class="check-item" onclick="toggleCheck(this,'carro1')"><input type="checkbox" id="carro1"><label for="carro1">Limpiaparabrisas en buen estado</label></div>
+ <div class="check-item" onclick="toggleCheck(this,'carro2')"><input type="checkbox" id="carro2"><label for="carro2">Espejos retrovisores completos</label></div>
+ <div class="check-item" onclick="toggleCheck(this,'carro3')"><input type="checkbox" id="carro3"><label for="carro3">Sin óxido estructural ni deformaciones graves</label></div>
+ <div class="check-item" onclick="toggleCheck(this,'carro4')"><input type="checkbox" id="carro4"><label for="carro4">Cinturones de seguridad funcionales</label></div>
+</div>
+
+<div class="checklist-section">
+ <h3>📄 Documentación</h3>
+ <div class="check-item" onclick="toggleCheck(this,'doc1')"><input type="checkbox" id="doc1"><label for="doc1">Permiso de circulación en vigor</label></div>
+ <div class="check-item" onclick="toggleCheck(this,'doc2')"><input type="checkbox" id="doc2"><label for="doc2">Ficha técnica (tarjeta ITV)</label></div>
+ <div class="check-item" onclick="toggleCheck(this,'doc3')"><input type="checkbox" id="doc3"><label for="doc3">Justificante del seguro en vigor</label></div>
+ <div class="check-item" onclick="toggleCheck(this,'doc4')"><input type="checkbox" id="doc4"><label for="doc4">DNI (recomendable, no siempre obligatorio)</label></div>
+</div>
+
+<button class="reset-btn" onclick="resetChecklist()">🔄 Reiniciar checklist</button>
+
+<div class="tip-box">
+<strong>💡 Consejo de experto:</strong> Antes de ir a la ITV, circula unos 15-20 minutos por autovía si tu coche es diésel. Esto limpia el filtro de partículas y el catalizador, reduciendo las emisiones y las probabilidades de rechazo en la prueba de gases.
+</div>
+
+<div class="cta-box">
+ <p style="margin:0 0 10px 0;">📅 ¿No sabes cuándo te toca la ITV?</p>
+ <a href="cuando-me-toca-itv">Usa nuestra calculadora de fecha →</a>
+</div>
+
+<h2>¿Qué pasa si suspendes la ITV?</h2>
+<p>Si algún punto de la checklist no lo tienes claro y la ITV resulta <strong>desfavorable</strong>, tienes 2 meses para reparar y volver. Algunas estaciones aplican condiciones especiales para la segunda inspección. Consulta nuestra guía específica para saber cómo proceder.</p>
+
+<div class="cta-box">
+ <p style="margin:0 0 10px 0;">📉 ¿Qué hacer si suspendes la ITV?</p>
+ <a href="que-pasa-si-suspendo-la-itv">Ver guía de plazos y multas →</a>
+</div>
+
+<h2>Preguntas frecuentes</h2>
+<h3>¿Qué revisan exactamente en la ITV?</h3>
+<p>La inspección cubre alumbrado, frenos, dirección, visibilidad, ejes, ruedas, suspensión, chasis, emisiones contaminantes, ruidos y documentación. Es una revisión completa del estado del vehículo.</p>
+<h3>¿Cuánto tiempo se tarda en preparar el coche para la ITV?</h3>
+<p>Una revisión básica en casa se puede hacer en 15-20 minutos. Si detectas algún defecto (bombilla fundida, neumático bajo de presión), puedes resolverlo en el momento.</p>
+<h3>¿Puedo pasar la ITV con un defecto leve?</h3>
+<p>Sí. Si el defecto es leve, la ITV será favorable pero con apercibimiento. Debes repararlo de inmediato, aunque no necesitas volver a la estación.</p>
+<h3>¿Qué pasa si encuentro un defecto grave antes de la ITV?</h3>
+<p>Si detectas un defecto grave (fuga de líquido de frenos, dirección dura, etc.), no acudas a la ITV sin repararlo antes. Circular con un defecto muy grave puede suponer multa e inmovilización del vehículo.</p>
+
+<div class="guides-block">
+ <h3>📚 Guías relacionadas</h3>
+ <a href="guia-luces">💡 Cómo revisar las luces en detalle</a>
+ <a href="guia-neumaticos">🛞 Revisión de neumáticos</a>
+ <a href="guia-frenos">🛑 Revisión de frenos</a>
+ <a href="guia-gases">💨 Prueba de gases</a>
+ <a href="guia-documentacion">📄 Documentación obligatoria</a>
+ <a href="que-pasa-si-suspendo-la-itv">📉 Qué hacer si suspendes</a>
+</div>
+
+<div class="other-ccaa">
+ <h3>🛠️ Otras herramientas</h3>
+ <a href="cuando-me-toca-itv">📅 Calculadora de fecha</a>
+ <a href="calculadora-precio-itv">💶 Calculadora de precios</a>
+ <a href="estaciones-itv">📍 Buscador de estaciones</a>
+ <a href="seguros-coche">🛡️ Seguros de coche</a>
+</div>
+
+<a href="index" class="btn">← Volver a la página principal</a>
+</div>
+
+
+<div class="related-guides">
+<h3>📚 Enlazado interno recomendado</h3>
+<a href="cuando-me-toca-itv">📅 Calculadora de fecha</a>
+<a href="guia-luces">💡 Luces</a>
+<a href="guia-neumaticos">🛞 Neumáticos</a>
+<a href="guia-frenos">🛑 Frenos</a>
+</div>
+<footer<footer>
+<p><strong>ITVcheck</strong> | Información orientativa sobre la ITV en España.</p>
+<p style="font-size:13px;color:#94A3B8;margin-top:15px;max-width:700px;margin-left:auto;margin-right:auto;">Como Afiliado de Amazon, ITVcheck gana por las compras que cumplan los requisitos aplicables.</p>
+<p style="margin-top:15px;">
+<a href="sobre-nosotros">Sobre nosotros</a> | 
+<a href="contacto">Contacto</a> | 
+<a href="aviso-legal">Aviso legal</a> | 
+<a href="politica-cookies">Cookies</a> | 
+<a href="politica-privacidad">Privacidad</a> | 
+<a href="politica-afiliados">Afiliados</a>
+</p>
+</footer>
+
+<script>
+function toggleMenu(){var n=document.getElementById('menu');n.classList.toggle('open');}
+window.onload=function(){
+ if(localStorage.getItem('cookiesAceptadas')===null){document.getElementById('cookieBanner').style.display='block';}
+ cargarChecklist();
+};
+function aceptarCookies(){localStorage.setItem('cookiesAceptadas','true');loadScripts();document.getElementById('cookieBanner').style.display='none';}
+function rechazarCookies(){localStorage.setItem('cookiesAceptadas','false');document.getElementById('cookieBanner').style.display='none';}
+
+var totalItems = 25;
+
+function toggleCheck(el, id){
+ var checkbox = document.getElementById(id);
+ if(el.tagName === 'INPUT' || el.tagName === 'LABEL') return;
+ checkbox.checked = !checkbox.checked;
+ if(checkbox.checked){ el.classList.add('done'); } else { el.classList.remove('done'); }
+ guardarChecklist();
+ actualizarProgreso();
+}
+
+function actualizarProgreso(){
+ var marcados = document.querySelectorAll('.check-item input:checked').length;
+ var porcentaje = Math.round((marcados / totalItems) * 100);
+ document.getElementById('progressBar').style.width = porcentaje + '%';
+ document.getElementById('progressText').innerText = marcados + ' de ' + totalItems + ' revisados (' + porcentaje + '%)';
+}
+
+function guardarChecklist(){
+ var estado = {};
+ document.querySelectorAll('.check-item input').forEach(function(cb){
+ estado[cb.id] = cb.checked;
+ });
+ localStorage.setItem('checklistITV', JSON.stringify(estado));
+}
+
+function cargarChecklist(){
+ var guardado = localStorage.getItem('checklistITV');
+ if(guardado){
+ var estado = JSON.parse(guardado);
+ Object.keys(estado).forEach(function(id){
+ var cb = document.getElementById(id);
+ if(cb && estado[id]){ cb.checked = true; cb.parentElement.classList.add('done'); }
+ });
+ }
+ actualizarProgreso();
+}
+
+function resetChecklist(){
+ if(!confirm('¿Seguro que quieres reiniciar la checklist?')) return;
+ document.querySelectorAll('.check-item input').forEach(function(cb){
+ cb.checked = false;
+ cb.parentElement.classList.remove('done');
+ });
+ localStorage.removeItem('checklistITV');
+ actualizarProgreso();
+}
+</script>
+</body>
+</html>
