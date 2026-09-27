@@ -28,7 +28,7 @@ $paginas += @{
     Archivo = "mecanica\bombillas.html"
     Productos = @(
         @{ Asin="B07YDD74GW"; Img="61q6IsrY3mL"; Titulo="Bombilla H7 XELORD (pack de 2)"; Desc="Certificacion E-Mark, luz mas blanca y homologada para pasar la ITV." },
-        @{ Asin="B092JGM388"; Img="71Lh44paL-S"; Titulo="Bombilla W5W XELORD (pack de 10)"; Desc="12V 5W, luz blanca, homologadas para ITV." },
+        @{ Asin="B092JGM388"; Img="71Lh44paL-S"; Titulo="Bombilla W5W XELORD (pack de 2)"; Desc="12V 5W, luz blanca, homologadas para ITV." },
         @{ Asin="B09PY8WQHJ"; Img="810eYUofxZL"; Titulo="Destornilladores JOREST (40 puntas)"; Desc="Puntas de T5 a T20, mango magnetico, ideales para el vano motor." }
     )
 }
