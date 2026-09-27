@@ -531,3 +531,77 @@ footer{background:var(--tx);color:white;padding:60px 20px 20px}
   table{font-size:14px}
   th,td{padding:10px}
 }
+/* ═══════════════════════════════════════════════════════════════
+   TARJETAS AMAZON — Afiliados
+   ═══════════════════════════════════════════════════════════════ */
+
+.amazon-card {
+  display: flex;
+  gap: 18px;
+  background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
+  border: 1px solid #E2E8F0;
+  border-left: 4px solid #FACC15;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 24px 0;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.amazon-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -8px rgba(250, 204, 21, 0.35);
+}
+.amazon-card img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 8px;
+  padding: 6px;
+}
+.amazon-card-body {
+  flex: 1;
+  min-width: 0;
+}
+.amazon-card-body h4 {
+  font-size: 17px;
+  font-weight: 800;
+  color: #1E293B;
+  margin: 0 0 6px 0;
+  line-height: 1.3;
+}
+.amazon-card-body p {
+  font-size: 14px;
+  color: #64748B;
+  margin: 0 0 12px 0;
+  line-height: 1.5;
+}
+.btn-amazon {
+  display: inline-block;
+  background: #FACC15;
+  color: #1E293B;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-amazon:hover {
+  background: #EAB308;
+  transform: translateY(-1px);
+  color: #1E293B;
+}
+
+@media (max-width: 600px) {
+  .amazon-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 18px 14px;
+  }
+  .amazon-card img {
+    width: 90px;
+    height: 90px;
+  }
+}
