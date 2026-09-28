@@ -1,5 +1,5 @@
-﻿# scripts/generate-sitemap.ps1
-# Regenera sitemap.xml solo con paginas HTML que existen realmente
+# scripts/generate-sitemap.ps1
+# Regenera sitemap.xml con logica correcta para index.html
 
 $root = Split-Path -Parent $PSScriptRoot
 Set-Location $root
@@ -9,7 +9,7 @@ $today = (Get-Date).ToString("yyyy-MM-dd")
 
 function Get-Priority($path) {
     if ($path -eq "/") { return "1.0" }
-    if ($path -match "^/(guia-completa-itv|cuando-me-toca-itv|calculadora-precio-itv|checklist-itv|guias|itv-por-comunidad)$") { return "0.9" }
+    if ($path -match "^/(guia-completa-itv|cuando-me-toca-itv|calculadora-precio-itv|checklist-itv|guias|itv-por-comunidad|blog)$") { return "0.9" }
     if ($path -match "^/itv-[a-z]+$") { return "0.8" }
     if ($path -match "^/mecanica/[a-z0-9\-]+$") { return "0.6" }
     if ($path -match "^/(aviso-legal|politica-|sobre-nosotros|contacto|404)") { return "0.3" }
@@ -17,12 +17,12 @@ function Get-Priority($path) {
 }
 
 function Get-Changefreq($path) {
-    if ($path -eq "/" -or $path -eq "/guias") { return "weekly" }
+    if ($path -eq "/" -or $path -eq "/guias" -or $path -eq "/blog") { return "weekly" }
     if ($path -match "^/(aviso-legal|politica-|sobre-nosotros|contacto|404)") { return "yearly" }
     return "monthly"
 }
 
-$exclude = @("404.html", "index.html")
+$exclude = @("404.html")
 
 $files = Get-ChildItem -Recurse -Filter *.html | Where-Object {
     $exclude -notcontains $_.Name
@@ -30,19 +30,29 @@ $files = Get-ChildItem -Recurse -Filter *.html | Where-Object {
 
 $urls = @()
 
+# Home
 $urls += "  <url>`n    <loc>$baseUrl/</loc>`n    <lastmod>$today</lastmod>`n    <changefreq>weekly</changefreq>`n    <priority>1.0</priority>`n  </url>"
 
 foreach ($f in $files) {
     $relative = $f.FullName.Replace($root, "").Replace("\", "/").Replace(".html", "")
+
+    # Saltamos el index de la raiz (ya esta como /)
+    if ($relative -eq "/index") { continue }
+
+    # Convertimos /blog/index a /blog
+    if ($relative -match "/index$") {
+        $relative = $relative -replace "/index$", ""
+    }
+
     $url = "$baseUrl$relative"
     $prio = Get-Priority $relative
     $freq = Get-Changefreq $relative
     $urls += "  <url>`n    <loc>$url</loc>`n    <lastmod>$today</lastmod>`n    <changefreq>$freq</changefreq>`n    <priority>$prio</priority>`n  </url>"
 }
 
-$header = "<?xml version=`"1.0`" encoding=`"UTF-8`"?>"
-$openTag = "<urlset xmlns=`"http://www.sitemaps.org/schemas/sitemap/0.9`">"
-$closeTag = "</urlset>"
+$header = '<?xml version="1.0" encoding="UTF-8"?>'
+$openTag = '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+$closeTag = '</urlset>'
 
 $sitemap = "$header`n$openTag`n$($urls -join "`n")`n$closeTag`n"
 
