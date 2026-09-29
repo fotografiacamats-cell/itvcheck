@@ -1,0 +1,772 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mapa interactivo con 192 estaciones de ITV en Espana: filtra por ciudad, CCAA, operador y tipo de vehiculo. Estado abierto/cerrado en tiempo real, telefono directo, como llegar y guia para elegir la mejor estacion.">
+<title>Mapa Interactivo de Estaciones de ITV en España 2026 | ITVcheck</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗺️</text></svg>">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.min.css"/>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});
+function loadScripts(){
+ var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-T1PZZHFJ4E';s.async=true;document.head.appendChild(s);
+ gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});
+ gtag('js',new Date());gtag('config','G-T1PZZHFJ4E');
+ var a=document.createElement('script');a.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7947218272068445';a.async=true;a.crossOrigin='anonymous';document.head.appendChild(a);
+}
+if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuántas estaciones de ITV hay en España?","acceptedAnswer":{"@type":"Answer","text":"En España hay más de 450 estaciones de ITV autorizadas distribuidas por las 17 comunidades autónomas."}},{"@type":"Question","name":"¿Puedo pasar la ITV en cualquier estación de España?","acceptedAnswer":{"@type":"Answer","text":"Sí. Puedes pasar la ITV en cualquier estación autorizada de España, independientemente de dónde esté matriculado tu vehículo."}},{"@type":"Question","name":"¿Necesito cita previa?","acceptedAnswer":{"@type":"Answer","text":"No es obligatoria, pero sí recomendable. La mayoría de estaciones permiten reservar online."}},{"@type":"Question","name":"¿Cómo sé si una estación está abierta ahora?","acceptedAnswer":{"@type":"Answer","text":"En nuestro mapa interactivo mostramos el estado en tiempo real de cada estación: abierta o cerrada, según el día y la hora actuales."}}]}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="canonical" href="https://itvcheck.es/estaciones-itv">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ItemList","name":"Estaciones de ITV en Espana","numberOfItems":192,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"AutomotiveBusiness","name":"ITV Alcorcón","address":{"@type":"PostalAddress","addressLocality":"Alcorcón","addressRegion":"Madrid","addressCountry":"ES"}}},{"@type":"ListItem","position":2,"item":{"@type":"AutomotiveBusiness","name":"ITV Móstoles","address":{"@type":"PostalAddress","addressLocality":"Móstoles","addressRegion":"Madrid","addressCountry":"ES"}}},{"@type":"ListItem","position":3,"item":{"@type":"AutomotiveBusiness","name":"ITV Parla","address":{"@type":"PostalAddress","addressLocality":"Parla","addressRegion":"Madrid","addressCountry":"ES"}}},{"@type":"ListItem","position":4,"item":{"@type":"AutomotiveBusiness","name":"ITV Fuenlabrada","address":{"@type":"PostalAddress","addressLocality":"Fuenlabrada","addressRegion":"Madrid","addressCountry":"ES"}}},{"@type":"ListItem","position":5,"item":{"@type":"AutomotiveBusiness","name":"ITV Leganés","address":{"@type":"PostalAddress","addressLocality":"Leganés","addressRegion":"Madrid","addressCountry":"ES"}}},{"@type":"ListItem","position":6,"item":{"@type":"AutomotiveBusiness","name":"ITV Rivas H2Ocio","address":{"@type":"PostalAddress","addressLocality":"Rivas-Vaciamadrid","addressRegion":"Madrid","addressCountry":"ES"}}},{"@type":"ListItem","position":7,"item":{"@type":"AutomotiveBusiness","name":"ITV San Sebastián de los Reyes","address":{"@type":"PostalAddress","addressLocality":"San Sebastián de los Reyes","addressRegion":"Madrid","addressCountry":"ES"}}},{"@type":"ListItem","position":8,"item":{"@type":"AutomotiveBusiness","name":"ITV Julián Camarillo","address":{"@type":"PostalAddress","addressLocality":"Madrid","addressRegion":"Madrid","addressCountry":"ES"}}},{"@type":"ListItem","position":9,"item":{"@type":"AutomotiveBusiness","name":"ITV Villaverde","address":{"@type":"PostalAddress","addressLocality":"Madrid","addressRegion":"Madrid","addressCountry":"ES"}}},{"@type":"ListItem","position":10,"item":{"@type":"AutomotiveBusiness","name":"ITV Fuencarral","address":{"@type":"PostalAddress","addressLocality":"Madrid","addressRegion":"Madrid","addressCountry":"ES"}}},{"@type":"ListItem","position":11,"item":{"@type":"AutomotiveBusiness","name":"ITV Cuatro Vientos","address":{"@type":"PostalAddress","addressLocality":"Madrid","addressRegion":"Madrid","addressCountry":"ES"}}},{"@type":"ListItem","position":12,"item":{"@type":"AutomotiveBusiness","name":"ITV Vallecas Albufera","address":{"@type":"PostalAddress","addressLocality":"Madrid","addressRegion":"Madrid","addressCountry":"ES"}}},{"@type":"ListItem","position":13,"item":{"@type":"AutomotiveBusiness","name":"ITV San Blas","address":{"@type":"PostalAddress","addressLocality":"Madrid","addressRegion":"Madrid","addressCountry":"ES"}}},{"@type":"ListItem","position":14,"item":{"@type":"AutomotiveBusiness","name":"ITV Carabanchel Islazul","address":{"@type":"PostalAddress","addressLocality":"Madrid","addressRegion":"Madrid","addressCountry":"ES"}}},{"@type":"ListItem","position":15,"item":{"@type":"AutomotiveBusiness","name":"ITV Getafe Nassica","address":{"@type":"PostalAddress","addressLocality":"Getafe","addressRegion":"Madrid","addressCountry":"ES"}}},{"@type":"ListItem","position":16,"item":{"@type":"AutomotiveBusiness","name":"ITV Coslada","address":{"@type":"PostalAddress","addressLocality":"Coslada","addressRegion":"Madrid","addressCountry":"ES"}}},{"@type":"ListItem","position":17,"item":{"@type":"AutomotiveBusiness","name":"ITV Alcalá de Henares","address":{"@type":"PostalAddress","addressLocality":"Alcalá de Henares","addressRegion":"Madrid","addressCountry":"ES"}}},{"@type":"ListItem","position":18,"item":{"@type":"AutomotiveBusiness","name":"ITV Arganda del Rey","address":{"@type":"PostalAddress","addressLocality":"Arganda del Rey","addressRegion":"Madrid","addressCountry":"ES"}}},{"@type":"ListItem","position":19,"item":{"@type":"AutomotiveBusiness","name":"ITV Collado Villalba","address":{"@type":"PostalAddress","addressLocality":"Collado Villalba","addressRegion":"Madrid","addressCountry":"ES"}}},{"@type":"ListItem","position":20,"item":{"@type":"AutomotiveBusiness","name":"ITV Getafe","address":{"@type":"PostalAddress","addressLocality":"Getafe","addressRegion":"Madrid","addressCountry":"ES"}}},{"@type":"ListItem","position":21,"item":{"@type":"AutomotiveBusiness","name":"ITV Alcobendas","address":{"@type":"PostalAddress","addressLocality":"Alcobendas","addressRegion":"Madrid","addressCountry":"ES"}}},{"@type":"ListItem","position":22,"item":{"@type":"AutomotiveBusiness","name":"ITV Colmenar Viejo","address":{"@type":"PostalAddress","addressLocality":"Colmenar Viejo","addressRegion":"Madrid","addressCountry":"ES"}}},{"@type":"ListItem","position":23,"item":{"@type":"AutomotiveBusiness","name":"ITV Zona Franca","address":{"@type":"PostalAddress","addressLocality":"Barcelona","addressRegion":"Cataluña","addressCountry":"ES"}}},{"@type":"ListItem","position":24,"item":{"@type":"AutomotiveBusiness","name":"ITV Barcelona Motors","address":{"@type":"PostalAddress","addressLocality":"Barcelona","addressRegion":"Cataluña","addressCountry":"ES"}}},{"@type":"ListItem","position":25,"item":{"@type":"AutomotiveBusiness","name":"ITV Còrsega","address":{"@type":"PostalAddress","addressLocality":"Barcelona","addressRegion":"Cataluña","addressCountry":"ES"}}},{"@type":"ListItem","position":26,"item":{"@type":"AutomotiveBusiness","name":"ITV Àvila","address":{"@type":"PostalAddress","addressLocality":"Barcelona","addressRegion":"Cataluña","addressCountry":"ES"}}},{"@type":"ListItem","position":27,"item":{"@type":"AutomotiveBusiness","name":"ITV La Maquinista - Caracas","address":{"@type":"PostalAddress","addressLocality":"Barcelona","addressRegion":"Cataluña","addressCountry":"ES"}}},{"@type":"ListItem","position":28,"item":{"@type":"AutomotiveBusiness","name":"ITV Diputació","address":{"@type":"PostalAddress","addressLocality":"Barcelona","addressRegion":"Cataluña","addressCountry":"ES"}}},{"@type":"ListItem","position":29,"item":{"@type":"AutomotiveBusiness","name":"ITV Sant Celoni","address":{"@type":"PostalAddress","addressLocality":"Sant Celoni","addressRegion":"Cataluña","addressCountry":"ES"}}},{"@type":"ListItem","position":30,"item":{"@type":"AutomotiveBusiness","name":"ITV Badalona","address":{"@type":"PostalAddress","addressLocality":"Badalona","addressRegion":"Cataluña","addressCountry":"ES"}}},{"@type":"ListItem","position":31,"item":{"@type":"AutomotiveBusiness","name":"ITV Granollers","address":{"@type":"PostalAddress","addressLocality":"Granollers","addressRegion":"Cataluña","addressCountry":"ES"}}},{"@type":"ListItem","position":32,"item":{"@type":"AutomotiveBusiness","name":"ITV Sabadell","address":{"@type":"PostalAddress","addressLocality":"Sabadell","addressRegion":"Cataluña","addressCountry":"ES"}}},{"@type":"ListItem","position":33,"item":{"@type":"AutomotiveBusiness","name":"ITV Terrassa","address":{"@type":"PostalAddress","addressLocality":"Terrassa","addressRegion":"Cataluña","addressCountry":"ES"}}},{"@type":"ListItem","position":34,"item":{"@type":"AutomotiveBusiness","name":"ITV Sant Fruitós de Bages","address":{"@type":"PostalAddress","addressLocality":"Sant Fruitós de Bages","addressRegion":"Cataluña","addressCountry":"ES"}}},{"@type":"ListItem","position":35,"item":{"@type":"AutomotiveBusiness","name":"ITV Manresa","address":{"@type":"PostalAddress","addressLocality":"Manresa","addressRegion":"Cataluña","addressCountry":"ES"}}},{"@type":"ListItem","position":36,"item":{"@type":"AutomotiveBusiness","name":"ITV Vilanova i la Geltrú","address":{"@type":"PostalAddress","addressLocality":"Vilanova i la Geltrú","addressRegion":"Cataluña","addressCountry":"ES"}}},{"@type":"ListItem","position":37,"item":{"@type":"AutomotiveBusiness","name":"ITV Sant Just Desvern","address":{"@type":"PostalAddress","addressLocality":"Sant Just Desvern","addressRegion":"Cataluña","addressCountry":"ES"}}},{"@type":"ListItem","position":38,"item":{"@type":"AutomotiveBusiness","name":"ITV Sant Andreu de la Barca","address":{"@type":"PostalAddress","addressLocality":"Sant Andreu de la Barca","addressRegion":"Cataluña","addressCountry":"ES"}}},{"@type":"ListItem","position":39,"item":{"@type":"AutomotiveBusiness","name":"ITV Vara de Quart","address":{"@type":"PostalAddress","addressLocality":"Valencia","addressRegion":"Comunidad Valenciana","addressCountry":"ES"}}},{"@type":"ListItem","position":40,"item":{"@type":"AutomotiveBusiness","name":"ITV Campanar","address":{"@type":"PostalAddress","addressLocality":"Valencia","addressRegion":"Comunidad Valenciana","addressCountry":"ES"}}},{"@type":"ListItem","position":41,"item":{"@type":"AutomotiveBusiness","name":"ITV Catarroja","address":{"@type":"PostalAddress","addressLocality":"Catarroja","addressRegion":"Comunidad Valenciana","addressCountry":"ES"}}},{"@type":"ListItem","position":42,"item":{"@type":"AutomotiveBusiness","name":"ITV Massalfassar","address":{"@type":"PostalAddress","addressLocality":"Massalfassar","addressRegion":"Comunidad Valenciana","addressCountry":"ES"}}},{"@type":"ListItem","position":43,"item":{"@type":"AutomotiveBusiness","name":"ITV Ribarroja","address":{"@type":"PostalAddress","addressLocality":"Riba-roja de Túria","addressRegion":"Comunidad Valenciana","addressCountry":"ES"}}},{"@type":"ListItem","position":44,"item":{"@type":"AutomotiveBusiness","name":"ITV Sagunto","address":{"@type":"PostalAddress","addressLocality":"Sagunto","addressRegion":"Comunidad Valenciana","addressCountry":"ES"}}},{"@type":"ListItem","position":45,"item":{"@type":"AutomotiveBusiness","name":"ITV Llíria","address":{"@type":"PostalAddress","addressLocality":"Llíria","addressRegion":"Comunidad Valenciana","addressCountry":"ES"}}},{"@type":"ListItem","position":46,"item":{"@type":"AutomotiveBusiness","name":"ITV Alzira","address":{"@type":"PostalAddress","addressLocality":"Alzira","addressRegion":"Comunidad Valenciana","addressCountry":"ES"}}},{"@type":"ListItem","position":47,"item":{"@type":"AutomotiveBusiness","name":"ITV Gandía","address":{"@type":"PostalAddress","addressLocality":"Gandía","addressRegion":"Comunidad Valenciana","addressCountry":"ES"}}},{"@type":"ListItem","position":48,"item":{"@type":"AutomotiveBusiness","name":"ITV Ontinyent","address":{"@type":"PostalAddress","addressLocality":"Ontinyent","addressRegion":"Comunidad Valenciana","addressCountry":"ES"}}},{"@type":"ListItem","position":49,"item":{"@type":"AutomotiveBusiness","name":"ITV San Antonio de Benagéber","address":{"@type":"PostalAddress","addressLocality":"San Antonio de Benagéber","addressRegion":"Comunidad Valenciana","addressCountry":"ES"}}},{"@type":"ListItem","position":50,"item":{"@type":"AutomotiveBusiness","name":"ITV Utiel","address":{"@type":"PostalAddress","addressLocality":"Utiel","addressRegion":"Comunidad Valenciana","addressCountry":"ES"}}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://itvcheck.es/"},{"@type":"ListItem","position":2,"name":"Mapa de Estaciones ITV","item":"https://itvcheck.es/estaciones-itv"}]}
+</script>
+</head>
+<body>
+<div id="cookieBanner"><p>Utilizamos cookies para mejorar tu experiencia y mostrar anuncios de Google AdSense. <a href="politica-cookies" style="color:#FACC15;">Más información</a></p><button onclick="aceptarCookies()">Aceptar</button><button class="reject" onclick="rechazarCookies()">Rechazar</button></div>
+<a href="https://api.whatsapp.com/send?text=Estoy%20buscando%20una%20estaci%C3%B3n%20de%20ITV%20con%20ITVcheck" target="_blank" id="whatsappBtn" aria-label="Contactar por WhatsApp">💬</a>
+<div id="toast"></div>
+<header><a href="index" class="logo">ITV<span>check</span></a><button class="hamburger" onclick="toggleMenu()">☰</button><nav id="menu"><a href="index">Inicio</a><a href="guias">Guías</a><a href="mecanica">Mecánica DIY</a><a href="itv-por-comunidad">CCAA</a><a href="cuando-me-toca-itv">Calculadora</a><a href="calculadora-precio-itv">Precios</a><a href="checklist-itv">Checklist</a><a href="contacto">Contacto</a></nav></header>
+<div class="container">
+<div class="breadcrumbs"><a href="index">Inicio</a> » <span>Mapa de Estaciones ITV</span></div>
+<h1>Mapa Interactivo de Estaciones de ITV en España</h1>
+<div class="meta-date">
+ 📅 Última actualización: <strong>Octubre de 2026</strong> | 🔗 Fuentes: <a href="https://www.dgt.es" target="_blank" rel="nofollow noopener">DGT</a>, operadores autorizados (Applus, SGS, TÜV, Itevelesa, VEIASA, SITVAL, ITVASA, Dekra, Itasua, SYC), <a href="https://www.openstreetmap.org" target="_blank" rel="nofollow noopener">OpenStreetMap</a>.
+</div>
+<p>Explora el <strong>mapa interactivo</strong> con las principales estaciones de ITV de España. Filtra por ciudad, comunidad autónoma, operador y <strong>tipo de vehículo</strong>, consulta el <strong>estado abierto/cerrado en tiempo real</strong>, el <strong>teléfono directo</strong> y los botones de llamada/WhatsApp, obtén la ruta en Google Maps y comparte tu búsqueda con un clic.</p>
+<div class="layout">
+ <div class="filtros">
+ <h3>🔍 Filtrar estaciones</h3>
+ <label for="busqueda">Buscar por ciudad o nombre</label>
+ <input type="text" id="busqueda" placeholder="Ej: Madrid, Barcelona..." oninput="aplicarFiltros()">
+ <label for="ccaa">Comunidad autónoma</label>
+ <select id="ccaa" onchange="aplicarFiltros()">
+ <option value="">Todas</option>
+ <option value="Madrid">Madrid</option>
+ <option value="Cataluña">Cataluña</option>
+ <option value="Andalucía">Andalucía</option>
+ <option value="Comunidad Valenciana">Comunidad Valenciana</option>
+ <option value="Galicia">Galicia</option>
+ <option value="País Vasco">País Vasco</option>
+ <option value="Asturias">Asturias</option>
+ <option value="Canarias">Canarias</option>
+ <option value="Baleares">Baleares</option>
+ <option value="Aragón">Aragón</option>
+ <option value="Murcia">Murcia</option>
+ <option value="Castilla y León">Castilla y León</option>
+ <option value="Castilla-La Mancha">Castilla-La Mancha</option>
+ <option value="Extremadura">Extremadura</option>
+ <option value="Navarra">Navarra</option>
+ <option value="La Rioja">La Rioja</option>
+ <option value="Cantabria">Cantabria</option>
+ <option value="Ceuta">Ceuta</option>
+ <option value="Melilla">Melilla</option>
+ </select>
+ <label for="operador">Operador</label>
+ <select id="operador" onchange="aplicarFiltros()">
+ <option value="">Todos</option>
+ <option value="Applus">Applus</option>
+ <option value="SGS">SGS</option>
+ <option value="TÜV">TÜV</option>
+ <option value="Itevelesa">Itevelesa</option>
+ <option value="VEIASA">VEIASA</option>
+ <option value="SITVAL">SITVAL</option>
+ <option value="ITVASA">ITVASA</option>
+ <option value="Dekra">Dekra</option>
+ <option value="Itasua">Itasua</option>
+ <option value="SYC">SYC</option>
+ </select>
+ <label for="tipo">Tipo de vehículo</label>
+ <select id="tipo" onchange="aplicarFiltros()">
+ <option value="">Todos los tipos</option>
+ <option value="turismo">Turismo</option>
+ <option value="moto">Motocicleta</option>
+ <option value="furgoneta">Furgoneta</option>
+ <option value="pesado">Vehículo pesado</option>
+ <option value="agricola">Agrícola</option>
+ </select>
+ <button class="geo-btn" onclick="usarMiUbicacion()">📍 Usar mi ubicación</button>
+ <button class="share-btn" onclick="compartirEnlace()">🔗 Compartir esta búsqueda</button>
+ <div class="contador" id="contador">Cargando estaciones...</div>
+ <div class="leyenda">
+ <div style="font-weight:700;color:var(--tx);margin-bottom:8px;">Leyenda</div>
+ <div class="leyenda-item"><span class="leyenda-dot" style="background:var(--ve)"></span> Todas las categorías</div>
+ <div class="leyenda-item"><span class="leyenda-dot" style="background:var(--azul)"></span> Motos</div>
+ <div class="leyenda-item"><span class="leyenda-dot" style="background:var(--naranja)"></span> Pesados</div>
+ <div class="leyenda-item"><span class="leyenda-dot" style="background:var(--morado)"></span> Agrícola</div>
+ </div>
+ <div class="lista-resultados" id="lista"></div>
+ </div>
+ <div style="position:relative;">
+ <button class="map-toggle-btn" id="mapToggleBtn" onclick="toggleModoMapa()" title="Cambiar modo claro/oscuro">🌙</button>
+ <div id="mapa"><div class="mapa-error">Cargando mapa... Si este mensaje permanece, revisa la consola (F12).</div></div>
+ </div>
+</div>
+<div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7947218272068445" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins></div>
+<h2>¿Qué debes llevar a la estación?</h2>
+<ul>
+<li><strong>Permiso de circulación</strong> en vigor.</li>
+<li><strong>Ficha técnica</strong> (tarjeta ITV).</li>
+<li><strong>Justificante del seguro</strong> (recibo o copia digital).</li>
+<li><strong>DNI</strong> (recomendable, aunque no siempre obligatorio).</li>
+</ul>
+<div class="tip-box">
+<strong>💡 Tip:</strong> En cada marcador del mapa verás el <strong>estado abierto/cerrado en tiempo real</strong>, el operador, la dirección y los botones de llamada, WhatsApp y "Cómo llegar". Si compartes el enlace con los filtros aplicados, tus amigos verán exactamente la misma búsqueda.
+</div>
+<div class="cta-box">
+ <p style="margin:0 0 10px 0;">📅 ¿No sabes cuándo te toca la ITV?</p>
+ <a href="cuando-me-toca-itv">Usa nuestra calculadora de fecha →</a>
+</div>
+<h2>Comunidades con más estaciones</h2>
+<ul>
+<li><strong>Andalucía:</strong> Más de 80 estaciones repartidas por sus 8 provincias.</li>
+<li><strong>Cataluña:</strong> Más de 60 estaciones en Barcelona, Girona, Lleida y Tarragona.</li>
+<li><strong>Madrid:</strong> Alrededor de 30 estaciones repartidas por la región metropolitana.</li>
+<li><strong>Comunidad Valenciana:</strong> Más de 40 estaciones gestionadas por SITVAL.</li>
+</ul>
+<h2>Preguntas frecuentes</h2>
+<h3>¿Puedo pasar la ITV en otra comunidad autónoma?</h3>
+<p>Sí. Puedes pasar la ITV en cualquier estación autorizada de España, independientemente de dónde esté matriculado el vehículo.</p>
+<h3>¿Es necesario cita previa?</h3>
+<p>No es obligatoria, pero sí muy recomendable. Muchas estaciones ofrecen descuentos por reservar online y evitarás las esperas habituales.</p>
+<h3>¿Cómo sé si una estación está abierta ahora?</h3>
+<p>En nuestro mapa mostramos el estado en tiempo real. Además, la lista lateral indica "Abierto ahora" o "Cerrado" según la hora actual y el horario de la estación.</p>
+<div class="guides-block">
+ <h3>📚 Guías relacionadas</h3>
+ <a href="cuando-me-toca-itv">📅 ¿Cuándo me toca la ITV?</a>
+ <a href="calculadora-precio-itv">💶 Calculadora de precio por CCAA</a>
+ <a href="guia-documentacion">📄 Documentación obligatoria</a>
+ <a href="que-pasa-si-suspendo-la-itv">📉 Qué hacer si suspendes</a>
+</div>
+<div class="other-ccaa">
+ <h3>📍 ITV por comunidades</h3>
+ <a href="itv-madrid">ITV Madrid</a>
+ <a href="itv-cataluna">ITV Cataluña</a>
+ <a href="itv-andalucia">ITV Andalucía</a>
+ <a href="itv-valencia">ITV Comunidad Valenciana</a>
+ <a href="itv-por-comunidad">Ver todas las CCAA →</a>
+</div>
+<h2 style="margin-top:40px;">Cómo elegir tu estación de ITV: 5 criterios</h2>
+<p>No todas las estaciones de ITV son iguales. Antes de reservar cita, ten en cuenta estos cinco criterios para elegir la que mejor te encaje:</p>
+
+<h3>1. Precio</h3>
+<p>El precio de la ITV varía según la comunidad autónoma, el tipo de vehiculo y el operador. La diferencia entre la estación más barata y la más cara de la misma provincia puede superar el 40%. Consulta nuestra <a href="calculadora-precio-itv">calculadora de precios por CCAA</a> antes de reservar.</p>
+
+<h3>2. Cercanía y accesibilidad</h3>
+<p>Una estación cerca de casa o del trabajo te ahorra tiempo si suspendes y tienes que volver. Usa el botón "Usar mi ubicación" del mapa para ver las 15 más cercanas.</p>
+
+<h3>3. Tipo de vehículo</h3>
+<p>No todas las estaciones inspeccionan motos, ciclomotores, vehículos agrícolas o industriales. Filtra por tipo de vehículo en el mapa antes de desplazarte.</p>
+
+<h3>4. Disponibilidad de cita</h3>
+<p>Algunas estaciones tienen lista de espera de días; otras permiten cita en el mismo día. Si vas con la ITV caducada, prioriza estaciones con cita inmediata.</p>
+
+<h3>5. Historial de rechazos</h3>
+<p>Las estaciones con técnicos más estrictos tienen tasas de rechazo más altas. Si tu vehículo va justo (frenos, emisiones, alumbrado), una revisión previa en taller es mejor que probar suerte.</p>
+
+<h2>Preguntas frecuentes sobre estaciones de ITV</h2>
+
+<h3>¿Cuánto cuesta la ITV en 2026?</h3>
+<p>Entre 30 y 60 euros para turismos, según comunidad autónoma. Motos entre 20 y 35 euros. Vehículos industriales y agrícolas pueden superar los 80 euros.</p>
+
+<h3>¿Puedo cambiar de estación si suspendo la ITV?</h3>
+<p>Sí. Puedes volver a la misma o ir a cualquier otra autorizada de España. La segunda inspección suele tener descuento del 50-70% si es en la misma estación y dentro de los 15 días posteriores.</p>
+
+<h3>¿Hay que pedir cita previa?</h3>
+<p>No es obligatoria, pero sí recomendable. La mayoría de operadores (Applus, TÜV, SGS, Itevelesa, VEIASA) permiten reservar online. Sin cita, puedes esperar entre 30 minutos y 2 horas en hora punta.</p>
+
+<a href="index" class="btn">← Volver a la página principal</a>
+</div>
+
+<div class="related-guides">
+<h3>📚 Enlazado interno recomendado</h3>
+<a href="cuando-me-toca-itv">📅 Calculadora de fecha</a>
+<a href="calculadora-precio-itv">💶 Precios por CCAA</a>
+<a href="itv-por-comunidad">📍 Todas las CCAA</a>
+<a href="checklist-itv">✅ Checklist pre-ITV</a>
+</div>
+<footer>
+<p><strong>ITVcheck</strong> | Información orientativa sobre la ITV en España.</p>
+<p style="font-size:13px;color:#94A3B8;margin-top:15px;max-width:700px;margin-left:auto;margin-right:auto;">Como Afiliado de Amazon, ITVcheck gana por las compras que cumplan los requisitos aplicables.</p>
+<p style="margin-top:15px;">
+<a href="sobre-nosotros">Sobre nosotros</a> | 
+<a href="contacto">Contacto</a> | 
+<a href="aviso-legal">Aviso legal</a> | 
+<a href="politica-cookies">Cookies</a> | 
+<a href="politica-privacidad">Privacidad</a> | 
+<a href="politica-afiliados">Afiliados</a>
+</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>if(typeof L === 'undefined'){document.write('<scr'+'ipt src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"><\/scr'+'ipt>');}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
+<script>if(typeof L !== 'undefined' && typeof L.markerClusterGroup === 'undefined'){document.write('<scr'+'ipt src="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"><\/scr'+'ipt>');}</script>
+<script>
+function toggleMenu(){var n=document.getElementById('menu');n.classList.toggle('open');}
+function aceptarCookies(){localStorage.setItem('cookiesAceptadas','true');loadScripts();document.getElementById('cookieBanner').style.display='none';}
+function rechazarCookies(){localStorage.setItem('cookiesAceptadas','false');document.getElementById('cookieBanner').style.display='none';}
+function mostrarToast(msg){var t = document.getElementById('toast');t.innerText = msg;t.classList.add('show');setTimeout(function(){ t.classList.remove('show'); }, 2500);}
+
+var horarioEstandar = { lv: [['08:00','14:00'],['16:00','20:00']], sab: [['09:00','13:00']], dom: [] };
+var horarioAmplio = { lv: [['07:45','20:15']], sab: [['08:00','13:00']], dom: [] };
+var horarioExtendido = { lv: [['07:00','21:00']], sab: [['08:00','14:00']], dom: [] };
+var horarioMadrugador = { lv: [['06:00','21:00']], sab: [], dom: [] };
+var horarioContinuo = { lv: [['07:30','21:30']], sab: [['09:00','14:00']], dom: [] };
+var horarioFinde = { lv: [['08:00','20:00']], sab: [['08:30','19:00']], dom: [['08:30','14:30']] };
+var horarioNocturno = { lv: [['08:00','21:00']], sab: [['08:30','19:00']], dom: [['08:30','14:30']] };
+
+var estaciones = [
+ // ==================== MADRID (22) ====================
+ { nombre:'ITV Alcorcón', ciudad:'Alcorcón', ccaa:'Madrid', operador:'SGS', direccion:'Pol. Ind. Urtinsa, C/ Las Fábricas, 17', cp:'28925', lat:40.3457, lng:-3.8248, tipo:'todos', horario:horarioEstandar, tel:'915 08 33 61' },
+ { nombre:'ITV Móstoles', ciudad:'Móstoles', ccaa:'Madrid', operador:'Applus', direccion:'Pol. Ind. La Fuensanta, Av. de la Reguera, 14', cp:'28935', lat:40.3223, lng:-3.8649, tipo:'todos', horario:horarioEstandar, tel:'916 14 27 78' },
+ { nombre:'ITV Parla', ciudad:'Parla', ccaa:'Madrid', operador:'Applus', direccion:'C/ Berlín, 1', cp:'28981', lat:40.2361, lng:-3.7685, tipo:'todos', horario:horarioEstandar, tel:'916 98 76 12' },
+ { nombre:'ITV Fuenlabrada', ciudad:'Fuenlabrada', ccaa:'Madrid', operador:'Applus', direccion:'Pol. Ind. La Cantueña, Av. de la Industria, 5', cp:'28947', lat:40.2842, lng:-3.7944, tipo:'todos', horario:horarioEstandar, tel:'916 15 91 10' },
+ { nombre:'ITV Leganés', ciudad:'Leganés', ccaa:'Madrid', operador:'SGS', direccion:'C/ Esteban Terradas, s/n', cp:'28914', lat:40.3272, lng:-3.7635, tipo:'todos', horario:horarioEstandar, tel:'916 87 32 24' },
+ { nombre:'ITV Rivas H2Ocio', ciudad:'Rivas-Vaciamadrid', ccaa:'Madrid', operador:'SGS', direccion:'C/ Mariano Barbacid, 8', cp:'28521', lat:40.3312, lng:-3.5186, tipo:'todos', horario:horarioExtendido, tel:'916 66 88 57' },
+ { nombre:'ITV San Sebastián de los Reyes', ciudad:'San Sebastián de los Reyes', ccaa:'Madrid', operador:'Applus', direccion:'Av. Fuente Nueva, 7', cp:'28703', lat:40.5475, lng:-3.6274, tipo:'todos', horario:horarioEstandar, tel:'916 52 71 77' },
+ { nombre:'ITV Julián Camarillo', ciudad:'Madrid', ccaa:'Madrid', operador:'SGS', direccion:'C/ Miguel Yuste, 31', cp:'28037', lat:40.4386, lng:-3.6297, tipo:'todos', horario:horarioEstandar, tel:'917 54 16 00' },
+ { nombre:'ITV Villaverde', ciudad:'Madrid', ccaa:'Madrid', operador:'SGS', direccion:'C/ San Dalmacio, 13', cp:'28021', lat:40.3466, lng:-3.6932, tipo:'todos', horario:horarioEstandar, tel:'917 98 41 32' },
+ { nombre:'ITV Fuencarral', ciudad:'Madrid', ccaa:'Madrid', operador:'SGS', direccion:'C/ Ntra. Sra. de Valverde, 179', cp:'28034', lat:40.5008, lng:-3.7027, tipo:'todos', horario:horarioEstandar, tel:'917 34 36 60' },
+ { nombre:'ITV Cuatro Vientos', ciudad:'Madrid', ccaa:'Madrid', operador:'SGS', direccion:'C/ Sinfonía, 29', cp:'28054', lat:40.3763, lng:-3.7856, tipo:'todos', horario:horarioEstandar, tel:'917 17 47 80' },
+ { nombre:'ITV Vallecas Albufera', ciudad:'Madrid', ccaa:'Madrid', operador:'Applus', direccion:'C. de Bruno Abúndez, 37', cp:'28031', lat:40.3739, lng:-3.6271, tipo:'todos', horario:horarioExtendido, tel:'910 90 08 16' },
+ { nombre:'ITV San Blas', ciudad:'Madrid', ccaa:'Madrid', operador:'SGS', direccion:'Calle Aguaviva, 1', cp:'28022', lat:40.4464, lng:-3.6007, tipo:'todos', horario:horarioEstandar, tel:'913 29 06 88' },
+ { nombre:'ITV Carabanchel Islazul', ciudad:'Madrid', ccaa:'Madrid', operador:'SGS', direccion:'Centro Comercial Islazul', cp:'28054', lat:40.3751, lng:-3.7486, tipo:'todos', horario:horarioFinde, tel:'915 08 33 61' },
+ { nombre:'ITV Getafe Nassica', ciudad:'Getafe', ccaa:'Madrid', operador:'SGS', direccion:'Centro Comercial Nassica', cp:'28906', lat:40.2931, lng:-3.7167, tipo:'todos', horario:horarioFinde, tel:'919 26 69 84' },
+ { nombre:'ITV Coslada', ciudad:'Coslada', ccaa:'Madrid', operador:'SGS', direccion:'Av. de San Pablo', cp:'28823', lat:40.4236, lng:-3.5606, tipo:'todos', horario:horarioEstandar, tel:'916 72 80 48' },
+ { nombre:'ITV Alcalá de Henares', ciudad:'Alcalá de Henares', ccaa:'Madrid', operador:'SGS', direccion:'Pol. Ind.', cp:'28806', lat:40.4818, lng:-3.3643, tipo:'todos', horario:horarioEstandar, tel:'918 89 89 85' },
+ { nombre:'ITV Arganda del Rey', ciudad:'Arganda del Rey', ccaa:'Madrid', operador:'SGS', direccion:'Camino del Puente Viejo', cp:'28500', lat:40.3003, lng:-3.4378, tipo:'todos', horario:horarioEstandar, tel:'918 71 41 14' },
+ { nombre:'ITV Collado Villalba', ciudad:'Collado Villalba', ccaa:'Madrid', operador:'Itevelesa', direccion:'Pol. Ind.', cp:'28400', lat:40.6323, lng:-4.0073, tipo:'todos', horario:horarioEstandar, tel:'918 40 63 40' },
+ { nombre:'ITV Getafe', ciudad:'Getafe', ccaa:'Madrid', operador:'Applus', direccion:'Pol. Ind. Los Olivos', cp:'28906', lat:40.3083, lng:-3.7327, tipo:'todos', horario:horarioEstandar, tel:'916 83 34 76' },
+ { nombre:'ITV Alcobendas', ciudad:'Alcobendas', ccaa:'Madrid', operador:'Applus', direccion:'C. de la Maliciosa, 1', cp:'28108', lat:40.5407, lng:-3.6357, tipo:'todos', horario:horarioEstandar, tel:'916 62 00 35' },
+ { nombre:'ITV Colmenar Viejo', ciudad:'Colmenar Viejo', ccaa:'Madrid', operador:'SGS', direccion:'Calle de la Perfumería, 1', cp:'28770', lat:40.6591, lng:-3.7661, tipo:'todos', horario:horarioEstandar, tel:'918 46 33 10' },
+
+ // ==================== BARCELONA (16) ====================
+ { nombre:'ITV Zona Franca', ciudad:'Barcelona', ccaa:'Cataluña', operador:'Applus', direccion:'Pol. Ind. Zona Franca', cp:'08040', lat:41.3416, lng:2.1351, tipo:'todos', horario:horarioExtendido, tel:'932 64 80 10' },
+ { nombre:'ITV Barcelona Motors', ciudad:'Barcelona', ccaa:'Cataluña', operador:'Applus', direccion:'C/ Motors, 136', cp:'08040', lat:41.3413, lng:2.1401, tipo:'todos', horario:horarioExtendido, tel:'932 96 89 70' },
+ { nombre:'ITV Còrsega', ciudad:'Barcelona', ccaa:'Cataluña', operador:'TÜV', direccion:'C/ Córcega, 384-392', cp:'08037', lat:41.4022, lng:2.1696, tipo:'todos', horario:horarioExtendido, tel:'934 57 66 61' },
+ { nombre:'ITV Àvila', ciudad:'Barcelona', ccaa:'Cataluña', operador:'Itevelesa', direccion:'C/ Ávila, 130-134', cp:'08018', lat:41.4004, lng:2.1918, tipo:'moto', horario:horarioExtendido, tel:'933 09 29 90' },
+ { nombre:'ITV La Maquinista - Caracas', ciudad:'Barcelona', ccaa:'Cataluña', operador:'TÜV', direccion:'C/ Caracas, 10B', cp:'08030', lat:41.4404, lng:2.1974, tipo:'todos', horario:horarioNocturno, tel:'934 85 17 46' },
+ { nombre:'ITV Diputació', ciudad:'Barcelona', ccaa:'Cataluña', operador:'TÜV', direccion:'C/ Diputació, 158-160', cp:'08011', lat:41.3879, lng:2.1607, tipo:'moto', horario:horarioExtendido, tel:'934 87 74 66' },
+ { nombre:'ITV Sant Celoni', ciudad:'Sant Celoni', ccaa:'Cataluña', operador:'TÜV', direccion:'Ctra. Gualba, 41-43', cp:'08470', lat:41.6901, lng:2.4908, tipo:'todos', horario:horarioExtendido, tel:'938 67 47 57' },
+ { nombre:'ITV Badalona', ciudad:'Badalona', ccaa:'Cataluña', operador:'TÜV', direccion:'Carrer de la Industria, 427', cp:'08918', lat:41.4504, lng:2.2471, tipo:'todos', horario:horarioExtendido, tel:'933 99 09 89' },
+ { nombre:'ITV Granollers', ciudad:'Granollers', ccaa:'Cataluña', operador:'TÜV', direccion:'Pol. Ind. Coll de la Manya', cp:'08403', lat:41.6079, lng:2.2877, tipo:'todos', horario:horarioExtendido, tel:'938 49 20 28' },
+ { nombre:'ITV Sabadell', ciudad:'Sabadell', ccaa:'Cataluña', operador:'TÜV', direccion:'Pol. Ind. Can Roqueta', cp:'08202', lat:41.5463, lng:2.1086, tipo:'todos', horario:horarioExtendido, tel:'937 27 08 63' },
+ { nombre:'ITV Terrassa', ciudad:'Terrassa', ccaa:'Cataluña', operador:'TÜV', direccion:'Pol. Ind.', cp:'08228', lat:41.5635, lng:2.0089, tipo:'todos', horario:horarioExtendido, tel:'937 36 16 00' },
+ { nombre:'ITV Sant Fruitós de Bages', ciudad:'Sant Fruitós de Bages', ccaa:'Cataluña', operador:'Applus', direccion:'Pol. Ind. El Grau', cp:'08272', lat:41.7505, lng:1.8723, tipo:'todos', horario:horarioExtendido, tel:'938 78 61 61' },
+ { nombre:'ITV Manresa', ciudad:'Manresa', ccaa:'Cataluña', operador:'Applus', direccion:'Pol. Ind. Bufalvent', cp:'08243', lat:41.7283, lng:1.8247, tipo:'todos', horario:horarioExtendido, tel:'938 74 82 25' },
+ { nombre:'ITV Vilanova i la Geltrú', ciudad:'Vilanova i la Geltrú', ccaa:'Cataluña', operador:'Applus', direccion:'Ronda Europa', cp:'08800', lat:41.2242, lng:1.7256, tipo:'todos', horario:horarioExtendido, tel:'938 10 21 62' },
+ { nombre:'ITV Sant Just Desvern', ciudad:'Sant Just Desvern', ccaa:'Cataluña', operador:'Applus', direccion:'Av. de la Riera, 19', cp:'08960', lat:41.3847, lng:2.0757, tipo:'todos', horario:horarioExtendido, tel:'934 73 57 55' },
+ { nombre:'ITV Sant Andreu de la Barca', ciudad:'Sant Andreu de la Barca', ccaa:'Cataluña', operador:'TÜV', direccion:'Antiga Ctra. N-II, 592', cp:'08740', lat:41.4472, lng:1.9735, tipo:'todos', horario:horarioExtendido, tel:'936 82 21 12' },
+
+ // ==================== VALENCIA (20) ====================
+ { nombre:'ITV Vara de Quart', ciudad:'Valencia', ccaa:'Comunidad Valenciana', operador:'SITVAL', direccion:'Pol. Vara de Quart, C/ Dels Gremis, 15', cp:'46014', lat:39.4396, lng:-0.4053, tipo:'todos', horario:horarioContinuo, tel:'963 13 60 00' },
+ { nombre:'ITV Campanar', ciudad:'Valencia', ccaa:'Comunidad Valenciana', operador:'SITVAL', direccion:'Av. de Manuel de Falla, 10', cp:'46015', lat:39.4862, lng:-0.3984, tipo:'todos', horario:horarioContinuo, tel:'961 93 36 11' },
+ { nombre:'ITV Catarroja', ciudad:'Catarroja', ccaa:'Comunidad Valenciana', operador:'SITVAL', direccion:'Pol. Ind. El Bony, Carrer 32', cp:'46470', lat:39.4012, lng:-0.4039, tipo:'todos', horario:horarioExtendido, tel:'961 26 76 02' },
+ { nombre:'ITV Massalfassar', ciudad:'Massalfassar', ccaa:'Comunidad Valenciana', operador:'SITVAL', direccion:'Azagador de Lliria, s/n', cp:'46560', lat:39.5629, lng:-0.3218, tipo:'pesado', horario:horarioExtendido, tel:'961 47 07 80' },
+ { nombre:'ITV Ribarroja', ciudad:'Riba-roja de Túria', ccaa:'Comunidad Valenciana', operador:'SITVAL', direccion:'Pol. Ind. El Oliveral, C. B', cp:'46394', lat:39.5476, lng:-0.5691, tipo:'todos', horario:horarioExtendido, tel:'961 66 81 81' },
+ { nombre:'ITV Sagunto', ciudad:'Sagunto', ccaa:'Comunidad Valenciana', operador:'SITVAL', direccion:'Pol. Ind.', cp:'46500', lat:39.6759, lng:-0.2743, tipo:'pesado', horario:horarioExtendido, tel:'962 69 81 79' },
+ { nombre:'ITV Llíria', ciudad:'Llíria', ccaa:'Comunidad Valenciana', operador:'SITVAL', direccion:'Pol. Ind. Pla Rascaña, s/n', cp:'46160', lat:39.6247, lng:-0.5967, tipo:'todos', horario:horarioExtendido, tel:'962 79 06 14' },
+ { nombre:'ITV Alzira', ciudad:'Alzira', ccaa:'Comunidad Valenciana', operador:'SITVAL', direccion:'Ctra. Alzira - Algemesí, s/n', cp:'46600', lat:39.1524, lng:-0.4373, tipo:'todos', horario:horarioExtendido, tel:'962 41 03 19' },
+ { nombre:'ITV Gandía', ciudad:'Gandía', ccaa:'Comunidad Valenciana', operador:'SITVAL', direccion:'Pol. Ind.', cp:'46700', lat:38.9676, lng:-0.1825, tipo:'todos', horario:horarioExtendido, tel:'962 87 49 10' },
+ { nombre:'ITV Ontinyent', ciudad:'Ontinyent', ccaa:'Comunidad Valenciana', operador:'SITVAL', direccion:'Pol. Ind.', cp:'46870', lat:38.8221, lng:-0.6066, tipo:'todos', horario:horarioExtendido, tel:'962 38 06 10' },
+ { nombre:'ITV San Antonio de Benagéber', ciudad:'San Antonio de Benagéber', ccaa:'Comunidad Valenciana', operador:'SITVAL', direccion:'Pol. Ind.', cp:'46184', lat:39.5456, lng:-0.4986, tipo:'todos', horario:horarioExtendido, tel:'961 35 60 60' },
+ { nombre:'ITV Utiel', ciudad:'Utiel', ccaa:'Comunidad Valenciana', operador:'SITVAL', direccion:'Pol. Ind. El Melero, parcelas 88 y 89', cp:'46300', lat:39.5674, lng:-1.2040, tipo:'agricola', horario:horarioExtendido, tel:'962 17 14 51' },
+ { nombre:'ITV Xàtiva', ciudad:'Xàtiva', ccaa:'Comunidad Valenciana', operador:'SITVAL', direccion:'Pol. Ind.', cp:'46800', lat:38.9902, lng:-0.5182, tipo:'todos', horario:horarioExtendido, tel:'962 27 35 23' },
+ { nombre:'ITV Alicante', ciudad:'Alicante', ccaa:'Comunidad Valenciana', operador:'SITVAL', direccion:'C/ Nieve, 7, Pol. Ind. Plà de la Vallonga', cp:'03113', lat:38.3452, lng:-0.4810, tipo:'todos', horario:horarioExtendido, tel:'965 11 15 32' },
+ { nombre:'ITV Alcoy', ciudad:'Alcoy', ccaa:'Comunidad Valenciana', operador:'SITVAL', direccion:'Pol. Ind.', cp:'03801', lat:38.6985, lng:-0.4736, tipo:'todos', horario:horarioExtendido, tel:'965 54 15 84' },
+ { nombre:'ITV Benidorm', ciudad:'Benidorm', ccaa:'Comunidad Valenciana', operador:'SITVAL', direccion:'Pol. Ind.', cp:'03502', lat:38.5407, lng:-0.1216, tipo:'todos', horario:horarioExtendido, tel:'965 86 73 10' },
+ { nombre:'ITV Elche', ciudad:'Elche', ccaa:'Comunidad Valenciana', operador:'SITVAL', direccion:'Carrer d’Asp, s/n', cp:'03203', lat:38.2669, lng:-0.6984, tipo:'todos', horario:horarioExtendido, tel:'966 66 65 12' },
+ { nombre:'ITV Novelda', ciudad:'Novelda', ccaa:'Comunidad Valenciana', operador:'SITVAL', direccion:'Pol. Ind.', cp:'03660', lat:38.3824, lng:-0.7683, tipo:'todos', horario:horarioExtendido, tel:'965 60 23 54' },
+ { nombre:'ITV Orihuela', ciudad:'Orihuela', ccaa:'Comunidad Valenciana', operador:'SITVAL', direccion:'Km. 8,3 Carretera', cp:'03300', lat:38.0848, lng:-0.9445, tipo:'todos', horario:horarioExtendido, tel:'966 30 07 65' },
+ { nombre:'ITV Villena', ciudad:'Villena', ccaa:'Comunidad Valenciana', operador:'SITVAL', direccion:'Pol. Ind.', cp:'03400', lat:38.6375, lng:-0.8648, tipo:'todos', horario:horarioExtendido, tel:'965 80 16 12' },
+
+ // ==================== ANDALUCÍA (19) ====================
+ { nombre:'ITV Sevilla El Pino', ciudad:'Sevilla', ccaa:'Andalucía', operador:'VEIASA', direccion:'Pol. Ind. El Pino, C/ Pino Central, 16-18', cp:'41016', lat:37.3891, lng:-5.9845, tipo:'todos', horario:horarioAmplio, tel:'955 11 87 97' },
+ { nombre:'ITV Gelves', ciudad:'Gelves', ccaa:'Andalucía', operador:'VEIASA', direccion:'Autovía Sevilla-Coria del Río, Km 4,5', cp:'41120', lat:37.3354, lng:-6.0270, tipo:'todos', horario:horarioAmplio, tel:'955 76 06 22' },
+ { nombre:'ITV Alcalá de Guadaíra', ciudad:'Alcalá de Guadaíra', ccaa:'Andalucía', operador:'VEIASA', direccion:'Ctra. Alcalá-Dos Hermanas, Km 4,5', cp:'41500', lat:37.3370, lng:-5.8414, tipo:'todos', horario:horarioAmplio, tel:'954 11 32 11' },
+ { nombre:'ITV La Rinconada', ciudad:'La Rinconada', ccaa:'Andalucía', operador:'VEIASA', direccion:'Ctra. Sevilla-Cazalla, Km 9', cp:'41309', lat:37.4856, lng:-5.9809, tipo:'todos', horario:horarioAmplio, tel:'954 79 00 12' },
+ { nombre:'ITV Sevilla Este', ciudad:'Sevilla', ccaa:'Andalucía', operador:'VEIASA', direccion:'Torreblanca', cp:'41020', lat:37.4022, lng:-5.9220, tipo:'todos', horario:horarioAmplio, tel:'954 25 80 00' },
+ { nombre:'ITV Sevilla Sur', ciudad:'Sevilla', ccaa:'Andalucía', operador:'VEIASA', direccion:'Av. de Jerez, s/n, Bellavista', cp:'41012', lat:37.3590, lng:-6.0083, tipo:'todos', horario:horarioAmplio, tel:'954 43 21 10' },
+ { nombre:'ITV Morón de la Frontera', ciudad:'Morón de la Frontera', ccaa:'Andalucía', operador:'VEIASA', direccion:'Pol. Ind.', cp:'41530', lat:37.1218, lng:-5.4512, tipo:'todos', horario:horarioAmplio, tel:'955 85 15 11' },
+ { nombre:'ITV Málaga Guadalhorce-Diderot', ciudad:'Málaga', ccaa:'Andalucía', operador:'VEIASA', direccion:'Pol. Ind. Guadalhorce, C/ Diderot, 1', cp:'29004', lat:36.7213, lng:-4.4214, tipo:'todos', horario:horarioAmplio, tel:'951 77 21 36' },
+ { nombre:'ITV Málaga Guadalhorce-Godini', ciudad:'Málaga', ccaa:'Andalucía', operador:'VEIASA', direccion:'Pol. Ind. Guadalhorce, C/ Carlo Goldoni, 17', cp:'29004', lat:36.7028, lng:-4.4752, tipo:'todos', horario:horarioAmplio, tel:'951 77 21 36' },
+ { nombre:'ITV El Palo', ciudad:'Málaga', ccaa:'Andalucía', operador:'VEIASA', direccion:'C/ Escritor Fuentes y Cerdá, 2', cp:'29018', lat:36.7190, lng:-4.3486, tipo:'moto', horario:horarioAmplio, tel:'951 91 70 72' },
+ { nombre:'ITV El Viso', ciudad:'Málaga', ccaa:'Andalucía', operador:'VEIASA', direccion:'C/ Brasilia, 22-30', cp:'29004', lat:36.7215, lng:-4.4567, tipo:'todos', horario:horarioAmplio, tel:'951 91 70 72' },
+ { nombre:'ITV Antequera', ciudad:'Antequera', ccaa:'Andalucía', operador:'VEIASA', direccion:'Pol. Ind.', cp:'29200', lat:37.0194, lng:-4.5610, tipo:'todos', horario:horarioAmplio, tel:'952 84 21 55' },
+ { nombre:'ITV Estepona', ciudad:'Estepona', ccaa:'Andalucía', operador:'VEIASA', direccion:'Pol. Ind.', cp:'29680', lat:36.4267, lng:-5.1468, tipo:'todos', horario:horarioAmplio, tel:'952 80 33 00' },
+ { nombre:'ITV Marbella', ciudad:'Marbella', ccaa:'Andalucía', operador:'VEIASA', direccion:'Pol. Ind.', cp:'29600', lat:36.5101, lng:-4.8824, tipo:'todos', horario:horarioAmplio, tel:'952 77 01 55' },
+ { nombre:'ITV Ronda', ciudad:'Ronda', ccaa:'Andalucía', operador:'VEIASA', direccion:'Pol. Ind.', cp:'29400', lat:36.7462, lng:-5.1613, tipo:'todos', horario:horarioAmplio, tel:'952 87 10 11' },
+ { nombre:'ITV Córdoba Las Quemadas', ciudad:'Córdoba', ccaa:'Andalucía', operador:'VEIASA', direccion:'Calle Impresor Acisclo Cortés Ribera, parc. A, Pol. Ind. las Quemadas', cp:'14014', lat:37.8882, lng:-4.7794, tipo:'todos', horario:horarioAmplio, tel:'957 74 95 48' },
+ { nombre:'ITV Granada Peligros', ciudad:'Peligros', ccaa:'Andalucía', operador:'VEIASA', direccion:'Pol. Ind. Juncaril, Parcelas 317 y 318, C. Lanjarón', cp:'18210', lat:37.2347, lng:-3.6281, tipo:'todos', horario:horarioAmplio, tel:'958 56 40 25' },
+ { nombre:'ITV Jerez de la Frontera', ciudad:'Jerez de la Frontera', ccaa:'Andalucía', operador:'VEIASA', direccion:'Calle Alcalde Manuel Cantos Ropero, s/n', cp:'11408', lat:36.6850, lng:-6.1265, tipo:'todos', horario:horarioAmplio, tel:'856 58 60 60' },
+ { nombre:'ITV Almería El Alquián', ciudad:'El Alquián', ccaa:'Andalucía', operador:'VEIASA', direccion:'Paraje Las Salinas', cp:'04130', lat:36.8381, lng:-2.4598, tipo:'todos', horario:horarioAmplio, tel:'950 03 70 91' },
+ { nombre:'ITV Algeciras', ciudad:'Algeciras', ccaa:'Andalucía', operador:'VEIASA', direccion:'Pol. Ind. El Fresno, s/n', cp:'11205', lat:36.1301, lng:-5.4534, tipo:'todos', horario:horarioAmplio, tel:'956 63 11 77' },
+ { nombre:'ITV Baena', ciudad:'Baena', ccaa:'Andalucía', operador:'VEIASA', direccion:'Área de Servicio, Ctra. Córdoba-Málaga', cp:'14850', lat:37.6167, lng:-4.3167, tipo:'agricola', horario:horarioAmplio, tel:'957 69 10 10' },
+ { nombre:'ITV Baza', ciudad:'Baza', ccaa:'Andalucía', operador:'VEIASA', direccion:'Carretera de Murcia, s/n', cp:'18800', lat:37.4906, lng:-2.7748, tipo:'todos', horario:horarioAmplio, tel:'958 86 07 51' },
+ { nombre:'ITV Guadix', ciudad:'Guadix', ccaa:'Andalucía', operador:'VEIASA', direccion:'Centro de Transportes, s/n', cp:'18500', lat:37.2983, lng:-3.1354, tipo:'todos', horario:horarioAmplio, tel:'958 66 30 77' },
+ { nombre:'ITV Loja', ciudad:'Loja', ccaa:'Andalucía', operador:'VEIASA', direccion:'Pol. Ind. El Manzanil II', cp:'18300', lat:37.1669, lng:-4.1511, tipo:'todos', horario:horarioAmplio, tel:'958 32 11 11' },
+ { nombre:'ITV Puente Genil', ciudad:'Puente Genil', ccaa:'Andalucía', operador:'VEIASA', direccion:'Pol. Ind. Los Arcos', cp:'14500', lat:37.3915, lng:-4.7667, tipo:'todos', horario:horarioAmplio, tel:'957 60 11 11' },
+ { nombre:'ITV Palma del Río', ciudad:'Palma del Río', ccaa:'Andalucía', operador:'VEIASA', direccion:'Pol. Ind. Garrotal Oeste', cp:'14700', lat:37.6989, lng:-5.2839, tipo:'todos', horario:horarioAmplio, tel:'957 64 11 11' },
+ { nombre:'ITV Peñarroya', ciudad:'Peñarroya-Pueblonuevo', ccaa:'Andalucía', operador:'VEIASA', direccion:'Carretera al Silo, s/n', cp:'14200', lat:38.3041, lng:-5.2642, tipo:'todos', horario:horarioAmplio, tel:'957 11 40 19' },
+
+ // ==================== PAÍS VASCO (6) ====================
+ { nombre:'ITV Amorebieta', ciudad:'Amorebieta-Etxano', ccaa:'País Vasco', operador:'Itevelesa', direccion:'Pol. Ind. Zubieta', cp:'48340', lat:43.2219, lng:-2.7357, tipo:'todos', horario:horarioAmplio, tel:'946 73 03 33' },
+ { nombre:'ITV Arrigorriaga', ciudad:'Arrigorriaga', ccaa:'País Vasco', operador:'Itevelesa', direccion:'Autopista Bilbao-Zaragoza, Área Jambide', cp:'48480', lat:43.2076, lng:-2.8859, tipo:'todos', horario:horarioAmplio, tel:'946 71 17 13' },
+ { nombre:'ITV Zamudio', ciudad:'Zamudio', ccaa:'País Vasco', operador:'Itevelesa', direccion:'Pol. Ind. Ugaldeguren I, Parcela 8', cp:'48170', lat:43.2835, lng:-2.8657, tipo:'todos', horario:horarioAmplio, tel:'902 93 27 00' },
+ { nombre:'ITV Zalla', ciudad:'Zalla', ccaa:'País Vasco', operador:'Itevelesa', direccion:'Pol. El Longar', cp:'48850', lat:43.2135, lng:-3.1352, tipo:'pesado', horario:horarioAmplio, tel:'946 39 04 32' },
+ { nombre:'ITV Trapagaran', ciudad:'Trapagaran', ccaa:'País Vasco', operador:'Itevelesa', direccion:'Pol. Ind.', cp:'48510', lat:43.3088, lng:-3.0369, tipo:'todos', horario:horarioAmplio, tel:'944 92 03 15' },
+ { nombre:'ITV Sopela', ciudad:'Sopela', ccaa:'País Vasco', operador:'Itevelesa', direccion:'Olabide Kalea, 10 A', cp:'48600', lat:43.3794, lng:-2.9857, tipo:'moto', horario:horarioEstandar, tel:'946 149 021' },
+ { nombre:'ITV Vitoria - Jundiz', ciudad:'Vitoria-Gasteiz', ccaa:'País Vasco', operador:'Itasua', direccion:'Pol. Ind. Jundiz, C/ Zurrupitieta, 4', cp:'01015', lat:42.8333, lng:-2.7333, tipo:'todos', horario:horarioAmplio, tel:'945 29 00 95' },
+ { nombre:'ITV Irún', ciudad:'Irún', ccaa:'País Vasco', operador:'Itevelesa', direccion:'C/ Alcalde José Luis Hidalgo, 22', cp:'20305', lat:43.3501, lng:-1.7932, tipo:'moto', horario:horarioAmplio, tel:'943 62 33 84' },
+ { nombre:'ITV Urnieta', ciudad:'Urnieta', ccaa:'País Vasco', operador:'Itevelesa', direccion:'Pol. Ind. Erratzu, 81', cp:'20130', lat:43.2500, lng:-1.9833, tipo:'todos', horario:horarioAmplio, tel:'943 55 60 58' },
+
+ // ==================== ARAGÓN (7) ====================
+ { nombre:'ITV Ciudad del Transporte', ciudad:'Zaragoza', ccaa:'Aragón', operador:'SGS', direccion:'Ctra. Huesca, Km 7', cp:'50011', lat:41.6867, lng:-0.8594, tipo:'pesado', horario:horarioExtendido, tel:'876 50 55 66' },
+ { nombre:'ITV Pol. Ind. Plaza', ciudad:'Zaragoza', ccaa:'Aragón', operador:'SGS', direccion:'Pol. Ind. Plaza', cp:'50014', lat:41.6285, lng:-0.9323, tipo:'todos', horario:horarioExtendido, tel:'976 27 48 33' },
+ { nombre:'ITV Pol. Ind. El Pilar', ciudad:'Zaragoza', ccaa:'Aragón', operador:'SGS', direccion:'C/ 23 de Abril, 32', cp:'50014', lat:41.6677, lng:-0.8988, tipo:'todos', horario:horarioExtendido, tel:'976 54 03 17' },
+ { nombre:'ITV Pol. Ind. Malpica', ciudad:'Zaragoza', ccaa:'Aragón', operador:'SGS', direccion:'C/ D, Parcela 24', cp:'50014', lat:41.6318, lng:-0.9206, tipo:'pesado', horario:horarioExtendido, tel:'976 57 08 18' },
+ { nombre:'ITV Calatayud', ciudad:'Calatayud', ccaa:'Aragón', operador:'SGS', direccion:'Pol. Ind.', cp:'50300', lat:41.3538, lng:-1.6429, tipo:'todos', horario:horarioExtendido, tel:'976 88 53 72' },
+ { nombre:'ITV Ejea de los Caballeros', ciudad:'Ejea de los Caballeros', ccaa:'Aragón', operador:'SGS', direccion:'Pol. Ind.', cp:'50600', lat:42.1272, lng:-1.1378, tipo:'agricola', horario:horarioExtendido, tel:'976 66 44 51' },
+ { nombre:'ITV Utebo', ciudad:'Utebo', ccaa:'Aragón', operador:'SGS', direccion:'Pol. Ind.', cp:'50180', lat:41.7167, lng:-0.9963, tipo:'todos', horario:horarioExtendido, tel:'976 78 54 74' },
+ { nombre:'ITV Huesca', ciudad:'Huesca', ccaa:'Aragón', operador:'SGS', direccion:'C/ Polígono Sepes, 35', cp:'22006', lat:42.1407, lng:-0.4263, tipo:'todos', horario:horarioEstandar, tel:'974 21 55 93' },
+ { nombre:'ITV Monzón', ciudad:'Monzón', ccaa:'Aragón', operador:'SGS', direccion:'Pol. Ind. Camino de la Barca', cp:'22400', lat:41.9167, lng:0.2000, tipo:'todos', horario:horarioEstandar, tel:'974 40 44 55' },
+ { nombre:'ITV Barbastro', ciudad:'Barbastro', ccaa:'Aragón', operador:'SGS', direccion:'Pol. Ind. Valle del Cinca', cp:'22300', lat:42.0361, lng:0.1264, tipo:'todos', horario:horarioEstandar, tel:'974 31 00 62' },
+ { nombre:'ITV Jaca', ciudad:'Jaca', ccaa:'Aragón', operador:'SGS', direccion:'Pol. Ind. Llano de la Victoria', cp:'22700', lat:42.5692, lng:-0.5494, tipo:'todos', horario:horarioEstandar, tel:'974 35 60 12' },
+ { nombre:'ITV Teruel', ciudad:'Teruel', ccaa:'Aragón', operador:'SGS', direccion:'Pol. Ind. La Paz, C/ Sábado, 26', cp:'44004', lat:40.3389, lng:-1.1052, tipo:'todos', horario:horarioEstandar, tel:'978 61 07 68' },
+ { nombre:'ITV Alcañiz', ciudad:'Alcañiz', ccaa:'Aragón', operador:'SGS', direccion:'Pol. Ind. Las Horcas', cp:'44600', lat:41.0511, lng:-0.1322, tipo:'todos', horario:horarioEstandar, tel:'978 83 10 31' },
+ { nombre:'ITV Andorra', ciudad:'Andorra', ccaa:'Aragón', operador:'SGS', direccion:'Pol. Ind. La Estación', cp:'44500', lat:40.9761, lng:-0.4473, tipo:'todos', horario:horarioEstandar, tel:'978 88 00 11' },
+
+ // ==================== MURCIA (8) ====================
+ { nombre:'ITV Águilas', ciudad:'Águilas', ccaa:'Murcia', operador:'TÜV', direccion:'Pol. Ind. El Labradorcico', cp:'30880', lat:37.4064, lng:-1.5823, tipo:'todos', horario:horarioEstandar, tel:'968 41 31 80' },
+ { nombre:'ITV San Pedro del Pinatar', ciudad:'San Pedro del Pinatar', ccaa:'Murcia', operador:'TÜV', direccion:'Pol. Ind. Las Beatas', cp:'30740', lat:37.8372, lng:-0.7910, tipo:'todos', horario:horarioEstandar, tel:'968 18 43 10' },
+ { nombre:'ITV Media Sala', ciudad:'Cartagena', ccaa:'Murcia', operador:'TÜV', direccion:'Nueva Cartagena', cp:'30394', lat:37.6301, lng:-1.0064, tipo:'todos', horario:horarioExtendido, tel:'968 23 49 56' },
+ { nombre:'ITV La Cayetana', ciudad:'Murcia', ccaa:'Murcia', operador:'TÜV', direccion:'Ctra. de Murcia, km 60,8', cp:'30011', lat:37.9922, lng:-1.1307, tipo:'todos', horario:horarioEstandar, tel:'968 47 61 10' },
+ { nombre:'ITV Caravaca', ciudad:'Caravaca de la Cruz', ccaa:'Murcia', operador:'TÜV', direccion:'Pol. Ind. Venta Cávila', cp:'30400', lat:38.1057, lng:-1.8629, tipo:'todos', horario:horarioEstandar, tel:'968 72 55 02' },
+ { nombre:'ITV Cartagena', ciudad:'Cartagena', ccaa:'Murcia', operador:'TÜV', direccion:'Ctra. de la Asomada', cp:'30310', lat:37.6053, lng:-0.9913, tipo:'todos', horario:horarioEstandar, tel:'968 53 02 02' },
+ { nombre:'ITV Baser', ciudad:'Murcia', ccaa:'Murcia', operador:'TÜV', direccion:'Av. Primero de Mayo, 11', cp:'30006', lat:37.9869, lng:-1.1290, tipo:'todos', horario:horarioNocturno, tel:'968 29 31 00' },
+ { nombre:'ITV Lorca', ciudad:'Lorca', ccaa:'Murcia', operador:'TÜV', direccion:'Pol. Ind. Saprelorca', cp:'30817', lat:37.6712, lng:-1.7017, tipo:'todos', horario:horarioEstandar, tel:'968 46 44 46' },
+
+ // ==================== CASTILLA-LA MANCHA (12) ====================
+ { nombre:'ITV Toledo', ciudad:'Toledo', ccaa:'Castilla-La Mancha', operador:'TÜV', direccion:'C/ Río Jarama, 13 (Pol. Ind. Santa María de Benquerencia)', cp:'45007', lat:39.8628, lng:-3.9886, tipo:'todos', horario:horarioExtendido, tel:'925 23 43 77' },
+ { nombre:'ITV Albacete', ciudad:'Albacete', ccaa:'Castilla-La Mancha', operador:'SGS', direccion:'Carretera de Mahora, Km 3', cp:'02006', lat:39.0031, lng:-1.8524, tipo:'todos', horario:horarioExtendido, tel:'967 21 59 73' },
+ { nombre:'ITV Ciudad Real', ciudad:'Ciudad Real', ccaa:'Castilla-La Mancha', operador:'SGS', direccion:'Polígono Industrial Avanzado. Avd. de la Ciencia, s/n', cp:'13005', lat:38.9878, lng:-3.9237, tipo:'todos', horario:horarioExtendido, tel:'926 21 28 00' },
+ { nombre:'ITV Cuenca', ciudad:'Cuenca', ccaa:'Castilla-La Mancha', operador:'SGS', direccion:'Polígono Industrial Los Palancares, Parcela 4', cp:'16003', lat:40.0621, lng:-2.1410, tipo:'todos', horario:horarioExtendido, tel:'969 21 35 53' },
+ { nombre:'ITV Guadalajara', ciudad:'Guadalajara', ccaa:'Castilla-La Mancha', operador:'SGS', direccion:'Polígono El Balconcillo, C/ Trafalgar, s/n', cp:'19004', lat:40.6355, lng:-3.1602, tipo:'todos', horario:horarioExtendido, tel:'949 20 29 86' },
+ { nombre:'ITV Talavera de la Reina', ciudad:'Talavera de la Reina', ccaa:'Castilla-La Mancha', operador:'SGS', direccion:'Pol. Ind. Cazalegas', cp:'45600', lat:39.9581, lng:-4.8307, tipo:'todos', horario:horarioExtendido, tel:'925 76 43 77' },
+ { nombre:'ITV Tomelloso', ciudad:'Tomelloso', ccaa:'Castilla-La Mancha', operador:'SGS', direccion:'CM-3102, 33', cp:'13700', lat:39.1510, lng:-3.0223, tipo:'todos', horario:horarioExtendido, tel:'926 50 44 55' },
+ { nombre:'ITV Illescas', ciudad:'Illescas', ccaa:'Castilla-La Mancha', operador:'SGS', direccion:'Carretera Madrid-Toledo (N-401), Km 31,100', cp:'45200', lat:40.1194, lng:-3.8475, tipo:'todos', horario:horarioExtendido, tel:'925 51 15 27' },
+ { nombre:'ITV Azuqueca de Henares', ciudad:'Azuqueca de Henares', ccaa:'Castilla-La Mancha', operador:'SGS', direccion:'Polígono El Comendador, Calle Las Ondas, 3', cp:'19200', lat:40.5547, lng:-3.2602, tipo:'todos', horario:horarioExtendido, tel:'949 34 80 19' },
+ { nombre:'ITV Tarancón', ciudad:'Tarancón', ccaa:'Castilla-La Mancha', operador:'SGS', direccion:'Polígono Tarancón Sur, C/ Aliagares, s/n', cp:'16400', lat:40.0113, lng:-3.0069, tipo:'todos', horario:horarioExtendido, tel:'969 13 76 81' },
+ { nombre:'ITV Puertollano', ciudad:'Puertollano', ccaa:'Castilla-La Mancha', operador:'SGS', direccion:'Polígono Industrial La Nava', cp:'13500', lat:38.6876, lng:-4.1073, tipo:'todos', horario:horarioExtendido, tel:'926 43 10 12' },
+ { nombre:'ITV Valdepeñas', ciudad:'Valdepeñas', ccaa:'Castilla-La Mancha', operador:'SGS', direccion:'Ctra. de la Solana, s/n', cp:'13300', lat:38.7622, lng:-3.3867, tipo:'todos', horario:horarioExtendido, tel:'926 32 10 12' },
+
+ // ==================== CASTILLA Y LEÓN (8) ====================
+ { nombre:'ITV Burgos', ciudad:'Burgos', ccaa:'Castilla y León', operador:'Itevelesa', direccion:'Polígono Industrial Villalonquejar s/n, Calle López Bravo', cp:'09001', lat:42.3585, lng:-3.7346, tipo:'todos', horario:horarioAmplio, tel:'947 29 86 08' },
+ { nombre:'ITV Salamanca', ciudad:'Salamanca', ccaa:'Castilla y León', operador:'Itevelesa', direccion:'Polígono Industrial El Montalvo', cp:'37008', lat:40.9701, lng:-5.6635, tipo:'todos', horario:horarioAmplio, tel:'923 19 28 00' },
+ { nombre:'ITV León', ciudad:'León', ccaa:'Castilla y León', operador:'Itevelesa', direccion:'Polígono Industrial de Vilecha', cp:'24192', lat:42.5776, lng:-5.5992, tipo:'todos', horario:horarioAmplio, tel:'987 30 11 00' },
+ { nombre:'ITV Ponferrada', ciudad:'Ponferrada', ccaa:'Castilla y León', operador:'Itevelesa', direccion:'Carretera Nacional VI, Km 390', cp:'24400', lat:42.5461, lng:-6.5971, tipo:'todos', horario:horarioAmplio, tel:'987 45 56 51' },
+ { nombre:'ITV Valladolid', ciudad:'Valladolid', ccaa:'Castilla y León', operador:'Itevelesa', direccion:'Calle Vázquez de Menchaca, 2', cp:'47008', lat:41.6276, lng:-4.7447, tipo:'todos', horario:horarioAmplio, tel:'983 23 13 01' },
+ { nombre:'ITV Aranda de Duero', ciudad:'Aranda de Duero', ccaa:'Castilla y León', operador:'Itevelesa', direccion:'Polígono Industrial Prado Marina', cp:'09400', lat:41.6701, lng:-3.6887, tipo:'todos', horario:horarioAmplio, tel:'947 54 62 12' },
+ { nombre:'ITV Miranda de Ebro', ciudad:'Miranda de Ebro', ccaa:'Castilla y León', operador:'Itevelesa', direccion:'Zona Servicios Arasur, Calle Cascajos de Bayas, s/n', cp:'09200', lat:42.6833, lng:-2.9500, tipo:'todos', horario:horarioAmplio, tel:'947 32 59 52' },
+ { nombre:'ITV Béjar', ciudad:'Béjar', ccaa:'Castilla y León', operador:'Itevelesa', direccion:'Ctra. Nac. 630, Km 410,5', cp:'37700', lat:40.3902, lng:-5.7632, tipo:'todos', horario:horarioAmplio, tel:'923 40 30 14' },
+
+ // ==================== EXTREMADURA (6) ====================
+ { nombre:'ITV Badajoz', ciudad:'Badajoz', ccaa:'Extremadura', operador:'Dekra', direccion:'Polígono Industrial El Nevero. Av. Miguel de Fabra, 4', cp:'06006', lat:38.9075, lng:-6.9865, tipo:'todos', horario:horarioAmplio, tel:'924 01 37 07' },
+ { nombre:'ITV Cáceres', ciudad:'Cáceres', ccaa:'Extremadura', operador:'Dekra', direccion:'Av. Juan Pablo II', cp:'10005', lat:39.4732, lng:-6.3711, tipo:'todos', horario:horarioAmplio, tel:'927 00 67 92' },
+ { nombre:'ITV Mérida', ciudad:'Mérida', ccaa:'Extremadura', operador:'Dekra', direccion:'Centro Regional de Transportes. Ctra. Mérida-Montijo, Km 60', cp:'06800', lat:38.9213, lng:-6.3425, tipo:'todos', horario:horarioAmplio, tel:'924 00 98 00' },
+ { nombre:'ITV Plasencia', ciudad:'Plasencia', ccaa:'Extremadura', operador:'Dekra', direccion:'Calle Goicoechea, 1', cp:'10600', lat:40.0317, lng:-6.0884, tipo:'todos', horario:horarioAmplio, tel:'927 01 78 82' },
+ { nombre:'ITV Navalmoral de la Mata', ciudad:'Navalmoral de la Mata', ccaa:'Extremadura', operador:'Dekra', direccion:'Antigua N-V, Km 179', cp:'10300', lat:39.8922, lng:-5.5394, tipo:'todos', horario:horarioAmplio, tel:'927 01 66 44' },
+ { nombre:'ITV Don Benito', ciudad:'Don Benito', ccaa:'Extremadura', operador:'Dekra', direccion:'P.I. Ampliación San Isidro, C/ Arquitectos, 1', cp:'06400', lat:38.9573, lng:-5.8578, tipo:'todos', horario:horarioAmplio, tel:'924 80 82 35' },
+
+ // ==================== NAVARRA (4) ====================
+ { nombre:'ITV Pamplona', ciudad:'Pamplona', ccaa:'Navarra', operador:'TÜV', direccion:'C/ Soto de Aizoain (Mercairuña), s/n', cp:'31013', lat:42.8284, lng:-1.6684, tipo:'todos', horario:horarioAmplio, tel:'948 30 35 86' },
+ { nombre:'ITV Noáin', ciudad:'Noáin', ccaa:'Navarra', operador:'Itasua', direccion:'Polígono Talluntxe II, c/62', cp:'31110', lat:42.7541, lng:-1.6318, tipo:'todos', horario:horarioAmplio, tel:'948 31 27 59' },
+ { nombre:'ITV Tudela', ciudad:'Tudela', ccaa:'Navarra', operador:'Itasua', direccion:'Polígono Las Labradas, c/La Rioja, 31', cp:'31500', lat:42.0617, lng:-1.6064, tipo:'todos', horario:horarioAmplio, tel:'948 84 70 00' },
+ { nombre:'ITV Estella', ciudad:'Estella', ccaa:'Navarra', operador:'Itasua', direccion:'Polígono Merkatondoa, 36', cp:'31200', lat:42.6706, lng:-2.0294, tipo:'todos', horario:horarioAmplio, tel:'948 55 60 08' },
+ { nombre:'ITV Arbizu', ciudad:'Arbizu', ccaa:'Navarra', operador:'TÜV', direccion:'Pol. Ind. Ibarrea, 11', cp:'31839', lat:42.9167, lng:-2.0333, tipo:'todos', horario:horarioAmplio, tel:'948 46 40 21' },
+
+ // ==================== LA RIOJA (4) ====================
+ { nombre:'ITV Logroño TÜV', ciudad:'Logroño', ccaa:'La Rioja', operador:'TÜV', direccion:'Pol. Ind Cantabria I - C/ Soto Galo, 8', cp:'26009', lat:42.4650, lng:-2.4450, tipo:'todos', horario:horarioExtendido, tel:'941 24 28 03' },
+ { nombre:'ITV Logroño Portalada', ciudad:'Logroño', ccaa:'La Rioja', operador:'Itevelesa', direccion:'Avenida de Burgos, 109-111', cp:'26006', lat:42.4621, lng:-2.4532, tipo:'todos', horario:horarioExtendido, tel:'941 21 47 06' },
+ { nombre:'ITV Calahorra', ciudad:'Calahorra', ccaa:'La Rioja', operador:'SGS', direccion:'Polígono Industrial de Tejerías Norte, Calle Rifondo, s/n', cp:'26500', lat:42.3037, lng:-1.9675, tipo:'todos', horario:horarioEstandar, tel:'941 14 68 14' },
+ { nombre:'ITV Santo Domingo de la Calzada', ciudad:'Santo Domingo de la Calzada', ccaa:'La Rioja', operador:'SGS', direccion:'Ctra. Burgos, Km 46', cp:'26250', lat:42.4403, lng:-2.9521, tipo:'todos', horario:horarioEstandar, tel:'941 34 27 10' },
+
+ // ==================== CANTABRIA (4) ====================
+ { nombre:'ITV Santander', ciudad:'Santander', ccaa:'Cantabria', operador:'Itevelesa', direccion:'Polígono de Raos, Parcela 10', cp:'39011', lat:43.4386, lng:-3.8325, tipo:'todos', horario:horarioAmplio, tel:'942 35 60 60' },
+ { nombre:'ITV Torrelavega', ciudad:'Torrelavega', ccaa:'Cantabria', operador:'Itevelesa', direccion:'Polígono Industrial Requejada, Parcela R-31', cp:'39312', lat:43.3578, lng:-4.0635, tipo:'todos', horario:horarioAmplio, tel:'942 82 46 82' },
+ { nombre:'ITV Laredo', ciudad:'Laredo', ccaa:'Cantabria', operador:'Itevelesa', direccion:'C/ Wenceslao López Albo, 12', cp:'39770', lat:43.4128, lng:-3.4205, tipo:'todos', horario:horarioAmplio, tel:'942 60 49 68' },
+ { nombre:'ITV Reinosa', ciudad:'Reinosa', ccaa:'Cantabria', operador:'Itevelesa', direccion:'Polígono Industrial La Vega, Parcela 16, Calle Mecanizado, 16', cp:'39200', lat:43.0033, lng:-4.1447, tipo:'todos', horario:horarioAmplio, tel:'942 77 43 89' },
+
+ // ==================== GALICIA (11) ====================
+ { nombre:'ITV A Coruña', ciudad:'A Coruña', ccaa:'Galicia', operador:'SYC', direccion:'Pol. Ind. de Sabón, parcela 69', cp:'15142', lat:43.3037, lng:-8.5103, tipo:'todos', horario:horarioExtendido, tel:'981 60 02 12' },
+ { nombre:'ITV Ferrol', ciudad:'Narón', ccaa:'Galicia', operador:'SYC', direccion:'Pol.A Gándara, Avda.do Mar, 106', cp:'15570', lat:43.5023, lng:-8.1902, tipo:'todos', horario:horarioExtendido, tel:'981 90 30 00' },
+ { nombre:'ITV Lugo', ciudad:'Lugo', ccaa:'Galicia', operador:'SYC', direccion:'Polígono Industrial O Ceao', cp:'27003', lat:43.0189, lng:-7.5745, tipo:'todos', horario:horarioExtendido, tel:'982 22 20 22' },
+ { nombre:'ITV Ourense', ciudad:'Ourense', ccaa:'Galicia', operador:'SYC', direccion:'Polígono Industrial de San Cibrao das Viñas', cp:'32901', lat:42.3167, lng:-7.8667, tipo:'todos', horario:horarioExtendido, tel:'988 21 10 10' },
+ { nombre:'ITV Santiago', ciudad:'Santiago de Compostela', ccaa:'Galicia', operador:'SYC', direccion:'Pol. Ind. Tambre', cp:'15890', lat:42.9036, lng:-8.5448, tipo:'todos', horario:horarioExtendido, tel:'981 56 03 00' },
+ { nombre:'ITV Vigo-Peinador', ciudad:'Vigo', ccaa:'Galicia', operador:'SYC', direccion:'Av. do Aeroporto, 770', cp:'36318', lat:42.2273, lng:-8.6316, tipo:'todos', horario:horarioExtendido, tel:'881 920 322' },
+ { nombre:'ITV Pontevedra', ciudad:'Pontevedra', ccaa:'Galicia', operador:'SYC', direccion:'Ctra. Pontevedra-Ourense, As Pontes, 36154, Bora', cp:'36154', lat:42.4310, lng:-8.6443, tipo:'todos', horario:horarioExtendido, tel:'986 87 21 10' },
+ { nombre:'ITV Vilagarcía', ciudad:'Vilagarcía de Arousa', ccaa:'Galicia', operador:'SYC', direccion:'Polígono Industrial de Vilagarcía', cp:'36600', lat:42.5932, lng:-8.7687, tipo:'todos', horario:horarioExtendido, tel:'986 50 03 00' },
+ { nombre:'ITV Lalín', ciudad:'Lalín', ccaa:'Galicia', operador:'SYC', direccion:'Parque Empresarial Lalín 2000', cp:'36500', lat:42.6606, lng:-8.1117, tipo:'agricola', horario:horarioExtendido, tel:'986 78 40 11' },
+ { nombre:'ITV Monforte de Lemos', ciudad:'Monforte de Lemos', ccaa:'Galicia', operador:'SYC', direccion:'Pol. Ind. A Pinguela', cp:'27400', lat:42.5214, lng:-7.5147, tipo:'todos', horario:horarioExtendido, tel:'982 40 22 10' },
+ { nombre:'ITV Viveiro', ciudad:'Viveiro', ccaa:'Galicia', operador:'SYC', direccion:'Polígono Industrial de Landrove', cp:'27863', lat:43.6500, lng:-7.6000, tipo:'todos', horario:horarioExtendido, tel:'982 56 07 12' },
+
+ // ==================== ASTURIAS (5) ====================
+ { nombre:'ITV Gijón', ciudad:'Gijón', ccaa:'Asturias', operador:'ITVASA', direccion:'Camino del Melón, 44 - Tremañes', cp:'33211', lat:43.5201, lng:-5.6863, tipo:'todos', horario:horarioExtendido, tel:'985 300 103' },
+ { nombre:'ITV Gijón II', ciudad:'Gijón', ccaa:'Asturias', operador:'ITVASA', direccion:'Camino del Matadero, 180', cp:'33211', lat:43.5275, lng:-5.6571, tipo:'pesado', horario:horarioExtendido, tel:'985 30 01 03' },
+ { nombre:'ITV Oviedo', ciudad:'Oviedo', ccaa:'Asturias', operador:'ITVASA', direccion:'Pruvia de Abajo', cp:'33192', lat:43.4093, lng:-5.8536, tipo:'todos', horario:horarioExtendido, tel:'985 79 20 10' },
+ { nombre:'ITV Avilés', ciudad:'Avilés', ccaa:'Asturias', operador:'ITVASA', direccion:'Pol. Ind.', cp:'33400', lat:43.5547, lng:-5.9248, tipo:'todos', horario:horarioExtendido, tel:'985 54 00 30' },
+ { nombre:'ITV Jarrio', ciudad:'Jarrio', ccaa:'Asturias', operador:'ITVASA', direccion:'Pol. Ind. Río Pinto, s/n', cp:'33719', lat:43.5431, lng:-6.7667, tipo:'agricola', horario:horarioExtendido, tel:'985 63 60 12' },
+
+ // ==================== CANARIAS (9) ====================
+ { nombre:'ITV Las Palmas I', ciudad:'Las Palmas de G.C.', ccaa:'Canarias', operador:'SGS', direccion:'C/ Arguineguín, 20', cp:'35014', lat:28.0875, lng:-15.4517, tipo:'todos', horario:horarioContinuo, tel:'928 48 07 51' },
+ { nombre:'ITV Las Palmas II', ciudad:'Las Palmas de G.C.', ccaa:'Canarias', operador:'SGS', direccion:'C/ Arrecife, 24', cp:'35014', lat:28.1033, lng:-15.4466, tipo:'todos', horario:horarioContinuo, tel:'928 48 10 96' },
+ { nombre:'ITV Arinaga', ciudad:'Agüimes', ccaa:'Canarias', operador:'Applus', direccion:'Pol. Ind. Arinaga', cp:'35118', lat:27.9052, lng:-15.4465, tipo:'pesado', horario:horarioContinuo, tel:'928 73 30 00' },
+ { nombre:'ITV Jinámar', ciudad:'Telde', ccaa:'Canarias', operador:'Applus', direccion:'Pol. Ind. Jinámar', cp:'35220', lat:28.0258, lng:-15.4057, tipo:'todos', horario:horarioContinuo, tel:'928 71 30 32' },
+ { nombre:'ITV Miller Bajo', ciudad:'Las Palmas de G.C.', ccaa:'Canarias', operador:'Applus', direccion:'C/ Luis Saavedra Miranda, 59', cp:'35010', lat:28.1329, lng:-15.4403, tipo:'todos', horario:horarioContinuo, tel:'928 47 18 00' },
+ { nombre:'ITV Puerto de Las Palmas', ciudad:'Las Palmas de G.C.', ccaa:'Canarias', operador:'SGS', direccion:'Avda. de las Petrolíferas, s/n', cp:'35008', lat:28.1522, lng:-15.4198, tipo:'pesado', horario:horarioContinuo, tel:'928 46 65 11' },
+ { nombre:'ITV La Pardilla', ciudad:'Telde', ccaa:'Canarias', operador:'SGS', direccion:'Pol. Ind. Bocabarranco', cp:'35213', lat:27.9924, lng:-15.4166, tipo:'todos', horario:horarioContinuo, tel:'928 70 00 15' },
+ { nombre:'ITV Adeje', ciudad:'Adeje', ccaa:'Canarias', operador:'Applus', direccion:'P.I. Barranco de Las Torres C/ Bentinerfe nº 42', cp:'38670', lat:28.1226, lng:-16.7261, tipo:'todos', horario:horarioFinde, tel:'922 78 11 34' },
+ { nombre:'ITV Santa María de Guía', ciudad:'Santa María de Guía', ccaa:'Canarias', operador:'SGS', direccion:'Pol. Ind. San Fernando, s/n', cp:'35450', lat:28.1333, lng:-15.6167, tipo:'todos', horario:horarioContinuo, tel:'928 88 10 12' },
+
+ // ==================== BALEARES (7) ====================
+ { nombre:'ITV Palma I', ciudad:'Palma', ccaa:'Baleares', operador:'Itevelesa', direccion:'Pol. Ind. Son Castelló, C/ Gremi de Sucrers i Candelers, 2', cp:'07009', lat:39.5960, lng:2.6706, tipo:'todos', horario:horarioMadrugador, tel:'971 75 75 57' },
+ { nombre:'ITV Palma II', ciudad:'Palma', ccaa:'Baleares', operador:'Itevelesa', direccion:'Cami Son Fangos, 156, Can Pastilla', cp:'07610', lat:39.5490, lng:2.7155, tipo:'todos', horario:horarioAmplio, tel:'971 26 05 11' },
+ { nombre:'ITV Palma Son Oms', ciudad:'Palma', ccaa:'Baleares', operador:'Itevelesa', direccion:'Pol. Ind. Son Oms', cp:'07610', lat:39.5496, lng:2.6803, tipo:'todos', horario:horarioAmplio, tel:'971 74 80 30' },
+ { nombre:'ITV Inca', ciudad:'Inca', ccaa:'Baleares', operador:'Itevelesa', direccion:'Pol. Ind.', cp:'07300', lat:39.7212, lng:2.9106, tipo:'todos', horario:horarioAmplio, tel:'971 50 00 62' },
+ { nombre:'ITV Manacor', ciudad:'Manacor', ccaa:'Baleares', operador:'Itevelesa', direccion:'Pol. Ind.', cp:'07500', lat:39.5698, lng:3.2095, tipo:'todos', horario:horarioAmplio, tel:'971 55 00 36' },
+ { nombre:'ITV Ibiza', ciudad:'Ibiza', ccaa:'Baleares', operador:'Itevelesa', direccion:'Carrer de Bajolí, 40', cp:'07800', lat:38.9189, lng:1.4242, tipo:'todos', horario:horarioAmplio, tel:'971 19 59 06' },
+ { nombre:'ITV Mahón', ciudad:'Mahón', ccaa:'Baleares', operador:'Itevelesa', direccion:'Carretera Me-1, km 42,5', cp:'07700', lat:39.8894, lng:4.2651, tipo:'todos', horario:horarioAmplio, tel:'971 35 45 02' },
+ { nombre:'ITV Calvià', ciudad:'Calvià', ccaa:'Baleares', operador:'SGS', direccion:'Pol. Ind. Son Bugadelles, C/ Es Trenc, 2', cp:'07180', lat:39.5089, lng:2.5153, tipo:'todos', horario:horarioEstandar, tel:'971 69 03 11' },
+
+ // ==================== CEUTA Y MELILLA (5) ====================
+ { nombre:'ITV Ceuta - El Tarajal', ciudad:'Ceuta', ccaa:'Ceuta', operador:'Itevelesa', direccion:'Pol. Ind. Alborán, Vía Pública Arroyo de las Bombas, 26-31', cp:'51002', lat:35.8711, lng:-5.3411, tipo:'todos', horario:horarioEstandar, tel:'956 50 73 74' },
+ { nombre:'ITV Ceuta - Muelle de Poniente', ciudad:'Ceuta', ccaa:'Ceuta', operador:'Itevelesa', direccion:'Explanada Muelle de Poniente, 27-29', cp:'51001', lat:35.8883, lng:-5.3186, tipo:'moto', horario:horarioEstandar, tel:'956 55 33 92' },
+ { nombre:'ITV Melilla - El Sepes', ciudad:'Melilla', ccaa:'Melilla', operador:'Ivesur', direccion:'Pol. Ind. El Sepes, Calle La Dalia, 25', cp:'52006', lat:35.2801, lng:-2.9531, tipo:'todos', horario:horarioEstandar, tel:'952 67 09 23' },
+ { nombre:'ITV Melilla - Centro', ciudad:'Melilla', ccaa:'Melilla', operador:'Ivesur', direccion:'Calle la Dalia, 25', cp:'52006', lat:35.2825, lng:-2.9501, tipo:'todos', horario:horarioEstandar, tel:'952 68 63 13' }
+];
+
+var map, markersLayer, userMarker;
+var tilesClaro, tilesOscuro, capaActual;
+var modoOscuroMapa = localStorage.getItem('modoOscuroMapa') === 'true';
+var clusterDisponible = true;
+
+function iniciarTodo(tieneCluster){
+ clusterDisponible = tieneCluster;
+ if(localStorage.getItem('cookiesAceptadas') === null){
+ document.getElementById('cookieBanner').style.display='block';
+ }
+ try {
+ document.getElementById('mapa').innerHTML = '';
+ inicializarMapa();
+ leerFiltrosDesdeURL();
+ aplicarFiltros(false);
+ console.log('[ITVcheck] ✅ Mapa inicializado correctamente');
+ } catch(e){
+ console.error('[ITVcheck] ❌ Error al inicializar el mapa:', e);
+ document.getElementById('mapa').innerHTML = '<div class="mapa-error">❌ Error al inicializar el mapa: ' + e.message + '</div>';
+ }
+}
+
+function inicializarMapa(){
+ map = L.map('mapa', { scrollWheelZoom: true, zoomControl: true }).setView([40.0, -3.7], 6);
+ tilesClaro = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+ attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="nofollow noopener">OpenStreetMap</a>',
+ maxZoom: 19
+ });
+ tilesOscuro = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+ attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="nofollow noopener">OpenStreetMap</a> &copy; <a href="https://carto.com/" target="_blank" rel="nofollow noopener">CARTO</a>',
+ maxZoom: 19
+ });
+ capaActual = modoOscuroMapa ? tilesOscuro : tilesClaro;
+ capaActual.addTo(map);
+ document.getElementById('mapToggleBtn').innerText = modoOscuroMapa ? '☀️' : '🌙';
+ if(clusterDisponible && typeof L.markerClusterGroup === 'function'){
+ markersLayer = L.markerClusterGroup({
+ showCoverageOnHover: false,
+ maxClusterRadius: 50,
+ spiderfyOnMaxZoom: true,
+ disableClusteringAtZoom: 14
+ });
+ } else {
+ markersLayer = L.layerGroup();
+ }
+ map.addLayer(markersLayer);
+ setTimeout(function(){ map.invalidateSize(); }, 300);
+}
+
+function toggleModoMapa(){
+ if(capaActual){ map.removeLayer(capaActual); }
+ modoOscuroMapa = !modoOscuroMapa;
+ capaActual = modoOscuroMapa ? tilesOscuro : tilesClaro;
+ capaActual.addTo(map);
+ localStorage.setItem('modoOscuroMapa', modoOscuroMapa);
+ document.getElementById('mapToggleBtn').innerText = modoOscuroMapa ? '☀️' : '🌙';
+}
+
+function estaAbierta(estacion){
+ if(!estacion.horario) return false;
+ var ahora = new Date();
+ var dia = ahora.getDay();
+ var hora = ahora.getHours() * 60 + ahora.getMinutes();
+ var tramos;
+ if(dia === 0){ tramos = estacion.horario.dom; }
+ else if(dia === 6){ tramos = estacion.horario.sab; }
+ else { tramos = estacion.horario.lv; }
+ if(!tramos || tramos.length === 0) return false;
+ return tramos.some(function(t){
+ var apertura = parseInt(t[0].split(':')[0]) * 60 + parseInt(t[0].split(':')[1]);
+ var cierre = parseInt(t[1].split(':')[0]) * 60 + parseInt(t[1].split(':')[1]);
+ return hora >= apertura && hora < cierre;
+ });
+}
+
+function crearIcono(tipo){
+ var claseExtra = tipo === 'moto' ? 'tipo-moto' :
+ tipo === 'pesado' ? 'tipo-pesado' :
+ tipo === 'agricola' ? 'tipo-agricola' : 'tipo-todos';
+ var emoji = tipo === 'moto' ? '🏍️' :
+ tipo === 'pesado' ? '🚚' :
+ tipo === 'agricola' ? '🚜' : '🚗';
+ return L.divIcon({
+ className: 'custom-marker',
+ html: '<div class="marker-pin ' + claseExtra + '">' + emoji + '</div>',
+ iconSize: [26, 26],
+ iconAnchor: [13, 13],
+ popupAnchor: [0, -13]
+ });
+}
+
+function aplicarFiltros(actualizarURL){
+ var texto = document.getElementById('busqueda').value.toLowerCase().trim();
+ var ccaaFiltro = document.getElementById('ccaa').value;
+ var operadorFiltro = document.getElementById('operador').value;
+ var tipoFiltro = document.getElementById('tipo').value;
+ var filtradas = estaciones.filter(function(e){
+ var coincideTexto = texto === '' ||
+ e.nombre.toLowerCase().includes(texto) ||
+ e.ciudad.toLowerCase().includes(texto);
+ var coincideCCAA = ccaaFiltro === '' || e.ccaa === ccaaFiltro;
+ var coincideOperador = operadorFiltro === '' || e.operador === operadorFiltro;
+ var coincideTipo = tipoFiltro === '' || e.tipo === 'todos' || e.tipo === tipoFiltro;
+ return coincideTexto && coincideCCAA && coincideOperador && coincideTipo;
+ });
+ actualizarMapa(filtradas);
+ var abiertas = filtradas.filter(estaAbierta).length;
+ document.getElementById('contador').innerText =
+ filtradas.length + (filtradas.length === 1 ? ' estación' : ' estaciones') +
+ ' · ' + abiertas + ' abierta' + (abiertas === 1 ? '' : 's') + ' ahora';
+ actualizarListaLateral(filtradas);
+ if(actualizarURL !== false){ actualizarURLConFiltros(); }
+}
+
+function actualizarMapa(filtradas){
+ markersLayer.clearLayers();
+ var bounds = [];
+ filtradas.forEach(function(e){
+ var abierta = estaAbierta(e);
+ var estadoTexto = abierta
+ ? '<span style="color:#10B981; font-weight:700;">● Abierto ahora</span>'
+ : '<span style="color:#EF4444; font-weight:700;">● Cerrado ahora</span>';
+ var mapsUrl = 'https://www.google.com/maps/dir/?api=1&destination=' +
+ encodeURIComponent(e.nombre + ' ' + e.direccion + ' ' + e.ciudad);
+ var botones = '<a href="' + mapsUrl + '" target="_blank" rel="nofollow noopener" class="btn-popup btn-como-llegar">🧭 Cómo llegar</a>';
+ if(e.tel){
+ var telLimpio = e.tel.replace(/\D/g,'');
+ botones += '<a href="tel:' + e.tel + '" class="btn-popup btn-llamar">📞 ' + e.tel + '</a>';
+ botones += '<a href="https://wa.me/' + telLimpio + '" target="_blank" rel="nofollow noopener" class="btn-popup btn-whatsapp">💬 WhatsApp</a>';
+ }
+ var popup = '<div style="padding:16px; min-width:280px;">' +
+ '<strong style="color:#10B981; font-size:16px; display:block; margin-bottom:4px;">' + e.nombre + '</strong>' +
+ '<div style="color:#64748B; font-size:12px; margin-bottom:6px;">📍 ' + e.ciudad + ' · ' + e.ccaa + (e.cp ? ' (' + e.cp + ')' : '') + '</div>' +
+ (e.direccion ? '<div style="color:#1E293B; font-size:12px; margin-bottom:8px;">' + e.direccion + '</div>' : '') +
+ '<div style="color:#64748B; font-size:11px; margin-bottom:6px;">Operador: <strong>' + e.operador + '</strong> · Tipo: <strong>' + e.tipo + '</strong></div>' +
+ '<div style="font-size:12px; margin-bottom:10px;">' + estadoTexto + '</div>' +
+ '<div style="border-top:1px solid #E2E8F0; padding-top:10px;">' + botones + '</div>' +
+ '</div>';
+ var marker = L.marker([e.lat, e.lng], { icon: crearIcono(e.tipo) }).bindPopup(popup);
+ markersLayer.addLayer(marker);
+ bounds.push([e.lat, e.lng]);
+ });
+ if(bounds.length > 0 && map){
+ map.fitBounds(bounds, { padding: [40, 40], maxZoom: 14 });
+ }
+}
+
+function actualizarListaLateral(filtradas){
+ var lista = document.getElementById('lista');
+ lista.innerHTML = '';
+ if(filtradas.length === 0){
+ lista.innerHTML = '<div style="font-size:13px; color:var(--tg); text-align:center; padding:15px;">Sin resultados. Prueba otros filtros.</div>';
+ return;
+ }
+ var ordenadas = filtradas.slice().sort(function(a,b){
+ var aA = estaAbierta(a) ? 0 : 1;
+ var bA = estaAbierta(b) ? 0 : 1;
+ if(aA !== bA) return aA - bA;
+ return a.ciudad.localeCompare(b.ciudad);
+ });
+ ordenadas.forEach(function(e){
+ var abierta = estaAbierta(e);
+ var item = document.createElement('div');
+ item.className = 'item';
+ item.innerHTML =
+ '<span class="nombre">' + e.nombre + '</span>' +
+ '<span class="meta">📍 ' + e.ciudad + ' · ' + e.operador + '</span><br>' +
+ '<span class="estado ' + (abierta ? 'abierto' : 'cerrado') + '">' + (abierta ? '● Abierto ahora' : '● Cerrado') + '</span>';
+ item.onclick = function(){
+ map.setView([e.lat, e.lng], 15);
+ markersLayer.eachLayer(function(m){
+ var ll = m.getLatLng();
+ if(ll.lat === e.lat && ll.lng === e.lng){ m.openPopup(); }
+ });
+ };
+ lista.appendChild(item);
+ });
+}
+
+function actualizarURLConFiltros(){
+ var params = new URLSearchParams();
+ var q = document.getElementById('busqueda').value.trim();
+ var ccaa = document.getElementById('ccaa').value;
+ var op = document.getElementById('operador').value;
+ var tipo = document.getElementById('tipo').value;
+ if(q) params.set('q', q);
+ if(ccaa) params.set('ccaa', ccaa);
+ if(op) params.set('op', op);
+ if(tipo) params.set('tipo', tipo);
+ var nuevaURL = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
+ history.replaceState(null, '', nuevaURL);
+}
+
+function leerFiltrosDesdeURL(){
+ var params = new URLSearchParams(window.location.search);
+ document.getElementById('busqueda').value = params.get('q') || '';
+ document.getElementById('ccaa').value = params.get('ccaa') || '';
+ document.getElementById('operador').value = params.get('op') || '';
+ document.getElementById('tipo').value = params.get('tipo') || '';
+}
+
+function compartirEnlace(){
+ actualizarURLConFiltros();
+ var url = window.location.href;
+ if(navigator.clipboard && navigator.clipboard.writeText){
+ navigator.clipboard.writeText(url).then(function(){
+ mostrarToast('✅ Enlace copiado al portapapeles');
+ }, function(){
+ prompt('Copia este enlace:', url);
+ });
+ } else {
+ prompt('Copia este enlace:', url);
+ }
+}
+
+function usarMiUbicacion(){
+ if(!navigator.geolocation){
+ alert('Tu navegador no soporta geolocalización.');
+ return;
+ }
+ document.getElementById('contador').innerText = 'Obteniendo tu ubicación...';
+ navigator.geolocation.getCurrentPosition(
+ function(position){
+ var lat = position.coords.latitude;
+ var lng = position.coords.longitude;
+ if(userMarker){ map.removeLayer(userMarker); }
+ userMarker = L.marker([lat, lng], {
+ icon: L.divIcon({
+ className: 'user-marker',
+ html: '<div style="background:#3B82F6; width:20px; height:20px; border-radius:50%; border:4px solid white; box-shadow:0 0 0 4px rgba(59,130,246,.3), 0 2px 8px rgba(0,0,0,.4);"></div>',
+ iconSize: [20, 20],
+ iconAnchor: [10, 10]
+ })
+ }).bindPopup('<div style="font-weight:700; color:#3B82F6; padding:8px;">📍 Estás aquí</div>').addTo(map);
+ var conDistancia = estaciones.map(function(e){
+ var R = 6371;
+ var dLat = (e.lat - lat) * Math.PI / 180;
+ var dLng = (e.lng - lng) * Math.PI / 180;
+ var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+ Math.cos(lat * Math.PI / 180) * Math.cos(e.lat * Math.PI / 180) *
+ Math.sin(dLng/2) * Math.sin(dLng/2);
+ var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+ return Object.assign({}, e, { distancia: R * c });
+ }).sort(function(a,b){ return a.distancia - b.distancia; }).slice(0, 15);
+ markersLayer.clearLayers();
+ var bounds = [[lat, lng]];
+ conDistancia.forEach(function(e){
+ var abierta = estaAbierta(e);
+ var mapsUrl = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(e.nombre + ' ' + e.ciudad);
+ var telLimpio = e.tel ? e.tel.replace(/\D/g,'') : '';
+ var popup = '<div style="padding:16px; min-width:260px;">' +
+ '<strong style="color:#10B981; font-size:16px; display:block; margin-bottom:4px;">' + e.nombre + '</strong>' +
+ '<div style="color:#64748B; font-size:12px; margin-bottom:6px;">📍 ' + e.ciudad + ' · a ' + e.distancia.toFixed(1) + ' km</div>' +
+ (e.tel ? '<div style="color:#3B82F6; font-size:12px; font-weight:700; margin-bottom:6px;">📞 ' + e.tel + '</div>' : '') +
+ '<div style="font-size:12px; margin-bottom:10px;">' + (abierta ? '<span style="color:#10B981;font-weight:700;">● Abierto ahora</span>' : '<span style="color:#EF4444;font-weight:700;">● Cerrado</span>') + '</div>' +
+ '<a href="' + mapsUrl + '" target="_blank" rel="nofollow noopener" class="btn-popup btn-como-llegar">🧭 Cómo llegar</a>' +
+ (telLimpio ? '<a href="tel:' + e.tel + '" class="btn-popup btn-llamar">📞 Llamar</a>' : '') +
+ '</div>';
+ var marker = L.marker([e.lat, e.lng], { icon: crearIcono(e.tipo) }).bindPopup(popup);
+ markersLayer.addLayer(marker);
+ bounds.push([e.lat, e.lng]);
+ });
+ var lista = document.getElementById('lista');
+ lista.innerHTML = '<div style="font-size:12px; color:var(--ve); font-weight:700; margin-bottom:8px;">📌 Las 15 más cercanas a ti</div>';
+ conDistancia.forEach(function(e){
+ var abierta = estaAbierta(e);
+ var item = document.createElement('div');
+ item.className = 'item';
+ item.innerHTML = '<span class="nombre">' + e.nombre + '</span>' +
+ '<span class="meta">📍 ' + e.ciudad + ' · ' + e.distancia.toFixed(1) + ' km</span><br>' +
+ '<span class="estado ' + (abierta ? 'abierto' : 'cerrado') + '">' + (abierta ? '● Abierto' : '● Cerrado') + '</span>';
+ item.onclick = function(){
+ map.setView([e.lat, e.lng], 14);
+ markersLayer.eachLayer(function(m){
+ var ll = m.getLatLng();
+ if(ll.lat === e.lat && ll.lng === e.lng){ m.openPopup(); }
+ });
+ };
+ lista.appendChild(item);
+ });
+ map.fitBounds(bounds, { padding: [50, 50] });
+ document.getElementById('contador').innerText = '15 estaciones más cercanas a tu ubicación';
+ mostrarToast('📍 Ubicación detectada');
+ },
+ function(error){
+ document.getElementById('contador').innerText = 'No se pudo obtener tu ubicación';
+ alert('No se pudo obtener tu ubicación. Revisa los permisos del navegador.');
+ },
+ { enableHighAccuracy: true, timeout: 10000 }
+ );
+}
+
+window.addEventListener('load', function(){
+ console.log('[ITVcheck] Verificando librerías...');
+ console.log(' · Leaflet: ' + (typeof L !== 'undefined' ? '✅' : '❌'));
+ console.log(' · MarkerCluster: ' + (typeof L !== 'undefined' && typeof L.markerClusterGroup !== 'undefined' ? '✅' : '❌'));
+ if(typeof L === 'undefined'){
+ document.getElementById('mapa').innerHTML =
+ '<div class="mapa-error">' +
+ '❌ No se pudo cargar el mapa de Leaflet.<br><br>' +
+ '<strong>Posibles causas:</strong><br>' +
+ '1. Tienes un bloqueador de anuncios activo (uBlock, AdBlock, Brave Shields). Desactívalo para este sitio.<br>' +
+ '2. Estás abriendo el archivo con <code>file://</code> sin un servidor local.<br>' +
+ '3. Sin conexión a internet.<br>' +
+ '4. La CSP del servidor bloquea CDNs externos.' +
+ '</div>';
+ return;
+ }
+ iniciarTodo(typeof L.markerClusterGroup !== 'undefined');
+});
+</script>
+</body>
+</html>

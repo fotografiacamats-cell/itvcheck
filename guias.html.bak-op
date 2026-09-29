@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Todas las guías de ITVcheck organizadas por categorías: guía completa de la ITV, mantenimiento pre-ITV, tipos de vehículos, trámites, novedades 2026 y accesorios.">
+<title>Todas las Guías de ITVcheck: Mantenimiento, Trámites y Novedades 2026</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});
+function loadScripts(){
+ var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-T1PZZHFJ4E';s.async=true;document.head.appendChild(s);
+ gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});
+ gtag('js',new Date());gtag('config','G-T1PZZHFJ4E');
+ var a=document.createElement('script');a.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7947218272068445';a.async=true;a.crossOrigin='anonymous';document.head.appendChild(a);
+}
+if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
+</script>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"CollectionPage",
+ "name":"Todas las guías de ITVcheck",
+ "description":"Índice completo de guías sobre ITV, mantenimiento del coche, trámites DGT y accesorios.",
+ "url":"https://itvcheck.es/guias"
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="canonical" href="https://itvcheck.es/guias">
+</head>
+<body>
+<div id="cookieBanner">
+ <p>Utilizamos cookies para mejorar tu experiencia y mostrar anuncios de Google AdSense. <a href="politica-cookies" style="color:#FACC15;">Más información</a></p>
+ <button onclick="aceptarCookies()">Aceptar</button>
+ <button class="reject" onclick="rechazarCookies()">Rechazar</button>
+ <button class="config" onclick="window.location.href='politica-cookies'">Configurar</button>
+</div>
+
+<a href="https://api.whatsapp.com/send?text=Estoy%20explorando%20las%20gu%C3%ADas%20de%20ITVcheck" target="_blank" id="whatsappBtn" aria-label="Contactar por WhatsApp">💬</a>
+
+<header>
+ <a href="index" class="logo">ITV<span>check</span></a>
+ <button class="hamburger" onclick="toggleMenu()">☰</button>
+ <nav id="menu">
+ <a href="index">Inicio</a>
+ <a href="cuando-me-toca-itv">Calculadora</a>
+ <a href="calculadora-precio-itv">Precios</a>
+ <a href="estaciones-itv">Estaciones</a>
+ <a href="checklist-itv">Checklist</a>
+ <a href="itv-por-comunidad">CCAA</a>
+ <a href="contacto">Contacto</a>
+ </nav>
+</header>
+
+<div class="hero-wrapper">
+ <span class="hero-tag">📚 25+ GUÍAS ACTUALIZADAS</span>
+ <h1>Todas las <span>guías</span> de ITVcheck</h1>
+ <p class="hero-sub">Contenido verificado, actualizado a 2026 y organizado por categorías para que encuentres lo que buscas en segundos.</p>
+</div>
+
+<!-- GUÍA PILAR DESTACADA -->
+<div class="pilar-section">
+ <a href="guia-completa-itv" class="pilar-card">
+ <span class="pilar-tag">⭐ GUÍA DESTACADA</span>
+ <h2>Guía Completa de la ITV en España 2026</h2>
+ <p>La guía más completa del sitio. Cubre desde la periodicidad según tu vehículo hasta los precios actualizados de las 17 comunidades, pasando por el proceso de inspección, la documentación obligatoria y las novedades de 2026.</p>
+ <div class="pilar-meta">
+ <span>📅 Actualizado septiembre 2026</span>
+ <span>🗺️ 17 CCAA + Ceuta y Melilla</span>
+ <span>📊 Precios, plazos y sanciones oficiales</span>
+ </div>
+ <span class="pilar-cta">Leer la guía completa →</span>
+ </a>
+</div>
+
+<div class="container">
+
+ <!-- CATEGORÍA 1: MANTENIMIENTO PRE-ITV -->
+ <div class="categoria categoria-mantenimiento">
+ <div class="categoria-header">
+ <span class="categoria-icon">🔧</span>
+ <div class="categoria-texto">
+ <h2>Mantenimiento y revisión pre-ITV</h2>
+ <p>Prepara tu coche y evita el rechazo en la inspección.</p>
+ </div>
+ </div>
+ <div class="grid">
+ <a href="guia-luces" class="card">
+ <span class="card-icon">💡</span>
+ <h3>Revisión de luces</h3>
+ <p>La causa nº1 de rechazo en la ITV. Aprende a revisar todas las luces en 5 minutos.</p>
+ <span class="card-link">Leer guía</span>
+ </a>
+ <a href="guia-neumaticos" class="card">
+ <span class="card-icon">🛞</span>
+ <h3>Revisión de neumáticos</h3>
+ <p>Dibujo mínimo legal, presión correcta y defectos que causan rechazo.</p>
+ <span class="card-link">Leer guía</span>
+ </a>
+ <a href="guia-frenos" class="card">
+ <span class="card-icon">🛑</span>
+ <h3>Revisión de frenos</h3>
+ <p>El 12% de los rechazos. Aprende a revisarlos en casa sin herramientas especiales.</p>
+ <span class="card-link">Leer guía</span>
+ </a>
+ <a href="guia-gases" class="card">
+ <span class="card-icon">💨</span>
+ <h3>Prueba de gases</h3>
+ <p>El 19% de los rechazos. Trucos verificados para pasarla a la primera.</p>
+ <span class="card-link">Leer guía</span>
+ </a>
+ <a href="guia-documentacion" class="card">
+ <span class="card-icon">📄</span>
+ <h3>Documentación obligatoria</h3>
+ <p>Permiso, ficha técnica y seguro. Qué llevar exactamente a la ITV.</p>
+ <span class="card-link">Leer guía</span>
+ </a>
+ <a href="guia-bateria" class="card">
+ <span class="card-icon">🔋</span>
+ <h3>Cambiar la batería</h3>
+ <p>Los 5 pasos para cambiar la batería de tu coche en 15 minutos.</p>
+ <span class="card-link">Leer guía</span>
+ </a>
+ <a href="guia-bombilla" class="card">
+ <span class="card-icon">💡</span>
+ <h3>Cambiar la bombilla</h3>
+ <p>Cómo cambiar la bombilla del faro sin dañar el cristal ni la instalación.</p>
+ <span class="card-link">Leer guía</span>
+ </a>
+ <a href="limpiar-faros-coche" class="card">
+ <span class="card-icon">🚗</span>
+ <h3>Limpiar y restaurar faros</h3>
+ <p>Recupera la transparencia de los faros amarillentos y evita el rechazo.</p>
+ <span class="card-link">Leer guía</span>
+ </a>
+ </div>
+ </div>
+
+ <div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7947218272068445" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins></div>
+
+ <!-- CATEGORÍA 2: TIPOS DE VEHÍCULOS -->
+ <div class="categoria categoria-vehiculos">
+ <div class="categoria-header">
+ <span class="categoria-icon">🚗</span>
+ <div class="categoria-texto">
+ <h2>Guías por tipo de vehículo</h2>
+ <p>Todo lo específico para tu moto, eléctrico, camper o coche de gas.</p>
+ </div>
+ </div>
+ <div class="grid">
+ <a href="guia-motos" class="card">
+ <span class="card-icon">🏍️</span>
+ <h3>ITV para motos</h3>
+ <p>Los 5 puntos que revisan y cómo preparar tu moto para aprobar.</p>
+ <span class="card-link">Leer guía</span>
+ </a>
+ <a href="itv-coches-electricos" class="card">
+ <span class="card-icon">⚡</span>
+ <h3>ITV para coches eléctricos</h3>
+ <p>Sistema AVAS, batería de alta tensión y frenada regenerativa.</p>
+ <span class="card-link">Leer guía</span>
+ </a>
+ <a href="itv-coches-gas" class="card">
+ <span class="card-icon">⛽</span>
+ <h3>ITV para GLP y GNC</h3>
+ <p>Documentación obligatoria y controles específicos del sistema de gas.</p>
+ <span class="card-link">Leer guía</span>
+ </a>
+ <a href="itv-coches-importados" class="card">
+ <span class="card-icon">🌍</span>
+ <h3>ITV para coches importados</h3>
+ <p>Requisitos de Aduanas, DGT y documentación para la primera ITV.</p>
+ <span class="card-link">Leer guía</span>
+ </a>
+ <a href="itv-camper-furgonetas" class="card">
+ <span class="card-icon">🚐</span>
+ <h3>ITV para furgonetas camper</h3>
+ <p>Nueva norma DGT: ITV cada 6 meses en algunos casos. Cómo evitarlo.</p>
+ <span class="card-link">Leer guía</span>
+ </a>
+ <a href="mantenimiento-coches-electricos" class="card">
+ <span class="card-icon">🔌</span>
+ <h3>Mantenimiento de eléctricos</h3>
+ <p>La regla del 20-80, cuidado de la batería y qué revisan en la ITV.</p>
+ <span class="card-link">Leer guía</span>
+ </a>
+ </div>
+ </div>
+
+ <!-- CATEGORÍA 3: TRÁMITES Y SITUACIONES -->
+ <div class="categoria categoria-tramites">
+ <div class="categoria-header">
+ <span class="categoria-icon">📋</span>
+ <div class="categoria-texto">
+ <h2>Trámites, seguros y situaciones especiales</h2>
+ <p>Qué hacer si suspendes, dar de baja el coche o elegir seguro.</p>
+ </div>
+ </div>
+ <div class="grid">
+<a href="como-interpretar-informe-itv" class="card">
+<span class="card-icon">&#128220;</span>
+<h3>C&oacute;mo interpretar el informe de la ITV</h3>
+<p>Qu&eacute; significa cada c&oacute;digo, gravedad, coste y qu&eacute; hacer seg&uacute;n el resultado.</p>
+<span class="card-link">Leer gu&iacute;a</span>
+</a>
+<a href="tipos-defectos-itv" class="card">
+<span class="card-icon">&#128203;</span>
+<h3>Tipos de defectos en la ITV</h3>
+<p>Gu&iacute;a completa: leves, graves y muy graves. Costes, plazos y subsanaci&oacute;n.</p>
+<span class="card-link">Leer gu&iacute;a</span>
+</a>
+ <a href="que-pasa-si-suspendo-la-itv" class="card">
+ <span class="card-icon">📉</span>
+ <h3>Si suspendes la ITV</h3>
+ <p>Plazos, multas y cómo gestionar la segunda inspección sin sorpresas.</p>
+ <span class="card-link">Leer guía</span>
+ </a>
+ <a href="como-dar-de-baja-un-coche" class="card">
+ <span class="card-icon">🗑️</span>
+ <h3>Dar de baja un coche</h3>
+ <p>Trámites en la DGT, entrega en desguace y cuánto te pagan.</p>
+ <span class="card-link">Leer guía</span>
+ </a>
+ <a href="seguros-coche" class="card">
+ <span class="card-icon">🛡️</span>
+ <h3>Seguros de coche</h3>
+ <p>Tipos de cobertura, precios 2026 y cómo ahorrar al comparar.</p>
+ <span class="card-link">Leer guía</span>
+ </a>
+ </div>
+ </div>
+
+ <div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7947218272068445" data-ad-slot="0987654321" data-ad-format="auto" data-full-width-responsive="true"></ins></div>
+
+ <!-- CATEGORÍA 3.5: MECÁNICA DIY -->
+ <div class="categoria categoria-mecanica">
+ <div class="categoria-header">
+ <span class="categoria-icon">🔧</span>
+ <div class="categoria-texto">
+ <h2>Mecánica DIY: guías por coche</h2>
+ <p>Aprende a cambiar bombillas, baterías y escobillas de los modelos más vendidos en España.</p>
+ </div>
+ </div>
+ <div class="grid">
+ <a href="mecanica" class="card">
+ <span class="card-icon">🔍</span>
+ <h3>Buscador de guías</h3>
+ <p>Encuentra tu coche y la tarea que quieres hacer. Más de 50 guías paso a paso.</p>
+ <span class="card-link">Ver todas las guías →</span>
+ </a>
+ <a href="mecanica/bombillas" class="card">
+ <span class="card-icon">💡</span>
+ <h3>Cambiar las bombillas</h3>
+ <p>Guía pilar: tipos H4, H7, HIR2 y cómo cambiarlas sin dañar el cristal.</p>
+ <span class="card-link">Leer guía →</span>
+ </a>
+ <a href="mecanica/baterias" class="card">
+ <span class="card-icon">🔋</span>
+ <h3>Cambiar la batería</h3>
+ <p>Guía pilar: tipos AGM, EFB, síntomas de agotamiento y proceso paso a paso.</p>
+ <span class="card-link">Leer guía →</span>
+ </a>
+ <a href="mecanica/escobillas" class="card">
+ <span class="card-icon">🌧️</span>
+ <h3>Cambiar las escobillas</h3>
+ <p>Guía pilar: medidas, tipos de anclaje y cómo evitar dejar rayas.</p>
+ <span class="card-link">Leer guía →</span>
+ </a>
+ </div>
+ </div>
+ <!-- CATEGORÍA 4: NOVEDADES 2026 -->
+ <div class="categoria categoria-novedades">
+ <div class="categoria-header">
+ <span class="categoria-icon">🆕</span>
+ <div class="categoria-texto">
+ <h2>Novedades y tendencias 2026</h2>
+ <p>Lo último en normativas, accesorios obligatorios y mantenimiento moderno.</p>
+ </div>
+ </div>
+ <div class="grid">
+ <a href="baliza-v16-obligatoria" class="card">
+ <span class="card-icon">🚨</span>
+ <h3>Baliza V-16 conectada</h3>
+ <p>Obligatoria desde enero de 2026. Multas, comparativa real y cuál comprar.</p>
+ <span class="card-link">Leer guía</span>
+ </a>
+ <a href="preparar-coche-viaje-largo" class="card">
+ <span class="card-icon">🛣️</span>
+ <h3>Preparar el coche para viaje largo</h3>
+ <p>Checklist completa con los 5 puntos críticos y consejos de la DGT.</p>
+ <span class="card-link">Leer guía</span>
+ </a>
+ </div>
+ </div>
+
+ <!-- CATEGORÍA 5: ACCESORIOS Y GADGETS -->
+ <div class="categoria categoria-accesorios">
+ <div class="categoria-header">
+ <span class="categoria-icon">🛒</span>
+ <div class="categoria-texto">
+ <h2>Accesorios y gadgets recomendados</h2>
+ <p>Los mejores productos para tu coche, analizados y comparados.</p>
+ </div>
+ </div>
+ <div class="grid">
+<a href="mejores-productos-itv" class="card">
+<span class="card-icon">&#128722;</span>
+<h3>Mejores productos para la ITV</h3>
+<p>Kit b&aacute;sico, herramientas y an&aacute;lisis DIY vs taller. 20 productos seleccionados.</p>
+<span class="card-link">Ver gu&iacute;a de compra</span>
+</a>
+ <a href="mejores-gadgets-coche" class="card">
+ <span class="card-icon">🔌</span>
+ <h3>Los mejores gadgets 2026</h3>
+ <p>Cargador MagSafe, adaptador Android Auto, soporte y linterna LED.</p>
+ <span class="card-link">Leer guía</span>
+ </a>
+ </div>
+ </div>
+
+ <div class="cta-final">
+ <h2>¿No encuentras lo que buscas?</h2>
+ <p>Usa nuestras herramientas gratuitas o escríbenos y te ayudamos.</p>
+ <a href="contacto">Contactar con ITVcheck →</a>
+ </div>
+
+</div>
+
+<footer>
+ <div class="footer-grid">
+ <div class="footer-col">
+ <h4>ITVcheck</h4>
+ <p style="color:#94A3B8;font-size:14px;">Información independiente y clara para que la ITV nunca sea un problema.</p>
+ </div>
+ <div class="footer-col">
+ <h4>Herramientas</h4>
+ <a href="cuando-me-toca-itv">Calculadora de fecha</a>
+ <a href="calculadora-precio-itv">Comparador de precios</a>
+ <a href="estaciones-itv">Buscador de estaciones</a>
+ <a href="checklist-itv">Checklist pre-ITV</a>
+ </div>
+ <div class="footer-col">
+ <h4>Guías</h4>
+ <a href="guia-completa-itv">Guía completa ITV</a>
+ <a href="guias">Todas las guías</a>
+ <a href="guia-luces">Luces</a>
+ <a href="guia-neumaticos">Neumáticos</a>
+ <a href="guia-frenos">Frenos</a>
+ <a href="seguros-coche">Seguros</a>
+ </div>
+ <div class="footer-col">
+ <h4>Por CCAA</h4>
+ <a href="itv-por-comunidad">Todas las comunidades</a>
+ <a href="itv-madrid">ITV Madrid</a>
+ <a href="itv-cataluna">ITV Cataluña</a>
+ <a href="itv-andalucia">ITV Andalucía</a>
+ <a href="itv-valencia">ITV Valencia</a>
+ </div>
+ <div class="footer-col">
+ <h4>Legal</h4>
+ <a href="sobre-nosotros">Sobre nosotros</a>
+ <a href="contacto">Contacto</a>
+ <a href="aviso-legal">Aviso legal</a>
+ <a href="politica-cookies">Política de Cookies</a>
+ <a href="politica-privacidad">Política de Privacidad</a>
+ <a href="politica-afiliados">Afiliados</a>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <p>© 2026 ITVcheck. Todos los derechos reservados.</p>
+ </div>
+</footer>
+
+<button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
+<script>
+function toggleMenu(){var n=document.getElementById('menu');n.classList.toggle('open');}
+window.onload=function(){if(localStorage.getItem('cookiesAceptadas')===null){document.getElementById('cookieBanner').style.display='block';}};
+function aceptarCookies(){localStorage.setItem('cookiesAceptadas','true');loadScripts();document.getElementById('cookieBanner').style.display='none';}
+function rechazarCookies(){localStorage.setItem('cookiesAceptadas','false');document.getElementById('cookieBanner').style.display='none';}
+
+window.onscroll=function(){
+ if(document.body.scrollTop>20||document.documentElement.scrollTop>20){document.getElementById("scrollTopBtn").style.display="block";}else{document.getElementById("scrollTopBtn").style.display="none";}
+};
+function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
+</script>
+</body>
+</html>

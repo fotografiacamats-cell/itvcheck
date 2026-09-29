@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ITV Murcia 2026: precios liberalizados (turismo gasolina desde 40,13€, diésel 53,97€, eléctrico 33,49€), comparativa de estaciones, cita previa no obligatoria y operadores.">
+<title>ITV Murcia 2026: Precios Liberalizados, Comparativa de Estaciones y Cita Opcional | ITVcheck</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
+<script>
+function loadScripts(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-T1PZZHFJ4E';s.async=true;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});gtag('js',new Date());gtag('config','G-T1PZZHFJ4E');var a=document.createElement('script');a.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7947218272068445';a.async=true;a.crossOrigin='anonymous';document.head.appendChild(a);}
+if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
+</script>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+ {"@type":"Question","name":"¿Cuánto cuesta la ITV en Murcia en 2026?","acceptedAnswer":{"@type":"Answer","text":"Turismo gasolina: desde 40,13€. Diésel: desde 53,97€. Eléctrico: desde 33,49€. Motos y ciclomotores: desde 37,00€. Las tarifas están liberalizadas y cada estación fija su precio."}},
+ {"@type":"Question","name":"¿Por qué la ITV está liberalizada en Murcia?","acceptedAnswer":{"@type":"Answer","text":"Murcia es, junto con Madrid, una de las dos únicas comunidades donde las tarifas de la ITV no están reguladas. Cada estación fija libremente sus precios, lo que genera una horquilla amplia."}},
+ {"@type":"Question","name":"¿Es obligatoria la cita previa en Murcia?","acceptedAnswer":{"@type":"Answer","text":"No es obligatoria en la mayoría de estaciones. Puedes acudir directamente, aunque se recomienda reservar online o por teléfono para evitar esperas."}},
+ {"@type":"Question","name":"¿Qué operadores gestionan la ITV en Murcia?","acceptedAnswer":{"@type":"Answer","text":"TÜV Rheinland, Itevelesa, Applus y otras empresas autorizadas. Destacan ITV Cabezo Cortado, ITV Baser Primero de Mayo, ITV Espinardo y ITV Ciudad de Murcia."}}
+ ]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="canonical" href="https://itvcheck.es/itv-murcia">
+</head>
+<body>
+<div id="cookieBanner"><p>Utilizamos cookies para mejorar tu experiencia y mostrar anuncios de Google AdSense. <a href="politica-cookies" style="color:#FACC15;">Más información</a></p><button onclick="aceptarCookies()">Aceptar</button><button class="reject" onclick="rechazarCookies()">Rechazar</button></div>
+<a href="https://api.whatsapp.com/send?text=Estoy%20consultando%20la%20ITV%20en%20Murcia%20con%20ITVcheck" target="_blank" id="whatsappBtn" aria-label="Contactar por WhatsApp">💬</a>
+<header><a href="index" class="logo">ITV<span>check</span></a><button class="hamburger" onclick="toggleMenu()">☰</button><nav id="menu"><a href="index">Inicio</a><a href="itv-por-comunidad">CCAA</a><a href="cuando-me-toca-itv">Calculadora</a><a href="calculadora-precio-itv">Precios</a><a href="estaciones-itv">Estaciones</a><a href="mecanica">Mecánica</a><a href="contacto">Contacto</a></nav></header>
+
+<div class="container">
+<div class="breadcrumbs"><a href="index">Inicio</a> » <a href="itv-por-comunidad">CCAA</a> » <span>Murcia</span></div>
+
+<h1>ITV en Murcia 2026: Precios Liberalizados y Comparativa de Estaciones</h1>
+<div class="meta-date">📅 Última actualización: <strong>Septiembre de 2026</strong> | 🔗 Fuentes: <a href="https://www.carm.es/" target="_blank" rel="nofollow noopener">Región de Murcia</a>, <a href="https://www.dgt.es" target="_blank" rel="nofollow noopener">DGT</a>, operadores autorizados (TÜV Rheinland, Itevelesa).</div>
+
+<p>La Región de Murcia es, junto con Madrid, una de las <strong>dos únicas comunidades autónomas de España donde las tarifas de la ITV están completamente liberalizadas</strong>. No existe un precio máximo regulado: cada estación fija libremente sus tarifas, lo que genera una horquilla amplia y la posibilidad de ahorrar si comparas antes de reservar. Con una red gestionada por TÜV Rheinland, Itevelesa y otras empresas, encontrar una estación cercana es sencillo, y en la mayoría de casos <strong>no es obligatorio reservar cita previa</strong>.</p>
+
+<div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7947218272068445" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins></div>
+
+<h2>📅 ¿Cuándo me toca pasar la ITV en Murcia?</h2>
+<table>
+<tr><th>Antigüedad del vehículo (turismos)</th><th>Frecuencia</th></tr>
+<tr><td>Hasta 4 años</td><td>Exento</td></tr>
+<tr><td>A los 4 años</td><td>Primera ITV</td></tr>
+<tr><td>De 4 a 10 años</td><td>Cada 2 años</td></tr>
+<tr><td>Más de 10 años</td><td>Anualmente</td></tr>
+</table>
+<div style="text-align:center;margin-top:15px;"><a href="cuando-me-toca-itv" class="btn">🔎 Calcular mi fecha exacta →</a></div>
+
+<h2>💰 Precios de la ITV en Murcia 2026 (Tarifas Liberalizadas)</h2>
+<p>Al no haber regulación autonómica, los precios varían según la estación. Estos son los rangos orientativos:</p>
+<table>
+<tr><th>Tipo de Vehículo</th><th>Precio Mínimo</th><th>Observaciones</th></tr>
+<tr><td>Turismo Gasolina</td><td><strong>40,13 €</strong></td><td>Precio más bajo encontrado</td></tr>
+<tr><td>Turismo Diésel</td><td><strong>53,97 €</strong></td><td>Precio más bajo encontrado</td></tr>
+<tr><td>Turismo Eléctrico</td><td><strong>33,49 €</strong></td><td>Tarifa reducida para cero emisiones</td></tr>
+<tr><td>Motocicletas y ciclomotores</td><td><strong>37,00 €</strong></td><td>Precio desde</td></tr>
+</table>
+<p style="font-size:14px;color:var(--tg);"><em>*Precios orientativos con impuestos incluidos. La horquilla puede superar los 20 € entre la estación más barata y la más cara.</em></p>
+
+<div class="tip-box-warn">
+<strong>⚠️ Precios liberalizados:</strong> A diferencia de la mayoría de comunidades, en Murcia y Madrid cada estación fija su precio. <strong>Compara siempre</strong> antes de reservar. Algunas estaciones pueden tener precios significativamente más altos.
+</div>
+
+<div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7947218272068445" data-ad-slot="0987654321" data-ad-format="auto" data-full-width-responsive="true"></ins></div>
+
+<h2>📆 Cómo pedir cita previa en Murcia</h2>
+<p>En Murcia, la cita previa <strong>no es obligatoria</strong> en la mayoría de estaciones. Puedes acudir directamente, aunque se recomienda reservar para evitar esperas:</p>
+<ul>
+<li><strong>ITV Cabezo Cortado (Murcia):</strong> Aviso SMS gratis 15 días antes. Cita online, teléfono o WhatsApp. Horario L-V de 7:15 a 21:30.</li>
+<li><strong>ITV Baser Primero de Mayo (Murcia):</strong> En pleno centro de Murcia. <strong>Sin cita obligatoria</strong>. Horario L-V de 7:00 a 22:00.</li>
+<li><strong>ITV Espinardo (Itevelesa):</strong> Av. Dr. Pedro Guillén, 8. Tel. 868 459 510. Horario L-V de 8:00 a 21:30, sábados de 9:00 a 13:30. Cita online en <a href="https://www.itevelesa.com/" target="_blank" rel="nofollow noopener">itevelesa.com</a>.</li>
+<li><strong>ITV Ciudad de Murcia:</strong> Tel. 968 852 301. No es obligatorio reservar. Cita online para turismos, furgonetas y quads.</li>
+<li><strong>ITV Águilas:</strong> Polígono Industrial El Labradorcico. Gestionada por TÜV Rheinland.</li>
+<li><strong>ITV Noroeste:</strong> 4 centros con cita unificada desde una única web.</li>
+</ul>
+
+<h2>📍 Estaciones de ITV en Murcia</h2>
+<ul>
+<li><strong>Murcia capital:</strong> ITV Cabezo Cortado, ITV Baser Primero de Mayo, ITV Espinardo, ITV Ciudad de Murcia.</li>
+<li><strong>Águilas:</strong> ITV Águilas (Polígono El Labradorcico).</li>
+<li><strong>Cartagena:</strong> ITV Cartagena.</li>
+<li><strong>Lorca:</strong> ITV Lorca.</li>
+<li><strong>Zona Noroeste:</strong> ITV Caravaca de la Cruz, ITV Yecla, ITV Jumilla.</li>
+</ul>
+<div style="text-align:center;margin-top:15px;"><a href="estaciones-itv" class="btn">📍 Buscar estación por ciudad →</a></div>
+
+<h2>📄 Documentación obligatoria para la ITV en Murcia</h2>
+<ul>
+<li><strong>Permiso de Circulación</strong> original.</li>
+<li><strong>Ficha Técnica</strong> actualizada.</li>
+<li><strong>Justificante del seguro</strong> en vigor.</li>
+<li><strong>DNI/NIE</strong> del titular.</li>
+</ul>
+
+<h2>🛠️ Particularidades de la ITV en Murcia</h2>
+<ul>
+<li><strong>Precios liberalizados:</strong> Junto con Madrid, es la única comunidad donde cada estación fija su precio. Comparar es clave para ahorrar.</li>
+<li><strong>Cita previa no obligatoria:</strong> En la mayoría de estaciones puedes acudir directamente. ITV Baser Primero de Mayo y ITV Ciudad de Murcia lo confirman.</li>
+<li><strong>Horarios amplios:</strong> Algunas estaciones abren de 7:00 a 22:00, lo que facilita encontrar un hueco.</li>
+<li><strong>Clima cálido en verano:</strong> Las altas temperaturas afectan al aire acondicionado y al sistema de refrigeración. Revisa estos puntos antes de acudir.</li>
+<li><strong>Zona costera:</strong> El salitre puede acelerar la corrosión en vehículos que circulan habitualmente por la costa.</li>
+</ul>
+
+<h2>❓ Preguntas frecuentes sobre la ITV en Murcia</h2>
+
+<h3>¿Cuánto cuesta la ITV en Murcia en 2026?</h3>
+<p>Un turismo de gasolina paga desde <strong>40,13 €</strong>, uno diésel desde <strong>53,97 €</strong> y un eléctrico desde <strong>33,49 €</strong>. Las motos, desde <strong>37,00 €</strong>. Los precios varían según la estación.</p>
+
+<h3>¿Por qué la ITV está liberalizada en Murcia?</h3>
+<p>Murcia es, junto con Madrid, una de las dos únicas comunidades donde las tarifas <strong>no están reguladas</strong>. Cada estación fija libremente sus precios, lo que genera una horquilla amplia.</p>
+
+<h3>¿Es obligatoria la cita previa en Murcia?</h3>
+<p>No es obligatoria en la mayoría de estaciones. Puedes acudir directamente, aunque se recomienda reservar online o por teléfono para evitar esperas.</p>
+
+<h3>¿Qué operadores gestionan la ITV en Murcia?</h3>
+<p><strong>TÜV Rheinland</strong>, <strong>Itevelesa</strong>, <strong>Applus</strong> y otras empresas autorizadas. Destacan ITV Cabezo Cortado, ITV Baser Primero de Mayo, ITV Espinardo e ITV Ciudad de Murcia.</p>
+
+<h3>¿Puedo pasar la ITV en Murcia si mi coche está matriculado en otra comunidad?</h3>
+<p>Sí. Puedes pasar la ITV en cualquier estación autorizada de España, incluidas las murcianas, sin importar dónde esté matriculado el vehículo.</p>
+
+<div class="related-guides">
+<h3>📚 Guías relacionadas</h3>
+<a href="guia-luces">💡 Qué revisar en las luces antes de la ITV</a>
+<a href="guia-neumaticos">🛞 Revisión de neumáticos: el dibujo mínimo legal</a>
+<a href="guia-frenos">🛑 Cómo revisar los frenos en casa</a>
+<a href="guia-documentacion">📄 Documentación obligatoria para la ITV</a>
+<a href="que-pasa-si-suspendo-la-itv">📉 Qué hacer si suspendes la ITV</a>
+</div>
+
+<div class="other-ccaa">
+<h3>📍 Otras comunidades autónomas</h3>
+<a href="itv-valencia">ITV Comunidad Valenciana</a>
+<a href="itv-andalucia">ITV Andalucía</a>
+<a href="itv-castillalamancha">ITV Castilla-La Mancha</a>
+<a href="itv-madrid">ITV Madrid</a>
+<a href="itv-por-comunidad">Ver todas las CCAA →</a>
+</div>
+
+<a href="index" class="btn">← Volver a la página principal</a>
+</div>
+
+
+<div class="related-guides">
+<h3>📚 Enlazado interno recomendado</h3>
+<a href="itv-por-comunidad">📍 Todas las CCAA</a>
+<a href="itv-valencia">ITV Comunidad Valenciana</a>
+<a href="itv-andalucia">ITV Andalucía</a>
+<a href="itv-castillalamancha">ITV Castilla-La Mancha</a>
+</div>
+<footer><p><strong>ITVcheck</strong> | Información orientativa sobre la ITV en España.</p><p><a href="sobre-nosotros">Sobre nosotros</a> | <a href="contacto">Contacto</a> | <a href="aviso-legal">Aviso legal</a> | <a href="politica-cookies">Cookies</a> | <a href="politica-privacidad">Privacidad</a></p></footer>
+
+<script>
+function toggleMenu(){var n=document.getElementById('menu');n.classList.toggle('open');}
+window.onload=function(){if(localStorage.getItem('cookiesAceptadas')===null){document.getElementById('cookieBanner').style.display='block';}};
+function aceptarCookies(){localStorage.setItem('cookiesAceptadas','true');loadScripts();document.getElementById('cookieBanner').style.display='none';}
+function rechazarCookies(){localStorage.setItem('cookiesAceptadas','false');document.getElementById('cookieBanner').style.display='none';}
+</script>
+</body>
+</html>
