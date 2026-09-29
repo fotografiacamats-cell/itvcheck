@@ -733,7 +733,7 @@ var popup = '<div style="padding:16px; min-width:260px;">' +
  '<div style="font-size:12px; margin-bottom:10px;">' + (abierta ? '<span style="color:#10B981;font-weight:700;">● Abierto ahora</span>' : '<span style="color:#EF4444;font-weight:700;">● Cerrado</span>') + '</div>' +
  '<a href="' + mapsUrl + '" target="_blank" rel="nofollow noopener" class="btn-popup btn-como-llegar">🧭 Cómo llegar</a>' +
  (telLimpio ? '<a href="tel:' + e.tel + '" class="btn-popup btn-llamar">📞 Llamar</a>' : '') +
-'<a href="estaciones/' + slugify(e.nombre) + '" class="btn-popup" style="background:#10B981;color:#fff;margin-top:6px;">📄 Ver ficha completa</a>' +
+'<a href="estaciones/' + slugify(e.nombre) + '.html" class="btn-popup" style="background:#10B981;color:#fff;margin-top:6px;">📄 Ver ficha completa</a>' +
  '</div>';
  var marker = L.marker([e.lat, e.lng], { icon: crearIcono(e.tipo) }).bindPopup(popup);
  markersLayer.addLayer(marker);
@@ -745,7 +745,7 @@ var popup = '<div style="padding:16px; min-width:260px;">' +
  var abierta = estaAbierta(e);
  var item = document.createElement('div');
  item.className = 'item';
- item.innerHTML = '<a href="estaciones/' + slugify(e.nombre) + '" style="text-decoration:none;color:inherit;display:block;"><span class="nombre">' + e.nombre + '</span>' +
+ item.innerHTML = '<a href="estaciones/' + slugify(e.nombre) + '.html" style="text-decoration:none;color:inherit;display:block;"><span class="nombre">' + e.nombre + '</span>' +
  '<span class="meta">📍 ' + e.ciudad + ' · ' + e.distancia.toFixed(1) + ' km</span><br>' +
  '<span class="estado ' + (abierta ? 'abierto' : 'cerrado') + '">' + (abierta ? '● Abierto' : '● Cerrado') + '</span>';
  item.onclick = function(){
