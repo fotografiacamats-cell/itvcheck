@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nueva normativa ITV 2026 para furgonetas camper: la DGT obliga a pasar la inspección cada 6 meses a las de categoría N con más de 10 años. Descubre si tu camper está afectada, cómo evitarlo y qué revisan.">
+<title>ITV Furgonetas Camper 2026: Nueva Norma DGT, Cada 6 Meses y Cómo Evitarlo | ITVcheck</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚐</text></svg>">
+<script>
+function loadScripts(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-T1PZZHFJ4E';s.async=true;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});gtag('js',new Date());gtag('config','G-T1PZZHFJ4E');var a=document.createElement('script');a.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7947218272068445';a.async=true;a.crossOrigin='anonymous';document.head.appendChild(a);}
+if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
+</script>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+ {"@type":"Question","name":"¿Cada cuánto pasa la ITV una furgoneta camperizada en 2026?","acceptedAnswer":{"@type":"Answer","text":"Depende de la categoría en la ficha técnica. Si está homologada como autocaravana (categoría M): exenta hasta 4 años, cada 2 años de 4 a 10, y anual después. Si mantiene categoría de furgón comercial (categoría N, código 24): ITV anual hasta los 10 años y cada 6 meses a partir de los 10 años."}},
+ {"@type":"Question","name":"¿Qué es la Instrucción PROT 2026/04 de la DGT?","acceptedAnswer":{"@type":"Answer","text":"Es la nueva normativa que sustituye a la de 2023 y aclara la periodicidad de la ITV para autocaravanas y furgonetas camperizadas. La clave está en la categoría de homologación que figure en la ficha técnica del vehículo."}},
+ {"@type":"Question","name":"¿Cómo puedo evitar la ITV semestral si tengo una furgoneta camper de categoría N?","acceptedAnswer":{"@type":"Answer","text":"Homologando la furgoneta como autocaravana (categoría M). Para ello debe cumplir requisitos de altura interior, equipamiento fijo, instalación de gas y eléctrica homologada. Tras pasar la inspección técnica de reforma, la ficha técnica se actualiza."}},
+ {"@type":"Question","name":"¿Qué revisan en la ITV de una furgoneta camper?","acceptedAnswer":{"@type":"Answer","text":"Además de los controles habituales, se revisa la instalación de gas (estanqueidad, sujeción de bombonas), el sistema eléctrico auxiliar, la sujeción de muebles y enseres, y que no haya elementos que sobresalgan del vehículo."}},
+ {"@type":"Question","name":"¿Qué multa hay por no pasar la ITV de la camper?","acceptedAnswer":{"@type":"Answer","text":"Circular con la ITV caducada supone una multa de 200 € (100 € con pronto pago). Además, si el vehículo presenta defectos graves, puede ser inmovilizado. La aseguradora podría rechazar la cobertura en caso de siniestro."}}
+ ]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="canonical" href="https://itvcheck.es/itv-camper-furgonetas">
+</head>
+<body>
+<div id="cookieBanner"><p>Utilizamos cookies para mejorar tu experiencia y mostrar anuncios de Google AdSense. <a href="politica-cookies" style="color:#FACC15;">Más información</a></p><button onclick="aceptarCookies()">Aceptar</button><button class="reject" onclick="rechazarCookies()">Rechazar</button></div>
+<a href="https://api.whatsapp.com/send?text=Estoy%20consultando%20la%20ITV%20para%20furgonetas%20camper%20con%20ITVcheck" target="_blank" id="whatsappBtn" aria-label="Contactar por WhatsApp">💬</a>
+<header><a href="index" class="logo">ITV<span>check</span></a><button class="hamburger" onclick="toggleMenu()">☰</button><nav id="menu"><a href="index">Inicio</a><a href="guias">Guías</a><a href="mecanica">Mecánica DIY</a><a href="itv-por-comunidad">CCAA</a><a href="cuando-me-toca-itv">Calculadora</a><a href="calculadora-precio-itv">Precios</a><a href="contacto">Contacto</a></nav></header>
+
+<div class="container">
+<div class="breadcrumbs"><a href="index">Inicio</a> » <a href="guias">Guías</a><a href="mecanica">Mecánica DIY</a> » <span>ITV para Camper</span></div>
+
+<h1>ITV Furgonetas Camper 2026: Nueva Norma DGT, Cada 6 Meses y Cómo Evitarlo</h1>
+<div class="meta-date">📅 Última actualización: <strong>Septiembre de 2026</strong> | 🔗 Fuentes: <a href="https://www.dgt.es" target="_blank" rel="nofollow noopener">DGT</a> (Instrucción PROT 2026/04), <a href="https://www.boe.es" target="_blank" rel="nofollow noopener">BOE</a> (Real Decreto 920/2017), <a href="https://www.race.es/" target="_blank" rel="nofollow noopener">RACE</a>.</div>
+
+<div style="background:#FEF3C7;border-left:5px solid #FACC15;padding:15px 20px;border-radius:8px;margin-bottom:25px;font-size:15px;">
+<strong>📌 Aviso:</strong> Esta guía contiene enlaces de afiliado de Amazon. Si compras a través de ellos, ganamos una pequeña comisión sin coste adicional para ti. <a href="politica-afiliados" style="color:#92400E;font-weight:700;">Más información</a>.
+</div>
+
+<p>La <strong>Instrucción PROT 2026/04</strong> de la Dirección General de Tráfico ha puesto patas arriba el sector camper. A partir de ahora, las furgonetas camperizadas que mantengan la categoría <strong>N</strong> (furgón comercial) en su ficha técnica deberán pasar la ITV <strong>cada 6 meses</strong> a partir de los 10 años. Una autocaravana de la misma edad solo pasa <strong>una vez al año</strong>. La diferencia puede suponer más de <strong>80 € extra al año</strong> y un riesgo real de multa si te despistas. Esta guía te explica <strong>si tu camper está afectada, cómo comprobarlo en tu ficha técnica, y el truco legal para evitar la ITV semestral</strong>.</p>
+
+<div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7947218272068445" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins></div>
+
+<h2>⚖️ ¿Qué es la Instrucción PROT 2026/04 y por qué te afecta?</h2>
+<p>La DGT publicó el 11 de marzo de 2026 la <strong>Instrucción PROT 2026/04</strong>, que sustituye a la anterior PROT 2023/14. No es una ley nueva, sino una <strong>interpretación oficial del Real Decreto 920/2017</strong> que regula la ITV. Su objetivo es zanjar años de dudas sobre la periodicidad de inspección de autocaravanas y furgonetas camperizadas.</p>
+
+<p>La clave del cambio es esta: <strong>la frecuencia de la ITV ya no depende del uso que le des al vehículo, sino de la categoría técnica que figure en la ficha técnica</strong>. No importa que viajes, duermas o vivas en tu furgoneta. Lo que determina cuándo pasas la ITV es la letra y el código que aparecen en la documentación oficial.</p>
+
+<div class="tip-box-warn">
+<strong>⚠️ Aviso importante:</strong> La norma no afecta a turismos ni a motos. Solo afecta a autocaravanas y furgonetas camperizadas. Los bulos que circularon durante meses ("ITV cada 6 meses para coches de más de 10 años") son <strong>falsos</strong> en lo que respecta a coches particulares.
+</div>
+
+<h2>📅 Nueva periodicidad de ITV según el tipo de vehículo</h2>
+<p>La instrucción distingue dos grandes grupos según la categoría de homologación. Esta tabla es la referencia definitiva:</p>
+
+<table>
+<tr><th>Tipo de vehículo</th><th>Categoría</th><th>Hasta 4 años</th><th>De 4 a 10 años</th><th>Más de 10 años</th></tr>
+<tr><td><strong>Autocaravana</strong></td><td><strong>M</strong></td><td>Exenta</td><td>Cada 2 años</td><td><strong>Anual</strong></td></tr>
+<tr><td><strong>Furgoneta camperizada</strong></td><td><strong>N</strong></td><td>Anual</td><td>Anual</td><td><strong>Cada 6 meses</strong></td></tr>
+</table>
+<p style="font-size:14px;color:var(--tg);"><em>*Fuente: Instrucción PROT 2026/04 de la DGT. Real Decreto 920/2017.</em></p>
+
+<p>La diferencia es abismal. Una camper de categoría N con 12 años pasa la ITV <strong>dos veces al año</strong>, mientras que una autocaravana de categoría M de la misma edad solo la pasa <strong>una vez</strong>. El sobrecoste anual puede superar los <strong>80 €</strong> (dependiendo de la tarifa de tu comunidad autónoma), además del tiempo y las molestias de duplicar las visitas a la estación.</p>
+
+<div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7947218272068445" data-ad-slot="0987654321" data-ad-format="auto" data-full-width-responsive="true"></ins></div>
+
+<h2>🔍 ¿Cómo sé si mi camper está afectada? (Código 24 vs 32/33)</h2>
+<p>La respuesta está en tu <strong>ficha técnica</strong> (tarjeta de inspección técnica). Busca la letra de categoría y el número de código:</p>
+
+<ul>
+<li><strong>Categoría N + código 24:</strong> Furgón comercial camperizado. <strong>Estás afectado</strong>. A partir de los 10 años, ITV cada 6 meses.</li>
+<li><strong>Categoría M + código 32 o 33:</strong> Autocaravana homologada. <strong>No estás afectado</strong>. Mantienes la periodicidad favorable (cada 2 años hasta los 10, luego anual).</li>
+</ul>
+
+<p>Muchas furgonetas camperizadas que se venden en el mercado de segunda mano mantienen la categoría N1 con código 24 porque nunca se tramitó la homologación como autocaravana. <strong>Si compraste una camper de segunda mano y no verificaste este dato, podrías estar afectado sin saberlo.</strong></p>
+
+<div class="tip-box">
+<strong>💡 Dato clave:</strong> Las campers de fábrica como la Volkswagen California o la Mercedes-Benz Marco Polo suelen estar homologadas como categoría M (código 32/33), por lo que <strong>se libran</strong> de la ITV semestral. Las camperizaciones artesanales o de taller, en cambio, suelen quedarse en categoría N.
+</div>
+
+<div class="tip-box-danger">
+<strong>⚠️ Multa de 200 €:</strong> Circular con la ITV caducada es una infracción grave. La sanción es de <strong>200 €</strong> (100 € con pronto pago en 20 días) y no resta puntos. Pero lo más peligroso: si tienes un siniestro con la ITV caducada, <strong>tu aseguradora podría rechazar la cobertura</strong>, dejándote sin indemnización por daños propios o responsabilidad civil frente a terceros.
+</div>
+
+<h2>🔄 El truco legal para evitar la ITV semestral: homologar como autocaravana</h2>
+<p>Si tu furgoneta camperizada está en categoría N (código 24), tienes una vía legal para evitar la ITV cada 6 meses: <strong>homologarla como autocaravana (categoría M)</strong>. Este proceso, aunque requiere inversión inicial, te permitirá acceder a la periodicidad favorable (cada 2 años hasta los 10 años, luego anual).</p>
+
+<h3>Requisitos para homologar una furgoneta como autocaravana</h3>
+<ul>
+<li><strong>Altura interior mínima:</strong> El techo debe permitir estar de pie (generalmente techo elevado o pop-top).</li>
+<li><strong>Equipamiento interior fijo:</strong> Debe contar con al menos cocina, fregadero, nevera, mesa, asientos, camas y espacio de almacenamiento.</li>
+<li><strong>Instalación de gas homologada:</strong> Con certificado de instalación y revisión periódica.</li>
+<li><strong>Instalación eléctrica auxiliar:</strong> Baterías, inversores y cableado deben cumplir la normativa.</li>
+<li><strong>Ventilación adecuada:</strong> Para evitar acumulación de gases.</li>
+<li><strong>Documentación:</strong> Es necesario pasar una <strong>inspección técnica de reforma</strong> y actualizar la ficha técnica en la ITV.</li>
+</ul>
+
+<p>El proceso puede costar entre <strong>300 y 800 €</strong> (variable según el taller y el ingeniero que tramite la reforma), pero si haces los cálculos, se amortiza en 3-5 años al evitar la ITV semestral. Además, al estar homologada como autocaravana, el vehículo accede a la categoría M y a todos sus beneficios administrativos.</p>
+
+<h2>🔧 Qué revisan en la ITV de una camper (más allá de luces y frenos)</h2>
+<p>Si tu camper está afectada por la ITV semestral, conviene que sepas que la inspección es más exigente que la de un turismo. Además de los controles habituales (luces, frenos, neumáticos, emisiones, dirección), los técnicos revisan tres puntos específicos que no llevan los coches convencionales:</p>
+
+<ul>
+<li><strong>Instalación de gas:</strong> Las bombonas deben estar correctamente sujetas y todo el sistema de tuberías y conexiones debe ser estanco. Una fuga no detectada puede provocar una calificación de <strong>defecto grave</strong>.</li>
+<li><strong>Mobiliario fijo:</strong> Armarios, cocinas y camas deben estar anclados de forma sólida al suelo y a las paredes.</li>
+<li><strong>Elementos exteriores:</strong> No deben sobresalir del vehículo (toldos, placas solares, etc.).</li>
+<li><strong>Sistema eléctrico auxiliar:</strong> Baterías, inversores y cableado deben estar correctamente fijados y aislados.</li>
+</ul>
+
+<div class="tip-box">
+<strong>🛠️ Consejo de experto:</strong> Antes de acudir a la ITV, revisa que todos los muebles y la instalación de gas estén correctamente fijados. La sujeción de elementos interiores es uno de los motivos de rechazo más comunes en campers. Un organizador de maletero plegable puede ayudarte a mantener el orden y evitar que los objetos se desplacen.
+</div>
+
+<h2>🛒 Accesorios recomendados para tu camper (Amazon)</h2>
+<p>Si tienes una camper o autocaravana, estos accesorios pueden ayudarte a mantenerla en buen estado y a prepararla para la ITV:</p>
+
+<ul>
+<li>🧰 <strong>Organizador de maletero plegable:</strong> Mantén el orden y evita que los objetos se desplacen durante la conducción. Fundamental para la sujeción de enseres en la ITV.</li>
+<li>🚨 <strong>Baliza V-16 conectada:</strong> Obligatoria desde enero de 2026 en cualquier vehículo, incluidas campers y autocaravanas. Multa de 80 € si no la llevas.</li>
+<li>🔦 <strong>Linterna LED recargable:</strong> Imprescindible para emergencias nocturnas.</li>
+</ul>
+
+<a href="https://www.amazon.es/dp/B0DNQ5V1YH?tag=itvcheck-21&linkCode=ll1" target="_blank" rel="nofollow noopener" class="btn-cta">🛒 Ver Organizador de Maletero en Amazon</a>
+<p style="font-size:12px;color:#64748B;text-align:center;margin-top:-12px;margin-bottom:20px;font-style:italic;">Enlace de afiliado · El precio no cambia para ti</p>
+
+<a href="https://www.amazon.es/dp/B0FHBDDBNT?tag=itvcheck-21&linkCode=ll1" target="_blank" rel="nofollow noopener" class="btn-cta">🛒 Ver Baliza V-16 en Amazon</a>
+<p style="font-size:12px;color:#64748B;text-align:center;margin-top:-12px;margin-bottom:20px;font-style:italic;">Enlace de afiliado · El precio no cambia para ti</p>
+
+<h2>❓ Preguntas frecuentes sobre la ITV de campers</h2>
+
+<h3>¿Cada cuánto pasa la ITV una furgoneta camperizada en 2026?</h3>
+<p>Depende de la categoría en la ficha técnica. Si está homologada como autocaravana (categoría M): exenta hasta 4 años, cada 2 años de 4 a 10, y anual después. Si mantiene categoría de furgón comercial (categoría N, código 24): ITV anual hasta los 10 años y <strong>cada 6 meses</strong> a partir de los 10 años.</p>
+
+<h3>¿Qué es la Instrucción PROT 2026/04 de la DGT?</h3>
+<p>Es la nueva normativa que sustituye a la de 2023 y aclara la periodicidad de la ITV para autocaravanas y furgonetas camperizadas. La clave está en la categoría de homologación que figure en la ficha técnica del vehículo.</p>
+
+<h3>¿Cómo puedo evitar la ITV semestral si tengo una furgoneta camper de categoría N?</h3>
+<p>Homologando la furgoneta como autocaravana (categoría M). Para ello debe cumplir requisitos de altura interior, equipamiento fijo, instalación de gas y eléctrica homologada. Tras pasar la inspección técnica de reforma, la ficha técnica se actualiza y se accede a la periodicidad favorable.</p>
+
+<h3>¿Qué revisan en la ITV de una furgoneta camper?</h3>
+<p>Además de los controles habituales, se revisa la instalación de gas (estanqueidad, sujeción de bombonas), el sistema eléctrico auxiliar, la sujeción de muebles y enseres, y que no haya elementos que sobresalgan del vehículo.</p>
+
+<h3>¿Qué multa hay por no pasar la ITV de la camper?</h3>
+<p>Circular con la ITV caducada supone una multa de <strong>200 €</strong> (100 € con pronto pago). Además, si el vehículo presenta defectos graves, puede ser inmovilizado. La aseguradora podría rechazar la cobertura en caso de siniestro.</p>
+
+<h3>¿La nueva norma afecta a las autocaravanas tradicionales?</h3>
+<p>No. Las autocaravanas homologadas como categoría M mantienen la periodicidad habitual: exentas hasta 4 años, cada 2 años hasta los 10, y anual después. Solo afecta a las furgonetas que mantienen categoría N.</p>
+
+<div class="related-guides">
+<h3>📚 Guías relacionadas</h3>
+<a href="baliza-v16-obligatoria">🚨 Baliza V-16 conectada: obligatoria y comparativa</a>
+<a href="guia-documentacion">📄 Documentación obligatoria para la ITV</a>
+<a href="que-pasa-si-suspendo-la-itv">📉 Qué hacer si suspendes la ITV</a>
+<a href="calculadora-precio-itv">💶 Calculadora de precios por CCAA</a>
+<a href="checklist-itv">✅ Checklist Pre-ITV</a>
+</div>
+
+<div class="other-ccaa">
+<h3>📍 ITV por comunidades</h3>
+<a href="itv-madrid">ITV Madrid</a>
+<a href="itv-cataluna">ITV Cataluña</a>
+<a href="itv-andalucia">ITV Andalucía</a>
+<a href="itv-valencia">ITV Comunidad Valenciana</a>
+<a href="itv-por-comunidad">Ver todas las CCAA →</a>
+</div>
+
+<a href="index" class="btn">← Volver a la página principal</a>
+</div>
+
+
+<div class="related-guides">
+<h3>📚 Enlazado interno recomendado</h3>
+<a href="guias">📚 Todas las guías</a>
+<a href="baliza-v16-obligatoria">🚨 Baliza V-16</a>
+<a href="preparar-coche-viaje-largo">🛣️ Viaje largo</a>
+<a href="calculadora-precio-itv">💶 Precios por CCAA</a>
+</div>
+<footer>
+<p><strong>ITVcheck</strong> | Información orientativa sobre la ITV en España.</p>
+<p style="font-size:13px;color:#94A3B8;margin-top:15px;max-width:700px;margin-left:auto;margin-right:auto;">Como Afiliado de Amazon, ITVcheck gana por las compras que cumplan los requisitos aplicables.</p>
+<p style="margin-top:15px;">
+<a href="sobre-nosotros">Sobre nosotros</a> | 
+<a href="contacto">Contacto</a> | 
+<a href="aviso-legal">Aviso legal</a> | 
+<a href="politica-cookies">Cookies</a> | 
+<a href="politica-privacidad">Privacidad</a> | 
+<a href="politica-afiliados">Afiliados</a>
+</p>
+</footer>
+
+<script>
+function toggleMenu(){var n=document.getElementById('menu');n.classList.toggle('open');}
+window.onload=function(){if(localStorage.getItem('cookiesAceptadas')===null){document.getElementById('cookieBanner').style.display='block';}};
+function aceptarCookies(){localStorage.setItem('cookiesAceptadas','true');loadScripts();document.getElementById('cookieBanner').style.display='none';}
+function rechazarCookies(){localStorage.setItem('cookiesAceptadas','false');document.getElementById('cookieBanner').style.display='none';}
+</script>
+</body>
+</html>
