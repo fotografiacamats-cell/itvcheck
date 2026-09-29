@@ -587,7 +587,16 @@ function actualizarMapa(filtradas){
  botones += '<a href="tel:' + e.tel + '" class="btn-popup btn-llamar">📞 ' + e.tel + '</a>';
  botones += '<a href="https://wa.me/' + telLimpio + '" target="_blank" rel="nofollow noopener" class="btn-popup btn-whatsapp">💬 WhatsApp</a>';
  }
- var popup = '<div style="padding:16px; min-width:280px;">' +
+ function slugify(s){
+    s = s.toLowerCase();
+    var map = {'á':'a','é':'e','í':'i','ó':'o','ú':'u','à':'a','è':'e','ì':'i','ò':'o','ù':'u','ñ':'n','ü':'u','ç':'c'};
+    for (var k in map) { s = s.split(k).join(map[k]); }
+    s = s.replace(/[^a-z0-9\s-]/g, '');
+    s = s.replace(/\s+/g, '-');
+    return s;
+}
+
+var popup = '<div style="padding:16px; min-width:280px;">' +
  '<strong style="color:#10B981; font-size:16px; display:block; margin-bottom:4px;">' + e.nombre + '</strong>' +
  '<div style="color:#64748B; font-size:12px; margin-bottom:6px;">📍 ' + e.ciudad + ' · ' + e.ccaa + (e.cp ? ' (' + e.cp + ')' : '') + '</div>' +
  (e.direccion ? '<div style="color:#1E293B; font-size:12px; margin-bottom:8px;">' + e.direccion + '</div>' : '') +
@@ -632,7 +641,8 @@ function actualizarListaLateral(filtradas){
  if(ll.lat === e.lat && ll.lng === e.lng){ m.openPopup(); }
  });
  };
- lista.appendChild(item);
+ item.innerHTML += '</a>';
+    lista.appendChild(item);
  });
 }
 
@@ -707,13 +717,23 @@ function usarMiUbicacion(){
  var abierta = estaAbierta(e);
  var mapsUrl = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(e.nombre + ' ' + e.ciudad);
  var telLimpio = e.tel ? e.tel.replace(/\D/g,'') : '';
- var popup = '<div style="padding:16px; min-width:260px;">' +
+ function slugify(s){
+    s = s.toLowerCase();
+    var map = {'á':'a','é':'e','í':'i','ó':'o','ú':'u','à':'a','è':'e','ì':'i','ò':'o','ù':'u','ñ':'n','ü':'u','ç':'c'};
+    for (var k in map) { s = s.split(k).join(map[k]); }
+    s = s.replace(/[^a-z0-9\s-]/g, '');
+    s = s.replace(/\s+/g, '-');
+    return s;
+}
+
+var popup = '<div style="padding:16px; min-width:260px;">' +
  '<strong style="color:#10B981; font-size:16px; display:block; margin-bottom:4px;">' + e.nombre + '</strong>' +
  '<div style="color:#64748B; font-size:12px; margin-bottom:6px;">📍 ' + e.ciudad + ' · a ' + e.distancia.toFixed(1) + ' km</div>' +
  (e.tel ? '<div style="color:#3B82F6; font-size:12px; font-weight:700; margin-bottom:6px;">📞 ' + e.tel + '</div>' : '') +
  '<div style="font-size:12px; margin-bottom:10px;">' + (abierta ? '<span style="color:#10B981;font-weight:700;">● Abierto ahora</span>' : '<span style="color:#EF4444;font-weight:700;">● Cerrado</span>') + '</div>' +
  '<a href="' + mapsUrl + '" target="_blank" rel="nofollow noopener" class="btn-popup btn-como-llegar">🧭 Cómo llegar</a>' +
  (telLimpio ? '<a href="tel:' + e.tel + '" class="btn-popup btn-llamar">📞 Llamar</a>' : '') +
+'<a href="estaciones/' + slugify(e.nombre) + '" class="btn-popup" style="background:#10B981;color:#fff;margin-top:6px;">📄 Ver ficha completa</a>' +
  '</div>';
  var marker = L.marker([e.lat, e.lng], { icon: crearIcono(e.tipo) }).bindPopup(popup);
  markersLayer.addLayer(marker);
@@ -725,7 +745,7 @@ function usarMiUbicacion(){
  var abierta = estaAbierta(e);
  var item = document.createElement('div');
  item.className = 'item';
- item.innerHTML = '<span class="nombre">' + e.nombre + '</span>' +
+ item.innerHTML = '<a href="estaciones/' + slugify(e.nombre) + '" style="text-decoration:none;color:inherit;display:block;"><span class="nombre">' + e.nombre + '</span>' +
  '<span class="meta">📍 ' + e.ciudad + ' · ' + e.distancia.toFixed(1) + ' km</span><br>' +
  '<span class="estado ' + (abierta ? 'abierto' : 'cerrado') + '">' + (abierta ? '● Abierto' : '● Cerrado') + '</span>';
  item.onclick = function(){
@@ -735,7 +755,8 @@ function usarMiUbicacion(){
  if(ll.lat === e.lat && ll.lng === e.lng){ m.openPopup(); }
  });
  };
- lista.appendChild(item);
+ item.innerHTML += '</a>';
+    lista.appendChild(item);
  });
  map.fitBounds(bounds, { padding: [50, 50] });
  document.getElementById('contador').innerText = '15 estaciones más cercanas a tu ubicación';
