@@ -373,6 +373,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://itvcheck.es/mejores-productos-itv</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://itvcheck.es/politica-afiliados</loc>
     <lastmod>2026-09-29</lastmod>
     <changefreq>yearly</changefreq>
