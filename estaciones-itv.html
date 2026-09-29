@@ -586,6 +586,7 @@ function actualizarMapa(filtradas){
  var telLimpio = e.tel.replace(/\D/g,'');
  botones += '<a href="tel:' + e.tel + '" class="btn-popup btn-llamar">📞 ' + e.tel + '</a>';
  botones += '<a href="https://wa.me/' + telLimpio + '" target="_blank" rel="nofollow noopener" class="btn-popup btn-whatsapp">💬 WhatsApp</a>';
+ botones += '<a href="estaciones/' + e.nombre.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9\s-]/g, "").trim().replace(/\s+/g, "-") + '.html" class="btn-popup" style="background:#10B981;color:#fff;margin-top:6px;">&#128196; Ver ficha completa</a>';
  }
  function slugify(s){
     s = s.toLowerCase();
