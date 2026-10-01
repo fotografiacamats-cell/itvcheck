@@ -854,6 +854,7 @@
   .mag-defecto-buscador .campo { flex-direction: column; }
   .mag-defecto-buscador button { width: 100%; }
   .mag-vehiculo-grid { grid-template-columns: repeat(2, 1fr); }
+}
 
 /* ============================================================
    DEFECTOS ITV · Componentes específicos
@@ -1063,6 +1064,7 @@
   .mag-toc { padding: 20px 24px; }
   .stat-box { min-width: 130px; padding: 14px 16px; }
   .stat-box strong { font-size: 22px; }
+}
 
 /* ============================================================
    LIMPIEZA DE EMOJIS · Related guides y bloques editoriales
