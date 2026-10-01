@@ -854,4 +854,213 @@
   .mag-defecto-buscador .campo { flex-direction: column; }
   .mag-defecto-buscador button { width: 100%; }
   .mag-vehiculo-grid { grid-template-columns: repeat(2, 1fr); }
+
+/* ============================================================
+   DEFECTOS ITV · Componentes específicos
+   ============================================================ */
+
+/* Badges de gravedad v2 */
+.def-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+.def-badge-leve {
+  background: #FFF8E5;
+  color: var(--signal-dark);
+  border: 1px solid #E8D9A8;
+}
+.def-badge-grave {
+  background: #FFF1E5;
+  color: #B45309;
+  border: 1px solid #EDD4B3;
+}
+.def-badge-muygrave {
+  background: #FDEEF0;
+  color: var(--red);
+  border: 1px solid #F0C9CE;
+}
+
+/* Compatibilidad con clases antiguas (.badge, .badge-leve, .badge-grave, .badge-muygrave) */
+.badge { display: inline-block; padding: 4px 12px; border-radius: 3px; font-family: var(--font-mono); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap; }
+.badge-leve { background: #FFF8E5; color: var(--signal-dark); border: 1px solid #E8D9A8; }
+.badge-grave { background: #FFF1E5; color: #B45309; border: 1px solid #EDD4B3; }
+.badge-muygrave { background: #FDEEF0; color: var(--red); border: 1px solid #F0C9CE; }
+
+/* Tabla de defectos */
+.defect-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-size: 15px;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+}
+.defect-table tr th {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 14px 18px;
+  text-align: left;
+  font-weight: 600;
+}
+.defect-table tr th:last-child { text-align: center; }
+.defect-table tr td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-2);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.defect-table tr:nth-child(even) td {
+  background: var(--paper-3);
+}
+.defect-table tr:last-child td { border-bottom: none; }
+.defect-table td:last-child {
+  text-align: center;
+  width: 130px;
+}
+
+/* Caja intro de categoría */
+.cat-intro {
+  background: var(--paper-2);
+  border-left: 3px solid var(--ink-3);
+  padding: 18px 24px;
+  margin: 24px 0 28px;
+  font-size: 15px;
+  color: var(--ink-2);
+  line-height: 1.6;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Stats boxes (pequeños) */
+.stat-box {
+  display: inline-block;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 16px 20px;
+  margin: 4px 8px 4px 0;
+  font-size: 13px;
+  color: var(--ink-3);
+  min-width: 160px;
+  vertical-align: top;
+}
+.stat-box strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+/* Proceso numerado (subsanación/reclamación) */
+.process-step {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 24px;
+  margin: 28px 0;
+  align-items: start;
+}
+.process-num {
+  width: 56px;
+  height: 56px;
+  background: var(--ink);
+  color: var(--signal);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  border-radius: 4px;
+  flex-shrink: 0;
+  letter-spacing: -0.02em;
+}
+.process-body {
+  padding-top: 4px;
+}
+.process-body h4 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+.process-body p {
+  font-size: 15px;
+  color: var(--ink-2);
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+.process-body ul {
+  margin: 8px 0 0 20px;
+}
+.process-body ul li {
+  font-size: 15px;
+  color: var(--ink-2);
+  margin-bottom: 6px;
+}
+
+/* Índice de contenidos editorial */
+.mag-toc {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 32px 40px;
+  margin: 40px 0;
+  list-style: none;
+}
+.mag-toc li {
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--line);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+.mag-toc li:last-child { border-bottom: none; }
+.mag-toc li::before {
+  content: '→';
+  font-family: var(--font-mono);
+  color: var(--signal-dark);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.mag-toc li a {
+  color: var(--ink);
+  text-decoration: none;
+}
+.mag-toc li a:hover {
+  color: var(--signal-dark);
+  text-decoration: underline;
+}
+
+/* Ajuste tabla summary */
+.summary-table tr td:first-child { font-weight: 600; color: var(--ink); }
+
+/* Responsive específico */
+@media (max-width: 900px) {
+  .defect-table tr td { padding: 12px 12px; font-size: 14px; }
+  .defect-table tr th { padding: 12px 12px; font-size: 9px; }
+  .defect-table td:last-child { width: 100px; }
+  .process-step { grid-template-columns: 44px 1fr; gap: 16px; }
+  .process-num { width: 44px; height: 44px; font-size: 18px; }
+  .mag-toc { padding: 20px 24px; }
+  .stat-box { min-width: 130px; padding: 14px 16px; }
+  .stat-box strong { font-size: 22px; }
 }
