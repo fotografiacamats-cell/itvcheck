@@ -5,8 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Blog de ITVcheck: art&iacute;culos sobre ITV, precios por provincia, mantenimiento y preparaci&oacute;n del coche antes de la inspecci&oacute;n.">
 <title>Blog | ITVcheck</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>">
-<link rel="stylesheet" href="/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#128221;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles-v2.css">
+<link rel="stylesheet" href="/styles-editorial.css">
 <link rel="canonical" href="https://itvcheck.es/blog/">
 <script type="application/ld+json">
 {
@@ -20,86 +24,213 @@
 </head>
 <body>
 
-<header>
-<a href="/index" class="logo">ITV<span>check</span></a>
-<button class="hamburger" onclick="document.getElementById('menu').classList.toggle('open')">&#9776;</button>
-<nav id="menu">
-<a href="/index">Inicio</a>
-<a href="/guias">Gu&iacute;as</a>
-<a href="/blog/">Blog</a>
-<a href="/mecanica">Mec&aacute;nica DIY</a>
-<a href="/itv-por-comunidad">CCAA</a>
-<a href="/contacto">Contacto</a>
-</nav>
+<div class="itv-topbar">
+  <div class="itv-topbar-inner">
+    <span><span class="dot"></span>ITVCHECK &middot; EDICI&Oacute;N 2026</span>
+    <span>5 ART&Iacute;CULOS &middot; ACTUALIZADO OCT 2026</span>
+  </div>
+</div>
+
+<header class="itv-header">
+  <div class="itv-header-inner">
+    <a href="/index" class="itv-logo">
+      <span class="itv-logo-mark">ITV</span>
+      ITVcheck
+    </a>
+    <nav class="itv-nav">
+      <a href="/guias">Gu&iacute;as</a>
+      <a href="/estaciones-itv">Estaciones</a>
+      <a href="/operadores-itv-espana">Operadores</a>
+      <a href="/calculadora-precio-itv">Precios</a>
+      <a href="/checklist-itv">Checklist</a>
+    </nav>
+  </div>
 </header>
+
+<div class="mag-issue-bar">
+  <span>ITVcheck &middot; Manual de inspecci&oacute;n t&eacute;cnica</span>
+  <span>BLOG &middot; <strong>Edici&oacute;n 2026</strong></span>
+</div>
+
+<section class="mag-hero">
+  <div class="mag-hero-text">
+    <span class="kicker">Actualizado Octubre 2026</span>
+    <h1>Blog<br><em>de ITVcheck.</em></h1>
+    <p class="lead">Art&iacute;culos sobre ITV, precios, mantenimiento y preparaci&oacute;n del coche antes de la inspecci&oacute;n. Publicamos contenido nuevo peri&oacute;dicamente con datos verificados y actualizados a 2026.</p>
+    <div class="mag-hero-ctas">
+      <a href="#articulos" class="btn-hero">Ver los art&iacute;culos &rarr;</a>
+      <a href="/guias" class="btn-hero-secondary">Todas las gu&iacute;as &rarr;</a>
+    </div>
+  </div>
+  <aside class="mag-hero-aside">
+    <span class="label">Datos clave</span>
+    <div class="stat-row">
+      <span class="n">5</span>
+      <span class="l">Art&iacute;culos<br>publicados</span>
+    </div>
+    <div class="stat-row">
+      <span class="n">4</span>
+      <span class="l">Categor&iacute;as<br>tem&aacute;ticas</span>
+    </div>
+    <div class="stat-row">
+      <span class="n">2026</span>
+      <span class="l">Datos<br>actualizados</span>
+    </div>
+  </aside>
+</section>
+
+<div class="mag-data-bar">
+  <div>
+    <span class="n">52</span>
+    <span class="l">Provincias analizadas<br>en el art&iacute;culo de precios</span>
+  </div>
+  <div>
+    <span class="n">200<small>&euro;</small></span>
+    <span class="l">Multa base por circular<br>con ITV caducada</span>
+  </div>
+  <div>
+    <span class="n">6<small>meses</small></span>
+    <span class="l">Coche parado m&aacute;s all&aacute;<br>del cual revisar todo</span>
+  </div>
+  <div>
+    <span class="n">200k<small>km</small></span>
+    <span class="l">Umbral donde la ITV<br>mira con m&aacute;s lupa</span>
+  </div>
+</div>
 
 <div class="container">
 
-<div class="breadcrumbs"><a href="/index">Inicio</a> &raquo; <span>Blog</span></div>
-
-<h1>Blog de ITVcheck</h1>
-
 <p>Art&iacute;culos sobre ITV, precios, mantenimiento y preparaci&oacute;n del coche antes de la inspecci&oacute;n. Publicamos contenido nuevo peri&oacute;dicamente con datos verificados y actualizados a 2026.</p>
 
-<div class="bento-grid" style="margin-top:30px;">
-<a href="/blog/itv-motos-ciclomotores" class="bento-card">
-<span class="bento-icon">&#127949;</span>
-<h3>ITV de motos y ciclomotores 2026: cu&aacute;ndo y qu&eacute; revisan</h3>
-<p>Periodicidad, defectos t&iacute;picos, motos el&eacute;ctricas y proceso paso a paso.</p>
-<span class="bento-link">Leer art&iacute;culo &rarr;</span>
-</a>
-<a href="/blog/multa-no-pasar-itv" class="bento-card">
-<span class="bento-icon">&#128680;</span>
-<h3>Multa por no pasar la ITV: importes, reducci&oacute;n y c&oacute;mo recurrir</h3>
-<p>200&euro; caducada, 500&euro; negativa, reducci&oacute;n del 50% y casos judiciales reales.</p>
-<span class="bento-link">Leer art&iacute;culo &rarr;</span>
+<h2 id="articulos">Todos los art&iacute;culos</h2>
+
+<div class="mag-tools-list">
+
+<a href="/blog/multa-no-pasar-itv" data-num="01">
+  <span aria-hidden="true"></span>
+  <div>
+    <span class="tool-title">Multa por no pasar la ITV: importes, reducci&oacute;n y c&oacute;mo recurrir</span>
+    <p class="tool-desc">200&euro; caducada, 500&euro; negativa, reducci&oacute;n del 50% y casos judiciales reales. Qu&eacute; dice la DGT, cu&aacute;ndo procede recurrir y c&oacute;mo hacerlo.</p>
+  </div>
+  <span class="tool-arrow">&rarr;</span>
 </a>
 
-<a href="/blog/precio-itv-por-provincia-2026" class="bento-card">
-<span class="bento-icon">💰</span>
-<h3>Cu&aacute;nto cuesta pasar la ITV en 2026: precios por provincia</h3>
-<p>Comparativa real de las 52 provincias, las m&aacute;s baratas, las m&aacute;s caras y trucos para ahorrar.</p>
-<span class="bento-link">Leer art&iacute;culo &rarr;</span>
+<a href="/blog/precio-itv-por-provincia-2026" data-num="02">
+  <span aria-hidden="true"></span>
+  <div>
+    <span class="tool-title">Cu&aacute;nto cuesta pasar la ITV en 2026: precios por provincia</span>
+    <p class="tool-desc">Comparativa real de las 52 provincias, las m&aacute;s baratas, las m&aacute;s caras y trucos para ahorrar sin sacrificar rigor.</p>
+  </div>
+  <span class="tool-arrow">&rarr;</span>
 </a>
 
-<a href="/blog/itv-coche-mas-200000-km" class="bento-card">
-<span class="bento-icon">🚗</span>
-<h3>ITV para coches con m&aacute;s de 200.000 km: qu&eacute; revisan con lupa</h3>
-<p>Los puntos cr&iacute;ticos que debes revisar antes de llevar un coche con muchos kil&oacute;metros.</p>
-<span class="bento-link">Leer art&iacute;culo &rarr;</span>
+<a href="/blog/itv-motos-ciclomotores" data-num="03">
+  <span aria-hidden="true"></span>
+  <div>
+    <span class="tool-title">ITV de motos y ciclomotores 2026: cu&aacute;ndo y qu&eacute; revisan</span>
+    <p class="tool-desc">Periodicidad por cilindrada, defectos t&iacute;picos, motos el&eacute;ctricas y proceso paso a paso en la estaci&oacute;n.</p>
+  </div>
+  <span class="tool-arrow">&rarr;</span>
 </a>
 
-<a href="/blog/itv-coche-parado-6-meses" class="bento-card">
-<span class="bento-icon">⏸️</span>
-<h3>C&oacute;mo preparar tu coche si lleva 6 meses parado antes de la ITV</h3>
-<p>Bater&iacute;a, l&iacute;quidos, neum&aacute;ticos y frenos: qu&eacute; revisar tras un largo per&iacute;odo sin uso.</p>
-<span class="bento-link">Leer art&iacute;culo &rarr;</span>
+<a href="/blog/itv-coche-mas-200000-km" data-num="04">
+  <span aria-hidden="true"></span>
+  <div>
+    <span class="tool-title">ITV para coches con m&aacute;s de 200.000 km: qu&eacute; revisan con lupa</span>
+    <p class="tool-desc">Los puntos cr&iacute;ticos que debes revisar antes de llevar un coche con muchos kil&oacute;metros: emisiones, frenos, suspensi&oacute;n y holguras.</p>
+  </div>
+  <span class="tool-arrow">&rarr;</span>
+</a>
+
+<a href="/blog/itv-coche-parado-6-meses" data-num="05">
+  <span aria-hidden="true"></span>
+  <div>
+    <span class="tool-title">C&oacute;mo preparar tu coche si lleva 6 meses parado antes de la ITV</span>
+    <p class="tool-desc">Bater&iacute;a, l&iacute;quidos, neum&aacute;ticos y frenos: qu&eacute; revisar tras un largo per&iacute;odo sin uso y qu&eacute; fallos aparecen m&aacute;s.</p>
+  </div>
+  <span class="tool-arrow">&rarr;</span>
 </a>
 
 </div>
 
-<div class="related-guides" style="margin-top:40px;">
-<h3>Gu&iacute;as destacadas</h3>
-<a href="/guia-completa-itv">Gu&iacute;a completa de la ITV 2026</a>
-<a href="/calculadora-precio-itv">Calculadora de precios por comunidad</a>
-<a href="/checklist-itv">Checklist pre-ITV (25 puntos)</a>
-<a href="/cuando-me-toca-itv">Calculadora de fecha de ITV</a>
+<h2>Gu&iacute;as destacadas</h2>
+
+<p>Si buscas informaci&oacute;n m&aacute;s completa sobre alg&uacute;n tema, estas gu&iacute;as pilar son el mejor punto de partida:</p>
+
+<div class="related-guides">
+  <h3>Gu&iacute;as destacadas</h3>
+  <a href="/guia-completa-itv">Gu&iacute;a completa de la ITV 2026</a>
+  <a href="/calculadora-precio-itv">Calculadora de precios por comunidad</a>
+  <a href="/checklist-itv">Checklist pre-ITV (25 puntos)</a>
+  <a href="/cuando-me-toca-itv">Calculadora de fecha de ITV</a>
+</div>
+
+<div class="other-ccaa">
+  <h3>Herramientas relacionadas</h3>
+  <a href="/estaciones-itv">Buscador de estaciones</a>
+  <a href="/operadores-itv-espana">11 operadores de ITV</a>
+  <a href="/tipos-defectos-itv">Tipos de defectos</a>
+  <a href="/como-interpretar-informe-itv">Interpretar el informe</a>
 </div>
 
 </div>
 
-<footer>
-<p><strong>ITVcheck</strong> | Informaci&oacute;n orientativa sobre la ITV en Espa&ntilde;a.</p>
-<p style="font-size:13px;color:#94A3B8;margin-top:15px;">Como Afiliado de Amazon, ITVcheck gana por las compras que cumplan los requisitos aplicables.</p>
-<p style="margin-top:15px;">
-<a href="/autor/daniel-vega">Autor: Daniel Vega</a> |
-<a href="/sobre-nosotros">Sobre nosotros</a> |
-<a href="/contacto">Contacto</a> |
-<a href="/aviso-legal">Aviso legal</a> |
-<a href="/politica-cookies">Cookies</a> |
-<a href="/politica-privacidad">Privacidad</a> |
-<a href="/politica-afiliados">Afiliados</a>
-</p>
+<footer class="itv-footer">
+  <div class="itv-footer-inner">
+    <div class="itv-footer-top">
+      <div class="itv-footer-brand">
+        <a href="/index" class="itv-logo">
+          <span class="itv-logo-mark">ITV</span>
+          ITVcheck
+        </a>
+        <p>Manual de inspecci&oacute;n t&eacute;cnica independiente sobre la ITV en Espa&ntilde;a. Gu&iacute;as t&eacute;cnicas, mapa de estaciones y datos verificados.</p>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Herramientas</h4>
+        <a href="/cuando-me-toca-itv">Calculadora de fecha</a>
+        <a href="/calculadora-precio-itv">Comparador de precios</a>
+        <a href="/estaciones-itv">Buscador de estaciones</a>
+        <a href="/checklist-itv">Checklist pre-ITV</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Gu&iacute;as</h4>
+        <a href="/guia-completa-itv">Gu&iacute;a completa ITV</a>
+        <a href="/guias">Todas las gu&iacute;as</a>
+        <a href="/blog/">Blog</a>
+        <a href="/mecanica">Mec&aacute;nica DIY</a>
+        <a href="/guia-luces">Luces</a>
+        <a href="/guia-neumaticos">Neum&aacute;ticos</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Novedades 2026</h4>
+        <a href="/baliza-v16-obligatoria">Baliza V-16 obligatoria</a>
+        <a href="/itv-camper-furgonetas">ITV para campers</a>
+        <a href="/preparar-coche-viaje-largo">Viaje largo</a>
+        <a href="/mantenimiento-coches-electricos">Mantenimiento el&eacute;ctricos</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Por CCAA</h4>
+        <a href="/itv-por-comunidad">Todas las comunidades</a>
+        <a href="/itv-madrid">ITV Madrid</a>
+        <a href="/itv-cataluna">ITV Catalu&ntilde;a</a>
+        <a href="/itv-andalucia">ITV Andaluc&iacute;a</a>
+        <a href="/itv-valencia">ITV Valencia</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Legal</h4>
+        <a href="/sobre-nosotros">Sobre nosotros</a>
+        <a href="/contacto">Contacto</a>
+        <a href="/aviso-legal">Aviso legal</a>
+        <a href="/politica-cookies">Pol&iacute;tica de Cookies</a>
+        <a href="/politica-privacidad">Pol&iacute;tica de Privacidad</a>
+        <a href="/politica-afiliados">Afiliados</a>
+      </div>
+    </div>
+    <div class="itv-footer-bottom">
+      <span>&copy; 2026 ITVCHECK.ES</span>
+      <span>MANUAL DE INSPECCI&Oacute;N &middot; BLOG &middot; EDICI&Oacute;N 2026</span>
+    </div>
+  </div>
 </footer>
 
 </body>
