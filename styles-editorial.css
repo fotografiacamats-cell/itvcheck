@@ -1,7 +1,13 @@
 /* ============================================================
    ITVCHECK · CAPA EDITORIAL
-   Estilo revista técnica / publicación seria
    ============================================================ */
+
+/* KILL GREEN · Redefinir verdes obsoletos */
+:root {
+  --green: #14171C;
+  --success: #2E7D4F;
+  --whatsapp: #25D366;
+}
 
 .mag-issue-bar {
   max-width: 1240px;
@@ -108,7 +114,6 @@
   text-align: right;
 }
 
-/* Barra de datos horizontal */
 .mag-data-bar {
   max-width: 1240px;
   margin: 0 auto;
@@ -150,7 +155,6 @@
   font-weight: 500;
 }
 
-/* Sección con número editorial */
 .mag-section {
   max-width: 1240px;
   margin: 0 auto;
@@ -195,7 +199,6 @@
   padding-bottom: 4px;
 }
 
-/* Artículo destacado */
 .mag-feature {
   display: grid;
   grid-template-columns: 1fr 340px;
@@ -239,10 +242,7 @@
   font-weight: 500;
 }
 
-/* Lista de herramientas editorial */
-.mag-tools-list {
-  border-top: 1px solid var(--line);
-}
+.mag-tools-list { border-top: 1px solid var(--line); }
 .mag-tools-list a {
   display: grid;
   grid-template-columns: 60px 1fr auto;
@@ -265,9 +265,7 @@
   letter-spacing: 0.1em;
   transition: color 0.25s;
 }
-.mag-tools-list a:hover {
-  padding-left: 24px;
-}
+.mag-tools-list a:hover { padding-left: 24px; }
 .mag-tools-list a:hover::before { color: var(--signal-dark); }
 .mag-tools-list .tool-title {
   font-family: var(--font-display);
@@ -295,10 +293,7 @@
   transform: translateX(6px);
 }
 
-/* Lista de últimas actualizaciones */
-.mag-updates {
-  border-top: 1px solid var(--line);
-}
+.mag-updates { border-top: 1px solid var(--line); }
 .mag-updates a {
   display: grid;
   grid-template-columns: 110px 1fr 24px;
@@ -341,7 +336,6 @@
   transform: translateX(4px);
 }
 
-/* Grid de categorías por bloque */
 .mag-cat-section {
   border-top: 1px solid var(--line);
   padding-top: 32px;
@@ -379,7 +373,6 @@
   border-bottom-color: var(--signal);
 }
 
-/* Bloque de aviso editorial */
 .mag-notice {
   max-width: 1240px;
   margin: 0 auto;
@@ -416,11 +409,9 @@
 .mag-notice-inner a:hover { text-decoration: underline; }
 
 /* ============================================================
-   BLOQUES ADICIONALES v2.1
-   Selector CCAA · Widget fecha · Tabla precios · Buscador códigos
+   BLOQUES ADICIONALES · CCAA · Widget · Precios · Defectos
    ============================================================ */
 
-/* A) SELECTOR DE CCAA */
 .mag-ccaa-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -467,7 +458,6 @@
   font-weight: 600;
 }
 
-/* B) WIDGET "¿CUÁNDO ME TOCA?" */
 .mag-calc-widget {
   background: var(--paper-2);
   border: 1.5px solid var(--ink);
@@ -614,7 +604,6 @@
   text-transform: uppercase;
 }
 
-/* C) TABLA DE PRECIOS POR CCAA */
 .mag-precios-tabla {
   width: 100%;
   border-collapse: collapse;
@@ -658,7 +647,6 @@
 }
 .mag-precios-tabla tbody a:hover { color: var(--signal-dark); }
 
-/* D) BUSCADOR DE CÓDIGOS DE DEFECTO */
 .mag-defecto-buscador {
   max-width: 700px;
   margin: 0 auto;
@@ -767,101 +755,11 @@
   border-color: var(--ink);
 }
 
-/* E) SELECTOR DE TIPO DE VEHÍCULO */
-.mag-vehiculo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px;
-}
-.mag-vehiculo-grid a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 24px 16px;
-  background: var(--paper-2);
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.15s;
-  position: relative;
-}
-.mag-vehiculo-grid a:hover {
-  border-color: var(--ink);
-  transform: translate(-2px, -2px);
-  box-shadow: 4px 4px 0 var(--ink);
-}
-.mag-vehiculo-grid .v-icon {
-  font-size: 28px;
-  margin-bottom: 12px;
-  display: block;
-  filter: grayscale(100%);
-  transition: filter 0.2s;
-}
-.mag-vehiculo-grid a:hover .v-icon {
-  filter: grayscale(0%);
-}
-.mag-vehiculo-grid .v-name {
-  font-family: var(--font-display);
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--ink);
-  letter-spacing: -0.01em;
-  margin-bottom: 4px;
-}
-.mag-vehiculo-grid .v-meta {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  color: var(--ink-3);
-  text-transform: uppercase;
-}
-
 /* ============================================================
-   RESPONSIVE
-   ============================================================ */
-@media (max-width: 900px) {
-  .mag-hero { grid-template-columns: 1fr; gap: 40px; padding: 40px 20px 60px; }
-  .mag-hero-text h1 { font-size: 52px; }
-  .mag-hero-aside { border-left: none; border-top: 1px solid var(--line); padding-left: 0; padding-top: 32px; }
-  .mag-data-bar { grid-template-columns: 1fr 1fr; }
-  .mag-data-bar > div { padding: 20px 0; border-right: none; border-bottom: 1px solid var(--line); }
-  .mag-data-bar .n { font-size: 40px; }
-  .mag-data-bar .l { font-size: 12px; }
-  .mag-section { padding: 48px 20px; }
-  .mag-section-head { grid-template-columns: 1fr; gap: 8px; margin-bottom: 32px; }
-  .mag-section-head h2 { font-size: 32px; }
-  .mag-feature { grid-template-columns: 1fr; gap: 32px; }
-  .mag-feature-body h3 { font-size: 30px; }
-  .mag-tools-list a { grid-template-columns: 40px 1fr auto; gap: 16px; padding: 24px 0; }
-  .mag-tools-list .tool-title { font-size: 20px; }
-  .mag-updates a { grid-template-columns: 1fr; gap: 8px; }
-  .mag-issue-bar { flex-direction: column; gap: 4px; padding: 16px 20px 0; }
-  .mag-ccaa-grid { grid-template-columns: 1fr 1fr; }
-  .mag-ccaa-grid a { padding: 14px 16px; }
-  .mag-ccaa-grid .ccaa-nombre { font-size: 13px; }
-  .mag-ccaa-grid .ccaa-precio { font-size: 11px; }
-  .mag-calc-widget { padding: 28px 24px; box-shadow: 5px 5px 0 var(--signal); }
-  .mag-calc-widget h3 { font-size: 22px; }
-  .mag-calc-form { grid-template-columns: 1fr !important; gap: 14px; }
-  .mag-calc-result .date-big { font-size: 32px; }
-  .mag-precios-tabla { font-size: 13px; }
-  .mag-precios-tabla thead th { padding: 12px 12px; font-size: 9px; }
-  .mag-precios-tabla tbody td { padding: 12px 12px; }
-  .mag-precios-tabla tbody a { font-size: 13px; }
-  .mag-defecto-buscador { padding: 24px; }
-  .mag-defecto-buscador .campo { flex-direction: column; }
-  .mag-defecto-buscador button { width: 100%; }
-  .mag-vehiculo-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-/* ============================================================
-   DEFECTOS ITV · Componentes específicos
+   DEFECTOS ITV · Badges + Tablas + Proceso
    ============================================================ */
 
-/* Badges de gravedad v2 */
-.def-badge {
+.badge {
   display: inline-block;
   padding: 4px 12px;
   border-radius: 3px;
@@ -872,29 +770,22 @@
   letter-spacing: 0.08em;
   white-space: nowrap;
 }
-.def-badge-leve {
+.badge-leve {
   background: #FFF8E5;
   color: var(--signal-dark);
   border: 1px solid #E8D9A8;
 }
-.def-badge-grave {
+.badge-grave {
   background: #FFF1E5;
   color: #B45309;
   border: 1px solid #EDD4B3;
 }
-.def-badge-muygrave {
+.badge-muygrave {
   background: #FDEEF0;
   color: var(--red);
   border: 1px solid #F0C9CE;
 }
 
-/* Compatibilidad con clases antiguas (.badge, .badge-leve, .badge-grave, .badge-muygrave) */
-.badge { display: inline-block; padding: 4px 12px; border-radius: 3px; font-family: var(--font-mono); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap; }
-.badge-leve { background: #FFF8E5; color: var(--signal-dark); border: 1px solid #E8D9A8; }
-.badge-grave { background: #FFF1E5; color: #B45309; border: 1px solid #EDD4B3; }
-.badge-muygrave { background: #FDEEF0; color: var(--red); border: 1px solid #F0C9CE; }
-
-/* Tabla de defectos */
 .defect-table {
   width: 100%;
   border-collapse: collapse;
@@ -922,16 +813,28 @@
   font-size: 15px;
   line-height: 1.5;
 }
-.defect-table tr:nth-child(even) td {
-  background: var(--paper-3);
-}
+.defect-table tr:nth-child(even) td { background: var(--paper-3); }
 .defect-table tr:last-child td { border-bottom: none; }
+
+/* La última columna ya NO tiene width fijo. Los badges quedan centrados,
+   y las tablas con prosa larga (operadores) respiran de forma natural. */
 .defect-table td:last-child {
   text-align: center;
-  width: 130px;
+}
+.defect-table td:last-child .badge {
+  display: inline-block;
 }
 
-/* Caja intro de categoría */
+/* Tablas de operadores (3 columnas): anchos explícitos coherentes.
+   :nth-last-child(3) sólo aplica si la tabla tiene exactamente 3 columnas.
+   En tablas de 2 o 4 columnas no toca nada. */
+.defect-table th:nth-child(1):nth-last-child(3),
+.defect-table td:nth-child(1):nth-last-child(3) { width: 20%; }
+.defect-table th:nth-child(2):nth-last-child(2),
+.defect-table td:nth-child(2):nth-last-child(2) { width: 22%; }
+.defect-table th:nth-child(3):nth-last-child(1),
+.defect-table td:nth-child(3):nth-last-child(1) { width: 58%; }
+
 .cat-intro {
   background: var(--paper-2);
   border-left: 3px solid var(--ink-3);
@@ -943,7 +846,6 @@
   border-radius: 0 4px 4px 0;
 }
 
-/* Stats boxes (pequeños) */
 .stat-box {
   display: inline-block;
   background: var(--paper-2);
@@ -967,7 +869,6 @@
   margin-bottom: 6px;
 }
 
-/* Proceso numerado (subsanación/reclamación) */
 .process-step {
   display: grid;
   grid-template-columns: 56px 1fr;
@@ -989,9 +890,7 @@
   flex-shrink: 0;
   letter-spacing: -0.02em;
 }
-.process-body {
-  padding-top: 4px;
-}
+.process-body { padding-top: 4px; }
 .process-body h4 {
   font-family: var(--font-display);
   font-size: 20px;
@@ -1006,16 +905,13 @@
   margin-bottom: 8px;
   line-height: 1.6;
 }
-.process-body ul {
-  margin: 8px 0 0 20px;
-}
+.process-body ul { margin: 8px 0 0 20px; }
 .process-body ul li {
   font-size: 15px;
   color: var(--ink-2);
   margin-bottom: 6px;
 }
 
-/* Índice de contenidos editorial */
 .mag-toc {
   background: var(--paper-2);
   border: 1px solid var(--line);
@@ -1051,26 +947,12 @@
   text-decoration: underline;
 }
 
-/* Ajuste tabla summary */
 .summary-table tr td:first-child { font-weight: 600; color: var(--ink); }
 
-/* Responsive específico */
-@media (max-width: 900px) {
-  .defect-table tr td { padding: 12px 12px; font-size: 14px; }
-  .defect-table tr th { padding: 12px 12px; font-size: 9px; }
-  .defect-table td:last-child { width: 100px; }
-  .process-step { grid-template-columns: 44px 1fr; gap: 16px; }
-  .process-num { width: 44px; height: 44px; font-size: 18px; }
-  .mag-toc { padding: 20px 24px; }
-  .stat-box { min-width: 130px; padding: 14px 16px; }
-  .stat-box strong { font-size: 22px; }
-}
-
 /* ============================================================
-   LIMPIEZA DE EMOJIS · Related guides y bloques editoriales
+   LIMPIEZA EMOJIS · Related guides + CCAA + Botones volver
    ============================================================ */
 
-/* Listas relacionadas sin emojis */
 .related-guides,
 .guides-block {
   background: var(--paper-2) !important;
@@ -1104,9 +986,7 @@
   position: relative !important;
 }
 .related-guides a:last-child,
-.guides-block a:last-child {
-  border-bottom: none !important;
-}
+.guides-block a:last-child { border-bottom: none !important; }
 .related-guides a::before,
 .guides-block a::before {
   content: '→ ';
@@ -1122,11 +1002,8 @@
   padding-left: 8px !important;
 }
 .related-guides a:hover::before,
-.guides-block a:hover::before {
-  margin-right: 8px;
-}
+.guides-block a:hover::before { margin-right: 8px; }
 
-/* Bloque CCAA sin emojis */
 .other-ccaa {
   background: var(--paper-2);
   border: 1px solid var(--line);
@@ -1165,8 +1042,6 @@
   border-color: var(--ink);
 }
 
-/* Botones tipo "Volver" sin emoji */
-.btn-volver,
 .container > .btn,
 main > .btn {
   display: inline-block;
@@ -1183,7 +1058,642 @@ main > .btn {
   border-radius: 4px;
   transition: all 0.15s;
 }
-.btn-volver:hover {
+.container > .btn:hover,
+main > .btn:hover {
   background: var(--ink);
   color: var(--paper);
+}
+
+/* ============================================================
+   CHECKLIST ITV · Componentes interactivos
+   ============================================================ */
+
+.progress-container {
+  background: var(--paper-2);
+  border: 1.5px solid var(--ink);
+  border-radius: 4px;
+  padding: 24px 28px;
+  margin: 32px 0;
+  position: relative;
+  overflow: hidden;
+}
+.progress-bar {
+  height: 6px;
+  background: var(--paper-3);
+  border-radius: 3px;
+  margin-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+  transition: width 0.3s ease-out;
+  width: 0%;
+}
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--signal);
+  border-radius: 3px;
+}
+.progress-text {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: var(--ink-2);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.progress-text strong,
+.progress-text .pct { color: var(--signal-dark); font-weight: 700; }
+
+.checklist-section {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 24px 28px;
+  margin: 24px 0;
+}
+.checklist-section h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 0 0 20px;
+  padding: 0 0 14px;
+  border-bottom: 1px dashed var(--line);
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.checklist-section h3::before {
+  content: '§';
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--signal-dark);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  margin: 4px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s;
+  user-select: none;
+  border: 1px solid transparent;
+}
+.check-item:hover {
+  background: var(--paper);
+  border-color: var(--line);
+}
+.check-item input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 1.5px solid var(--ink);
+  border-radius: 4px;
+  background: var(--paper-2);
+  cursor: pointer;
+  flex-shrink: 0;
+  position: relative;
+  transition: all 0.15s;
+  margin: 0;
+}
+.check-item input[type="checkbox"]:checked {
+  background: var(--signal);
+  border-color: var(--signal);
+}
+.check-item input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 7px;
+  height: 12px;
+  border-right: 2.5px solid var(--ink);
+  border-bottom: 2.5px solid var(--ink);
+  transform: rotate(45deg);
+}
+.check-item input[type="checkbox"]:focus-visible {
+  outline: 3px solid var(--signal);
+  outline-offset: 2px;
+}
+.check-item label {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--ink-2);
+  cursor: pointer;
+  margin: 0;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 500;
+  line-height: 1.5;
+  transition: color 0.15s, text-decoration 0.15s;
+}
+.check-item.checked label,
+.check-item input:checked + label {
+  color: var(--ink-3);
+  text-decoration: line-through;
+  text-decoration-color: var(--line-2);
+}
+
+.checklist-section .check-item input {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+}
+
+/* ============================================================
+   ESTACIONES ITV · Mapa + Filtros + Índice
+   ============================================================ */
+
+.layout {
+  max-width: 1240px;
+  margin: 40px auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.filtros {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 24px 24px 28px;
+  position: sticky;
+  top: 100px;
+}
+.filtros h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 0 0 20px;
+  padding: 0 0 14px;
+  border-bottom: 1px solid var(--line);
+}
+.filtros label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 14px 0 6px;
+}
+.filtros input[type="text"],
+.filtros select {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 14px;
+  padding: 10px 14px;
+  background: var(--paper);
+  border: 1.5px solid var(--line);
+  border-radius: 4px;
+  color: var(--ink);
+  box-sizing: border-box;
+  appearance: none;
+  margin: 0;
+}
+.filtros input[type="text"]:focus,
+.filtros select:focus {
+  outline: none;
+  border-color: var(--ink);
+  box-shadow: 3px 3px 0 var(--signal);
+}
+.filtros select {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2314171C' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 14px;
+  padding-right: 38px;
+  cursor: pointer;
+}
+
+.geo-btn,
+.share-btn {
+  width: 100%;
+  margin-top: 12px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.12s, box-shadow 0.12s;
+  border: 1.5px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  letter-spacing: 0.01em;
+}
+.geo-btn {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.geo-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--signal);
+}
+.share-btn {
+  background: var(--signal);
+  color: var(--ink);
+  border-color: var(--signal);
+}
+.share-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.contador {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--ink-2);
+  text-transform: uppercase;
+  font-weight: 600;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 10px 14px;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.leyenda {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.leyenda > div:first-child {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.leyenda-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--ink-2);
+}
+.leyenda-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 2px var(--paper-2);
+}
+
+.lista-resultados {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  max-height: 500px;
+  overflow-y: auto;
+}
+.lista-resultados .item {
+  padding: 10px 12px;
+  border-bottom: 1px dashed var(--line);
+  cursor: pointer;
+  transition: background 0.15s, padding-left 0.15s;
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.45;
+}
+.lista-resultados .item:hover {
+  background: var(--paper);
+  padding-left: 18px;
+}
+.lista-resultados .item:last-child { border-bottom: none; }
+.lista-resultados .item .nombre {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 14px;
+  display: block;
+  margin-bottom: 2px;
+}
+.lista-resultados .item .meta {
+  color: var(--ink-3);
+  font-size: 12px;
+}
+.lista-resultados .item .estado {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.lista-resultados .item .estado.abierto { color: var(--success); }
+.lista-resultados .item .estado.cerrado { color: var(--red); }
+
+#mapa {
+  width: 100%;
+  height: 700px;
+  min-height: 500px;
+  background: var(--paper-3);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.mapa-error {
+  display: grid;
+  place-items: center;
+  padding: 40px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-3);
+  line-height: 1.6;
+  height: 100%;
+}
+
+.map-toggle-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 500;
+  background: var(--paper-2);
+  border: 1.5px solid var(--ink);
+  border-radius: 4px;
+  width: 42px;
+  height: 42px;
+  font-size: 18px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: transform 0.12s, box-shadow 0.12s;
+  padding: 0;
+}
+.map-toggle-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--signal);
+}
+
+.custom-marker { background: transparent; border: none; }
+.marker-pin {
+  width: 26px;
+  height: 26px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--paper-2);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  font-size: 11px;
+}
+.marker-pin > * { transform: rotate(45deg); }
+.marker-pin.tipo-todos { background: var(--signal); }
+.marker-pin.tipo-moto { background: #3B82F6; }
+.marker-pin.tipo-pesado { background: #F97316; }
+.marker-pin.tipo-agricola { background: #8B5CF6; }
+
+.leaflet-popup-content-wrapper {
+  border-radius: 4px !important;
+  box-shadow: 4px 4px 0 rgba(20,23,28,0.15) !important;
+  border: 1.5px solid var(--ink);
+  background: var(--paper-2) !important;
+}
+.leaflet-popup-tip {
+  background: var(--paper-2) !important;
+  border: 1.5px solid var(--ink);
+  box-shadow: none !important;
+}
+.btn-popup {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  margin: 2px 4px 2px 0;
+  border-radius: 3px;
+  text-decoration: none;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  transition: all 0.15s;
+}
+.btn-popup:hover {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.btn-popup.btn-como-llegar {
+  background: var(--signal);
+  border-color: var(--signal);
+  color: var(--ink);
+}
+.btn-popup.btn-como-llegar:hover {
+  background: var(--signal-dark);
+  border-color: var(--signal-dark);
+  color: var(--paper);
+}
+.btn-popup.btn-llamar {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+.btn-popup.btn-llamar:hover {
+  background: var(--signal);
+  border-color: var(--signal);
+  color: var(--ink);
+}
+.btn-popup.btn-whatsapp {
+  background: var(--whatsapp);
+  border-color: var(--whatsapp);
+  color: #fff;
+}
+.btn-popup.btn-whatsapp:hover {
+  background: #128C7E;
+  border-color: #128C7E;
+  color: #fff;
+}
+
+#indice-estaciones-ccaa {
+  max-width: 1240px;
+  margin: 60px auto;
+  padding: 0 32px;
+}
+#indice-estaciones-ccaa h2 {
+  font-family: var(--font-display);
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin: 0 0 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+#indice-estaciones-ccaa > p {
+  font-size: 15px;
+  color: var(--ink-3);
+  margin-bottom: 32px;
+  max-width: 720px;
+}
+#indice-estaciones-ccaa details {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+#indice-estaciones-ccaa details[open] { border-color: var(--ink); }
+#indice-estaciones-ccaa summary {
+  cursor: pointer;
+  padding: 16px 22px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--ink);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  letter-spacing: -0.01em;
+  transition: background 0.15s;
+}
+#indice-estaciones-ccaa summary:hover { background: var(--paper); }
+#indice-estaciones-ccaa summary::-webkit-details-marker { display: none; }
+#indice-estaciones-ccaa summary::after {
+  content: '+';
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink-3);
+  transition: transform 0.2s;
+}
+#indice-estaciones-ccaa details[open] summary::after {
+  content: '−';
+  color: var(--signal-dark);
+}
+#indice-estaciones-ccaa summary span {
+  color: var(--ink-3);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  margin-left: 0;
+}
+#indice-estaciones-ccaa ul {
+  list-style: none;
+  margin: 0;
+  padding: 8px 22px 22px;
+  columns: 2;
+  column-gap: 32px;
+}
+#indice-estaciones-ccaa li {
+  padding: 6px 0;
+  border-bottom: 1px dashed var(--line);
+  font-size: 14px;
+  color: var(--ink-2);
+  break-inside: avoid;
+}
+#indice-estaciones-ccaa li a {
+  color: var(--ink);
+  font-weight: 500;
+  text-decoration: none;
+}
+#indice-estaciones-ccaa li a:hover {
+  color: var(--signal-dark);
+  text-decoration: underline;
+}
+
+/* ============================================================
+   WHATSAPP FLOATING (marca real)
+   ============================================================ */
+#whatsappBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  background: var(--whatsapp);
+  color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 900;
+  transition: transform 0.15s;
+}
+#whatsappBtn:hover { transform: scale(1.1); }
+
+/* ============================================================
+   RESPONSIVE CONSOLIDADO
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .mag-hero { grid-template-columns: 1fr; gap: 40px; padding: 40px 20px 60px; }
+  .mag-hero-text h1 { font-size: 52px; }
+  .mag-hero-aside { border-left: none; border-top: 1px solid var(--line); padding-left: 0; padding-top: 32px; }
+  .mag-data-bar { grid-template-columns: 1fr 1fr; }
+  .mag-data-bar > div { padding: 20px 0; border-right: none; border-bottom: 1px solid var(--line); }
+  .mag-data-bar .n { font-size: 40px; }
+  .mag-data-bar .l { font-size: 12px; }
+  .mag-section { padding: 48px 20px; }
+  .mag-section-head { grid-template-columns: 1fr; gap: 8px; margin-bottom: 32px; }
+  .mag-section-head h2 { font-size: 32px; }
+  .mag-feature { grid-template-columns: 1fr; gap: 32px; }
+  .mag-feature-body h3 { font-size: 30px; }
+  .mag-tools-list a { grid-template-columns: 40px 1fr auto; gap: 16px; padding: 24px 0; }
+  .mag-tools-list .tool-title { font-size: 20px; }
+  .mag-updates a { grid-template-columns: 1fr; gap: 8px; }
+  .mag-issue-bar { flex-direction: column; gap: 4px; padding: 16px 20px 0; }
+  .mag-ccaa-grid { grid-template-columns: 1fr 1fr; }
+  .mag-ccaa-grid a { padding: 14px 16px; }
+  .mag-ccaa-grid .ccaa-nombre { font-size: 13px; }
+  .mag-ccaa-grid .ccaa-precio { font-size: 11px; }
+  .mag-calc-widget { padding: 28px 24px; box-shadow: 5px 5px 0 var(--signal); }
+  .mag-calc-widget h3 { font-size: 22px; }
+  .mag-calc-form { grid-template-columns: 1fr !important; gap: 14px; }
+  .mag-calc-result .date-big { font-size: 32px; }
+  .mag-precios-tabla { font-size: 13px; }
+  .mag-precios-tabla thead th { padding: 12px 12px; font-size: 9px; }
+  .mag-precios-tabla tbody td { padding: 12px 12px; }
+  .mag-precios-tabla tbody a { font-size: 13px; }
+  .mag-defecto-buscador { padding: 24px; }
+  .mag-defecto-buscador .campo { flex-direction: column; }
+  .mag-defecto-buscador button { width: 100%; }
+  .defect-table tr td { padding: 12px 12px; font-size: 14px; }
+  .defect-table tr th { padding: 12px 12px; font-size: 9px; }
+  .process-step { grid-template-columns: 44px 1fr; gap: 16px; }
+  .process-num { width: 44px; height: 44px; font-size: 18px; }
+  .mag-toc { padding: 20px 24px; }
+  .stat-box { min-width: 130px; padding: 14px 16px; }
+  .stat-box strong { font-size: 22px; }
+  .checklist-section { padding: 20px 20px; }
+  .checklist-section h3 { font-size: 19px; }
+  .check-item { padding: 12px 12px; gap: 12px; }
+  .check-item label { font-size: 14px; }
+  .progress-container { padding: 20px; }
+  .layout { grid-template-columns: 1fr; gap: 20px; padding: 0 20px; }
+  .filtros { position: static; }
+  #mapa { height: 500px; }
+  #indice-estaciones-ccaa { padding: 0 20px; }
+  #indice-estaciones-ccaa h2 { font-size: 28px; }
+  #indice-estaciones-ccaa ul { columns: 1; }
 }
