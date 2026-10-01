@@ -8,24 +8,11 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📋</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles-v2.css">
+<link rel="stylesheet" href="/styles-editorial.css">
 <link rel="canonical" href="https://itvcheck.es/tipos-defectos-itv">
-<style>
-.badge { display:inline-block; padding:3px 10px; border-radius:12px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; }
-.badge-leve { background:#FEF3C7; color:#92400E; }
-.badge-grave { background:#FED7AA; color:#9A3412; }
-.badge-muygrave { background:#FECACA; color:#991B1B; }
-.defect-table td:last-child { width:110px; text-align:center; }
-.cat-intro { background:#F8FAFC; border-left:4px solid #94A3B8; padding:12px 16px; margin:12px 0; font-size:13px; color:#475569; }
-.stat-box { display:inline-block; background:#ECFDF5; border:1px solid #10B981; border-radius:6px; padding:10px 14px; margin:4px 6px 4px 0; font-size:13px; }
-.stat-box strong { color:#059669; display:block; font-size:20px; font-family:'Outfit',sans-serif; }
-.summary-table td:first-child { font-weight:600; }
-.process-step { display:flex; gap:15px; margin:15px 0; }
-.process-num { flex-shrink:0; width:38px; height:38px; border-radius:50%; background:#10B981; color:#fff; font-weight:900; font-family:'Outfit',sans-serif; display:flex; align-items:center; justify-content:center; font-size:18px; }
-.process-body { flex:1; }
-.process-body h4 { margin-top:0; }
-</style>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -66,7 +53,7 @@
 </head>
 <body>
 
-<div class="itv-topbar"><div class="itv-topbar-inner"><span><span class="dot"></span>ITVCHECK &middot; EDICI&Oacute;N 2026</span><span>192 ESTACIONES MAPEADAS</span></div></div>
+<div class="itv-topbar"><div class="itv-topbar-inner"><span><span class="dot"></span>ITVCHECK &middot; EDICI&Oacute;N 2026</span><span>GU&Iacute;A DE REFERENCIA &middot; 200+ DEFECTOS</span></div></div>
 
 <header class="itv-header">
   <div class="itv-header-inner">
@@ -88,36 +75,67 @@
 
 <div class="breadcrumbs"><a href="/index">Inicio</a> &raquo; <a href="/guias">Gu&iacute;as</a> &raquo; <span>Defectos en la ITV</span></div>
 
-<h1>Defectos en la ITV: gu&iacute;a completa 2026</h1>
+<div class="mag-issue-bar">
+  <span>ITVcheck &middot; Manual de inspecci&oacute;n t&eacute;cnica</span>
+  <span>GU&Iacute;A 03 &middot; <strong>Edici&oacute;n 2026</strong></span>
+</div>
 
-<div class="meta-date">&Uacute;ltima actualizaci&oacute;n: <strong>Octubre de 2026</strong> &middot; Por <a href="/autor/daniel-vega">Daniel Vega</a>, T&eacute;cnico Superior en Automoci&oacute;n &middot; 14 min de lectura</div>
+<section class="mag-hero">
+  <div class="mag-hero-text">
+    <span class="kicker">Actualizado Octubre 2026 &middot; 14 min de lectura</span>
+    <h1>Defectos en la ITV:<br><em>gu&iacute;a completa 2026.</em></h1>
+    <p class="lead">Los 200+ defectos que puede marcar el inspector, organizados en las 11 categor&iacute;as oficiales. Gravedad, c&oacute;mo revisarlos, cu&aacute;nto cuestan y c&oacute;mo reclamar. Basado en el Real Decreto 920/2017.</p>
+    <div class="mag-hero-ctas">
+      <a href="#niveles" class="btn-hero">Ver los 3 niveles &rarr;</a>
+      <a href="#categorias" class="btn-hero-secondary">Ir a los 200+ defectos &rarr;</a>
+    </div>
+  </div>
+  <aside class="mag-hero-aside">
+    <span class="label">Datos clave</span>
+    <div class="stat-row">
+      <span class="n">200+</span>
+      <span class="l">Defectos<br>catalogados</span>
+    </div>
+    <div class="stat-row">
+      <span class="n">11</span>
+      <span class="l">Categor&iacute;as<br>oficiales</span>
+    </div>
+    <div class="stat-row">
+      <span class="n">2</span>
+      <span class="l">Meses<br>para subsanar</span>
+    </div>
+  </aside>
+</section>
 
 <p>Cuando pasas la ITV, cada fallo que encuentra el inspector se clasifica en tres niveles: <strong>defecto leve (DL)</strong>, <strong>defecto grave (DG)</strong> o <strong>defecto muy grave (DMG)</strong>. No es una simple etiqueta: el nivel determina el resultado de la inspecci&oacute;n, el plazo para reparar y si puedes seguir circulando con el coche o no.</p>
 
 <p>Esta es la gu&iacute;a m&aacute;s completa en espa&ntilde;ol sobre defectos en la ITV. Recoge <strong>m&aacute;s de 200 defectos concretos</strong> organizados en las 11 categor&iacute;as oficiales del manual de inspecci&oacute;n, con su gravedad habitual, c&oacute;mo revisarlos antes de ir, cu&aacute;nto cuesta repararlos, los plazos legales y el proceso de reclamaci&oacute;n. Todo basado en el <strong>Real Decreto 920/2017</strong>, que regula la inspecci&oacute;n t&eacute;cnica de veh&iacute;culos en Espa&ntilde;a.</p>
 
-<div class="stat-box">
-<strong>+80%</strong>
-rechazos concentrados en 4 &aacute;reas
-</div>
-<div class="stat-box">
-<strong>~30%</strong>
-fallos de alumbrado
-</div>
-<div class="stat-box">
-<strong>2 meses</strong>
-plazo tras desfavorable
-</div>
-<div class="stat-box">
-<strong>200 &euro;</strong>
-multa por ITV caducada
+<div class="mag-data-bar">
+  <div>
+    <span class="n">+80<small>%</small></span>
+    <span class="l">Rechazos concentrados<br>en 4 &aacute;reas</span>
+  </div>
+  <div>
+    <span class="n">~30<small>%</small></span>
+    <span class="l">Fallos<br>de alumbrado</span>
+  </div>
+  <div>
+    <span class="n">2<small>meses</small></span>
+    <span class="l">Plazo tras<br>desfavorable</span>
+  </div>
+  <div>
+    <span class="n">200<small>&euro;</small></span>
+    <span class="l">Multa por<br>ITV caducada</span>
+  </div>
 </div>
 
 <h2>&Iacute;ndice de contenidos</h2>
-<ul>
+<ul class="mag-toc">
 <li><a href="#niveles">Los 3 niveles de defecto y sus consecuencias</a></li>
+<li><a href="#codigos">Tabla de c&oacute;digos oficiales por categor&iacute;a</a></li>
 <li><a href="#categorias">Los 200+ defectos por categor&iacute;a oficial</a></li>
-<li><a href="#frecuentes">Los 20 defectos m&aacute;s frecuentes en Espa&ntilde;a</a></li>
+<li><a href="#frecuentes">Los defectos m&aacute;s frecuentes en Espa&ntilde;a</a></li>
 <li><a href="#costes">Cu&aacute;nto cuesta reparar cada defecto</a></li>
 <li><a href="#subsanacion">Qu&eacute; hacer si suspendes: proceso paso a paso</a></li>
 <li><a href="#reclamacion">C&oacute;mo reclamar un defecto injustificado</a></li>
@@ -603,18 +621,62 @@ Escrito por <a href="/autor/daniel-vega" style="color:#10B981;font-weight:700;">
 
 </div>
 
-<footer>
-<p><strong>ITVcheck</strong> | Informaci&oacute;n orientativa sobre la ITV en Espa&ntilde;a.</p>
-<p style="font-size:13px;color:#94A3B8;margin-top:15px;">Como Afiliado de Amazon, ITVcheck gana por las compras que cumplan los requisitos aplicables.</p>
-<p style="margin-top:15px;">
-<a href="/autor/daniel-vega">Autor: Daniel Vega</a> |
-<a href="/sobre-nosotros">Sobre nosotros</a> |
-<a href="/contacto">Contacto</a> |
-<a href="/aviso-legal">Aviso legal</a> |
-<a href="/politica-cookies">Cookies</a> |
-<a href="/politica-privacidad">Privacidad</a> |
-<a href="/politica-afiliados">Afiliados</a>
-</p>
+<footer class="itv-footer">
+  <div class="itv-footer-inner">
+    <div class="itv-footer-top">
+      <div class="itv-footer-brand">
+        <a href="/index" class="itv-logo">
+          <span class="itv-logo-mark">ITV</span>
+          ITVcheck
+        </a>
+        <p>Manual de inspecci&oacute;n t&eacute;cnica independiente sobre la ITV en Espa&ntilde;a. Gu&iacute;as t&eacute;cnicas, mapa de estaciones y datos verificados.</p>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Herramientas</h4>
+        <a href="/cuando-me-toca-itv">Calculadora de fecha</a>
+        <a href="/calculadora-precio-itv">Comparador de precios</a>
+        <a href="/estaciones-itv">Buscador de estaciones</a>
+        <a href="/checklist-itv">Checklist pre-ITV</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Gu&iacute;as</h4>
+        <a href="/guia-completa-itv">Gu&iacute;a completa ITV</a>
+        <a href="/guias">Todas las gu&iacute;as</a>
+        <a href="/mecanica">Mec&aacute;nica DIY</a>
+        <a href="/guia-luces">Luces</a>
+        <a href="/guia-neumaticos">Neum&aacute;ticos</a>
+        <a href="/seguros-coche">Seguros</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Novedades 2026</h4>
+        <a href="/baliza-v16-obligatoria">Baliza V-16 obligatoria</a>
+        <a href="/itv-camper-furgonetas">ITV para campers</a>
+        <a href="/preparar-coche-viaje-largo">Viaje largo</a>
+        <a href="/mantenimiento-coches-electricos">Mantenimiento el&eacute;ctricos</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Por CCAA</h4>
+        <a href="/itv-por-comunidad">Todas las comunidades</a>
+        <a href="/itv-madrid">ITV Madrid</a>
+        <a href="/itv-cataluna">ITV Catalu&ntilde;a</a>
+        <a href="/itv-andalucia">ITV Andaluc&iacute;a</a>
+        <a href="/itv-valencia">ITV Valencia</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Legal</h4>
+        <a href="/sobre-nosotros">Sobre nosotros</a>
+        <a href="/contacto">Contacto</a>
+        <a href="/aviso-legal">Aviso legal</a>
+        <a href="/politica-cookies">Pol&iacute;tica de Cookies</a>
+        <a href="/politica-privacidad">Pol&iacute;tica de Privacidad</a>
+        <a href="/politica-afiliados">Afiliados</a>
+      </div>
+    </div>
+    <div class="itv-footer-bottom">
+      <span>&copy; 2026 ITVCHECK.ES</span>
+      <span>MANUAL DE INSPECCI&Oacute;N &middot; GU&Iacute;A 03 &middot; EDICI&Oacute;N 2026</span>
+    </div>
+  </div>
 </footer>
 
 </body>
