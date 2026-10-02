@@ -5,8 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="C&oacute;mo interpretar tu informe de ITV paso a paso: qu&eacute; significa cada c&oacute;digo, qu&eacute; gravedad tiene, cu&aacute;nto cuesta repararlo y qu&eacute; hacer seg&uacute;n el resultado. Gu&iacute;a pr&aacute;ctica 2026.">
 <title>C&oacute;mo Interpretar el Informe de la ITV 2026: Gu&iacute;a Completa | ITVcheck</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📋</text></svg>">
-<link rel="stylesheet" href="/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#128203;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles-v2.css">
+<link rel="stylesheet" href="/styles-editorial.css">
 <link rel="canonical" href="https://itvcheck.es/como-interpretar-informe-itv">
 <script type="application/ld+json">
 {
@@ -16,7 +20,7 @@
   "author": {"@type":"Person","name":"Daniel Vega","url":"https://itvcheck.es/autor/daniel-vega","jobTitle":"T&eacute;cnico Superior en Automoci&oacute;n"},
   "publisher": {"@type":"Organization","name":"ITVcheck","url":"https://itvcheck.es"},
   "datePublished": "2026-10-01",
-  "dateModified": "2026-10-01",
+  "dateModified": "2026-10-02",
   "description": "Gu&iacute;a paso a paso para entender el informe de la ITV: c&oacute;digos, gravedad, coste y siguientes pasos."
 }
 </script>
@@ -33,89 +37,148 @@
   ]
 }
 </script>
-<style>
-.badge { display:inline-block; padding:3px 10px; border-radius:12px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; }
-.badge-leve { background:#FEF3C7; color:#92400E; }
-.badge-grave { background:#FED7AA; color:#9A3412; }
-.badge-muygrave { background:#FECACA; color:#991B1B; }
-.anatomia { background:#F8FAFC; border:2px dashed #94A3B8; padding:20px; margin:20px 0; border-radius:8px; font-family:monospace; font-size:13px; line-height:1.8; }
-.anatomia .label { color:#10B981; font-weight:700; }
-.codigo-box { background:#F0FDF4; border-left:4px solid #10B981; padding:12px 16px; margin:12px 0; border-radius:4px; }
-.codigo-box h4 { margin:0 0 6px 0; color:#0F172A; font-size:15px; }
-.codigo-box .cod { background:#10B981; color:#fff; padding:2px 8px; border-radius:4px; font-family:monospace; font-weight:700; margin-right:8px; }
-.codigo-box .meta { font-size:12px; color:#64748B; margin-top:8px; }
-</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Inicio","item":"https://itvcheck.es/"},
+    {"@type":"ListItem","position":2,"name":"Gu&iacute;as","item":"https://itvcheck.es/guias"},
+    {"@type":"ListItem","position":3,"name":"Interpretar informe ITV"}
+  ]
+}
+</script>
 </head>
 <body>
 
-<header>
-<a href="/index" class="logo">ITV<span>check</span></a>
-<button class="hamburger" onclick="document.getElementById('menu').classList.toggle('open')">&#9776;</button>
-<nav id="menu">
-<a href="/index">Inicio</a>
-<a href="/guias">Gu&iacute;as</a>
-<a href="/blog/">Blog</a>
-<a href="/mecanica">Mec&aacute;nica DIY</a>
-<a href="/itv-por-comunidad">CCAA</a>
-<a href="/contacto">Contacto</a>
-</nav>
+<div class="itv-topbar">
+  <div class="itv-topbar-inner">
+    <span><span class="dot"></span>ITVCHECK &middot; EDICI&Oacute;N 2026</span>
+    <span>GU&Iacute;A 13 &middot; INFORMES ITV</span>
+  </div>
+</div>
+
+<header class="itv-header">
+  <div class="itv-header-inner">
+    <a href="/index" class="itv-logo">
+      <span class="itv-logo-mark">ITV</span>
+      ITVcheck
+    </a>
+    <button class="itv-nav-toggle" aria-label="Abrir men&uacute;" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="itv-nav">
+      <a href="/guias">Gu&iacute;as</a>
+      <a href="/estaciones-itv">Estaciones</a>
+      <a href="/operadores-itv-espana">Operadores</a>
+      <a href="/calculadora-precio-itv">Precios</a>
+      <a href="/checklist-itv">Checklist</a>
+    </nav>
+  </div>
 </header>
+
+<div class="mag-issue-bar">
+  <span>ITVcheck &middot; Manual de inspecci&oacute;n t&eacute;cnica</span>
+  <span>GU&Iacute;A 13 &middot; <strong>Edici&oacute;n 2026</strong></span>
+</div>
+
+<section class="mag-hero hero-blog">
+  <div class="mag-hero-text">
+    <span class="kicker">Actualizado Octubre 2026 &middot; 12 min de lectura</span>
+    <h1 class="h1-inline">Interpretar <em>el informe de ITV.</em></h1>
+    <p class="lead">Acabas de salir de la estaci&oacute;n ITV y tienes en la mano un papel con c&oacute;digos como &laquo;04.01.02&raquo; o &laquo;08.03&raquo;. Puede ser confuso. Esta gu&iacute;a te explica <strong>qu&eacute; significa cada apartado de tu informe</strong>, c&oacute;mo leer los c&oacute;digos de defectos y qu&eacute; hacer seg&uacute;n el resultado. Basada en el <strong>Manual de Procedimiento de Inspecci&oacute;n</strong> de la DGT y el <strong>Real Decreto 920/2017</strong>.</p>
+    <div class="mag-hero-ctas">
+      <a href="#anatomia" class="btn-hero">Ver anatom&iacute;a del informe &rarr;</a>
+      <a href="#codigos" class="btn-hero-secondary">20 c&oacute;digos frecuentes &rarr;</a>
+    </div>
+  </div>
+  <aside class="mag-hero-aside">
+    <span class="label">Datos clave</span>
+    <div class="stat-row">
+      <span class="n">12</span>
+      <span class="l">Categor&iacute;as<br>de defectos</span>
+    </div>
+    <div class="stat-row">
+      <span class="n">3</span>
+      <span class="l">Tipos de resultado:<br>Fav / Desfav / Neg</span>
+    </div>
+    <div class="stat-row">
+      <span class="n">2<small>meses</small></span>
+      <span class="l">Plazo m&aacute;ximo para<br>reparar un desfavorable</span>
+    </div>
+  </aside>
+</section>
+
+<div class="mag-data-bar">
+  <div>
+    <span class="n">80<small>%</small></span>
+    <span class="l">De los defectos se concentran<br>en solo 20 c&oacute;digos</span>
+  </div>
+  <div>
+    <span class="n">12</span>
+    <span class="l">Categor&iacute;as mayores<br>en el manual de inspecci&oacute;n</span>
+  </div>
+  <div>
+    <span class="n">3</span>
+    <span class="l">Niveles de gravedad: leve,<br>grave y muy grave</span>
+  </div>
+  <div>
+    <span class="n">30<small>d&iacute;as</small></span>
+    <span class="l">Plazo para reclamar<br>un defecto del informe</span>
+  </div>
+</div>
 
 <div class="container">
 
-<div class="breadcrumbs"><a href="/index">Inicio</a> &raquo; <a href="/guias">Gu&iacute;as</a> &raquo; <span>Interpretar informe ITV</span></div>
+<p>Acabas de salir de la estaci&oacute;n ITV y tienes en la mano un papel con c&oacute;digos como &laquo;04.01.02&raquo; o &laquo;08.03&raquo;. Puede ser confuso. Esta gu&iacute;a te explica <strong>qu&eacute; significa cada apartado de tu informe</strong>, c&oacute;mo leer los c&oacute;digos de defectos y qu&eacute; hacer seg&uacute;n el resultado.</p>
 
-<h1>C&oacute;mo interpretar el informe de la ITV: gu&iacute;a pr&aacute;ctica 2026</h1>
-
-<div class="meta-date">Ultima actualizacion: <strong>Octubre de 2026</strong> &middot; Por <a href="/autor/daniel-vega">Daniel Vega</a>, T&eacute;cnico Superior en Automoci&oacute;n &middot; 12 min de lectura</div>
-
-<p>Acabas de salir de la estaci&oacute;n ITV y tienes en la mano un papel con c&oacute;digos como "04.01.02" o "08.03". Puede ser confuso. Esta gu&iacute;a te explica <strong>qu&eacute; significa cada apartado de tu informe</strong>, c&oacute;mo leer los c&oacute;digos de defectos y qu&eacute; hacer seg&uacute;n el resultado. Est&aacute; basada en el <strong>Manual de Procedimiento de Inspecci&oacute;n</strong> de la DGT y en el <strong>Real Decreto 920/2017</strong>.</p>
-
-<div class="callout">
-<strong>Antes de empezar:</strong> si solo quieres entender un c&oacute;digo concreto, mira la secci&oacute;n <a href="#codigos-frecuentes">Los 20 c&oacute;digos m&aacute;s frecuentes</a>. Si quieres comprender el informe completo, sigue leyendo en orden.
+<div class="mag-notice-inner">
+  <h3>Antes de empezar</h3>
+  <p>Si solo quieres entender un c&oacute;digo concreto, salta directamente a la secci&oacute;n <a href="#codigos">Los 20 c&oacute;digos m&aacute;s frecuentes</a>. Si quieres comprender el informe completo, sigue el art&iacute;culo en orden.</p>
 </div>
 
-<h2>1. Anatom&iacute;a del informe de ITV</h2>
+<h2 id="anatomia">1. Anatom&iacute;a del informe de ITV</h2>
 
 <p>Todo informe de ITV espa&ntilde;ol sigue el mismo formato. Estos son los apartados que encontrar&aacute;s, en orden:</p>
 
-<div class="anatomia">
-<span class="label">Encabezado:</span> datos del veh&iacute;culo (matr&iacute;cula, bastidor, marca, modelo)<br>
-<span class="label">Fecha:</span> d&iacute;a de la inspecci&oacute;n<br>
-<span class="label">Estaci&oacute;n:</span> nombre y n&uacute;mero de la estaci&oacute;n ITV<br>
-<span class="label">Resultado:</span> FAVORABLE / DESFAVORABLE / NEGATIVA<br>
-<span class="label">Pr&oacute;xima inspecci&oacute;n:</span> fecha l&iacute;mite de la siguiente ITV<br>
-<span class="label">Defectos:</span> listado con c&oacute;digo, descripci&oacute;n y gravedad<br>
-<span class="label">Observaciones:</span> notas adicionales del inspector<br>
-<span class="label">Firma:</span> sello y firma del ingeniero t&eacute;cnico
+<div class="cat-intro">
+  <strong>Encabezado:</strong> datos del veh&iacute;culo (matr&iacute;cula, bastidor, marca, modelo)<br>
+  <strong>Fecha:</strong> d&iacute;a de la inspecci&oacute;n<br>
+  <strong>Estaci&oacute;n:</strong> nombre y n&uacute;mero de la estaci&oacute;n ITV<br>
+  <strong>Resultado:</strong> FAVORABLE / DESFAVORABLE / NEGATIVA<br>
+  <strong>Pr&oacute;xima inspecci&oacute;n:</strong> fecha l&iacute;mite de la siguiente ITV<br>
+  <strong>Defectos:</strong> listado con c&oacute;digo, descripci&oacute;n y gravedad<br>
+  <strong>Observaciones:</strong> notas adicionales del inspector<br>
+  <strong>Firma:</strong> sello y firma del ingeniero t&eacute;cnico
 </div>
 
 <p>El <strong>resultado</strong> es la parte m&aacute;s importante. Determina si puedes circular o no, y qu&eacute; plazo tienes:</p>
 
-<table>
+<table class="defect-table">
 <tr><th>Resultado</th><th>Significa</th><th>Puede circular</th><th>Plazo</th></tr>
 <tr><td><strong>Favorable</strong></td><td>Sin defectos o solo leves</td><td>S&iacute;, con normalidad</td><td>&mdash;</td></tr>
 <tr><td><strong>Desfavorable</strong></td><td>Al menos un defecto grave</td><td>Solo al taller</td><td>2 meses</td></tr>
 <tr><td><strong>Negativa</strong></td><td>Al menos un defecto muy grave</td><td>No, ni al taller</td><td>Gr&uacute;a obligatoria</td></tr>
 </table>
 
-<div class="tip-box"><strong>Dato clave:</strong> un solo defecto grave convierte toda la ITV en desfavorable, aunque tengas otros 20 leves. El resultado siempre se calcula por el peor de los defectos detectados.</div>
+<div class="mag-notice-inner">
+  <h3>Dato clave</h3>
+  <p>Un solo defecto grave convierte toda la ITV en desfavorable, aunque tengas otros 20 leves. El resultado siempre se calcula por el peor de los defectos detectados.</p>
+</div>
 
 <h2>2. C&oacute;mo leer los c&oacute;digos de defectos</h2>
 
 <p>Los c&oacute;digos del informe siguen una estructura jer&aacute;rquica de 3 niveles separados por puntos. Entender la l&oacute;gica te permite descifrar cualquier c&oacute;digo, aunque no aparezca en las tablas de esta gu&iacute;a:</p>
 
-<div class="codigo-box">
-<h4><span class="cod">04.01.02</span> Luz de cruce fundida</h4>
-<p><strong>04</strong> = Alumbrado y se&ntilde;alizaci&oacute;n (categor&iacute;a mayor)</p>
-<p><strong>01</strong> = Luces de cruce y carretera (subcategor&iacute;a)</p>
-<p><strong>02</strong> = Defecto concreto: l&aacute;mpara fundida</p>
-<p class="meta"><strong>Gravedad t&iacute;pica:</strong> <span class="badge badge-grave">Grave</span> &middot; <strong>Coste:</strong> 5-30 &euro; &middot; <strong>DIY:</strong> S&iacute;</p>
+<div class="mag-notice-inner">
+  <h3>Ejemplo: <code>04.01.02</code> &mdash; Luz de cruce fundida</h3>
+  <p><strong>04</strong> = Alumbrado y se&ntilde;alizaci&oacute;n (categor&iacute;a mayor)<br>
+  <strong>01</strong> = Luces de cruce y carretera (subcategor&iacute;a)<br>
+  <strong>02</strong> = Defecto concreto: l&aacute;mpara fundida</p>
+  <p style="margin-top:10px;">Gravedad t&iacute;pica: <span class="badge badge-grave">Grave</span> &middot; Coste: 5-30 &euro; &middot; DIY: s&iacute;</p>
 </div>
 
 <p>Las 12 categor&iacute;as mayores son las siguientes:</p>
 
-<table>
+<table class="defect-table">
 <tr><th>C&oacute;digo</th><th>Categor&iacute;a</th><th>Ejemplos de subcategor&iacute;as</th></tr>
 <tr><td><strong>01</strong></td><td>Antiempotramiento delantero</td><td>Paragolpes, defensas</td></tr>
 <tr><td><strong>02</strong></td><td>Carrocer&iacute;a y chasis</td><td>Identificaci&oacute;n, bastidor, largueros, corrosi&oacute;n</td></tr>
@@ -131,118 +194,63 @@
 <tr><td><strong>12</strong></td><td>Veh&iacute;culos especiales</td><td>Taxis, ambulancias, transporte escolar</td></tr>
 </table>
 
-<h2 id="codigos-frecuentes">3. Los 20 c&oacute;digos m&aacute;s frecuentes en Espa&ntilde;a</h2>
+<h2 id="codigos">3. Los 20 c&oacute;digos m&aacute;s frecuentes en Espa&ntilde;a</h2>
 
 <p>Seg&uacute;n los datos de AECA-ITV, m&aacute;s del 80% de los defectos que aparecen en los informes espa&ntilde;oles pertenecen a estos 20 c&oacute;digos. Los agrupamos por categor&iacute;a:</p>
 
 <h3>Alumbrado (04)</h3>
 
-<div class="codigo-box">
-<h4><span class="cod">04.01.02</span> Luz de cruce fundida</h4>
-<p class="meta"><span class="badge badge-grave">Grave</span> &middot; 5-30 &euro; &middot; DIY s&iacute;</p>
-</div>
-
-<div class="codigo-box">
-<h4><span class="cod">04.01.04</span> Haz de luz deslumbrador o mal orientado</h4>
-<p class="meta"><span class="badge badge-grave">Grave</span> &middot; 10-25 &euro; &middot; Taller obligatorio</p>
-</div>
-
-<div class="codigo-box">
-<h4><span class="cod">04.02.02</span> Luz de freno fundida</h4>
-<p class="meta"><span class="badge badge-grave">Grave</span> &middot; 5-15 &euro; &middot; DIY s&iacute;</p>
-</div>
-
-<div class="codigo-box">
-<h4><span class="cod">04.02.05</span> Luz de matr&iacute;cula fundida</h4>
-<p class="meta"><span class="badge badge-grave">Grave</span> &middot; 3-12 &euro; &middot; DIY s&iacute;</p>
-</div>
-
-<div class="codigo-box">
-<h4><span class="cod">04.03.02</span> Intermitente fundido</h4>
-<p class="meta"><span class="badge badge-grave">Grave</span> &middot; 5-20 &euro; &middot; DIY s&iacute;</p>
-</div>
+<table class="defect-table">
+<tr><th>C&oacute;digo</th><th>Defecto</th><th>Gravedad</th><th>Coste t&iacute;pico</th></tr>
+<tr><td><code>04.01.02</code></td><td>Luz de cruce fundida</td><td><span class="badge badge-grave">Grave</span></td><td>5-30 &euro; &middot; DIY</td></tr>
+<tr><td><code>04.01.04</code></td><td>Haz de luz deslumbrador o mal orientado</td><td><span class="badge badge-grave">Grave</span></td><td>10-25 &euro; &middot; Taller</td></tr>
+<tr><td><code>04.02.02</code></td><td>Luz de freno fundida</td><td><span class="badge badge-grave">Grave</span></td><td>5-15 &euro; &middot; DIY</td></tr>
+<tr><td><code>04.02.05</code></td><td>Luz de matr&iacute;cula fundida</td><td><span class="badge badge-grave">Grave</span></td><td>3-12 &euro; &middot; DIY</td></tr>
+<tr><td><code>04.03.02</code></td><td>Intermitente fundido</td><td><span class="badge badge-grave">Grave</span></td><td>5-20 &euro; &middot; DIY</td></tr>
+</table>
 
 <h3>Frenos (06)</h3>
 
-<div class="codigo-box">
-<h4><span class="cod">06.01.03</span> Pastillas de freno por debajo del l&iacute;mite</h4>
-<p class="meta"><span class="badge badge-grave">Grave</span> &middot; 40-120 &euro; por eje &middot; Taller recomendado</p>
-</div>
-
-<div class="codigo-box">
-<h4><span class="cod">06.01.05</span> Discos de freno alabeados o rayados</h4>
-<p class="meta"><span class="badge badge-grave">Grave</span> &middot; 120-400 &euro; por eje &middot; Taller</p>
-</div>
-
-<div class="codigo-box">
-<h4><span class="cod">06.01.09</span> Desequilibrio de frenada superior al 25%</h4>
-<p class="meta"><span class="badge badge-grave">Grave</span> &middot; 80-300 &euro; &middot; Taller obligatorio</p>
-</div>
-
-<div class="codigo-box">
-<h4><span class="cod">06.02.01</span> Freno de estacionamiento ineficaz</h4>
-<p class="meta"><span class="badge badge-grave">Grave</span> &middot; 60-200 &euro; &middot; Taller</p>
-</div>
+<table class="defect-table">
+<tr><th>C&oacute;digo</th><th>Defecto</th><th>Gravedad</th><th>Coste t&iacute;pico</th></tr>
+<tr><td><code>06.01.03</code></td><td>Pastillas de freno por debajo del l&iacute;mite</td><td><span class="badge badge-grave">Grave</span></td><td>40-120 &euro;/eje &middot; Taller</td></tr>
+<tr><td><code>06.01.05</code></td><td>Discos de freno alabeados o rayados</td><td><span class="badge badge-grave">Grave</span></td><td>120-400 &euro;/eje &middot; Taller</td></tr>
+<tr><td><code>06.01.09</code></td><td>Desequilibrio de frenada superior al 25%</td><td><span class="badge badge-grave">Grave</span></td><td>80-300 &euro; &middot; Taller</td></tr>
+<tr><td><code>06.02.01</code></td><td>Freno de estacionamiento ineficaz</td><td><span class="badge badge-grave">Grave</span></td><td>60-200 &euro; &middot; Taller</td></tr>
+</table>
 
 <h3>Neum&aacute;ticos y suspensi&oacute;n (08)</h3>
 
-<div class="codigo-box">
-<h4><span class="cod">08.03.02</span> Dibujo de neum&aacute;tico por debajo de 1,6 mm</h4>
-<p class="meta"><span class="badge badge-grave">Grave</span> &middot; 60-200 &euro; por rueda &middot; Taller</p>
-</div>
-
-<div class="codigo-box">
-<h4><span class="cod">08.03.05</span> Desgaste irregular del neum&aacute;tico</h4>
-<p class="meta"><span class="badge badge-grave">Grave</span> &middot; 30-60 &euro; (alineaci&oacute;n) + neum&aacute;ticos</p>
-</div>
-
-<div class="codigo-box">
-<h4><span class="cod">08.03.08</span> Neum&aacute;tico con grietas profundas o m&aacute;s de 8 a&ntilde;os</h4>
-<p class="meta"><span class="badge badge-grave">Grave</span> &middot; 60-200 &euro; por rueda</p>
-</div>
-
-<div class="codigo-box">
-<h4><span class="cod">08.04.01</span> Amortiguador con fuga o rebote excesivo</h4>
-<p class="meta"><span class="badge badge-grave">Grave</span> &middot; 150-350 &euro; por eje &middot; Taller</p>
-</div>
+<table class="defect-table">
+<tr><th>C&oacute;digo</th><th>Defecto</th><th>Gravedad</th><th>Coste t&iacute;pico</th></tr>
+<tr><td><code>08.03.02</code></td><td>Dibujo de neum&aacute;tico por debajo de 1,6 mm</td><td><span class="badge badge-grave">Grave</span></td><td>60-200 &euro;/rueda &middot; Taller</td></tr>
+<tr><td><code>08.03.05</code></td><td>Desgaste irregular del neum&aacute;tico</td><td><span class="badge badge-grave">Grave</span></td><td>30-60 &euro; + neum&aacute;ticos</td></tr>
+<tr><td><code>08.03.08</code></td><td>Neum&aacute;tico con grietas profundas o m&aacute;s de 8 a&ntilde;os</td><td><span class="badge badge-grave">Grave</span></td><td>60-200 &euro;/rueda</td></tr>
+<tr><td><code>08.04.01</code></td><td>Amortiguador con fuga o rebote excesivo</td><td><span class="badge badge-grave">Grave</span></td><td>150-350 &euro;/eje &middot; Taller</td></tr>
+</table>
 
 <h3>Emisiones (05)</h3>
 
-<div class="codigo-box">
-<h4><span class="cod">05.03.02</span> Opacidad de humos fuera de rango (di&eacute;sel)</h4>
-<p class="meta"><span class="badge badge-grave">Grave</span> &middot; 0-1.500 &euro; seg&uacute;n causa</p>
-</div>
-
-<div class="codigo-box">
-<h4><span class="cod">05.01.02</span> CO fuera de rango (gasolina)</h4>
-<p class="meta"><span class="badge badge-grave">Grave</span> &middot; 80-250 &euro; (sonda lambda)</p>
-</div>
-
-<div class="codigo-box">
-<h4><span class="cod">05.04.01</span> Testigo de motor (MIL) encendido</h4>
-<p class="meta"><span class="badge badge-grave">Grave</span> &middot; Variable seg&uacute;n causa</p>
-</div>
+<table class="defect-table">
+<tr><th>C&oacute;digo</th><th>Defecto</th><th>Gravedad</th><th>Coste t&iacute;pico</th></tr>
+<tr><td><code>05.03.02</code></td><td>Opacidad de humos fuera de rango (di&eacute;sel)</td><td><span class="badge badge-grave">Grave</span></td><td>0-1.500 &euro; seg&uacute;n causa</td></tr>
+<tr><td><code>05.01.02</code></td><td>CO fuera de rango (gasolina)</td><td><span class="badge badge-grave">Grave</span></td><td>80-250 &euro; (sonda lambda)</td></tr>
+<tr><td><code>05.04.01</code></td><td>Testigo de motor (MIL) encendido</td><td><span class="badge badge-grave">Grave</span></td><td>Variable seg&uacute;n causa</td></tr>
+</table>
 
 <h3>Carrocer&iacute;a y documentaci&oacute;n (02, 10, 11)</h3>
 
-<div class="codigo-box">
-<h4><span class="cod">02.01.03</span> Matr&iacute;cula ilegible o mal fijada</h4>
-<p class="meta"><span class="badge badge-grave">Grave</span> &middot; 15-30 &euro; (juego de placas)</p>
-</div>
+<table class="defect-table">
+<tr><th>C&oacute;digo</th><th>Defecto</th><th>Gravedad</th><th>Coste t&iacute;pico</th></tr>
+<tr><td><code>02.01.03</code></td><td>Matr&iacute;cula ilegible o mal fijada</td><td><span class="badge badge-grave">Grave</span></td><td>15-30 &euro; (juego placas)</td></tr>
+<tr><td><code>02.02.04</code></td><td>Corrosi&oacute;n estructural en bajos o largueros</td><td><span class="badge badge-muygrave">Muy grave</span></td><td>200-1.500 &euro; seg&uacute;n extensi&oacute;n</td></tr>
+<tr><td><code>10.05.01</code></td><td>Escobillas del limpiaparabrisas en mal estado</td><td><span class="badge badge-leve">Leve</span></td><td>10-40 &euro; &middot; DIY</td></tr>
+<tr><td><code>11.01.01</code></td><td>Falta de documentaci&oacute;n obligatoria</td><td><span class="badge badge-muygrave">Muy grave</span></td><td>Tr&aacute;mite administrativo</td></tr>
+</table>
 
-<div class="codigo-box">
-<h4><span class="cod">02.02.04</span> Corrosi&oacute;n estructural en bajos o largueros</h4>
-<p class="meta"><span class="badge badge-muygrave">Muy grave</span> &middot; 200-1.500 &euro; seg&uacute;n extensi&oacute;n</p>
-</div>
-
-<div class="codigo-box">
-<h4><span class="cod">10.05.01</span> Escobillas del limpiaparabrisas en mal estado</h4>
-<p class="meta"><span class="badge badge-leve">Leve</span> &middot; 10-40 &euro; &middot; DIY s&iacute;</p>
-</div>
-
-<div class="codigo-box">
-<h4><span class="cod">11.01.01</span> Falta de documentaci&oacute;n obligatoria</h4>
-<p class="meta"><span class="badge badge-muygrave">Muy grave</span> &middot; Tr&aacute;mite administrativo</p>
+<div class="mag-notice-inner">
+  <h3>Recuerda</h3>
+  <p>El c&oacute;digo completo tiene 3 niveles separados por puntos: <code>categor&iacute;a.subcategor&iacute;a.defecto</code>. Con la tabla de las 12 categor&iacute;as puedes descifrar cualquier c&oacute;digo del informe, aunque no aparezca en el listado de arriba.</p>
 </div>
 
 <h2>4. Qu&eacute; hacer seg&uacute;n el resultado</h2>
@@ -266,10 +274,16 @@
 <li><strong>Algunos defectos muy graves pueden suponer la baja del veh&iacute;culo</strong> si no compensa econ&oacute;micamente la reparaci&oacute;n.</li>
 </ol>
 
+<div class="mag-notice-inner">
+  <h3>&iquest;Quieres saber cu&aacute;nto cuesta reparar los defectos?</h3>
+  <p>Consulta nuestra gu&iacute;a completa de tipos de defectos con costes y gravedad de cada uno.</p>
+  <a href="/tipos-defectos-itv">Ver gu&iacute;a de tipos de defectos &rarr;</a>
+</div>
+
 <h2>5. Errores comunes al interpretar el informe</h2>
 
 <ol>
-<li><strong>Confundir "desfavorable" con "negativa".</strong> Son dos resultados distintos con consecuencias muy diferentes. El desfavorable permite circular al taller, el negativo no.</li>
+<li><strong>Confundir &laquo;desfavorable&raquo; con &laquo;negativa&raquo;.</strong> Son dos resultados distintos con consecuencias muy diferentes. El desfavorable permite circular al taller, el negativo no.</li>
 <li><strong>Pensar que puedes reclamar en el momento.</strong> Las reclamaciones se presentan por escrito, no en el mostrador. Pide la hoja oficial.</li>
 <li><strong>No leer los defectos leves.</strong> Aunque apruebes, los leves quedan anotados. Si se repiten en dos ITV consecutivas, la tercera los convierte en graves.</li>
 <li><strong>Ignorar la fecha l&iacute;mite de la pr&oacute;xima ITV.</strong> Siempre aparece en el informe. Ap&uacute;ntala.</li>
@@ -287,7 +301,10 @@
 <li><strong>Segunda opini&oacute;n en otra estaci&oacute;n.</strong> Pasa la ITV en otro centro pagando tarifa completa. Si el resultado es favorable, ya tienes tu ITV.</li>
 </ul>
 
-<div class="tip-box"><strong>Realismo:</strong> las reclamaciones por clasificaci&oacute;n de defectos rara vez prosperan, porque el manual de inspecci&oacute;n es muy detallado. S&iacute; funcionan cuando hay errores objetivos de medici&oacute;n o aplicaci&oacute;n incorrecta del manual en veh&iacute;culos con reformas.</div>
+<div class="mag-notice-inner">
+  <h3>Realismo</h3>
+  <p>Las reclamaciones por clasificaci&oacute;n de defectos rara vez prosperan, porque el manual de inspecci&oacute;n es muy detallado. S&iacute; funcionan cuando hay errores objetivos de medici&oacute;n o aplicaci&oacute;n incorrecta del manual en veh&iacute;culos con reformas.</p>
+</div>
 
 <h2>7. Preguntas frecuentes</h2>
 
@@ -309,36 +326,95 @@
 <h3>&iquest;Los defectos leves se acumulan entre ITV?</h3>
 <p>No caducan por s&iacute; solos, pero si se repiten en dos inspecciones consecutivas, pueden convertirse en graves en la tercera.</p>
 
+<div class="mag-notice-inner">
+  <h3>Resumen r&aacute;pido</h3>
+  <p>El informe de ITV se lee de arriba abajo: <strong>resultado</strong> (favorable / desfavorable / negativa), <strong>pr&oacute;xima inspecci&oacute;n</strong>, y <strong>listado de defectos con c&oacute;digo</strong>. Los c&oacute;digos tienen 3 niveles: <code>categor&iacute;a.subcategor&iacute;a.defecto</code>. El 80% de los defectos se concentran en 20 c&oacute;digos, y el 60% son de alumbrado, frenos y neum&aacute;ticos. Si el resultado es desfavorable, tienes 2 meses para reparar y volver con tarifa reducida. Si es negativa, el coche va en gr&uacute;a y la segunda inspecci&oacute;n es completa.</p>
+</div>
+
 <div class="related-guides">
-<h3>Gu&iacute;as relacionadas</h3>
-<a href="/tipos-defectos-itv">Tipos de defectos en la ITV (gu&iacute;a completa)</a>
-<a href="/que-pasa-si-suspendo-la-itv">Qu&eacute; pasa si suspendo la ITV</a>
-<a href="/checklist-itv">Checklist pre-ITV (25 puntos)</a>
-<a href="/guia-frenos">C&oacute;mo revisar los frenos en casa</a>
-<a href="/guia-neumaticos">Gu&iacute;a completa de neum&aacute;ticos</a>
-<a href="/guia-luces">C&oacute;mo revisar las luces</a>
-<a href="/itv-por-comunidad">ITV por comunidad aut&oacute;noma</a>
+  <h3>Gu&iacute;as relacionadas</h3>
+  <a href="/tipos-defectos-itv">Tipos de defectos en la ITV</a>
+  <a href="/que-pasa-si-suspendo-la-itv">Qu&eacute; pasa si suspendo la ITV</a>
+  <a href="/checklist-itv">Checklist pre-ITV (25 puntos)</a>
+  <a href="/guia-frenos">C&oacute;mo revisar los frenos en casa</a>
+  <a href="/guia-neumaticos">Gu&iacute;a completa de neum&aacute;ticos</a>
+  <a href="/guia-luces">C&oacute;mo revisar las luces</a>
+  <a href="/itv-por-comunidad">ITV por comunidad aut&oacute;noma</a>
 </div>
 
-<p style="margin-top:30px;font-size:14px;color:#64748B;">
-Escrito por <a href="/autor/daniel-vega" style="color:#10B981;font-weight:700;">Daniel Vega</a>, T&eacute;cnico Superior en Automoci&oacute;n con 12 a&ntilde;os de experiencia en inspecci&oacute;n y mantenimiento de veh&iacute;culos.
-</p>
+<div class="mag-notice-inner">
+  <h3>Sobre el autor</h3>
+  <p><strong>Daniel Vega</strong>, T&eacute;cnico Superior en Automoci&oacute;n con 12 a&ntilde;os de experiencia en inspecci&oacute;n y mantenimiento de veh&iacute;culos. <a href="/autor/daniel-vega">Ver perfil del autor &rarr;</a></p>
+</div>
+
+<div class="other-ccaa">
+  <h3>M&aacute;s herramientas</h3>
+  <a href="/cuando-me-toca-itv">Calculadora de fecha</a>
+  <a href="/calculadora-precio-itv">Precios por CCAA</a>
+  <a href="/estaciones-itv">Buscador de estaciones</a>
+  <a href="/checklist-itv">Checklist pre-ITV</a>
+</div>
 
 </div>
 
-<footer>
-<p><strong>ITVcheck</strong> | Informaci&oacute;n orientativa sobre la ITV en Espa&ntilde;a.</p>
-<p style="font-size:13px;color:#94A3B8;margin-top:15px;">Como Afiliado de Amazon, ITVcheck gana por las compras que cumplan los requisitos aplicables.</p>
-<p style="margin-top:15px;">
-<a href="/autor/daniel-vega">Autor: Daniel Vega</a> |
-<a href="/sobre-nosotros">Sobre nosotros</a> |
-<a href="/contacto">Contacto</a> |
-<a href="/aviso-legal">Aviso legal</a> |
-<a href="/politica-cookies">Cookies</a> |
-<a href="/politica-privacidad">Privacidad</a> |
-<a href="/politica-afiliados">Afiliados</a>
-</p>
+<footer class="itv-footer">
+  <div class="itv-footer-inner">
+    <div class="itv-footer-top">
+      <div class="itv-footer-brand">
+        <a href="/index" class="itv-logo">
+          <span class="itv-logo-mark">ITV</span>
+          ITVcheck
+        </a>
+        <p>Manual de inspecci&oacute;n t&eacute;cnica independiente sobre la ITV en Espa&ntilde;a. Gu&iacute;as t&eacute;cnicas, mapa de estaciones y datos verificados.</p>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Herramientas</h4>
+        <a href="/cuando-me-toca-itv">Calculadora de fecha</a>
+        <a href="/calculadora-precio-itv">Comparador de precios</a>
+        <a href="/estaciones-itv">Buscador de estaciones</a>
+        <a href="/checklist-itv">Checklist pre-ITV</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Gu&iacute;as</h4>
+        <a href="/guia-completa-itv">Gu&iacute;a completa ITV</a>
+        <a href="/guias">Todas las gu&iacute;as</a>
+        <a href="/blog/">Blog</a>
+        <a href="/mecanica">Mec&aacute;nica DIY</a>
+        <a href="/guia-luces">Luces</a>
+        <a href="/guia-neumaticos">Neum&aacute;ticos</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Novedades 2026</h4>
+        <a href="/baliza-v16-obligatoria">Baliza V-16 obligatoria</a>
+        <a href="/itv-camper-furgonetas">ITV para campers</a>
+        <a href="/preparar-coche-viaje-largo">Viaje largo</a>
+        <a href="/mantenimiento-coches-electricos">Mantenimiento el&eacute;ctricos</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Por CCAA</h4>
+        <a href="/itv-por-comunidad">Todas las comunidades</a>
+        <a href="/itv-madrid">ITV Madrid</a>
+        <a href="/itv-cataluna">ITV Catalu&ntilde;a</a>
+        <a href="/itv-andalucia">ITV Andaluc&iacute;a</a>
+        <a href="/itv-valencia">ITV Valencia</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Legal</h4>
+        <a href="/sobre-nosotros">Sobre nosotros</a>
+        <a href="/contacto">Contacto</a>
+        <a href="/aviso-legal">Aviso legal</a>
+        <a href="/politica-cookies">Pol&iacute;tica de Cookies</a>
+        <a href="/politica-privacidad">Pol&iacute;tica de Privacidad</a>
+        <a href="/politica-afiliados">Afiliados</a>
+      </div>
+    </div>
+    <div class="itv-footer-bottom">
+      <span>&copy; 2026 ITVCHECK.ES</span>
+      <span>MANUAL DE INSPECCI&Oacute;N &middot; GU&Iacute;A 13 &middot; EDICI&Oacute;N 2026</span>
+    </div>
+  </div>
 </footer>
 
+<script src="/js/nav-mobile.js" defer></script>
 </body>
 </html>

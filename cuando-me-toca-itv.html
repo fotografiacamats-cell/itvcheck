@@ -5,7 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Calcula gratis cuándo te toca pasar la ITV. Introduce el año de matriculación, el tipo de vehículo y la última ITV para saber tu próxima fecha, los días restantes y qué revisar.">
 <title>¿Cuándo me toca la ITV? Calculadora 2026 | ITVcheck</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📅</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#128197;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles-v2.css">
+<link rel="stylesheet" href="/styles-editorial.css">
+<link rel="canonical" href="https://itvcheck.es/cuando-me-toca-itv">
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -30,94 +36,193 @@ if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
  ]
 }
 </script>
-<link rel="stylesheet" href="/styles.css">
-<link rel="canonical" href="https://itvcheck.es/cuando-me-toca-itv">
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"WebApplication",
+ "name":"Calculadora de ITV",
+ "url":"https://itvcheck.es/cuando-me-toca-itv",
+ "applicationCategory":"UtilityApplication",
+ "operatingSystem":"Any",
+ "offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},
+ "description":"Calculadora gratuita para saber cuándo te toca pasar la ITV según el año de matriculación y el tipo de vehículo."
+}
+</script>
 </head>
 <body>
-<div id="cookieBanner"><p>Utilizamos cookies para mejorar tu experiencia y mostrar anuncios de Google AdSense. <a href="politica-cookies" style="color:#FACC15;">Más información</a></p><button onclick="aceptarCookies()">Aceptar</button><button class="reject" onclick="rechazarCookies()">Rechazar</button></div>
-<a href="https://api.whatsapp.com/send?text=Estoy%20calculando%20cu%C3%A1ndo%20me%20toca%20la%20ITV%20con%20ITVcheck" target="_blank" id="whatsappBtn" aria-label="Contactar por WhatsApp">💬</a>
-<header><a href="index" class="logo">ITV<span>check</span></a><button class="hamburger" onclick="toggleMenu()">☰</button><nav id="menu"><a href="index">Inicio</a><a href="guias">Guías</a><a href="mecanica">Mecánica DIY</a><a href="itv-por-comunidad">CCAA</a><a href="calculadora-precio-itv">Precios</a><a href="estaciones-itv">Estaciones</a><a href="checklist-itv">Checklist</a><a href="contacto">Contacto</a></nav></header>
 
-<div class="container">
-<div class="breadcrumbs"><a href="index">Inicio</a> » <span>Calculadora ITV</span></div>
-
-<h1>¿Cuándo me toca la ITV? Calculadora 2026</h1>
-<div class="meta-date">
- 📅 Última actualización: <strong>Septiembre de 2026</strong> | 🔗 Fuentes: <a href="https://www.dgt.es" target="_blank" rel="nofollow noopener">DGT</a>, <a href="https://www.boe.es" target="_blank" rel="nofollow noopener">BOE</a> (Real Decreto 920/2017).
+<div id="cookieBanner">
+  <p>Utilizamos cookies para mejorar tu experiencia y mostrar anuncios de Google AdSense. <a href="politica-cookies">M&aacute;s informaci&oacute;n</a></p>
+  <button onclick="aceptarCookies()">Aceptar</button>
+  <button class="reject" onclick="rechazarCookies()">Rechazar</button>
 </div>
 
-<p>Esta herramienta gratuita calcula cuándo te toca pasar la ITV basándose en la antigüedad de tu vehículo, su tipo y la fecha de la última inspección. Introduce tus datos y obtén el resultado al instante, incluyendo los días que te quedan y qué deberías revisar antes de acudir.</p>
+<a href="https://api.whatsapp.com/send?text=Estoy%20calculando%20cu%C3%A1ndo%20me%20toca%20la%20ITV%20con%20ITVcheck" target="_blank" id="whatsappBtn" aria-label="Contactar por WhatsApp">&#128172;</a>
 
-<div class="calc-hero">
- <h2>📅 Calcula tu próxima ITV</h2>
- <div class="calc-form">
- <label for="anio">Año de matriculación</label>
- <input type="number" id="anio" placeholder="Ej: 2019" min="1980" max="2026">
+<div class="itv-topbar">
+  <div class="itv-topbar-inner">
+    <span><span class="dot"></span>ITVCHECK &middot; EDICI&Oacute;N 2026</span>
+    <span>HERRAMIENTA 01 &middot; CALCULADORA</span>
+  </div>
+</div>
 
- <label for="tipo">Tipo de vehículo</label>
- <select id="tipo">
- <option value="turismo">Turismo</option>
- <option value="moto">Motocicleta</option>
- <option value="furgoneta">Furgoneta</option>
- <option value="remolque">Remolque</option>
- </select>
+<header class="itv-header">
+  <div class="itv-header-inner">
+    <a href="/index" class="itv-logo">
+      <span class="itv-logo-mark">ITV</span>
+      ITVcheck
+    </a>
+    <button class="itv-nav-toggle" aria-label="Abrir men&uacute;" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="itv-nav">
+      <a href="/guias">Gu&iacute;as</a>
+      <a href="/estaciones-itv">Estaciones</a>
+      <a href="/operadores-itv-espana">Operadores</a>
+      <a href="/calculadora-precio-itv">Precios</a>
+      <a href="/checklist-itv">Checklist</a>
+    </nav>
+  </div>
+</header>
 
- <label for="ultima">Última ITV superada (opcional)</label>
- <input type="number" id="ultima" placeholder="Ej: 2024" min="1980" max="2026">
+<div class="mag-issue-bar">
+  <span>ITVcheck &middot; Manual de inspecci&oacute;n t&eacute;cnica</span>
+  <span>HERRAMIENTA 01 &middot; <strong>Calculadora ITV</strong></span>
+</div>
 
- <button onclick="calcular()">🔎 Calcular fecha límite</button>
+<section class="mag-hero hero-blog">
+  <div class="mag-hero-text">
+    <span class="kicker">Calculadora 2026 &middot; Actualizado Octubre 2026</span>
+    <h1 class="h1-inline">&iquest;Cu&aacute;ndo me <em>toca la ITV?</em></h1>
+    <p class="lead">Introduce el a&ntilde;o de matriculaci&oacute;n, el tipo de veh&iacute;culo y (opcionalmente) la fecha de tu &uacute;ltima ITV. La calculadora te dir&aacute; la pr&oacute;xima fecha, los d&iacute;as que quedan y qu&eacute; revisar antes de acudir. Basada en el <strong>Real Decreto 920/2017</strong> y actualizada a las reglas vigentes en 2026.</p>
+    <div class="mag-hero-ctas">
+      <a href="#calculadora" class="btn-hero">Usar la calculadora &rarr;</a>
+      <a href="#periodicidad" class="btn-hero-secondary">Ver periodicidad &rarr;</a>
+    </div>
+  </div>
+  <aside class="mag-hero-aside">
+    <span class="label">Datos clave</span>
+    <div class="stat-row">
+      <span class="n">4<small>a&ntilde;os</small></span>
+      <span class="l">Primera ITV<br>de un turismo</span>
+    </div>
+    <div class="stat-row">
+      <span class="n">2<small>a&ntilde;os</small></span>
+      <span class="l">Periodicidad<br>4-10 a&ntilde;os</span>
+    </div>
+    <div class="stat-row">
+      <span class="n">1<small>a&ntilde;o</small></span>
+      <span class="l">Periodicidad<br>+10 a&ntilde;os</span>
+    </div>
+  </aside>
+</section>
 
- <div id="resultado" class="result-box"></div>
- </div>
+<div class="mag-data-bar">
+  <div>
+    <span class="n">4<small>a&ntilde;os</small></span>
+    <span class="l">Primera ITV de turismos<br>y motocicletas</span>
+  </div>
+  <div>
+    <span class="n">30<small>d&iacute;as</small></span>
+    <span class="l">Puedes pasar la ITV antes<br>sin alterar la fecha</span>
+  </div>
+  <div>
+    <span class="n">200<small>&euro;</small></span>
+    <span class="l">Multa por circular<br>con la ITV caducada</span>
+  </div>
+  <div>
+    <span class="n">15-30<small>d&iacute;as</small></span>
+    <span class="l">Ventana ideal para<br>pasar la ITV</span>
+  </div>
+</div>
+
+<div class="container">
+
+<p>Esta herramienta gratuita calcula cu&aacute;ndo te toca pasar la ITV bas&aacute;ndose en la antig&uuml;edad de tu veh&iacute;culo, su tipo y la fecha de la &uacute;ltima inspecci&oacute;n. Introduce tus datos y obt&eacute;n el resultado al instante, incluyendo los d&iacute;as que te quedan y qu&eacute; deber&iacute;as revisar antes de acudir.</p>
+
+<div class="mag-calc-widget" id="calculadora">
+  <h3>Calcula tu pr&oacute;xima ITV</h3>
+  <p class="sub">Introduce a&ntilde;o de matriculaci&oacute;n, tipo de veh&iacute;culo y, si lo sabes, el a&ntilde;o de tu &uacute;ltima ITV.</p>
+  <form class="mag-calc-form" onsubmit="calcular(); return false;">
+    <div class="field">
+      <label for="anio">A&ntilde;o de matriculaci&oacute;n</label>
+      <input type="number" id="anio" placeholder="Ej: 2019" min="1980" max="2026">
+    </div>
+    <div class="field">
+      <label for="tipo">Tipo de veh&iacute;culo</label>
+      <select id="tipo">
+        <option value="turismo">Turismo</option>
+        <option value="moto">Motocicleta</option>
+        <option value="furgoneta">Furgoneta</option>
+        <option value="remolque">Remolque</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="ultima">A&ntilde;o &uacute;ltima ITV (opcional)</label>
+      <input type="number" id="ultima" placeholder="Ej: 2024" min="1980" max="2026">
+    </div>
+    <button type="submit">Calcular &rarr;</button>
+  </form>
+  <div class="mag-calc-result" id="resultado"></div>
 </div>
 
 <div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7947218272068445" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins></div>
 
-<h2>¿Cómo funciona el cálculo?</h2>
-<p>La periodicidad de la ITV en España está regulada por el <strong>Real Decreto 920/2017</strong>. Se calcula según la antigüedad del vehículo a partir de su primera matriculación:</p>
-<table>
-<tr><th>Antigüedad del vehículo</th><th>Frecuencia de la ITV</th></tr>
-<tr><td>Hasta 4 años (turismo)</td><td>Exento</td></tr>
-<tr><td>A los 4 años</td><td>Primera ITV</td></tr>
-<tr><td>De 4 a 10 años</td><td>Cada 2 años</td></tr>
-<tr><td>Más de 10 años</td><td>Anualmente</td></tr>
-</table>
-<p><strong>Nota:</strong> Las motocicletas deben pasar su primera ITV a los 4 años en la mayoría de comunidades, aunque existen pequeñas variaciones. Los remolques suelen pasar cada 2 años.</p>
+<h2>C&oacute;mo funciona el c&aacute;lculo</h2>
 
-<div class="cta-box">
- <p style="margin:0 0 10px 0;">💶 ¿Quieres saber cuánto cuesta la ITV en tu comunidad?</p>
- <a href="calculadora-precio-itv">Ver comparador de precios por CCAA →</a>
+<p>La periodicidad de la ITV en Espa&ntilde;a est&aacute; regulada por el <strong>Real Decreto 920/2017</strong>. Se calcula seg&uacute;n la antig&uuml;edad del veh&iacute;culo a partir de su primera matriculaci&oacute;n:</p>
+
+<table class="defect-table">
+<tr><th>Antig&uuml;edad del veh&iacute;culo</th><th>Frecuencia de la ITV</th></tr>
+<tr><td>Hasta 4 a&ntilde;os (turismo)</td><td>Exento</td></tr>
+<tr><td>A los 4 a&ntilde;os</td><td>Primera ITV</td></tr>
+<tr><td>De 4 a 10 a&ntilde;os</td><td>Cada 2 a&ntilde;os</td></tr>
+<tr><td>M&aacute;s de 10 a&ntilde;os</td><td>Anualmente</td></tr>
+</table>
+
+<p><strong>Nota:</strong> Las motocicletas deben pasar su primera ITV a los 4 a&ntilde;os en la mayor&iacute;a de comunidades, aunque existen peque&ntilde;as variaciones. Los remolques suelen pasar cada 2 a&ntilde;os.</p>
+
+<div class="mag-notice-inner">
+  <h3>&iquest;Quieres saber cu&aacute;nto cuesta la ITV en tu comunidad?</h3>
+  <p>Compara las tarifas de 2026 en las 19 comunidades aut&oacute;nomas.</p>
+  <a href="/calculadora-precio-itv">Ver comparador de precios por CCAA &rarr;</a>
 </div>
 
-<h2>¿Puedo pasar la ITV antes de tiempo?</h2>
-<p>Sí. Puedes pasar la ITV hasta <strong>30 días antes</strong> de la fecha de caducidad sin que esta se modifique. Es decir, si te caduca el 20 de mayo, puedes pasarla desde el 20 de abril sin problema.</p>
+<h2>&iquest;Puedo pasar la ITV antes de tiempo?</h2>
 
-<h2>¿Qué pasa si paso la ITV tarde?</h2>
-<p>Circular con la ITV caducada supone una <strong>multa de 200 €</strong>. Además, si pasas la inspección con retraso, la próxima fecha de vencimiento se calcula desde el día en que realmente la pasaste, no desde la fecha original.</p>
+<p>S&iacute;. Puedes pasar la ITV hasta <strong>30 d&iacute;as antes</strong> de la fecha de caducidad sin que esta se modifique. Es decir, si te caduca el 20 de mayo, puedes pasarla desde el 20 de abril sin problema.</p>
 
-<div class="cta-box">
- <p style="margin:0 0 10px 0;">📍 ¿Buscas la estación más cercana?</p>
- <a href="estaciones-itv">Busca tu estación por ciudad →</a>
+<h2>&iquest;Qu&eacute; pasa si paso la ITV tarde?</h2>
+
+<p>Circular con la ITV caducada supone una <strong>multa de 200 &euro;</strong>. Adem&aacute;s, si pasas la inspecci&oacute;n con retraso, la pr&oacute;xima fecha de vencimiento se calcula desde el d&iacute;a en que realmente la pasaste, no desde la fecha original.</p>
+
+<div class="mag-notice-inner">
+  <h3>&iquest;Buscas la estaci&oacute;n m&aacute;s cercana?</h3>
+  <p>Consulta nuestro mapa interactivo con 192 estaciones de ITV en toda Espa&ntilde;a.</p>
+  <a href="/estaciones-itv">Busca tu estaci&oacute;n por ciudad &rarr;</a>
 </div>
 
 <h2>Consejos antes de acudir a la ITV</h2>
+
 <p>Antes de ir, revisa especialmente:</p>
+
 <ul>
-<li><strong>Luces:</strong> cruce, carretera, freno, intermitentes y matrícula.</li>
-<li><strong>Neumáticos:</strong> dibujo mínimo 1,6 mm y presión correcta.</li>
-<li><strong>Frenos:</strong> discos, pastillas y líquido.</li>
+<li><strong>Luces:</strong> cruce, carretera, freno, intermitentes y matr&iacute;cula.</li>
+<li><strong>Neum&aacute;ticos:</strong> dibujo m&iacute;nimo 1,6 mm y presi&oacute;n correcta.</li>
+<li><strong>Frenos:</strong> discos, pastillas y l&iacute;quido.</li>
 <li><strong>Limpiaparabrisas:</strong> escobillas en buen estado.</li>
-<li><strong>Documentación:</strong> permiso, ficha técnica y seguro.</li>
+<li><strong>Documentaci&oacute;n:</strong> permiso, ficha t&eacute;cnica y seguro.</li>
 </ul>
 
-<div class="cta-box">
- <p style="margin:0 0 10px 0;">🔧 ¿Quieres preparar tu coche a fondo?</p>
- <a href="checklist-itv">Ver checklist completa Pre-ITV →</a>
+<div class="mag-notice-inner">
+  <h3>&iquest;Quieres preparar tu coche a fondo?</h3>
+  <p>Checklist pre-ITV con los 25 puntos que m&aacute;s rechazos provocan.</p>
+  <a href="/checklist-itv">Ver checklist completa &rarr;</a>
 </div>
 
-<h2>Periodicidad por tipo de veh&iacute;culo</h2>
+<h2 id="periodicidad">Periodicidad por tipo de veh&iacute;culo</h2>
+
 <p>La tabla anterior se centra en turismos, pero cada tipo de veh&iacute;culo tiene su propio calendario. Esta es la periodicidad completa seg&uacute;n el Real Decreto 920/2017:</p>
-<table>
+
+<table class="defect-table">
 <tr><th>Tipo de veh&iacute;culo</th><th>Primera ITV</th><th>Despu&eacute;s</th></tr>
 <tr><td>Turismos y derivados</td><td>4 a&ntilde;os</td><td>Cada 2 a&ntilde;os hasta los 10 a&ntilde;os, luego anual</td></tr>
 <tr><td>Motocicletas y ciclomotores</td><td>4 a&ntilde;os</td><td>Cada 2 a&ntilde;os hasta los 10 a&ntilde;os, luego anual</td></tr>
@@ -126,10 +231,13 @@ if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
 <tr><td>Autocaravanas (hasta 3.500 kg)</td><td>4 a&ntilde;os</td><td>Cada 2 a&ntilde;os hasta los 10 a&ntilde;os, luego anual</td></tr>
 <tr><td>Veh&iacute;culos hist&oacute;ricos</td><td>Seg&uacute;n categor&iacute;a</td><td>Cada 2-4 a&ntilde;os seg&uacute;n antig&uuml;edad</td></tr>
 </table>
+
 <p><strong>Importante:</strong> estas periodicidades son las generales. Algunas comunidades aut&oacute;nomas aplican peque&ntilde;os ajustes para veh&iacute;culos especiales, por lo que conviene confirmar con la estaci&oacute;n antes de la cita.</p>
 
 <h2>ITV de veh&iacute;culos especiales: calendarios m&aacute;s estrictos</h2>
+
 <p>Los veh&iacute;culos destinados a servicios p&uacute;blicos tienen calendarios m&aacute;s exigentes porque su uso intensivo aumenta el desgaste y el riesgo. Estos son los principales:</p>
+
 <ul>
 <li><strong>Taxis y VTC:</strong> primera ITV al a&ntilde;o de matriculaci&oacute;n, y luego <strong>anualmente</strong> sin excepci&oacute;n durante toda su vida &uacute;til.</li>
 <li><strong>Ambulancias:</strong> primera ITV al a&ntilde;o, luego cada <strong>6 meses</strong> a partir del quinto a&ntilde;o.</li>
@@ -137,147 +245,227 @@ if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
 <li><strong>Transporte escolar:</strong> primera ITV al a&ntilde;o, luego cada <strong>6 meses</strong> a partir del quinto a&ntilde;o.</li>
 <li><strong>Veh&iacute;culos de bomberos y polic&iacute;a:</strong> primera ITV al a&ntilde;o, luego cada <strong>6 meses</strong> o anualmente seg&uacute;n la categor&iacute;a.</li>
 </ul>
+
 <p>Si tu veh&iacute;culo entra en alguna de estas categor&iacute;as, la calculadora de arriba no aplica: consulta directamente con la estaci&oacute;n o revisa el r&eacute;gimen espec&iacute;fico en el RD 920/2017.</p>
 
 <h2>Veh&iacute;culos hist&oacute;ricos: cu&aacute;ndo y c&oacute;mo pasan la ITV</h2>
-<p>Los veh&iacute;culos con matr&iacute;cula hist&oacute;rica tienen un r&eacute;gimen especial. No es lo mismo un coche con m&aacute;s de 30 a&ntilde;os que uno declarado "de inter&eacute;s hist&oacute;rico" por la administraci&oacute;n:</p>
+
+<p>Los veh&iacute;culos con matr&iacute;cula hist&oacute;rica tienen un r&eacute;gimen especial. No es lo mismo un coche con m&aacute;s de 30 a&ntilde;os que uno declarado &laquo;de inter&eacute;s hist&oacute;rico&raquo; por la administraci&oacute;n:</p>
+
 <ul>
 <li><strong>Veh&iacute;culos con m&aacute;s de 30 a&ntilde;os sin declaraci&oacute;n de inter&eacute;s hist&oacute;rico:</strong> pasan la ITV <strong>anualmente</strong> como cualquier veh&iacute;culo antiguo.</li>
 <li><strong>Veh&iacute;culos declarados de inter&eacute;s hist&oacute;rico:</strong> pasan la ITV <strong>cada 2 a&ntilde;os</strong> si tienen menos de 40 a&ntilde;os, o <strong>cada 4 a&ntilde;os</strong> si superan esa edad.</li>
 <li><strong>Veh&iacute;culos de colecci&oacute;n sin matr&iacute;cula hist&oacute;rica:</strong> se rigen por las reglas generales seg&uacute;n su antig&uuml;edad.</li>
 </ul>
+
 <p>Adem&aacute;s, los veh&iacute;culos hist&oacute;ricos est&aacute;n exentos de la ITV en algunos casos concretos, pero para circular normalmente deben tener la inspecci&oacute;n en vigor con la periodicidad especial.</p>
 
 <h2>&iquest;C&oacute;mo afecta pasar la ITV antes o despu&eacute;s de la fecha?</h2>
+
 <p>Es una de las dudas m&aacute;s frecuentes y la respuesta tiene matices que conviene conocer:</p>
+
 <ul>
 <li><strong>Hasta 30 d&iacute;as antes:</strong> puedes pasar la ITV sin que la fecha de caducidad se modifique. Es decir, si tu ITV caduca el 31 de mayo, puedes pasarla desde el 1 de mayo y la pr&oacute;xima seguir&aacute; siendo en la misma fecha de 2 a&ntilde;os despu&eacute;s (o 1 a&ntilde;o si tu coche tiene m&aacute;s de 10 a&ntilde;os).</li>
-<li><strong>M&aacute;s de 30 d&iacute;as antes:</strong> si pasas la ITV con m&aacute;s antelaci&oacute;n, la fecha de caducidad se recalcula desde la nueva fecha de inspecci&oacute;n. Esto puede suponer "perder" meses de validez.</li>
+<li><strong>M&aacute;s de 30 d&iacute;as antes:</strong> si pasas la ITV con m&aacute;s antelaci&oacute;n, la fecha de caducidad se recalcula desde la nueva fecha de inspecci&oacute;n. Esto puede suponer &laquo;perder&raquo; meses de validez.</li>
 <li><strong>Despu&eacute;s de la fecha de caducidad:</strong> aunque la pases al d&iacute;a siguiente, la nueva fecha se calcula desde el d&iacute;a real de la inspecci&oacute;n. Y si te pillan circulando con la ITV caducada, la multa es de 200 &euro;.</li>
 <li><strong>ITV caducada m&aacute;s de un a&ntilde;o:</strong> adem&aacute;s de la multa, el veh&iacute;culo puede ser inmovilizado y, en algunos casos, obligado a pasar una inspecci&oacute;n extraordinaria con coste adicional.</li>
 </ul>
-<div class="tip-box"><strong>Regla pr&aacute;ctica:</strong> la ventana ideal es entre <strong>15 y 30 d&iacute;as antes</strong> de la fecha de caducidad. Ni muy pronto (pierdes validez) ni despu&eacute;s (multa y riesgo).</div>
+
+<div class="mag-notice-inner">
+  <h3>Regla pr&aacute;ctica</h3>
+  <p>La ventana ideal es entre <strong>15 y 30 d&iacute;as antes</strong> de la fecha de caducidad. Ni muy pronto (pierdes validez) ni despu&eacute;s (multa y riesgo).</p>
+</div>
 
 <h2>Preguntas frecuentes</h2>
-<h3>¿La ITV caduca el mismo día del mes?</h3>
-<p>La ITV caduca el último día del mes correspondiente. Por ejemplo, si te toca en mayo de 2027, tienes hasta el 31 de mayo de 2027.</p>
-<h3>¿Qué pasa si no paso la ITV en el plazo?</h3>
-<p>El vehículo no puede circular legalmente y la multa es de 200 €.</p>
-<h3>¿La calculadora vale para cualquier comunidad?</h3>
-<p>Sí, la periodicidad de la ITV es la misma en toda España. Solo varían los precios y los operadores disponibles.</p>
+
+<h3>&iquest;La ITV caduca el mismo d&iacute;a del mes?</h3>
+<p>La ITV caduca el &uacute;ltimo d&iacute;a del mes correspondiente. Por ejemplo, si te toca en mayo de 2027, tienes hasta el 31 de mayo de 2027.</p>
+
+<h3>&iquest;Qu&eacute; pasa si no paso la ITV en el plazo?</h3>
+<p>El veh&iacute;culo no puede circular legalmente y la multa es de 200 &euro;.</p>
+
+<h3>&iquest;La calculadora vale para cualquier comunidad?</h3>
+<p>S&iacute;, la periodicidad de la ITV es la misma en toda Espa&ntilde;a. Solo var&iacute;an los precios y los operadores disponibles.</p>
+
+<div class="mag-notice-inner">
+  <h3>Resumen r&aacute;pido</h3>
+  <p>Turismos y motos: primera ITV a los 4 a&ntilde;os, cada 2 a&ntilde;os hasta los 10, y anual a partir de ah&iacute;. Furgonetas: primera a los 2 a&ntilde;os, cada 2 hasta los 6, y anual desde entonces. Remolques: primera a los 6 a&ntilde;os y cada 2 despu&eacute;s. Ventana ideal: 15-30 d&iacute;as antes de la caducidad. Pasar la ITV tarde supone 200 &euro; de multa y rec&aacute;lculo de la fecha desde el d&iacute;a real de la inspecci&oacute;n.</p>
+</div>
 
 <div class="guides-block">
- <h3>📚 Guías relacionadas</h3>
- <a href="guia-luces">🔧 Qué revisar antes de pasar la ITV</a>
- <a href="guia-documentacion">📄 Documentación obligatoria</a>
- <a href="guia-neumaticos">🛞 Revisión de neumáticos</a>
- <a href="guia-frenos">🛑 Revisión de frenos</a>
- <a href="que-pasa-si-suspendo-la-itv">📉 Qué hacer si suspendes la ITV</a>
- <a href="seguros-coche">🛡️ Seguros de coche</a>
+  <h3>Gu&iacute;as relacionadas</h3>
+  <a href="/guia-luces">Qu&eacute; revisar antes de pasar la ITV</a>
+  <a href="/guia-documentacion">Documentaci&oacute;n obligatoria</a>
+  <a href="/guia-neumaticos">Revisi&oacute;n de neum&aacute;ticos</a>
+  <a href="/guia-frenos">Revisi&oacute;n de frenos</a>
+  <a href="/que-pasa-si-suspendo-la-itv">Qu&eacute; hacer si suspendes la ITV</a>
+  <a href="/seguros-coche">Seguros de coche</a>
 </div>
 
 <div class="other-ccaa">
- <h3>📍 ITV por comunidades</h3>
- <a href="itv-madrid">ITV Madrid</a>
- <a href="itv-cataluna">ITV Cataluña</a>
- <a href="itv-andalucia">ITV Andalucía</a>
- <a href="itv-valencia">ITV Comunidad Valenciana</a>
- <a href="itv-por-comunidad">Ver todas las CCAA →</a>
+  <h3>ITV por comunidades</h3>
+  <a href="/itv-madrid">ITV Madrid</a>
+  <a href="/itv-cataluna">ITV Catalu&ntilde;a</a>
+  <a href="/itv-andalucia">ITV Andaluc&iacute;a</a>
+  <a href="/itv-valencia">ITV Comunidad Valenciana</a>
+  <a href="/itv-por-comunidad">Ver todas las CCAA &rarr;</a>
 </div>
 
-<a href="index" class="btn">← Volver a la página principal</a>
-</div>
+<p><a href="/index" class="btn">&larr; Volver a la p&aacute;gina principal</a></p>
 
+</div>
 
 <div class="related-guides">
-<h3>📚 Enlazado interno recomendado</h3>
-<a href="checklist-itv">✅ Checklist pre-ITV</a>
-<a href="calculadora-precio-itv">💶 Precios por CCAA</a>
-<a href="estaciones-itv">📍 Estaciones</a>
-<a href="guia-completa-itv">📚 Guía completa</a>
+  <h3>Enlazado interno recomendado</h3>
+  <a href="/checklist-itv">Checklist pre-ITV</a>
+  <a href="/calculadora-precio-itv">Precios por CCAA</a>
+  <a href="/estaciones-itv">Estaciones</a>
+  <a href="/guia-completa-itv">Gu&iacute;a completa ITV</a>
+  <a href="/blog/multa-no-pasar-itv">Multas por ITV caducada</a>
 </div>
-<footer>
-<p><strong>ITVcheck</strong> | Información orientativa sobre la ITV en España.</p>
-<p style="font-size:13px;color:#94A3B8;margin-top:15px;max-width:700px;margin-left:auto;margin-right:auto;">Como Afiliado de Amazon, ITVcheck gana por las compras que cumplan los requisitos aplicables.</p>
-<p style="margin-top:15px;">
-<a href="sobre-nosotros">Sobre nosotros</a> | 
-<a href="operadores-itv-espana">Operadores</a> | <a href="contacto">Contacto</a> | 
-<a href="aviso-legal">Aviso legal</a> | 
-<a href="politica-cookies">Cookies</a> | 
-<a href="politica-privacidad">Privacidad</a> | 
-<a href="politica-afiliados">Afiliados</a>
-</p>
+
+<footer class="itv-footer">
+  <div class="itv-footer-inner">
+    <div class="itv-footer-top">
+      <div class="itv-footer-brand">
+        <a href="/index" class="itv-logo">
+          <span class="itv-logo-mark">ITV</span>
+          ITVcheck
+        </a>
+        <p>Manual de inspecci&oacute;n t&eacute;cnica independiente sobre la ITV en Espa&ntilde;a. Gu&iacute;as t&eacute;cnicas, mapa de estaciones y datos verificados.</p>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Herramientas</h4>
+        <a href="/cuando-me-toca-itv">Calculadora de fecha</a>
+        <a href="/calculadora-precio-itv">Comparador de precios</a>
+        <a href="/estaciones-itv">Buscador de estaciones</a>
+        <a href="/checklist-itv">Checklist pre-ITV</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Gu&iacute;as</h4>
+        <a href="/guia-completa-itv">Gu&iacute;a completa ITV</a>
+        <a href="/guias">Todas las gu&iacute;as</a>
+        <a href="/blog/">Blog</a>
+        <a href="/mecanica">Mec&aacute;nica DIY</a>
+        <a href="/guia-luces">Luces</a>
+        <a href="/guia-neumaticos">Neum&aacute;ticos</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Novedades 2026</h4>
+        <a href="/baliza-v16-obligatoria">Baliza V-16 obligatoria</a>
+        <a href="/itv-camper-furgonetas">ITV para campers</a>
+        <a href="/preparar-coche-viaje-largo">Viaje largo</a>
+        <a href="/mantenimiento-coches-electricos">Mantenimiento el&eacute;ctricos</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Por CCAA</h4>
+        <a href="/itv-por-comunidad">Todas las comunidades</a>
+        <a href="/itv-madrid">ITV Madrid</a>
+        <a href="/itv-cataluna">ITV Catalu&ntilde;a</a>
+        <a href="/itv-andalucia">ITV Andaluc&iacute;a</a>
+        <a href="/itv-valencia">ITV Valencia</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Legal</h4>
+        <a href="/sobre-nosotros">Sobre nosotros</a>
+        <a href="/contacto">Contacto</a>
+        <a href="/aviso-legal">Aviso legal</a>
+        <a href="/politica-cookies">Pol&iacute;tica de Cookies</a>
+        <a href="/politica-privacidad">Pol&iacute;tica de Privacidad</a>
+        <a href="/politica-afiliados">Afiliados</a>
+      </div>
+    </div>
+    <div class="itv-footer-bottom">
+      <span>&copy; 2026 ITVCHECK.ES</span>
+      <span>MANUAL DE INSPECCI&Oacute;N &middot; HERRAMIENTA 01 &middot; EDICI&Oacute;N 2026</span>
+    </div>
+  </div>
 </footer>
 
+<script src="/js/nav-mobile.js" defer></script>
 <script>
-function toggleMenu(){var n=document.getElementById('menu');n.classList.toggle('open');}
+function toggleMenu(){var n=document.getElementById('menu');if(n)n.classList.toggle('open');}
 window.onload=function(){if(localStorage.getItem('cookiesAceptadas')===null){document.getElementById('cookieBanner').style.display='block';}};
 function aceptarCookies(){localStorage.setItem('cookiesAceptadas','true');loadScripts();document.getElementById('cookieBanner').style.display='none';}
 function rechazarCookies(){localStorage.setItem('cookiesAceptadas','false');document.getElementById('cookieBanner').style.display='none';}
 
 function calcular(){
- var anio = parseInt(document.getElementById('anio').value);
- var tipo = document.getElementById('tipo').value;
- var ultima = parseInt(document.getElementById('ultima').value) || 0;
- var res = document.getElementById('resultado');
+  var anio = parseInt(document.getElementById('anio').value);
+  var tipo = document.getElementById('tipo').value;
+  var ultima = parseInt(document.getElementById('ultima').value) || 0;
+  var res = document.getElementById('resultado');
 
- if(!anio || anio < 1980 || anio > 2026){
- res.style.display='block';
- res.className='result-box result-warn';
- res.innerHTML = '<div class="result-title">⚠️ Año no válido</div><div class="result-detail">Introduce un año de matriculación entre 1980 y 2026.</div>';
- return;
- }
+  // Validar año
+  if(!anio || anio < 1980 || anio > 2026){
+    res.classList.add('visible');
+    res.innerHTML =
+      '<span class="label">A&ntilde;o no v&aacute;lido</span>' +
+      '<div class="date-big">&mdash;</div>' +
+      '<p class="nota">Introduce un a&ntilde;o de matriculaci&oacute;n entre 1980 y 2026.</p>';
+    return;
+  }
 
- var actual = new Date().getFullYear();
- var antiguedad = actual - anio;
- var intervalo = 1;
- var mensaje = '';
- var proxima = 0;
+  var actual = new Date();
+  var anioActual = actual.getFullYear();
+  var antiguedad = anioActual - anio;
 
- if(tipo === 'turismo'){
- if(antiguedad < 4){ mensaje = 'Tu turismo es nuevo y aún no está obligado a pasar la ITV.'; }
- else if(antiguedad < 10){ intervalo = 2; mensaje = 'Tu turismo tiene entre 4 y 10 años. Pasa la ITV cada 2 años.'; }
- else { intervalo = 1; mensaje = 'Tu turismo tiene más de 10 años. Pasa la ITV anualmente.'; }
- } else if(tipo === 'moto'){
- if(antiguedad < 4){ mensaje = 'Tu moto es nueva y aún no está obligada a pasar la ITV.'; }
- else if(antiguedad < 10){ intervalo = 2; mensaje = 'Tu moto tiene entre 4 y 10 años. Pasa la ITV cada 2 años.'; }
- else { intervalo = 1; mensaje = 'Tu moto tiene más de 10 años. Pasa la ITV anualmente.'; }
- } else if(tipo === 'furgoneta'){
- if(antiguedad < 2){ mensaje = 'Tu furgoneta es nueva y aún no está obligada a pasar la ITV.'; }
- else if(antiguedad < 6){ intervalo = 2; mensaje = 'Tu furgoneta tiene entre 2 y 6 años. Pasa la ITV cada 2 años.'; }
- else if(antiguedad < 10){ intervalo = 1; mensaje = 'Tu furgoneta tiene entre 6 y 10 años. Pasa la ITV anualmente.'; }
- else { intervalo = 1; mensaje = 'Tu furgoneta tiene más de 10 años. Pasa la ITV anualmente.'; }
- } else {
- intervalo = 2; mensaje = 'Los remolques pasan la ITV cada 2 años.';
- }
+  // Configuraci&oacute;n por tipo
+  var primeraItv, intervalo, mensaje;
+  if(tipo === 'turismo' || tipo === 'moto'){
+    primeraItv = anio + 4;
+    if(antiguedad < 4){ mensaje = 'A&uacute;n no est&aacute;s obligado a pasar la ITV.'; intervalo = 2; }
+    else if(antiguedad < 10){ intervalo = 2; mensaje = 'Veh&iacute;culo entre 4 y 10 a&ntilde;os: ITV cada 2 a&ntilde;os.'; }
+    else { intervalo = 1; mensaje = 'Veh&iacute;culo con m&aacute;s de 10 a&ntilde;os: ITV anualmente.'; }
+  } else if(tipo === 'furgoneta'){
+    primeraItv = anio + 2;
+    if(antiguedad < 2){ mensaje = 'Furgoneta nueva, a&uacute;n no est&aacute; obligada.'; intervalo = 2; }
+    else if(antiguedad < 6){ intervalo = 2; mensaje = 'Furgoneta entre 2 y 6 a&ntilde;os: ITV cada 2 a&ntilde;os.'; }
+    else { intervalo = 1; mensaje = 'Furgoneta con m&aacute;s de 6 a&ntilde;os: ITV anualmente.'; }
+  } else {
+    primeraItv = anio + 6;
+    intervalo = 2;
+    if(antiguedad < 6){ mensaje = 'Remolque nuevo, a&uacute;n no est&aacute; obligado.'; }
+    else { mensaje = 'Remolque: ITV cada 2 a&ntilde;os.'; }
+  }
 
- if(mensaje.indexOf('no está obligado') !== -1){
- res.style.display='block';
- res.className='result-box result-ok';
- res.innerHTML = '<div class="result-title">🟢 ' + mensaje + '</div>';
- return;
- }
+  // Si a&uacute;n no est&aacute; obligado
+  if(mensaje.indexOf('a&uacute;n no') !== -1 || mensaje.indexOf('A&uacute;n no') !== -1){
+    res.classList.add('visible');
+    res.innerHTML =
+      '<span class="label">Sin ITV obligatoria todav&iacute;a</span>' +
+      '<div class="date-big">&mdash;</div>' +
+      '<p class="nota">' + mensaje + ' Tu primera ITV ser&aacute; en <strong>' + primeraItv + '</strong>.</p>';
+    return;
+  }
 
- if(ultima && ultima >= 1980){
- proxima = ultima + intervalo;
- if(proxima <= actual){ proxima = actual + intervalo; }
- } else {
- var primera = anio + 4;
- var ciclos = Math.ceil((actual - primera) / intervalo);
- if(ciclos < 1) ciclos = 0;
- proxima = primera + (ciclos * intervalo);
- if(proxima <= actual){ proxima += intervalo; }
- }
+  // Calcular pr&oacute;xima ITV
+  var base;
+  if(ultima && ultima >= 1980){
+    base = ultima;
+  } else {
+    var desdePrimera = anioActual - primeraItv;
+    var ciclos = Math.floor(desdePrimera / intervalo);
+    if(ciclos < 0) ciclos = 0;
+    base = primeraItv + (ciclos * intervalo);
+  }
 
- var dias = Math.round((new Date(proxima, 11, 31) - new Date()) / (1000*60*60*24));
+  var proxima = base + intervalo;
+  // Bucle defensivo: asegurar que proxima > a&ntilde;o actual
+  while(proxima <= anioActual){
+    proxima += intervalo;
+  }
 
- res.style.display='block';
- res.className='result-box result-ok';
- res.innerHTML =
- '<div class="result-title">🚗 ' + mensaje + '</div>' +
- '<div class="result-days">📅 Próxima ITV: ' + proxima + '</div>' +
- '<div class="result-detail">⏱ Te quedan aproximadamente <strong>' + dias + ' días</strong>.</div>' +
- '<div class="result-detail" style="margin-top:10px;">🔧 Revisa luces, neumáticos, frenos y documentación antes de acudir.</div>';
+  // D&iacute;as restantes (estimado a 31 dic del a&ntilde;o)
+  var fechaCaducidad = new Date(proxima, 11, 31);
+  var dias = Math.round((fechaCaducidad - actual) / (1000*60*60*24));
+  var diasTexto = dias > 0 ? dias + ' d&iacute;as' : 'Caducada';
+
+  res.classList.add('visible');
+  res.innerHTML =
+    '<span class="label">Pr&oacute;xima ITV estimada</span>' +
+    '<div class="date-big">' + proxima + '</div>' +
+    '<p class="nota">' + mensaje + ' Te quedan aproximadamente <strong>' + diasTexto + '</strong>. La fecha exacta depender&aacute; del mes de tu primera matriculaci&oacute;n: la ITV caduca el &uacute;ltimo d&iacute;a de ese mes.</p>' +
+    '<a href="/checklist-itv">Ver la checklist pre-ITV &rarr;</a>';
 }
 </script>
 </body>
