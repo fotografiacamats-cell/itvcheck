@@ -816,8 +816,6 @@
 .defect-table tr:nth-child(even) td { background: var(--paper-3); }
 .defect-table tr:last-child td { border-bottom: none; }
 
-/* La última columna ya NO tiene width fijo. Los badges quedan centrados,
-   y las tablas con prosa larga (operadores) respiran de forma natural. */
 .defect-table td:last-child {
   text-align: center;
 }
@@ -825,9 +823,6 @@
   display: inline-block;
 }
 
-/* Tablas de operadores (3 columnas): anchos explícitos coherentes.
-   :nth-last-child(3) sólo aplica si la tabla tiene exactamente 3 columnas.
-   En tablas de 2 o 4 columnas no toca nada. */
 .defect-table th:nth-child(1):nth-last-child(3),
 .defect-table td:nth-child(1):nth-last-child(3) { width: 20%; }
 .defect-table th:nth-child(2):nth-last-child(2),
@@ -932,7 +927,7 @@
 }
 .mag-toc li:last-child { border-bottom: none; }
 .mag-toc li::before {
-  content: '→';
+  content: '->';
   font-family: var(--font-mono);
   color: var(--signal-dark);
   font-weight: 600;
@@ -989,7 +984,7 @@
 .guides-block a:last-child { border-bottom: none !important; }
 .related-guides a::before,
 .guides-block a::before {
-  content: '→ ';
+  content: '-> ';
   color: var(--signal-dark);
   font-family: var(--font-mono);
   font-weight: 600;
@@ -1126,7 +1121,7 @@ main > .btn:hover {
   gap: 10px;
 }
 .checklist-section h3::before {
-  content: '§';
+  content: 'S';
   font-family: var(--font-mono);
   font-size: 12px;
   color: var(--signal-dark);
@@ -1586,7 +1581,7 @@ main > .btn:hover {
   transition: transform 0.2s;
 }
 #indice-estaciones-ccaa details[open] summary::after {
-  content: '−';
+  content: '-';
   color: var(--signal-dark);
 }
 #indice-estaciones-ccaa summary span {
@@ -1699,16 +1694,14 @@ main > .btn:hover {
 }
 
 /* ============================================================
-   VARIANTES DE HERO PARA BLOG Y GUÃAS
+   VARIANTES DE HERO PARA BLOG Y GUIAS
    ============================================================ */
 
-/* Hero con aside mÃ¡s estrecho para artÃ­culos de blog (H1 en 1 lÃ­nea) */
 .mag-hero.hero-blog {
   grid-template-columns: 1fr 280px;
   gap: 40px;
 }
 
-/* H1 en 1 lÃ­nea â€” blog, titulares medios (~50-60 caracteres) */
 .mag-hero-text h1.h1-inline {
   font-size: 56px;
   line-height: 1.05;
@@ -1717,7 +1710,6 @@ main > .btn:hover {
   white-space: nowrap;
 }
 
-/* H1 en 1 lÃ­nea â€” titulares largos (~70-90 caracteres) */
 .mag-hero-text h1.h1-inline-md {
   font-size: 46px;
   line-height: 1.05;
@@ -1726,7 +1718,6 @@ main > .btn:hover {
   white-space: nowrap;
 }
 
-/* H1 en 1 lÃ­nea â€” titulares extra largos (~90+ caracteres) */
 .mag-hero-text h1.h1-inline-sm {
   font-size: 40px;
   line-height: 1.08;
@@ -1760,7 +1751,7 @@ main > .btn:hover {
 }
 
 /* ============================================================
-   NAV MOVIL Â· Boton hamburguesa para .itv-header
+   NAV MOVIL - Boton hamburguesa para .itv-header
    ============================================================ */
 
 .itv-nav-toggle {
@@ -1847,4 +1838,484 @@ main > .btn:hover {
   .itv-nav a::after {
     display: none;
   }
+}
+
+/* ============================================================
+   MECANICA - Indice con filtros interactivos
+   Fase 6 - Oct 2026 - Prefijo .mag-mec-* para evitar colisiones
+   ============================================================ */
+
+.mag-mec-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.mag-mec-filters {
+  background: var(--paper-3, #F5F2EA);
+  padding: 44px 0 36px;
+  border-bottom: 1px solid var(--line);
+}
+
+.mag-mec-search {
+  max-width: 640px;
+  margin: 0 auto 28px;
+}
+
+.mag-mec-search input {
+  width: 100%;
+  padding: 16px 20px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--ink);
+  background: var(--paper-2);
+  border: 1.5px solid var(--line);
+  border-radius: 4px;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.mag-mec-search input:focus {
+  outline: none;
+  border-color: var(--ink);
+  box-shadow: 3px 3px 0 var(--signal);
+}
+
+.mag-mec-filter-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--ink-3);
+  text-align: center;
+  margin: 18px 0 10px;
+}
+
+.mag-mec-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.mag-mec-chip {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--paper-2);
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: all .15s ease;
+}
+
+.mag-mec-chip:hover { border-color: var(--signal); }
+
+.mag-mec-chip.active {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+.mag-mec-chip .count {
+  opacity: .55;
+  font-weight: 500;
+  margin-left: 4px;
+  font-size: 11px;
+}
+
+.mag-mec-chip.active .count { opacity: .75; }
+
+.mag-mec-guides {
+  padding: 48px 0 80px;
+}
+
+.mag-mec-results {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.mag-mec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.mag-mec-card {
+  display: block;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 22px 22px 18px;
+  position: relative;
+  overflow: hidden;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.mag-mec-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--signal);
+}
+
+.mag-mec-card[data-task="bateria"]::before { background: var(--ink); }
+.mag-mec-card[data-task="escobillas"]::before { background: var(--ink-3); }
+
+.mag-mec-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--ink);
+  box-shadow: 0 10px 24px -12px rgba(20,23,28,.15);
+}
+
+.mag-mec-card .brand {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.mag-mec-card .model {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -.02em;
+  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.mag-mec-card .task {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.mag-mec-card .meta {
+  display: flex;
+  gap: 16px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-3);
+  letter-spacing: .02em;
+}
+
+.mag-mec-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--ink-3);
+}
+
+.mag-mec-empty strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+/* ============================================================
+   MECANICA - Componentes de guias generales
+   Fase 6 - Oct 2026 - Prefijo .mag-mec-* ampliado
+   ============================================================ */
+
+.mag-mec-affiliate-notice {
+  background: var(--paper-3, #F5F2EA);
+  border-left: 3px solid var(--signal);
+  padding: 16px 22px;
+  margin: 24px 0;
+  font-size: 13px;
+  color: var(--ink-2);
+  border-radius: 0 4px 4px 0;
+  font-family: var(--font-mono);
+  letter-spacing: .02em;
+  line-height: 1.6;
+}
+
+.mag-mec-warn {
+  background: #FFF8E5;
+  border-left: 4px solid var(--signal-dark);
+  padding: 20px 24px;
+  margin: 24px 0;
+  font-size: 15px;
+  color: var(--ink-2);
+  line-height: 1.6;
+  border-radius: 0 4px 4px 0;
+}
+.mag-mec-warn strong {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--signal-dark);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.mag-mec-danger {
+  background: #FDEEF0;
+  border-left: 4px solid var(--red, #D94452);
+  padding: 20px 24px;
+  margin: 24px 0;
+  font-size: 15px;
+  color: var(--ink-2);
+  line-height: 1.6;
+  border-radius: 0 4px 4px 0;
+}
+.mag-mec-danger strong {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--red, #D94452);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.mag-mec-toolbox {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--ink);
+  border-radius: 4px;
+  padding: 28px 32px;
+  margin: 32px 0;
+}
+.mag-mec-toolbox h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 0 0 16px;
+  padding: 0 0 12px;
+  border-bottom: 1px dashed var(--line);
+}
+.mag-mec-toolbox ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.mag-mec-toolbox li {
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--line);
+  font-size: 15px;
+  color: var(--ink-2);
+  line-height: 1.55;
+}
+.mag-mec-toolbox li:last-child { border-bottom: none; }
+.mag-mec-toolbox li strong { color: var(--ink); font-weight: 600; }
+.mag-mec-toolbox li a {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--signal-dark);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  margin-left: 4px;
+}
+.mag-mec-toolbox li a:hover { text-decoration: underline; }
+
+.mag-mec-steps {
+  margin: 24px 0;
+}
+.mag-mec-step {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+.mag-mec-step:last-child { border-bottom: none; }
+.mag-mec-step-num {
+  width: 56px;
+  height: 56px;
+  background: var(--ink);
+  color: var(--signal);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.mag-mec-step-body { padding-top: 4px; }
+.mag-mec-step-body strong {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  display: block;
+  margin-bottom: 8px;
+}
+.mag-mec-step-body p {
+  font-size: 15px;
+  color: var(--ink-2);
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.mag-mec-models {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+  margin: 24px 0 32px;
+}
+.mag-mec-model-link {
+  display: block;
+  padding: 18px 22px;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform .15s, border-color .15s;
+  position: relative;
+  overflow: hidden;
+}
+.mag-mec-model-link::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--signal);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform .2s;
+}
+.mag-mec-model-link:hover {
+  border-color: var(--ink);
+  transform: translateY(-2px);
+}
+.mag-mec-model-link:hover::before { transform: scaleY(1); }
+.mag-mec-model-link strong {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  display: block;
+  margin-bottom: 4px;
+  color: var(--ink);
+}
+.mag-mec-model-link small {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-3);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.mag-mec-cta {
+  background: var(--paper-2);
+  border: 1.5px solid var(--ink);
+  border-left: 4px solid var(--signal);
+  border-radius: 4px;
+  padding: 24px 28px;
+  margin: 32px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.mag-mec-cta p {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  flex: 1;
+  min-width: 200px;
+}
+.mag-mec-cta a {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 22px;
+  background: var(--ink);
+  color: var(--paper);
+  border: 1.5px solid var(--ink);
+  border-radius: 4px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform .15s, box-shadow .15s;
+}
+.mag-mec-cta a:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--signal);
+}
+
+@media (max-width: 900px) {
+  .mag-mec-step { grid-template-columns: 44px 1fr; gap: 16px; }
+  .mag-mec-step-num { width: 44px; height: 44px; font-size: 18px; }
+  .mag-mec-step-body strong { font-size: 16px; }
+  .mag-mec-cta { flex-direction: column; align-items: stretch; }
+  .mag-mec-cta a { text-align: center; }
+  .mag-mec-models { grid-template-columns: 1fr; }
+  .mag-mec-toolbox { padding: 20px 22px; }
+  .mag-mec-filters { padding: 28px 0 24px; }
+  .mag-mec-guides { padding: 32px 0 60px; }
+  .mag-mec-grid { grid-template-columns: 1fr; }
+}
+/* ============================================================
+   FIX DATA-BAR - Estilos para strong/span sin clase
+   Fase 6 - Oct 2026
+   ============================================================ */
+
+.mag-data-bar > div > strong {
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--ink);
+  display: block;
+  margin-bottom: 12px;
+}
+.mag-data-bar > div > strong small {
+  font-size: 14px;
+  color: var(--signal-dark);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  margin-left: 4px;
+}
+.mag-data-bar > div > span {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  line-height: 1.45;
+  font-weight: 500;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .mag-data-bar > div > strong { font-size: 40px; }
+  .mag-data-bar > div > span { font-size: 12px; }
 }
