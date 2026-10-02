@@ -5,9 +5,40 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="ITV para coches con m&aacute;s de 200.000 km: qu&eacute; revisan con lupa, qu&eacute; defectos provocan rechazo y c&oacute;mo preparar tu coche antes de la inspecci&oacute;n.">
 <title>ITV para coches con m&aacute;s de 200.000 km: qu&eacute; revisan con lupa | ITVcheck</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
-<link rel="stylesheet" href="/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#128663;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles-v2.css">
+<link rel="stylesheet" href="/styles-editorial.css">
 <link rel="canonical" href="https://itvcheck.es/blog/itv-coche-mas-200000-km">
+<style>
+section.mag-hero {
+  grid-template-columns: 1fr 280px;
+  gap: 40px;
+}
+.mag-hero-text h1.h1-inline {
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  max-width: none;
+  white-space: nowrap;
+}
+.mag-hero-text h1.h1-inline em {
+  background: linear-gradient(transparent 60%, var(--signal) 60%);
+  padding: 0 4px;
+}
+@media (max-width: 1100px) {
+  .mag-hero-text h1.h1-inline { font-size: 46px; }
+}
+@media (max-width: 900px) {
+  section.mag-hero { grid-template-columns: 1fr; }
+  .mag-hero-text h1.h1-inline {
+    font-size: 34px;
+    white-space: normal;
+  }
+}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -16,41 +47,108 @@
   "author": {"@type":"Person","name":"Daniel Vega","url":"https://itvcheck.es/autor/daniel-vega"},
   "publisher": {"@type":"Organization","name":"ITVcheck","url":"https://itvcheck.es"},
   "datePublished": "2026-09-28",
-  "dateModified": "2026-09-28",
+  "dateModified": "2026-10-02",
   "description": "Gu&iacute;a para pasar la ITV con un coche de muchos kil&oacute;metros: puntos cr&iacute;ticos y defectos frecuentes."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"\u00bfUn coche con 200.000 km puede pasar la ITV sin problemas?","acceptedAnswer":{"@type":"Answer","text":"S\u00ed. Muchos coches con 250.000-300.000 km pasan la ITV sin ninguna incidencia si se han mantenido bien. Los kil\u00f3metros por s\u00ed solos no son un problema."}},
+    {"@type":"Question","name":"\u00bfA partir de cu\u00e1ntos km se considera un coche viejo para la ITV?","acceptedAnswer":{"@type":"Answer","text":"No hay un l\u00edmite legal. La ITV valora el estado real, no los kil\u00f3metros. Un coche con 300.000 km bien mantenido puede pasar mejor que uno con 80.000 km descuidado."}},
+    {"@type":"Question","name":"\u00bfMerece la pena cambiar el catalizador si falla la prueba de gases?","acceptedAnswer":{"@type":"Answer","text":"Depende del valor del coche. Un catalizador nuevo puede costar entre 300 y 1.200 euros seg\u00fan el modelo. Si el coche vale menos de 2.000 euros, hay que valorar si compensa la reparaci\u00f3n."}},
+    {"@type":"Question","name":"\u00bfLos coches di\u00e9sel con muchos km fallan m\u00e1s la ITV?","acceptedAnswer":{"@type":"Answer","text":"Los di\u00e9sel con muchos km son m\u00e1s propensos a fallar por opacidad y filtro de part\u00edculas, sobre todo si hacen mucha ciudad. Con un mantenimiento preventivo se evita en la mayor\u00eda de casos."}}
+  ]
 }
 </script>
 </head>
 <body>
 
-<header>
-<a href="/index" class="logo">ITV<span>check</span></a>
-<button class="hamburger" onclick="document.getElementById('menu').classList.toggle('open')">&#9776;</button>
-<nav id="menu">
-<a href="/index">Inicio</a>
-<a href="/guias">Gu&iacute;as</a>
-<a href="/blog/">Blog</a>
-<a href="/mecanica">Mec&aacute;nica DIY</a>
-<a href="/itv-por-comunidad">CCAA</a>
-<a href="/contacto">Contacto</a>
-</nav>
+<div class="itv-topbar">
+  <div class="itv-topbar-inner">
+    <span><span class="dot"></span>ITVCHECK &middot; EDICI&Oacute;N 2026</span>
+    <span>GU&Iacute;A COCHES DE ALTA KILOMETRAJE</span>
+  </div>
+</div>
+
+<header class="itv-header">
+  <div class="itv-header-inner">
+    <a href="/index" class="itv-logo">
+      <span class="itv-logo-mark">ITV</span>
+      ITVcheck
+    </a>
+    <nav class="itv-nav">
+      <a href="/guias">Gu&iacute;as</a>
+      <a href="/estaciones-itv">Estaciones</a>
+      <a href="/operadores-itv-espana">Operadores</a>
+      <a href="/calculadora-precio-itv">Precios</a>
+      <a href="/checklist-itv">Checklist</a>
+    </nav>
+  </div>
 </header>
 
+<div class="mag-issue-bar">
+  <span>ITVcheck &middot; Manual de inspecci&oacute;n t&eacute;cnica</span>
+  <span>BLOG &middot; <strong>Edici&oacute;n 2026</strong></span>
+</div>
+
+<section class="mag-hero">
+  <div class="mag-hero-text">
+    <span class="kicker">Actualizado Octubre 2026 &middot; 7 min de lectura</span>
+    <h1 class="h1-inline">Coches con <em>+200.000 km.</em></h1>
+    <p class="lead">Un coche con m&aacute;s de 200.000 km no tiene por qu&eacute; suspender la ITV. De hecho, muchos llegan a los 300.000 km pas&aacute;ndola sin problemas a&ntilde;o tras a&ntilde;o. Pero s&iacute; es cierto que, a partir de esa cifra, <strong>los inspectores prestan atenci&oacute;n a puntos concretos que en un coche nuevo apenas se miran</strong>. Conocerlos de antemano marca la diferencia entre pasar a la primera o volver dos veces.</p>
+    <div class="mag-hero-ctas">
+      <a href="#sistemas" class="btn-hero">Ver los 5 sistemas cr&iacute;ticos &rarr;</a>
+      <a href="#preparar" class="btn-hero-secondary">C&oacute;mo prepararlo &rarr;</a>
+    </div>
+  </div>
+  <aside class="mag-hero-aside">
+    <span class="label">Datos clave</span>
+    <div class="stat-row">
+      <span class="n">5</span>
+      <span class="l">Sistemas que m&aacute;s<br>rechazos provocan</span>
+    </div>
+    <div class="stat-row">
+      <span class="n">150k</span>
+      <span class="l">Km donde los discos<br>suelen estar al l&iacute;mite</span>
+    </div>
+    <div class="stat-row">
+      <span class="n">250k</span>
+      <span class="l">Vida &uacute;til t&iacute;pica<br>del catalizador</span>
+    </div>
+  </aside>
+</section>
+
+<div class="mag-data-bar">
+  <div>
+    <span class="n">5</span>
+    <span class="l">Sistemas cr&iacute;ticos: frenos,<br>neum&aacute;ticos, emisiones, suspensi&oacute;n, luces</span>
+  </div>
+  <div>
+    <span class="n">1,6<small>mm</small></span>
+    <span class="l">Dibujo m&iacute;nimo legal<br>en los neum&aacute;ticos</span>
+  </div>
+  <div>
+    <span class="n">2<small>mm</small></span>
+    <span class="l">Grosor m&iacute;nimo recomendado<br>en pastillas de freno</span>
+  </div>
+  <div>
+    <span class="n">1<small>semana</small></span>
+    <span class="l">Antelaci&oacute;n m&iacute;nima para<br>hacer la revisi&oacute;n preventiva</span>
+  </div>
+</div>
+
 <div class="container">
-
-<div class="breadcrumbs"><a href="/index">Inicio</a> &raquo; <a href="/blog/">Blog</a> &raquo; <span>ITV +200.000 km</span></div>
-
-<h1>ITV para coches con m&aacute;s de 200.000 km: qu&eacute; revisan con lupa</h1>
-
-<div class="meta-date">Ultima actualizacion: <strong>Septiembre de 2026</strong> &middot; Por <a href="/autor/daniel-vega">Daniel Vega</a> &middot; 6 min de lectura</div>
 
 <p>Un coche con m&aacute;s de 200.000 km no tiene por qu&eacute; suspender la ITV. De hecho, muchos llegan a los 300.000 km pas&aacute;ndola sin problemas a&ntilde;o tras a&ntilde;o. Pero s&iacute; es cierto que, a partir de esa cifra, <strong>los inspectores prestan atenci&oacute;n a puntos concretos que en un coche nuevo apenas se miran</strong>. Conocerlos de antemano marca la diferencia entre pasar a la primera o volver dos veces.</p>
 
 <p>En esta gu&iacute;a te cuento qu&eacute; defectos son m&aacute;s habituales en coches de muchos kil&oacute;metros, qu&eacute; revisa el inspector con especial atenci&oacute;n y c&oacute;mo prepararlo antes de acudir.</p>
 
-<h2>Por qu&eacute; los coches con muchos km fallan m&aacute;s la ITV</h2>
+<h2 id="sistemas">Por qu&eacute; los coches con muchos km fallan m&aacute;s la ITV</h2>
 
-<p>Un coche con 200.000 km no falla m&aacute;s por "viejo", falla m&aacute;s porque los componentes de desgaste est&aacute;n cerca de su l&iacute;mite. Y la ITV est&aacute; dise&ntilde;ada precisamente para detectar eso. Los cinco sistemas que m&aacute;s rechazos provocan a partir de esta cifra son:</p>
+<p>Un coche con 200.000 km no falla m&aacute;s por &laquo;viejo&raquo;, falla m&aacute;s porque los componentes de desgaste est&aacute;n cerca de su l&iacute;mite. Y la ITV est&aacute; dise&ntilde;ada precisamente para detectar eso. Los cinco sistemas que m&aacute;s rechazos provocan a partir de esta cifra son:</p>
 
 <ol>
 <li><strong>Frenos:</strong> discos alabeados, pastillas gastadas, l&iacute;quido degradado.</li>
@@ -73,8 +171,9 @@
 
 <p><strong>Qu&eacute; revisar antes de la ITV:</strong> acude a un taller o revisa t&uacute; mismo el grosor de las pastillas (m&iacute;nimo 2 mm) y el estado de los discos. Si notas vibraci&oacute;n, no lo dejes pasar: la ITV te lo va a detectar.</p>
 
-<div class="tip-box">
-<strong>Consejo:</strong> los discos rayados o alabeados son defecto grave. No intentes "limpiarlos" con un rodaje r&aacute;pido: el alabeo no se corrige. Si tienen m&aacute;s de 100.000 km, es muy probable que toque cambiarlos.
+<div class="mag-notice-inner">
+  <h3>Consejo</h3>
+  <p>Los discos rayados o alabeados son defecto grave. No intentes &laquo;limpiarlos&raquo; con un rodaje r&aacute;pido: el alabeo no se corrige. Si tienen m&aacute;s de 100.000 km, es muy probable que toque cambiarlos.</p>
 </div>
 
 <h2>2. Neum&aacute;ticos: desgaste irregular</h2>
@@ -106,8 +205,9 @@
 <li><strong>Comprueba que el testigo de motor est&aacute; apagado:</strong> si est&aacute; encendido, la ITV fallar&aacute; autom&aacute;ticamente.</li>
 </ul>
 
-<div class="tip-box">
-<strong>Consejo:</strong> si el filtro de part&iacute;culas est&aacute; muy obstruido, algunas estaciones ofrecen una limpieza espec&iacute;fica antes de la ITV. Cuesta menos que cambiar el filtro completo.
+<div class="mag-notice-inner">
+  <h3>Consejo</h3>
+  <p>Si el filtro de part&iacute;culas est&aacute; muy obstruido, algunas estaciones ofrecen una limpieza espec&iacute;fica antes de la ITV. Cuesta menos que cambiar el filtro completo.</p>
 </div>
 
 <h2>4. Suspensi&oacute;n: amortiguadores y silentblocks</h2>
@@ -137,7 +237,7 @@
 
 <h2>Los 5 defectos que suspenden sin remedio</h2>
 
-<table>
+<table class="defect-table">
 <tr><th>Defecto</th><th>Gravedad</th></tr>
 <tr><td>Fuga de l&iacute;quido de frenos</td><td>Muy grave (negativa)</td></tr>
 <tr><td>Discos alabeados o con grosor bajo m&iacute;nimo</td><td>Grave (desfavorable)</td></tr>
@@ -146,7 +246,7 @@
 <tr><td>Faro que deslumbra por mala alineaci&oacute;n</td><td>Grave</td></tr>
 </table>
 
-<h2>C&oacute;mo preparar un coche de 200.000 km antes de la ITV</h2>
+<h2 id="preparar">C&oacute;mo preparar un coche de 200.000 km antes de la ITV</h2>
 
 <p>Una semana antes de la inspecci&oacute;n:</p>
 
@@ -164,46 +264,100 @@
 <h3>&iquest;Un coche con 200.000 km puede pasar la ITV sin problemas?</h3>
 <p>S&iacute;. Muchos coches con 250.000-300.000 km pasan la ITV sin ninguna incidencia si se han mantenido bien. Los kil&oacute;metros por s&iacute; solos no son un problema.</p>
 
-<h3>&iquest;A partir de cu&aacute;ntos km se considera un coche "viejo" para la ITV?</h3>
+<h3>&iquest;A partir de cu&aacute;ntos km se considera un coche &laquo;viejo&raquo; para la ITV?</h3>
 <p>No hay un l&iacute;mite legal. La ITV valora el estado real, no los kil&oacute;metros. Un coche con 300.000 km bien mantenido puede pasar mejor que uno con 80.000 km descuidado.</p>
 
 <h3>&iquest;Merece la pena cambiar el catalizador si falla la prueba de gases?</h3>
-<p>Depende del valor del coche. Un catalizador nuevo puede costar entre 300 y 1.200 € seg&uacute;n el modelo. Si el coche vale menos de 2.000 €, hay que valorar si compensa la reparaci&oacute;n.</p>
+<p>Depende del valor del coche. Un catalizador nuevo puede costar entre 300 y 1.200 &euro; seg&uacute;n el modelo. Si el coche vale menos de 2.000 &euro;, hay que valorar si compensa la reparaci&oacute;n.</p>
 
 <h3>&iquest;Los coches di&eacute;sel con muchos km fallan m&aacute;s la ITV?</h3>
 <p>Los di&eacute;sel con muchos km son m&aacute;s propensos a fallar por opacidad y filtro de part&iacute;culas, sobre todo si hacen mucha ciudad. Con un mantenimiento preventivo se evita en la mayor&iacute;a de casos.</p>
 
-<div class="tip-box">
-<strong>Resumen r&aacute;pido:</strong> Un coche con 200.000 km no tiene por qu&eacute; suspender la ITV, pero s&iacute; necesita una revisi&oacute;n m&aacute;s profunda que uno nuevo. Frenos, neum&aacute;ticos, emisiones, suspensi&oacute;n y luces son los cinco sistemas que m&aacute;s rechazos provocan. Con una semana de anticipaci&oacute;n y un poco de mantenimiento preventivo, las probabilidades de aprobar a la primera son muy altas.
+<div class="mag-notice-inner">
+  <h3>Resumen r&aacute;pido</h3>
+  <p>Un coche con 200.000 km no tiene por qu&eacute; suspender la ITV, pero s&iacute; necesita una revisi&oacute;n m&aacute;s profunda que uno nuevo. Frenos, neum&aacute;ticos, emisiones, suspensi&oacute;n y luces son los cinco sistemas que m&aacute;s rechazos provocan. Con una semana de anticipaci&oacute;n y un poco de mantenimiento preventivo, las probabilidades de aprobar a la primera son muy altas.</p>
 </div>
 
 <div class="related-guides">
-<h3>Art&iacute;culos y gu&iacute;as relacionadas</h3>
-<a href="/blog/precio-itv-por-provincia-2026">Cu&aacute;nto cuesta pasar la ITV en 2026</a>
-<a href="/checklist-itv">Checklist pre-ITV (25 puntos)</a>
-<a href="/guia-frenos">C&oacute;mo revisar los frenos en casa</a>
-<a href="/guia-gases">Qu&eacute; miran en la prueba de gases</a>
-<a href="/guia-neumaticos">Revisi&oacute;n de neum&aacute;ticos</a>
+  <h3>Art&iacute;culos y gu&iacute;as relacionadas</h3>
+  <a href="/blog/precio-itv-por-provincia-2026">Cu&aacute;nto cuesta pasar la ITV en 2026</a>
+  <a href="/checklist-itv">Checklist pre-ITV (25 puntos)</a>
+  <a href="/guia-frenos">C&oacute;mo revisar los frenos en casa</a>
+  <a href="/guia-gases">Qu&eacute; miran en la prueba de gases</a>
+  <a href="/guia-neumaticos">Revisi&oacute;n de neum&aacute;ticos</a>
 </div>
 
-<p style="margin-top:30px;font-size:14px;color:#64748B;">
-Escrito por <a href="/autor/daniel-vega" style="color:#10B981;font-weight:700;">Daniel Vega</a>, T&eacute;cnico Superior en Automoci&oacute;n con 12 a&ntilde;os de experiencia.
-</p>
+<div class="mag-notice-inner">
+  <h3>Sobre el autor</h3>
+  <p><strong>Daniel Vega</strong>, T&eacute;cnico Superior en Automoci&oacute;n con 12 a&ntilde;os de experiencia en inspecci&oacute;n y mantenimiento de veh&iacute;culos. <a href="/autor/daniel-vega">Ver perfil del autor &rarr;</a></p>
+</div>
 
-<p style="margin-top:20px;"><a href="operadores-itv-espana" style="color:#10B981;font-weight:700;">&#127970; Ver qui&eacute;n gestiona la ITV en tu comunidad &rarr;</a></p></div>
+<div class="other-ccaa">
+  <h3>M&aacute;s herramientas</h3>
+  <a href="/operadores-itv-espana">Ver operadores de ITV</a>
+  <a href="/estaciones-itv">Buscar estaci&oacute;n</a>
+  <a href="/blog/multa-no-pasar-itv">Multas por ITV caducada</a>
+  <a href="/blog/precio-itv-por-provincia-2026">Precios por provincia</a>
+</div>
 
-<footer>
-<p><strong>ITVcheck</strong> | Informaci&oacute;n orientativa sobre la ITV en Espa&ntilde;a.</p>
-<p style="font-size:13px;color:#94A3B8;margin-top:15px;">Como Afiliado de Amazon, ITVcheck gana por las compras que cumplan los requisitos aplicables.</p>
-<p style="margin-top:15px;">
-<a href="/autor/daniel-vega">Autor: Daniel Vega</a> |
-<a href="/sobre-nosotros">Sobre nosotros</a> |
-<a href="/contacto">Contacto</a> |
-<a href="/aviso-legal">Aviso legal</a> |
-<a href="/politica-cookies">Cookies</a> |
-<a href="/politica-privacidad">Privacidad</a> |
-<a href="/politica-afiliados">Afiliados</a>
-</p>
+</div>
+
+<footer class="itv-footer">
+  <div class="itv-footer-inner">
+    <div class="itv-footer-top">
+      <div class="itv-footer-brand">
+        <a href="/index" class="itv-logo">
+          <span class="itv-logo-mark">ITV</span>
+          ITVcheck
+        </a>
+        <p>Manual de inspecci&oacute;n t&eacute;cnica independiente sobre la ITV en Espa&ntilde;a. Gu&iacute;as t&eacute;cnicas, mapa de estaciones y datos verificados.</p>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Herramientas</h4>
+        <a href="/cuando-me-toca-itv">Calculadora de fecha</a>
+        <a href="/calculadora-precio-itv">Comparador de precios</a>
+        <a href="/estaciones-itv">Buscador de estaciones</a>
+        <a href="/checklist-itv">Checklist pre-ITV</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Gu&iacute;as</h4>
+        <a href="/guia-completa-itv">Gu&iacute;a completa ITV</a>
+        <a href="/guias">Todas las gu&iacute;as</a>
+        <a href="/blog/">Blog</a>
+        <a href="/mecanica">Mec&aacute;nica DIY</a>
+        <a href="/guia-luces">Luces</a>
+        <a href="/guia-neumaticos">Neum&aacute;ticos</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Novedades 2026</h4>
+        <a href="/baliza-v16-obligatoria">Baliza V-16 obligatoria</a>
+        <a href="/itv-camper-furgonetas">ITV para campers</a>
+        <a href="/preparar-coche-viaje-largo">Viaje largo</a>
+        <a href="/mantenimiento-coches-electricos">Mantenimiento el&eacute;ctricos</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Por CCAA</h4>
+        <a href="/itv-por-comunidad">Todas las comunidades</a>
+        <a href="/itv-madrid">ITV Madrid</a>
+        <a href="/itv-cataluna">ITV Catalu&ntilde;a</a>
+        <a href="/itv-andalucia">ITV Andaluc&iacute;a</a>
+        <a href="/itv-valencia">ITV Valencia</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Legal</h4>
+        <a href="/sobre-nosotros">Sobre nosotros</a>
+        <a href="/contacto">Contacto</a>
+        <a href="/aviso-legal">Aviso legal</a>
+        <a href="/politica-cookies">Pol&iacute;tica de Cookies</a>
+        <a href="/politica-privacidad">Pol&iacute;tica de Privacidad</a>
+        <a href="/politica-afiliados">Afiliados</a>
+      </div>
+    </div>
+    <div class="itv-footer-bottom">
+      <span>&copy; 2026 ITVCHECK.ES</span>
+      <span>MANUAL DE INSPECCI&Oacute;N &middot; BLOG &middot; EDICI&Oacute;N 2026</span>
+    </div>
+  </div>
 </footer>
 
 </body>
