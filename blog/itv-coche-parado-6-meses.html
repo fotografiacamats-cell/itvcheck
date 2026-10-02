@@ -5,9 +5,40 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="C&oacute;mo preparar un coche que lleva 6 meses parado para pasar la ITV: bater&iacute;a, l&iacute;quidos, neum&aacute;ticos, frenos y combustible. Plan de 7 d&iacute;as.">
 <title>C&oacute;mo preparar tu coche si lleva 6 meses parado antes de la ITV | ITVcheck</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
-<link rel="stylesheet" href="/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#128663;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles-v2.css">
+<link rel="stylesheet" href="/styles-editorial.css">
 <link rel="canonical" href="https://itvcheck.es/blog/itv-coche-parado-6-meses">
+<style>
+section.mag-hero {
+  grid-template-columns: 1fr 280px;
+  gap: 40px;
+}
+.mag-hero-text h1.h1-inline {
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  max-width: none;
+  white-space: nowrap;
+}
+.mag-hero-text h1.h1-inline em {
+  background: linear-gradient(transparent 60%, var(--signal) 60%);
+  padding: 0 4px;
+}
+@media (max-width: 1100px) {
+  .mag-hero-text h1.h1-inline { font-size: 46px; }
+}
+@media (max-width: 900px) {
+  section.mag-hero { grid-template-columns: 1fr; }
+  .mag-hero-text h1.h1-inline {
+    font-size: 34px;
+    white-space: normal;
+  }
+}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -16,33 +47,100 @@
   "author": {"@type":"Person","name":"Daniel Vega","url":"https://itvcheck.es/autor/daniel-vega"},
   "publisher": {"@type":"Organization","name":"ITVcheck","url":"https://itvcheck.es"},
   "datePublished": "2026-09-28",
-  "dateModified": "2026-09-28",
+  "dateModified": "2026-10-02",
   "description": "Gu&iacute;a para poner a punto un coche que lleva meses sin usarse y pasarlo la ITV sin sustos."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"\u00bfPuedo pasar la ITV con un coche que lleva 6 meses parado sin hacer nada?","acceptedAnswer":{"@type":"Answer","text":"Puedes intentarlo, pero las probabilidades de fallar son altas. Bater\u00eda, frenos, neum\u00e1ticos y emisiones son los puntos que m\u00e1s fallan tras un largo per\u00edodo sin uso."}},
+    {"@type":"Question","name":"\u00bfCu\u00e1nto tiempo puede estar un coche parado sin dar problemas?","acceptedAnswer":{"@type":"Answer","text":"Hasta 2-3 meses no suele haber problemas graves. A partir de 6 meses empiezan a aparecer los fallos t\u00edpicos: bater\u00eda, frenos oxidados, neum\u00e1ticos deformados."}},
+    {"@type":"Question","name":"\u00bfEs mejor arrancar el coche cada semana si est\u00e1 parado?","acceptedAnswer":{"@type":"Answer","text":"S\u00ed, pero no basta con arrancarlo y apagarlo. Hay que dar una vuelta de 15-20 minutos para que la bater\u00eda se cargue, el aceite circule y los frenos se sequen."}},
+    {"@type":"Question","name":"\u00bfMerece la pena cambiar todos los l\u00edquidos tras 6 meses parado?","acceptedAnswer":{"@type":"Answer","text":"No todos. El aceite aguanta si tiene menos de 1 a\u00f1o. El l\u00edquido de frenos s\u00ed conviene cambiarlo si tiene m\u00e1s de 2 a\u00f1os. El refrigerante aguanta 4-5 a\u00f1os."}}
+  ]
 }
 </script>
 </head>
 <body>
 
-<header>
-<a href="/index" class="logo">ITV<span>check</span></a>
-<button class="hamburger" onclick="document.getElementById('menu').classList.toggle('open')">&#9776;</button>
-<nav id="menu">
-<a href="/index">Inicio</a>
-<a href="/guias">Gu&iacute;as</a>
-<a href="/blog/">Blog</a>
-<a href="/mecanica">Mec&aacute;nica DIY</a>
-<a href="/itv-por-comunidad">CCAA</a>
-<a href="/contacto">Contacto</a>
-</nav>
+<div class="itv-topbar">
+  <div class="itv-topbar-inner">
+    <span><span class="dot"></span>ITVCHECK &middot; EDICI&Oacute;N 2026</span>
+    <span>GU&Iacute;A COCHES PARADOS</span>
+  </div>
+</div>
+
+<header class="itv-header">
+  <div class="itv-header-inner">
+    <a href="/index" class="itv-logo">
+      <span class="itv-logo-mark">ITV</span>
+      ITVcheck
+    </a>
+    <nav class="itv-nav">
+      <a href="/guias">Gu&iacute;as</a>
+      <a href="/estaciones-itv">Estaciones</a>
+      <a href="/operadores-itv-espana">Operadores</a>
+      <a href="/calculadora-precio-itv">Precios</a>
+      <a href="/checklist-itv">Checklist</a>
+    </nav>
+  </div>
 </header>
 
+<div class="mag-issue-bar">
+  <span>ITVcheck &middot; Manual de inspecci&oacute;n t&eacute;cnica</span>
+  <span>BLOG &middot; <strong>Edici&oacute;n 2026</strong></span>
+</div>
+
+<section class="mag-hero">
+  <div class="mag-hero-text">
+    <span class="kicker">Actualizado Octubre 2026 &middot; 8 min de lectura</span>
+    <h1 class="h1-inline">Coche parado <em>6 meses.</em></h1>
+    <p class="lead">Un coche parado durante meses no envejece igual que uno que se usa. Al contrario: <strong>la falta de uso desgasta m&aacute;s r&aacute;pido ciertos componentes</strong> que la circulaci&oacute;n normal. Bater&iacute;as que se descargan, l&iacute;quidos que se separan, neum&aacute;ticos que se deforman, discos que se oxidan. Cuando llega el momento de pasar la ITV, todo eso se nota.</p>
+    <div class="mag-hero-ctas">
+      <a href="#plan" class="btn-hero">Ver el plan de 7 d&iacute;as &rarr;</a>
+      <a href="#fallos" class="btn-hero-secondary">Fallos t&iacute;picos &rarr;</a>
+    </div>
+  </div>
+  <aside class="mag-hero-aside">
+    <span class="label">Datos clave</span>
+    <div class="stat-row">
+      <span class="n">3-5%</span>
+      <span class="l">Autodescarga<br>mensual bater&iacute;a</span>
+    </div>
+    <div class="stat-row">
+      <span class="n">12,4V</span>
+      <span class="l">Voltaje m&iacute;nimo<br>en reposo</span>
+    </div>
+    <div class="stat-row">
+      <span class="n">6-8<small>a&ntilde;os</small></span>
+      <span class="l">Vida &uacute;til<br>de los neum&aacute;ticos</span>
+    </div>
+  </aside>
+</section>
+
+<div class="mag-data-bar">
+  <div>
+    <span class="n">3<small>meses</small></span>
+    <span class="l">Umbral donde empiezan<br>los problemas graves</span>
+  </div>
+  <div>
+    <span class="n">4</span>
+    <span class="l">Puntos cr&iacute;ticos: bater&iacute;a, l&iacute;quidos,<br>neum&aacute;ticos y frenos</span>
+  </div>
+  <div>
+    <span class="n">30<small>min</small></span>
+    <span class="l">Vuelta m&iacute;nima tras<br>el arranque inicial</span>
+  </div>
+  <div>
+    <span class="n">7<small>d&iacute;as</small></span>
+    <span class="l">Plan escalonado<br>antes de la ITV</span>
+  </div>
+</div>
+
 <div class="container">
-
-<div class="breadcrumbs"><a href="/index">Inicio</a> &raquo; <a href="/blog/">Blog</a> &raquo; <span>ITV coche parado 6 meses</span></div>
-
-<h1>C&oacute;mo preparar tu coche si lleva 6 meses parado antes de la ITV</h1>
-
-<div class="meta-date">Ultima actualizacion: <strong>Septiembre de 2026</strong> &middot; Por <a href="/autor/daniel-vega">Daniel Vega</a> &middot; 7 min de lectura</div>
 
 <p>Un coche parado durante meses no envejece igual que uno que se usa. Al contrario: <strong>la falta de uso desgasta m&aacute;s r&aacute;pido ciertos componentes</strong> que la circulaci&oacute;n normal. Bater&iacute;as que se descargan, l&iacute;quidos que se separan, neum&aacute;ticos que se deforman, discos que se oxidan. Cuando llega el momento de pasar la ITV, todo eso se nota.</p>
 
@@ -50,7 +148,7 @@
 
 <h2>Por qu&eacute; un coche parado falla m&aacute;s la ITV que uno usado</h2>
 
-<p>Un coche que circula a diario mantiene sus sistemas "activos": la bater&iacute;a se carga, el aceite lubrica, los frenos se secan, los neum&aacute;ticos ruedan. Cuando se para, todo eso se invierte:</p>
+<p>Un coche que circula a diario mantiene sus sistemas &laquo;activos&raquo;: la bater&iacute;a se carga, el aceite lubrica, los frenos se secan, los neum&aacute;ticos ruedan. Cuando se para, todo eso se invierte:</p>
 
 <ul>
 <li><strong>La bater&iacute;a se autodescarga</strong> entre un 3% y un 5% al mes. A los 6 meses puede estar al 60-70% o directamente muerta.</li>
@@ -61,7 +159,7 @@
 <li><strong>El combustible se degrada</strong>, sobre todo la gasolina sin plomo, que pierde octanaje en 3-6 meses.</li>
 </ul>
 
-<h2>1. Bater&iacute;a: lo primero que falla</h2>
+<h2 id="fallos">1. Bater&iacute;a: lo primero que falla</h2>
 
 <p>Es el fallo n&uacute;mero uno de un coche parado. Si la bater&iacute;a tiene m&aacute;s de 3 a&ntilde;os y el coche lleva 6 meses sin moverse, hay muchas probabilidades de que est&eacute; muerta o a punto.</p>
 
@@ -72,17 +170,18 @@
 <li><strong>Bornes sulfatados:</strong> limpiar con cepillo de alambre y vaselina.</li>
 </ul>
 
-<p><strong>Qu&eacute; hacer:</strong> si la bater&iacute;a est&aacute; por debajo de 12,2 V, ponla a cargar con un cargador de mantenimiento (CTEK o similar) durante 24 horas antes de intentar arrancar. Si no arranca tras la carga completa, c&aacute;mbiala. Una bater&iacute;a nueva cuesta entre 60 y 150 € seg&uacute;n el coche.</p>
+<p><strong>Qu&eacute; hacer:</strong> si la bater&iacute;a est&aacute; por debajo de 12,2 V, ponla a cargar con un cargador de mantenimiento (CTEK o similar) durante 24 horas antes de intentar arrancar. Si no arranca tras la carga completa, c&aacute;mbiala. Una bater&iacute;a nueva cuesta entre 60 y 150 &euro; seg&uacute;n el coche.</p>
 
-<div class="tip-box">
-<strong>Consejo:</strong> no intentes arrancar el coche a base de "darle al contacto" repetidamente. Si la bater&iacute;a est&aacute; sulfatada, cada intento la da&ntilde;a m&aacute;s. C&aacute;rgala primero o usa un arrancador port&aacute;til.
+<div class="mag-notice-inner">
+  <h3>Consejo</h3>
+  <p>No intentes arrancar el coche a base de &laquo;darle al contacto&raquo; repetidamente. Si la bater&iacute;a est&aacute; sulfatada, cada intento la da&ntilde;a m&aacute;s. C&aacute;rgala primero o usa un arrancador port&aacute;til.</p>
 </div>
 
 <h2>2. L&iacute;quidos: aceite, refrigerante, frenos</h2>
 
 <p>Los l&iacute;quidos de un coche parado se degradan o se separan. Antes de arrancar, revisa niveles y estado:</p>
 
-<table>
+<table class="defect-table">
 <tr><th>L&iacute;quido</th><th>Qu&eacute; comprobar</th></tr>
 <tr><td>Aceite motor</td><td>Nivel y color. Si est&aacute; negro y espeso, cambiar antes de la ITV.</td></tr>
 <tr><td>Refrigerante</td><td>Nivel entre MIN y MAX. Si est&aacute; marr&oacute;n, hay &oacute;xido en el circuito.</td></tr>
@@ -91,16 +190,16 @@
 <tr><td>Refrigerante A/A</td><td>Solo si el coche lleva mucho tiempo sin usarse.</td></tr>
 </table>
 
-<p>El l&iacute;quido de frenos es el m&aacute;s cr&iacute;tico: absorbe humedad del ambiente y, si tiene m&aacute;s de 2 a&ntilde;os, puede fallar en la prueba de frenada. C&aacute;mbialo si hay dudas, cuesta entre 40 y 80 €.</p>
+<p>El l&iacute;quido de frenos es el m&aacute;s cr&iacute;tico: absorbe humedad del ambiente y, si tiene m&aacute;s de 2 a&ntilde;os, puede fallar en la prueba de frenada. C&aacute;mbialo si hay dudas, cuesta entre 40 y 80 &euro;.</p>
 
 <h2>3. Neum&aacute;ticos: presi&oacute;n y puntos planos</h2>
 
-<p>Un coche parado 6 meses con el mismo peso sobre las mismas ruedas desarrolla "puntos planos": zonas del neum&aacute;tico que se deforman y no recuperan la forma. Al circular, se nota vibraci&oacute;n.</p>
+<p>Un coche parado 6 meses con el mismo peso sobre las mismas ruedas desarrolla &laquo;puntos planos&raquo;: zonas del neum&aacute;tico que se deforman y no recuperan la forma. Al circular, se nota vibraci&oacute;n.</p>
 
 <p><strong>Qu&eacute; revisar:</strong></p>
 <ul>
 <li><strong>Presi&oacute;n:</strong> en fr&iacute;o, a la del fabricante. Un coche parado suele perder 0,2-0,5 bares.</li>
-<li><strong>Puntos planos:</strong> toca la banda de rodadura. Si notas una zona "plana", puede que el neum&aacute;tico est&eacute; deformado.</li>
+<li><strong>Puntos planos:</strong> toca la banda de rodadura. Si notas una zona &laquo;plana&raquo;, puede que el neum&aacute;tico est&eacute; deformado.</li>
 <li><strong>Grietas:</strong> el caucho se agrieta con el tiempo. Si hay grietas profundas, el neum&aacute;tico est&aacute; caducado (m&aacute;s de 6-8 a&ntilde;os).</li>
 <li><strong>Fecha DOT:</strong> los 4 d&iacute;gitos finales del c&oacute;digo. Ej: 2320 = semana 23 de 2020.</li>
 </ul>
@@ -126,8 +225,9 @@
 <li>Revisa el l&iacute;quido de frenos (punto 2).</li>
 </ul>
 
-<div class="tip-box">
-<strong>Consejo:</strong> si el coche no se ha movido en 6 meses, no tires del freno de mano con fuerza al aparcarlo de nuevo. Deja una marcha engranada y calza una rueda. As&iacute; evitas que las pastillas se peguen.
+<div class="mag-notice-inner">
+  <h3>Consejo</h3>
+  <p>Si el coche no se ha movido en 6 meses, no tires del freno de mano con fuerza al aparcarlo de nuevo. Deja una marcha engranada y calza una rueda. As&iacute; evitas que las pastillas se peguen.</p>
 </div>
 
 <h2>5. Combustible y sistema de inyecci&oacute;n</h2>
@@ -153,7 +253,7 @@
 
 <h2>Los 5 defectos t&iacute;picos de un coche parado</h2>
 
-<table>
+<table class="defect-table">
 <tr><th>Defecto</th><th>Gravedad</th></tr>
 <tr><td>Bater&iacute;a descargada o sulfatada</td><td>Leve (pero impide arrancar)</td></tr>
 <tr><td>Fuga o nivel bajo de l&iacute;quido de frenos</td><td>Muy grave (negativa)</td></tr>
@@ -162,7 +262,7 @@
 <tr><td>Testigo de motor encendido</td><td>Grave</td></tr>
 </table>
 
-<h2>C&oacute;mo prepararlo: plan de 7 d&iacute;as</h2>
+<h2 id="plan">C&oacute;mo prepararlo: plan de 7 d&iacute;as</h2>
 
 <ol>
 <li><strong>D&iacute;a 1:</strong> revisa niveles (aceite, refrigerante, frenos, direcci&oacute;n). Rellena lo que falte.</li>
@@ -173,6 +273,11 @@
 <li><strong>D&iacute;a 6:</strong> rellena combustible fresco. Revisa faros, intermitentes, limpiaparabrisas.</li>
 <li><strong>D&iacute;a 7:</strong> lleva el coche a la ITV con la documentaci&oacute;n en regla (permiso, ficha t&eacute;cnica, seguro).</li>
 </ol>
+
+<div class="mag-notice-inner">
+  <h3>Plan exprés</h3>
+  <p>Si no tienes 7 d&iacute;as y necesitas pasar la ITV ya, al menos haz esto: carga la bater&iacute;a 24h, infla neum&aacute;ticos, comprueba niveles, da una vuelta de 30 minutos por autov&iacute;a y revisa que no haya testigos encendidos. Son las 5 acciones que m&aacute;s reducen el riesgo de suspender.</p>
+</div>
 
 <h2>Preguntas frecuentes</h2>
 
@@ -188,37 +293,91 @@
 <h3>&iquest;Merece la pena cambiar todos los l&iacute;quidos tras 6 meses parado?</h3>
 <p>No todos. El aceite aguanta si tiene menos de 1 a&ntilde;o. El l&iacute;quido de frenos s&iacute; conviene cambiarlo si tiene m&aacute;s de 2 a&ntilde;os. El refrigerante aguanta 4-5 a&ntilde;os.</p>
 
-<div class="tip-box">
-<strong>Resumen r&aacute;pido:</strong> Un coche parado 6 meses no es un coche "nuevo". Bater&iacute;a, l&iacute;quidos, neum&aacute;ticos y frenos son los cuatro puntos que hay que revisar antes de la ITV. Con una semana de preparaci&oacute;n y una vuelta suave previa, las probabilidades de aprobar aumentan much&iacute;simo.
+<div class="mag-notice-inner">
+  <h3>Resumen r&aacute;pido</h3>
+  <p>Un coche parado 6 meses no es un coche &laquo;nuevo&raquo;. Bater&iacute;a, l&iacute;quidos, neum&aacute;ticos y frenos son los cuatro puntos que hay que revisar antes de la ITV. Con una semana de preparaci&oacute;n y una vuelta suave previa, las probabilidades de aprobar aumentan much&iacute;simo.</p>
 </div>
 
 <div class="related-guides">
-<h3>Art&iacute;culos y gu&iacute;as relacionadas</h3>
-<a href="/blog/itv-coche-mas-200000-km">ITV para coches con m&aacute;s de 200.000 km</a>
-<a href="/blog/precio-itv-por-provincia-2026">Cu&aacute;nto cuesta pasar la ITV en 2026</a>
-<a href="/checklist-itv">Checklist pre-ITV (25 puntos)</a>
-<a href="/guia-frenos">C&oacute;mo revisar los frenos en casa</a>
-<a href="/guia-bateria">C&oacute;mo revisar y cargar la bater&iacute;a</a>
+  <h3>Art&iacute;culos y gu&iacute;as relacionadas</h3>
+  <a href="/blog/itv-coche-mas-200000-km">ITV para coches con m&aacute;s de 200.000 km</a>
+  <a href="/blog/precio-itv-por-provincia-2026">Cu&aacute;nto cuesta pasar la ITV en 2026</a>
+  <a href="/checklist-itv">Checklist pre-ITV (25 puntos)</a>
+  <a href="/guia-frenos">C&oacute;mo revisar los frenos en casa</a>
+  <a href="/guia-bateria">C&oacute;mo revisar y cargar la bater&iacute;a</a>
 </div>
 
-<p style="margin-top:30px;font-size:14px;color:#64748B;">
-Escrito por <a href="/autor/daniel-vega" style="color:#10B981;font-weight:700;">Daniel Vega</a>, T&eacute;cnico Superior en Automoci&oacute;n con 12 a&ntilde;os de experiencia.
-</p>
+<div class="mag-notice-inner">
+  <h3>Sobre el autor</h3>
+  <p><strong>Daniel Vega</strong>, T&eacute;cnico Superior en Automoci&oacute;n con 12 a&ntilde;os de experiencia en inspecci&oacute;n y mantenimiento de veh&iacute;culos. <a href="/autor/daniel-vega">Ver perfil del autor &rarr;</a></p>
+</div>
 
-<p style="margin-top:20px;"><a href="operadores-itv-espana" style="color:#10B981;font-weight:700;">&#127970; Ver qui&eacute;n gestiona la ITV en tu comunidad &rarr;</a></p></div>
+<div class="other-ccaa">
+  <h3>M&aacute;s herramientas</h3>
+  <a href="/operadores-itv-espana">Ver operadores de ITV</a>
+  <a href="/estaciones-itv">Buscar estaci&oacute;n</a>
+  <a href="/blog/multa-no-pasar-itv">Multas por ITV caducada</a>
+  <a href="/blog/itv-coche-mas-200000-km">Coches +200.000 km</a>
+</div>
 
-<footer>
-<p><strong>ITVcheck</strong> | Informaci&oacute;n orientativa sobre la ITV en Espa&ntilde;a.</p>
-<p style="font-size:13px;color:#94A3B8;margin-top:15px;">Como Afiliado de Amazon, ITVcheck gana por las compras que cumplan los requisitos aplicables.</p>
-<p style="margin-top:15px;">
-<a href="/autor/daniel-vega">Autor: Daniel Vega</a> |
-<a href="/sobre-nosotros">Sobre nosotros</a> |
-<a href="/contacto">Contacto</a> |
-<a href="/aviso-legal">Aviso legal</a> |
-<a href="/politica-cookies">Cookies</a> |
-<a href="/politica-privacidad">Privacidad</a> |
-<a href="/politica-afiliados">Afiliados</a>
-</p>
+</div>
+
+<footer class="itv-footer">
+  <div class="itv-footer-inner">
+    <div class="itv-footer-top">
+      <div class="itv-footer-brand">
+        <a href="/index" class="itv-logo">
+          <span class="itv-logo-mark">ITV</span>
+          ITVcheck
+        </a>
+        <p>Manual de inspecci&oacute;n t&eacute;cnica independiente sobre la ITV en Espa&ntilde;a. Gu&iacute;as t&eacute;cnicas, mapa de estaciones y datos verificados.</p>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Herramientas</h4>
+        <a href="/cuando-me-toca-itv">Calculadora de fecha</a>
+        <a href="/calculadora-precio-itv">Comparador de precios</a>
+        <a href="/estaciones-itv">Buscador de estaciones</a>
+        <a href="/checklist-itv">Checklist pre-ITV</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Gu&iacute;as</h4>
+        <a href="/guia-completa-itv">Gu&iacute;a completa ITV</a>
+        <a href="/guias">Todas las gu&iacute;as</a>
+        <a href="/blog/">Blog</a>
+        <a href="/mecanica">Mec&aacute;nica DIY</a>
+        <a href="/guia-luces">Luces</a>
+        <a href="/guia-neumaticos">Neum&aacute;ticos</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Novedades 2026</h4>
+        <a href="/baliza-v16-obligatoria">Baliza V-16 obligatoria</a>
+        <a href="/itv-camper-furgonetas">ITV para campers</a>
+        <a href="/preparar-coche-viaje-largo">Viaje largo</a>
+        <a href="/mantenimiento-coches-electricos">Mantenimiento el&eacute;ctricos</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Por CCAA</h4>
+        <a href="/itv-por-comunidad">Todas las comunidades</a>
+        <a href="/itv-madrid">ITV Madrid</a>
+        <a href="/itv-cataluna">ITV Catalu&ntilde;a</a>
+        <a href="/itv-andalucia">ITV Andaluc&iacute;a</a>
+        <a href="/itv-valencia">ITV Valencia</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Legal</h4>
+        <a href="/sobre-nosotros">Sobre nosotros</a>
+        <a href="/contacto">Contacto</a>
+        <a href="/aviso-legal">Aviso legal</a>
+        <a href="/politica-cookies">Pol&iacute;tica de Cookies</a>
+        <a href="/politica-privacidad">Pol&iacute;tica de Privacidad</a>
+        <a href="/politica-afiliados">Afiliados</a>
+      </div>
+    </div>
+    <div class="itv-footer-bottom">
+      <span>&copy; 2026 ITVCHECK.ES</span>
+      <span>MANUAL DE INSPECCI&Oacute;N &middot; BLOG &middot; EDICI&Oacute;N 2026</span>
+    </div>
+  </div>
 </footer>
 
 </body>

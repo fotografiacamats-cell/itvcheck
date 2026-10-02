@@ -6,8 +6,39 @@
 <meta name="description" content="ITV de motos y ciclomotores 2026: cu&aacute;ndo toca, qu&eacute; revisan, los 8 defectos m&aacute;s comunes y c&oacute;mo prepararla. Gu&iacute;a actualizada con la normativa vigente.">
 <title>ITV de Motos y Ciclomotores 2026: Cu&aacute;ndo, C&oacute;mo y Qu&eacute; Revisan | ITVcheck</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#127949;</text></svg>">
-<link rel="stylesheet" href="/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles-v2.css">
+<link rel="stylesheet" href="/styles-editorial.css">
 <link rel="canonical" href="https://itvcheck.es/blog/itv-motos-ciclomotores">
+<style>
+section.mag-hero {
+  grid-template-columns: 1fr 280px;
+  gap: 40px;
+}
+.mag-hero-text h1.h1-inline {
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  max-width: none;
+  white-space: nowrap;
+}
+.mag-hero-text h1.h1-inline em {
+  background: linear-gradient(transparent 60%, var(--signal) 60%);
+  padding: 0 4px;
+}
+@media (max-width: 1100px) {
+  .mag-hero-text h1.h1-inline { font-size: 46px; }
+}
+@media (max-width: 900px) {
+  section.mag-hero { grid-template-columns: 1fr; }
+  .mag-hero-text h1.h1-inline {
+    font-size: 34px;
+    white-space: normal;
+  }
+}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -38,53 +69,99 @@
   ]
 }
 </script>
-<style>
-.destacado-mot { background:#EFF6FF; border-left:4px solid #3B82F6; padding:14px 18px; margin:15px 0; font-size:13px; }
-.consejo-mot { background:#F0FDF4; border-left:4px solid #10B981; padding:14px 18px; margin:15px 0; font-size:13px; }
-.alerta-mot { background:#FEF3C7; border-left:4px solid #F59E0B; padding:14px 18px; margin:15px 0; font-size:13px; }
-.peligro-mot { background:#FEF2F2; border-left:4px solid #EF4444; padding:14px 18px; margin:15px 0; font-size:13px; }
-.tabla-mot { width:100%; border-collapse:collapse; margin:15px 0; font-size:13px; }
-.tabla-mot th { background:#3B82F6; color:#fff; padding:10px; text-align:left; }
-.tabla-mot td { padding:10px; border-bottom:1px solid #E2E8F0; vertical-align:top; }
-.tabla-mot tr:nth-child(even) td { background:#F8FAFC; }
-</style>
 </head>
 <body>
 
-<header>
-<a href="/index" class="logo">ITV<span>check</span></a>
-<button class="hamburger" onclick="document.getElementById('menu').classList.toggle('open')">&#9776;</button>
-<nav id="menu">
-<a href="/index">Inicio</a>
-<a href="/guias">Gu&iacute;as</a>
-<a href="/blog/">Blog</a>
-<a href="/mecanica">Mec&aacute;nica DIY</a>
-<a href="/itv-por-comunidad">CCAA</a>
-<a href="/contacto">Contacto</a>
-</nav>
+<div class="itv-topbar">
+  <div class="itv-topbar-inner">
+    <span><span class="dot"></span>ITVCHECK &middot; EDICI&Oacute;N 2026</span>
+    <span>GU&Iacute;A MOTOS Y CICLOMOTORES</span>
+  </div>
+</div>
+
+<header class="itv-header">
+  <div class="itv-header-inner">
+    <a href="/index" class="itv-logo">
+      <span class="itv-logo-mark">ITV</span>
+      ITVcheck
+    </a>
+    <nav class="itv-nav">
+      <a href="/guias">Gu&iacute;as</a>
+      <a href="/estaciones-itv">Estaciones</a>
+      <a href="/operadores-itv-espana">Operadores</a>
+      <a href="/calculadora-precio-itv">Precios</a>
+      <a href="/checklist-itv">Checklist</a>
+    </nav>
+  </div>
 </header>
 
+<div class="mag-issue-bar">
+  <span>ITVcheck &middot; Manual de inspecci&oacute;n t&eacute;cnica</span>
+  <span>BLOG &middot; <strong>Edici&oacute;n 2026</strong></span>
+</div>
+
+<section class="mag-hero">
+  <div class="mag-hero-text">
+    <span class="kicker">Actualizado Octubre 2026 &middot; 9 min de lectura</span>
+    <h1 class="h1-inline">ITV de <em>motos y ciclomotores.</em></h1>
+    <p class="lead">La ITV de la moto es la gran olvidada. Muchos moteros la pasan por obligaci&oacute;n, sin prepararla, y se llevan la sorpresa de una segunda visita con coste extra. Otros incluso creen que las motos est&aacute;n exentas, cuando es exactamente lo contrario: desde 2011 <strong>todas las motos y ciclomotores est&aacute;n obligados a pasar la ITV</strong> con la misma rigurosidad que un coche, aunque con matices propios.</p>
+    <div class="mag-hero-ctas">
+      <a href="#periodicidad" class="btn-hero">Ver periodicidad &rarr;</a>
+      <a href="#defectos" class="btn-hero-secondary">8 defectos t&iacute;picos &rarr;</a>
+    </div>
+  </div>
+  <aside class="mag-hero-aside">
+    <span class="label">Datos clave</span>
+    <div class="stat-row">
+      <span class="n">4<small>a&ntilde;os</small></span>
+      <span class="l">Primera ITV<br>de una moto</span>
+    </div>
+    <div class="stat-row">
+      <span class="n">2<small>a&ntilde;os</small></span>
+      <span class="l">Periodicidad<br>indefinida</span>
+    </div>
+    <div class="stat-row">
+      <span class="n">25-45<small>&euro;</small></span>
+      <span class="l">Precio t&iacute;pico<br>por moto</span>
+    </div>
+  </aside>
+</section>
+
+<div class="mag-data-bar">
+  <div>
+    <span class="n">4<small>a&ntilde;os</small></span>
+    <span class="l">Primera ITV motocicleta<br>(3 a&ntilde;os para ciclomotor)</span>
+  </div>
+  <div>
+    <span class="n">8</span>
+    <span class="l">Defectos m&aacute;s comunes<br>en motos y ciclomotores</span>
+  </div>
+  <div>
+    <span class="n">60<small>%</small></span>
+    <span class="l">De rechazos por alumbrado,<br>escape o frenos</span>
+  </div>
+  <div>
+    <span class="n">20<small>min</small></span>
+    <span class="l">Duraci&oacute;n media de<br>la inspecci&oacute;n</span>
+  </div>
+</div>
+
 <div class="container">
-
-<div class="breadcrumbs"><a href="/index">Inicio</a> &raquo; <a href="/blog/">Blog</a> &raquo; <span>ITV de motos</span></div>
-
-<h1>ITV de motos y ciclomotores 2026: cu&aacute;ndo, c&oacute;mo y qu&eacute; revisan</h1>
-
-<div class="meta-date">Ultima actualizacion: <strong>Octubre de 2026</strong> &middot; Por <a href="/autor/daniel-vega">Daniel Vega</a>, T&eacute;cnico Superior en Automoci&oacute;n &middot; 9 min de lectura</div>
 
 <p>La ITV de la moto es la gran olvidada. Muchos moteros la pasan por obligaci&oacute;n, sin prepararla, y se llevan la sorpresa de una segunda visita con coste extra. Otros incluso creen que las motos est&aacute;n exentas, cuando es exactamente lo contrario: desde 2011 <strong>todas las motos y ciclomotores est&aacute;n obligados a pasar la ITV</strong> con la misma rigurosidad que un coche, aunque con matices propios.</p>
 
 <p>Esta gu&iacute;a recoge todo lo que necesitas saber: cu&aacute;ndo te toca, qu&eacute; revisan espec&iacute;ficamente en una moto, los defectos m&aacute;s comunes que provocan rechazo, c&oacute;mo se gestiona una moto el&eacute;ctrica y el proceso paso a paso. Basada en el <strong>Real Decreto 920/2017</strong> y en el <strong>Manual de Procedimiento de Inspecci&oacute;n</strong> de la DGT.</p>
 
-<div class="destacado-mot">
-<strong>Dato clave:</strong> la ITV de la moto es m&aacute;s barata que la de un coche (25-45&euro; frente a 40-60&euro;) y tambi&eacute;n m&aacute;s r&aacute;pida (15-20 minutos frente a 30-40 minutos). Pero el porcentaje de rechazos es similar al de los turismos.
+<div class="mag-notice-inner">
+  <h3>Dato clave</h3>
+  <p>La ITV de la moto es m&aacute;s barata que la de un coche (25-45&euro; frente a 40-60&euro;) y tambi&eacute;n m&aacute;s r&aacute;pida (15-20 minutos frente a 30-40 minutos). Pero el porcentaje de rechazos es similar al de los turismos.</p>
 </div>
 
-<h2>1. Cu&aacute;ndo pasa la ITV una moto (tabla de periodicidad)</h2>
+<h2 id="periodicidad">1. Cu&aacute;ndo pasa la ITV una moto (tabla de periodicidad)</h2>
 
 <p>La periodicidad depende del tipo de veh&iacute;culo. Estos son los plazos vigentes en 2026:</p>
 
-<table class="tabla-mot">
+<table class="defect-table">
 <tr><th>Tipo</th><th>1&ordf; ITV</th><th>Despu&eacute;s</th></tr>
 <tr><td><strong>Ciclomotor</strong> (&lt; 50 cc)</td><td>A los 3 a&ntilde;os</td><td>Cada 2 a&ntilde;os indefinidamente</td></tr>
 <tr><td><strong>Motocicleta</strong> (&gt; 50 cc)</td><td>A los 4 a&ntilde;os</td><td>Cada 2 a&ntilde;os indefinidamente</td></tr>
@@ -93,8 +170,9 @@
 <tr><td><strong>Moto el&eacute;ctrica</strong></td><td>A los 4 a&ntilde;os</td><td>Cada 2 a&ntilde;os indefinidamente</td></tr>
 </table>
 
-<div class="alerta-mot">
-<strong>Diferencia con los coches:</strong> los turismos pasan la ITV <strong>anualmente</strong> a partir de los 10 a&ntilde;os. Las motos no. Sea cual sea su antig&uuml;edad, siguen pas&aacute;ndola cada 2 a&ntilde;os de forma indefinida. No existe el "salto a anual" en motos.
+<div class="mag-notice-inner">
+  <h3>Diferencia con los coches</h3>
+  <p>Los turismos pasan la ITV <strong>anualmente</strong> a partir de los 10 a&ntilde;os. Las motos no. Sea cual sea su antig&uuml;edad, siguen pas&aacute;ndola cada 2 a&ntilde;os de forma indefinida. No existe el &laquo;salto a anual&raquo; en motos.</p>
 </div>
 
 <p>Una particularidad de las motos: <strong>la fecha de la ITV se mantiene siempre en el mismo mes</strong>, independientemente del d&iacute;a exacto en que la pases. Es decir, si tu primera ITV fue en junio de 2026, las siguientes ser&aacute;n siempre en junio de 2028, junio de 2030, etc.</p>
@@ -130,11 +208,12 @@
 <h3>Asiento y anclajes</h3>
 <p>El asiento debe estar firmemente sujeto. En motos con asiento desmontable (tipo scooter), se comprueba que los anclajes funcionan correctamente.</p>
 
-<div class="consejo-mot">
-<strong>Consejo pr&aacute;ctico:</strong> una semana antes de la ITV, limpia la moto a fondo. Muchos rechazos por fugas de aceite se deben a que el inspector no puede distinguir si es una fuga activa o suciedad antigua. Una moto limpia pasa la inspecci&oacute;n m&aacute;s r&aacute;pido.
+<div class="mag-notice-inner">
+  <h3>Consejo pr&aacute;ctico</h3>
+  <p>Una semana antes de la ITV, limpia la moto a fondo. Muchos rechazos por fugas de aceite se deben a que el inspector no puede distinguir si es una fuga activa o suciedad antigua. Una moto limpia pasa la inspecci&oacute;n m&aacute;s r&aacute;pido.</p>
 </div>
 
-<h2>3. Los 8 defectos m&aacute;s comunes en motos</h2>
+<h2 id="defectos">3. Los 8 defectos m&aacute;s comunes en motos</h2>
 
 <p>Seg&uacute;n los datos de AECA-ITV, estos son los defectos que m&aacute;s rechazos provocan en motos y ciclomotores:</p>
 
@@ -149,8 +228,9 @@
 <li><strong>Documentaci&oacute;n incompleta o reformas no homologadas.</strong> Si has cambiado escape, manillar, intermitentes o cualquier pieza, debe constar en la ficha t&eacute;cnica.</li>
 </ol>
 
-<div class="peligro-mot">
-<strong>Atenci&oacute;n:</strong> el 60% de los rechazos en motos se deben a <strong>alumbrado, escape y frenos</strong>. Revisar estos tres puntos antes de ir resuelve la mayor&iacute;a de los casos.
+<div class="mag-notice-inner">
+  <h3>Atenci&oacute;n</h3>
+  <p>El 60% de los rechazos en motos se deben a <strong>alumbrado, escape y frenos</strong>. Revisar estos tres puntos antes de ir resuelve la mayor&iacute;a de los casos.</p>
 </div>
 
 <h2>4. ITV de motos el&eacute;ctricas: qu&eacute; cambia</h2>
@@ -172,15 +252,16 @@
 <h3>3. Sistema AVAS (en motos nuevas)</h3>
 <p>Aunque la obligaci&oacute;n del AVAS (sistema de alerta ac&uacute;stica para peatones) se aplica sobre todo a coches el&eacute;ctricos, algunas motos el&eacute;ctricas nuevas ya lo llevan. Si lo trae de f&aacute;brica, se verifica que funcione.</p>
 
-<div class="consejo-mot">
-<strong>Consejo para motos el&eacute;ctricas:</strong> llega a la ITV con al menos el 30% de bater&iacute;a. Algunos modelos no completan los autotests del BMS con carga muy baja, y el inspector no puede validar el sistema completo.
+<div class="mag-notice-inner">
+  <h3>Consejo para motos el&eacute;ctricas</h3>
+  <p>Llega a la ITV con al menos el 30% de bater&iacute;a. Algunos modelos no completan los autotests del BMS con carga muy baja, y el inspector no puede validar el sistema completo.</p>
 </div>
 
 <h2>5. Documentaci&oacute;n obligatoria para la ITV de una moto</h2>
 
 <p>Al igual que en coches, necesitas:</p>
 
-<table class="tabla-mot">
+<table class="defect-table">
 <tr><th>Documento</th><th>Obligatorio</th><th>Notas</th></tr>
 <tr><td>Permiso de circulaci&oacute;n</td><td>S&iacute;</td><td>Original, no fotocopia</td></tr>
 <tr><td>Ficha t&eacute;cnica (tarjeta ITV)</td><td>S&iacute;</td><td>Debe incluir reformas homologadas</td></tr>
@@ -189,8 +270,9 @@
 <tr><td>Documentaci&oacute;n de reformas</td><td>Solo si hay reformas</td><td>Escape, manillar, intermitentes, etc.</td></tr>
 </table>
 
-<div class="alerta-mot">
-<strong>Si tienes reformas no declaradas</strong> (escape deportivo, manillar cambiado, intermitentes LED retrofit...), la ITV te va a rechazar. Debes pasar primero por un taller autorizado que homologue las reformas y actualice la ficha t&eacute;cnica. Sin ese paso, no hay ITV posible.
+<div class="mag-notice-inner">
+  <h3>Si tienes reformas no declaradas</h3>
+  <p>Si has cambiado escape, manillar, intermitentes LED retrofit o cualquier pieza por una no original, la ITV te va a rechazar. Debes pasar primero por un taller autorizado que homologue las reformas y actualice la ficha t&eacute;cnica. Sin ese paso, no hay ITV posible.</p>
 </div>
 
 <h2>6. Proceso paso a paso: c&oacute;mo pasar la ITV de la moto</h2>
@@ -205,8 +287,9 @@
 <li><strong>Recibe el resultado.</strong> Favorable (con o sin defectos leves), Desfavorable (defectos graves) o Negativa (muy graves).</li>
 </ol>
 
-<div class="consejo-mot">
-<strong>Truco de horario:</strong> las estaciones de ITV est&aacute;n m&aacute;s tranquilas los martes, mi&eacute;rcoles y jueves por la ma&ntilde;ana. Los lunes, viernes y s&aacute;bados son los peores d&iacute;as. Si puedes elegir, evita esas franjas.
+<div class="mag-notice-inner">
+  <h3>Truco de horario</h3>
+  <p>Las estaciones de ITV est&aacute;n m&aacute;s tranquilas los martes, mi&eacute;rcoles y jueves por la ma&ntilde;ana. Los lunes, viernes y s&aacute;bados son los peores d&iacute;as. Si puedes elegir, evita esas franjas.</p>
 </div>
 
 <h2>7. Los 4 errores al preparar la moto para la ITV</h2>
@@ -222,7 +305,7 @@
 
 <p>El precio var&iacute;a por comunidad aut&oacute;noma. Estas son las tarifas orientativas de motocicletas:</p>
 
-<table class="tabla-mot">
+<table class="defect-table">
 <tr><th>Comunidad</th><th>Motocicleta</th><th>Ciclomotor</th></tr>
 <tr><td>Andaluc&iacute;a</td><td>~24&euro;</td><td>~18&euro;</td></tr>
 <tr><td>Catalu&ntilde;a</td><td>~35&euro;</td><td>~28&euro;</td></tr>
@@ -267,38 +350,92 @@
 
 <h2>10. Resumen r&aacute;pido</h2>
 
-<div class="destacado-mot">
-<strong>Lo esencial:</strong> la ITV de motos es <strong>m&aacute;s sencilla y barata</strong> que la de coches, pero tiene particularidades propias. Los tres puntos que m&aacute;s rechazos provocan son <strong>alumbrado, escape y frenos</strong>. Revisar esos tres antes de ir resuelve la mayor&iacute;a de los casos. Recuerda: la periodicidad es cada 2 a&ntilde;os indefinidamente, no pasa a anual como los coches. Y las motos el&eacute;ctricas pasan la ITV igual, con revisi&oacute;n de bater&iacute;a y cableado.
+<div class="mag-notice-inner">
+  <h3>Lo esencial</h3>
+  <p>La ITV de motos es <strong>m&aacute;s sencilla y barata</strong> que la de coches, pero tiene particularidades propias. Los tres puntos que m&aacute;s rechazos provocan son <strong>alumbrado, escape y frenos</strong>. Revisar esos tres antes de ir resuelve la mayor&iacute;a de los casos. Recuerda: la periodicidad es cada 2 a&ntilde;os indefinidamente, no pasa a anual como los coches. Y las motos el&eacute;ctricas pasan la ITV igual, con revisi&oacute;n de bater&iacute;a y cableado.</p>
 </div>
 
 <div class="related-guides">
-<h3>Art&iacute;culos y gu&iacute;as relacionadas</h3>
-<a href="/tipos-defectos-itv">Tipos de defectos en la ITV</a>
-<a href="/como-interpretar-informe-itv">C&oacute;mo interpretar el informe de la ITV</a>
-<a href="/que-pasa-si-suspendo-la-itv">Qu&eacute; pasa si suspendo la ITV</a>
-<a href="/cuando-me-toca-itv">Calculadora: cu&aacute;ndo me toca la ITV</a>
-<a href="/blog/multa-no-pasar-itv">Multa por no pasar la ITV</a>
-<a href="/itv-por-comunidad">ITV por comunidad aut&oacute;noma</a>
+  <h3>Art&iacute;culos y gu&iacute;as relacionadas</h3>
+  <a href="/tipos-defectos-itv">Tipos de defectos en la ITV</a>
+  <a href="/como-interpretar-informe-itv">C&oacute;mo interpretar el informe de la ITV</a>
+  <a href="/que-pasa-si-suspendo-la-itv">Qu&eacute; pasa si suspendo la ITV</a>
+  <a href="/cuando-me-toca-itv">Calculadora: cu&aacute;ndo me toca la ITV</a>
+  <a href="/blog/multa-no-pasar-itv">Multa por no pasar la ITV</a>
+  <a href="/itv-por-comunidad">ITV por comunidad aut&oacute;noma</a>
 </div>
 
-<p style="margin-top:30px;font-size:14px;color:#64748B;">
-Escrito por <a href="/autor/daniel-vega" style="color:#10B981;font-weight:700;">Daniel Vega</a>, T&eacute;cnico Superior en Automoci&oacute;n con 12 a&ntilde;os de experiencia en inspecci&oacute;n y mantenimiento de veh&iacute;culos.
-</p>
+<div class="mag-notice-inner">
+  <h3>Sobre el autor</h3>
+  <p><strong>Daniel Vega</strong>, T&eacute;cnico Superior en Automoci&oacute;n con 12 a&ntilde;os de experiencia en inspecci&oacute;n y mantenimiento de veh&iacute;culos. <a href="/autor/daniel-vega">Ver perfil del autor &rarr;</a></p>
+</div>
 
-<p style="margin-top:20px;"><a href="operadores-itv-espana" style="color:#10B981;font-weight:700;">&#127970; Ver qui&eacute;n gestiona la ITV en tu comunidad &rarr;</a></p></div>
+<div class="other-ccaa">
+  <h3>M&aacute;s herramientas</h3>
+  <a href="/operadores-itv-espana">Ver operadores de ITV</a>
+  <a href="/estaciones-itv">Buscar estaci&oacute;n</a>
+  <a href="/blog/multa-no-pasar-itv">Multas por ITV caducada</a>
+  <a href="/blog/precio-itv-por-provincia-2026">Precios por provincia</a>
+</div>
 
-<footer>
-<p><strong>ITVcheck</strong> | Informaci&oacute;n orientativa sobre la ITV en Espa&ntilde;a.</p>
-<p style="font-size:13px;color:#94A3B8;margin-top:15px;">Como Afiliado de Amazon, ITVcheck gana por las compras que cumplan los requisitos aplicables.</p>
-<p style="margin-top:15px;">
-<a href="/autor/daniel-vega">Autor: Daniel Vega</a> |
-<a href="/sobre-nosotros">Sobre nosotros</a> |
-<a href="/contacto">Contacto</a> |
-<a href="/aviso-legal">Aviso legal</a> |
-<a href="/politica-cookies">Cookies</a> |
-<a href="/politica-privacidad">Privacidad</a> |
-<a href="/politica-afiliados">Afiliados</a>
-</p>
+</div>
+
+<footer class="itv-footer">
+  <div class="itv-footer-inner">
+    <div class="itv-footer-top">
+      <div class="itv-footer-brand">
+        <a href="/index" class="itv-logo">
+          <span class="itv-logo-mark">ITV</span>
+          ITVcheck
+        </a>
+        <p>Manual de inspecci&oacute;n t&eacute;cnica independiente sobre la ITV en Espa&ntilde;a. Gu&iacute;as t&eacute;cnicas, mapa de estaciones y datos verificados.</p>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Herramientas</h4>
+        <a href="/cuando-me-toca-itv">Calculadora de fecha</a>
+        <a href="/calculadora-precio-itv">Comparador de precios</a>
+        <a href="/estaciones-itv">Buscador de estaciones</a>
+        <a href="/checklist-itv">Checklist pre-ITV</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Gu&iacute;as</h4>
+        <a href="/guia-completa-itv">Gu&iacute;a completa ITV</a>
+        <a href="/guias">Todas las gu&iacute;as</a>
+        <a href="/blog/">Blog</a>
+        <a href="/mecanica">Mec&aacute;nica DIY</a>
+        <a href="/guia-luces">Luces</a>
+        <a href="/guia-neumaticos">Neum&aacute;ticos</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Novedades 2026</h4>
+        <a href="/baliza-v16-obligatoria">Baliza V-16 obligatoria</a>
+        <a href="/itv-camper-furgonetas">ITV para campers</a>
+        <a href="/preparar-coche-viaje-largo">Viaje largo</a>
+        <a href="/mantenimiento-coches-electricos">Mantenimiento el&eacute;ctricos</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Por CCAA</h4>
+        <a href="/itv-por-comunidad">Todas las comunidades</a>
+        <a href="/itv-madrid">ITV Madrid</a>
+        <a href="/itv-cataluna">ITV Catalu&ntilde;a</a>
+        <a href="/itv-andalucia">ITV Andaluc&iacute;a</a>
+        <a href="/itv-valencia">ITV Valencia</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Legal</h4>
+        <a href="/sobre-nosotros">Sobre nosotros</a>
+        <a href="/contacto">Contacto</a>
+        <a href="/aviso-legal">Aviso legal</a>
+        <a href="/politica-cookies">Pol&iacute;tica de Cookies</a>
+        <a href="/politica-privacidad">Pol&iacute;tica de Privacidad</a>
+        <a href="/politica-afiliados">Afiliados</a>
+      </div>
+    </div>
+    <div class="itv-footer-bottom">
+      <span>&copy; 2026 ITVCHECK.ES</span>
+      <span>MANUAL DE INSPECCI&Oacute;N &middot; BLOG &middot; EDICI&Oacute;N 2026</span>
+    </div>
+  </div>
 </footer>
 
 </body>
