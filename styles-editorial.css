@@ -1697,3 +1697,64 @@ main > .btn:hover {
   #indice-estaciones-ccaa h2 { font-size: 28px; }
   #indice-estaciones-ccaa ul { columns: 1; }
 }
+
+/* ============================================================
+   VARIANTES DE HERO PARA BLOG Y GUÃAS
+   ============================================================ */
+
+/* Hero con aside mÃ¡s estrecho para artÃ­culos de blog (H1 en 1 lÃ­nea) */
+.mag-hero.hero-blog {
+  grid-template-columns: 1fr 280px;
+  gap: 40px;
+}
+
+/* H1 en 1 lÃ­nea â€” blog, titulares medios (~50-60 caracteres) */
+.mag-hero-text h1.h1-inline {
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  max-width: none;
+  white-space: nowrap;
+}
+
+/* H1 en 1 lÃ­nea â€” titulares largos (~70-90 caracteres) */
+.mag-hero-text h1.h1-inline-md {
+  font-size: 46px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  max-width: none;
+  white-space: nowrap;
+}
+
+/* H1 en 1 lÃ­nea â€” titulares extra largos (~90+ caracteres) */
+.mag-hero-text h1.h1-inline-sm {
+  font-size: 40px;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  max-width: none;
+  white-space: nowrap;
+}
+
+.mag-hero-text h1.h1-inline em,
+.mag-hero-text h1.h1-inline-md em,
+.mag-hero-text h1.h1-inline-sm em {
+  font-style: normal;
+  background: linear-gradient(transparent 60%, var(--signal) 60%);
+  padding: 0 4px;
+}
+
+@media (max-width: 1100px) {
+  .mag-hero-text h1.h1-inline { font-size: 46px; }
+  .mag-hero-text h1.h1-inline-md { font-size: 40px; }
+  .mag-hero-text h1.h1-inline-sm { font-size: 36px; }
+}
+
+@media (max-width: 900px) {
+  .mag-hero.hero-blog { grid-template-columns: 1fr; }
+  .mag-hero-text h1.h1-inline,
+  .mag-hero-text h1.h1-inline-md,
+  .mag-hero-text h1.h1-inline-sm {
+    font-size: 34px;
+    white-space: normal;
+  }
+}
