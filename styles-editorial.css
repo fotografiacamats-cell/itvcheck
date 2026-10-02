@@ -1758,3 +1758,93 @@ main > .btn:hover {
     white-space: normal;
   }
 }
+
+/* ============================================================
+   NAV MOVIL Â· Boton hamburguesa para .itv-header
+   ============================================================ */
+
+.itv-nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: 1.5px solid var(--ink);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0;
+  margin-left: auto;
+  position: relative;
+  transition: box-shadow 0.15s;
+  flex-shrink: 0;
+}
+
+.itv-nav-toggle:hover {
+  box-shadow: 3px 3px 0 var(--signal);
+}
+
+.itv-nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--ink);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.2s, opacity 0.2s, top 0.2s;
+}
+
+.itv-nav-toggle span:nth-child(1) { top: 14px; }
+.itv-nav-toggle span:nth-child(2) { top: 21px; }
+.itv-nav-toggle span:nth-child(3) { top: 28px; }
+
+.itv-nav-toggle.open span:nth-child(1) {
+  top: 21px;
+  transform: translateX(-50%) rotate(45deg);
+}
+.itv-nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.itv-nav-toggle.open span:nth-child(3) {
+  top: 21px;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+@media (max-width: 900px) {
+  .itv-nav-toggle {
+    display: block;
+  }
+  .itv-header-inner {
+    position: relative;
+  }
+  .itv-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-top: none;
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 0;
+    margin: 0;
+    z-index: 500;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+  }
+  .itv-nav.open {
+    display: flex;
+  }
+  .itv-nav a {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--line);
+    margin: 0;
+    font-size: 14px;
+  }
+  .itv-nav a:last-child {
+    border-bottom: none;
+  }
+  .itv-nav a::after {
+    display: none;
+  }
+}
