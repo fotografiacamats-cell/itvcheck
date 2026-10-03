@@ -1,153 +1,266 @@
-$nuevoSobre = @'
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="ITVcheck es un proyecto independiente liderado por Daniel Vega, técnico en automoción con 12 años de experiencia, para ayudar a los conductores a entender y pasar la ITV.">
+<meta name="description" content="ITVcheck es un proyecto editorial independiente especializado en la Inspecci&oacute;n T&eacute;cnica de Veh&iacute;culos en Espa&ntilde;a. Conoce qui&eacute;n est&aacute; detr&aacute;s, en qu&eacute; fuentes nos basamos y c&oacute;mo se financia.">
 <title>Sobre nosotros | ITVcheck</title>
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles-v2.css">
+<link rel="stylesheet" href="/styles-editorial.css">
 <link rel="canonical" href="https://itvcheck.es/sobre-nosotros">
+<script>
+function loadScripts(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-T1PZZHFJ4E';s.async=true;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});gtag('js',new Date());gtag('config','G-T1PZZHFJ4E');var a=document.createElement('script');a.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7947218272068445';a.async=true;a.crossOrigin='anonymous';document.head.appendChild(a);}
+if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
+</script>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "name": "Sobre ITVcheck",
-  "url": "https://itvcheck.es/sobre-nosotros",
-  "mainEntity": {
-    "@type": "Organization",
-    "name": "ITVcheck",
-    "url": "https://itvcheck.es",
-    "founder": {
-      "@type": "Person",
-      "name": "Daniel Vega",
-      "jobTitle": "T&eacute;cnico Superior en Automoci&oacute;n",
-      "url": "https://itvcheck.es/autor/daniel-vega"
-    },
-    "knowsAbout": ["ITV", "Inspecci&oacute;n T&eacute;cnica de Veh&iacute;culos", "Mantenimiento de autom&oacute;viles", "Normativa DGT"]
+ "@context":"https://schema.org",
+ "@graph":[
+  {
+   "@type":"AboutPage",
+   "name":"Sobre ITVcheck",
+   "url":"https://itvcheck.es/sobre-nosotros",
+   "inLanguage":"es-ES",
+   "isPartOf":{"@type":"WebSite","name":"ITVcheck","url":"https://itvcheck.es"}
+  },
+  {
+   "@type":"Organization",
+   "name":"ITVcheck",
+   "url":"https://itvcheck.es",
+   "description":"Portal editorial independiente sobre la Inspecci\u00f3n T\u00e9cnica de Veh\u00edculos en Espa\u00f1a.",
+   "founder":{
+    "@type":"Person",
+    "name":"Daniel Vega",
+    "jobTitle":"T\u00e9cnico Superior en Automoci\u00f3n",
+    "url":"https://itvcheck.es/autor/daniel-vega"
+   },
+   "knowsAbout":["ITV","Inspecci\u00f3n T\u00e9cnica de Veh\u00edculos","Mantenimiento de autom\u00f3viles","Normativa DGT","Real Decreto 920/2017"]
   }
+ ]
 }
 </script>
 </head>
 <body>
 
-<header>
-<a href="/index" class="logo">ITV<span>check</span></a>
-<button class="hamburger" onclick="document.getElementById('menu').classList.toggle('open')">&#9776;</button>
-<nav id="menu">
-<a href="/index">Inicio</a>
-<a href="/guias">Gu&iacute;as</a>
-<a href="/mecanica">Mec&aacute;nica DIY</a>
-<a href="/itv-por-comunidad">CCAA</a>
-<a href="/contacto">Contacto</a>
-</nav>
+<div id="cookieBanner">
+  <p>Utilizamos cookies para mejorar tu experiencia y mostrar anuncios de Google AdSense. <a href="politica-cookies">M&aacute;s informaci&oacute;n</a></p>
+  <button onclick="aceptarCookies()">Aceptar</button>
+  <button class="reject" onclick="rechazarCookies()">Rechazar</button>
+</div>
+
+<div class="itv-topbar">
+  <div class="itv-topbar-inner">
+    <span><span class="dot"></span>ITVCHECK &middot; EDICI&Oacute;N 2026</span>
+    <span>EDITORIAL &middot; SOBRE NOSOTROS</span>
+  </div>
+</div>
+
+<header class="itv-header">
+  <div class="itv-header-inner">
+    <a href="/index" class="itv-logo">
+      <span class="itv-logo-mark">ITV</span>
+      ITVcheck
+    </a>
+    <button class="itv-nav-toggle" aria-label="Abrir men&uacute;" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="itv-nav">
+      <a href="/guias">Gu&iacute;as</a>
+      <a href="/estaciones-itv">Estaciones</a>
+      <a href="/operadores-itv-espana">Operadores</a>
+      <a href="/calculadora-precio-itv">Precios</a>
+      <a href="/checklist-itv">Checklist</a>
+    </nav>
+  </div>
 </header>
+
+<div class="mag-issue-bar">
+  <span>ITVcheck &middot; Manual de inspecci&oacute;n t&eacute;cnica</span>
+  <span>EDITORIAL &middot; <strong>Edici&oacute;n 2026</strong></span>
+</div>
+
+<section class="mag-hero sin-aside">
+  <div class="mag-hero-text">
+    <span class="kicker">Editorial &middot; Qu&eacute; es ITVcheck</span>
+    <h1 class="h1-inline">Informaci&oacute;n <em>independiente</em> sobre la ITV.</h1>
+    <p class="lead">ITVcheck es un proyecto editorial independiente especializado en la Inspecci&oacute;n T&eacute;cnica de Veh&iacute;culos en Espa&ntilde;a. Publicamos gu&iacute;as t&eacute;cnicas basadas en normativa oficial, comparativas de precios por comunidad aut&oacute;noma y herramientas gratuitas. Sin publicidad intrusiva, sin patrocinios encubiertos, sin contenido generado sin revisi&oacute;n.</p>
+  </div>
+</section>
 
 <div class="container">
 
-<div class="breadcrumbs"><a href="/index">Inicio</a> &raquo; <span>Sobre nosotros</span></div>
+<div class="mag-notice-inner">
+  <h3>Qu&eacute; encontrar&aacute;s en esta p&aacute;gina</h3>
+  <p>Qui&eacute;n est&aacute; detr&aacute;s del proyecto, en qu&eacute; fuentes nos basamos, c&oacute;mo se financia el sitio y cu&aacute;l es nuestro compromiso editorial. Si detectas un error o quieres sugerir una mejora, escr&iacute;benos: <a href="/contacto">p&aacute;gina de contacto</a>.</p>
+</div>
 
-<h1>Sobre ITVcheck</h1>
+<h2>Qu&eacute; es ITVcheck</h2>
 
-<p>ITVcheck es un proyecto digital independiente creado para ayudar a los conductores espa&ntilde;oles a entender, preparar y pasar la Inspecci&oacute;n T&eacute;cnica de Veh&iacute;culos sin sorpresas. Publicamos gu&iacute;as t&eacute;cnicas basadas en normativa oficial, comparativas de precios por comunidad aut&oacute;noma y herramientas gratuitas como calculadoras de fecha y buscadores de estaciones.</p>
+<p>ITVcheck naci&oacute; con un objetivo concreto: <strong>desmitificar la ITV</strong>. La normativa cambia, las tarifas var&iacute;an enormemente entre comunidades aut&oacute;nomas, y las estaciones no siempre explican con claridad por qu&eacute; rechazan un veh&iacute;culo. Nuestro trabajo es traducir esa complejidad a un lenguaje claro, con datos verificables y procedimientos paso a paso.</p>
+
+<p>Publicamos tres tipos de contenido:</p>
+
+<ul>
+<li><strong>Gu&iacute;as t&eacute;cnicas:</strong> sobre defectos, documentos obligatorios, tipos de inspecci&oacute;n y normativa vigente.</li>
+<li><strong>Datos comparativos:</strong> precios por comunidad aut&oacute;noma, mapas de estaciones y estad&iacute;sticas de rechazo.</li>
+<li><strong>Herramientas gratuitas:</strong> calculadoras de fecha de ITV, comparadores de precios y checklists descargables.</li>
+</ul>
 
 <h2>Qui&eacute;n est&aacute; detr&aacute;s de ITVcheck</h2>
 
 <div style="display:flex;gap:24px;align-items:flex-start;margin:24px 0;flex-wrap:wrap;">
-
-<div style="flex:0 0 180px;">
-<img src="https://ui-avatars.com/api/?name=Daniel+Vega&size=360&background=10B981&color=fff&bold=true&font-size=0.4" 
-     alt="Daniel Vega, autor principal de ITVcheck" 
-     style="width:180px;height:180px;border-radius:50%;border:4px solid #10B981;">
+  <div style="flex:0 0 160px;">
+    <img src="https://ui-avatars.com/api/?name=Daniel+Vega&size=360&background=14171C&color=FFB800&bold=true&font-size=0.4" alt="Daniel Vega, editor principal de ITVcheck" style="width:160px;height:160px;border-radius:4px;">
+  </div>
+  <div style="flex:1;min-width:280px;">
+    <h3 style="margin-top:0;">Daniel Vega</h3>
+    <p style="font-size:14px;color:#5A6169;font-weight:600;margin-top:-6px;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:0.05em;">T&eacute;cnico Superior en Automoci&oacute;n &middot; Editor principal</p>
+    <p>T&eacute;cnico Superior en Automoci&oacute;n con m&aacute;s de <strong>doce a&ntilde;os de experiencia</strong> en mantenimiento preventivo y diagnosis de veh&iacute;culos. Ha trabajado en talleres multimarca y ha colaborado en proyectos de divulgaci&oacute;n mec&aacute;nica para publicaciones del sector.</p>
+    <p>Especializado en preparaci&oacute;n de veh&iacute;culos para la ITV, diagnosis electr&oacute;nica y mec&aacute;nica DIY orientada a conductores sin formaci&oacute;n t&eacute;cnica.</p>
+    <p><a href="/autor/daniel-vega">Ver perfil completo y metodolog&iacute;a &rarr;</a></p>
+  </div>
 </div>
 
-<div style="flex:1;min-width:280px;">
-<h3 style="margin-top:0;">Daniel Vega</h3>
-<p style="font-size:15px;color:#64748B;font-weight:600;margin-top:-8px;">T&eacute;cnico Superior en Automoci&oacute;n &middot; Editor principal</p>
+<h2>En qu&eacute; fuentes nos basamos</h2>
 
-<p>T&eacute;cnico Superior en Automoci&oacute;n con m&aacute;s de <strong>12 a&ntilde;os de experiencia</strong> en mantenimiento y diagnosis de veh&iacute;culos. A lo largo de mi carrera he trabajado en talleres multimarca y he colaborado en proyectos de divulgaci&oacute;n mec&aacute;nica para publicaciones del sector.</p>
+<p>Todo el contenido t&eacute;cnico de ITVcheck se apoya exclusivamente en fuentes oficiales y verificables:</p>
 
-<p>Soy aficionado a la restauraci&oacute;n de cl&aacute;sicos y a la mec&aacute;nica DIY. He cambiado cientos de bombillas, bater&iacute;as y escobillas en coches de todos los segmentos, y conozco bien el proceso de ITV desde los dos lados: como conductor y como t&eacute;cnico.</p>
+<table class="defect-table">
+<tr><th>Fuente</th><th>Uso en ITVcheck</th></tr>
+<tr><td><strong>Manual de Procedimiento de Inspecci&oacute;n de las Estaciones ITV</strong> (Ministerio de Industria)</td><td>Criterios t&eacute;cnicos de rechazo y clasificaci&oacute;n de defectos</td></tr>
+<tr><td><strong>Real Decreto 920/2017</strong></td><td>Normativa base de la ITV en Espa&ntilde;a</td></tr>
+<tr><td><strong>Instrucciones t&eacute;cnicas de la DGT</strong> (ej. PROT 2026/04)</td><td>Cambios normativos puntuales y periodicidad</td></tr>
+<tr><td><strong>Boletines oficiales de las CCAA</strong></td><td>Tarifas oficiales y particularidades regionales</td></tr>
+<tr><td><strong>Consulta directa con estaciones autorizadas</strong></td><td>Verificaci&oacute;n de precios, plazos y sistemas de cita</td></tr>
+</table>
 
-<blockquote style="border-left:4px solid #10B981;padding-left:16px;margin:20px 0;color:#1E293B;font-style:italic;background:#F8FAFC;padding:16px 20px;border-radius:8px;">
-Mi objetivo con ITVcheck es sencillo: que ning&uacute;n conductor pierda su cita en la ITV por una tonter&iacute;a que se puede revisar en casa en 10 minutos.
-</blockquote>
+<p>Cada gu&iacute;a incluye la fecha de &uacute;ltima actualizaci&oacute;n y, cuando aplica, enlace directo a la fuente citada. Cuando publicamos una cifra (precio, plazo legal, m&aacute;ximo legal de emisiones), es porque la hemos confirmado con una fuente oficial.</p>
 
-<p style="font-size:14px;"><a href="/autor/daniel-vega" style="color:#10B981;font-weight:700;">Ver perfil completo y metodolog&iacute;a &rarr;</a></p>
+<h2>C&oacute;mo se financia el sitio</h2>
+
+<p>ITVcheck es gratuito para el lector y se financia a trav&eacute;s de dos v&iacute;as, identificadas de forma clara en todas las p&aacute;ginas donde aparecen:</p>
+
+<table class="defect-table">
+<tr><th>Fuente</th><th>C&oacute;mo funciona</th><th>C&oacute;mo te afecta</th></tr>
+<tr><td><strong>Google AdSense</strong></td><td>Anuncios discretos gestionados por Google</td><td>Cero. No altera el contenido ni la redacci&oacute;n</td></tr>
+<tr><td><strong>Programa de Afiliados de Amazon EU</strong></td><td>Comisi&oacute;n por compras realizadas a trav&eacute;s de nuestros enlaces</td><td>Cero. El precio no cambia para ti</td></tr>
+</table>
+
+<p>Nunca vendemos datos personales, no publicamos rese&ntilde;as falsas y no alteramos nuestras opiniones por motivos comerciales. Puedes consultar todos los detalles en nuestra <a href="/politica-afiliados">Pol&iacute;tica de Afiliados</a>.</p>
+
+<h2>Compromiso editorial</h2>
+
+<ul>
+<li><strong>No inventamos datos.</strong> Si no tenemos una fuente verificable para una cifra, no la publicamos.</li>
+<li><strong>No publicamos contenido generado autom&aacute;ticamente sin revisi&oacute;n humana.</strong> Todas las gu&iacute;as pasan por edici&oacute;n manual.</li>
+<li><strong>Priorizamos la claridad sobre la complejidad.</strong> Si algo se puede explicar en 3 p&aacute;rrafos, no lo alargamos a 30.</li>
+<li><strong>Solo recomendamos productos que consideramos &uacute;tiles.</strong> Y solo cuando tiene sentido en el contexto del art&iacute;culo.</li>
+<li><strong>Identificamos siempre los enlaces de afiliado.</strong> Con avisos visibles antes y despu&eacute;s del bloque.</li>
+<li><strong>Actualizamos las gu&iacute;as cuando cambia la normativa.</strong> Con fecha visible de &uacute;ltima actualizaci&oacute;n.</li>
+<li><strong>Corregimos errores r&aacute;pidamente.</strong> Si nos avisas de un error, lo revisamos en menos de 48h.</li>
+</ul>
+
+<div class="mag-notice-inner">
+  <h3>Un compromiso con la transparencia</h3>
+  <p>Si en alg&uacute;n momento detectas contenido que no cumple estos principios, escr&iacute;benos a <a href="mailto:soporte@itvcheck.es">soporte@itvcheck.es</a>. Nos tomamos muy en serio las correcciones.</p>
 </div>
-
-</div>
-
-<h2>Nuestra misi&oacute;n</h2>
-
-<p>La ITV es una fuente de estr&eacute;s y confusi&oacute;n para muchos conductores. La normativa cambia, las tarifas var&iacute;an enormemente entre comunidades y las estaciones no siempre explican con claridad por qu&eacute; rechazan un veh&iacute;culo. Nuestro objetivo es <strong>desmitificar el proceso</strong> ofreciendo informaci&oacute;n clara, honesta y basada en la normativa oficial.</p>
-
-<h2>En qu&eacute; nos basamos</h2>
-
-<p>Para garantizar la m&aacute;xima fiabilidad, nuestro contenido se basa directamente en fuentes oficiales y verificables:</p>
-
-<ul>
-<li><strong>Manual de Procedimiento de Inspecci&oacute;n de las Estaciones ITV</strong> &mdash; publicado por el Ministerio de Industria.</li>
-<li><strong>Real Decreto 920/2017</strong> &mdash; normativa que regula la ITV en Espa&ntilde;a.</li>
-<li><strong>Directrices de la DGT</strong> &mdash; instrucciones t&eacute;cnicas (como la PROT 2026/04 sobre furgonetas camper).</li>
-<li><strong>Boletines oficiales de cada comunidad aut&oacute;noma</strong> &mdash; tarifas y particularidades regionales.</li>
-<li><strong>Contacto directo con estaciones autorizadas</strong> &mdash; para verificar precios, plazos y sistemas de cita previa.</li>
-</ul>
-
-<p>Cada gu&iacute;a incluye la fecha de &uacute;ltima actualizaci&oacute;n y las fuentes citadas. Cuando publicamos una cifra (como un precio de ITV o un plazo legal), es porque la hemos confirmado con una fuente oficial.</p>
-
-<h2>C&oacute;mo se financia este sitio</h2>
-
-<p>Para que todo nuestro contenido sea gratuito, ITVcheck se financia a trav&eacute;s de dos v&iacute;as, claramente identificadas en cada p&aacute;gina:</p>
-
-<ul>
-<li><strong>Publicidad de Google AdSense:</strong> anuncios discretos que no interfieren con la lectura.</li>
-<li><strong>Programa de Afiliados de Amazon:</strong> cuando recomendamos un producto y el usuario lo compra a trav&eacute;s de nuestro enlace, recibimos una peque&ntilde;a comisi&oacute;n sin coste adicional para el usuario.</li>
-</ul>
-
-<p>Nunca vendemos datos personales, no publicamos rese&ntilde;as falsas y no alteramos nuestras opiniones por motivos comerciales. Puedes consultar todos los detalles en nuestra <a href="/politica-afiliados" style="color:#10B981;font-weight:600;">Pol&iacute;tica de Afiliados</a>.</p>
-
-<h2>Nuestro compromiso editorial</h2>
-
-<ul>
-<li>No inventamos datos sobre estaciones ni precios sin fuente verificable.</li>
-<li>No publicamos contenido generado autom&aacute;ticamente sin revisi&oacute;n humana.</li>
-<li>Priorizamos la claridad sobre la complejidad.</li>
-<li>Solo recomendamos productos que consideramos &uacute;tiles y de calidad.</li>
-<li>Identificamos siempre los enlaces de afiliado.</li>
-<li>Actualizamos las gu&iacute;as cuando cambia la normativa.</li>
-</ul>
 
 <h2>Contacto</h2>
 
-<p>Si tienes dudas, sugerencias, o detectas un error en alguna gu&iacute;a, escr&iacute;benos a <a href="mailto:soporte@itvcheck.es" style="color:#10B981;font-weight:700;">soporte@itvcheck.es</a>. Respondemos a todas las consultas en un plazo m&aacute;ximo de 48-72 horas laborables.</p>
+<p>Para dudas, sugerencias, correcciones o propuestas de colaboraci&oacute;n:</p>
 
-<p>Tambi&eacute;n puedes usar nuestra <a href="/contacto" style="color:#10B981;font-weight:600;">p&aacute;gina de contacto</a>.</p>
+<p><a href="mailto:soporte@itvcheck.es">soporte@itvcheck.es</a> &mdash; respondemos en un plazo m&aacute;ximo de 48-72 horas laborables.</p>
+
+<p>Tambi&eacute;n puedes usar nuestra <a href="/contacto">p&aacute;gina de contacto</a>.</p>
+
+<div class="related-guides">
+  <h3>Enlaces &uacute;tiles</h3>
+  <a href="/autor/daniel-vega">Perfil del autor</a>
+  <a href="/contacto">Contacto</a>
+  <a href="/politica-afiliados">Pol&iacute;tica de afiliados</a>
+  <a href="/politica-privacidad">Pol&iacute;tica de privacidad</a>
+  <a href="/aviso-legal">Aviso legal</a>
+</div>
+
+<p><a href="/index" class="btn">&larr; Volver a la p&aacute;gina principal</a></p>
 
 </div>
 
-<footer>
-<p><strong>ITVcheck</strong> | Informaci&oacute;n orientativa sobre la ITV en Espa&ntilde;a.</p>
-<p style="font-size:13px;color:#94A3B8;margin-top:15px;">Como Afiliado de Amazon, ITVcheck gana por las compras que cumplan los requisitos aplicables.</p>
-<p style="margin-top:15px;">
-<a href="/autor/daniel-vega">Autor: Daniel Vega</a> |
-<a href="/sobre-nosotros">Sobre nosotros</a> |
-<a href="/contacto">Contacto</a> |
-<a href="/aviso-legal">Aviso legal</a> |
-<a href="/politica-cookies">Cookies</a> |
-<a href="/politica-privacidad">Privacidad</a> |
-<a href="/politica-afiliados">Afiliados</a>
-</p>
+<footer class="itv-footer">
+  <div class="itv-footer-inner">
+    <div class="itv-footer-top">
+      <div class="itv-footer-brand">
+        <a href="/index" class="itv-logo">
+          <span class="itv-logo-mark">ITV</span>
+          ITVcheck
+        </a>
+        <p>Manual de inspecci&oacute;n t&eacute;cnica independiente sobre la ITV en Espa&ntilde;a. Gu&iacute;as t&eacute;cnicas, mapa de estaciones y datos verificados.</p>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Herramientas</h4>
+        <a href="/cuando-me-toca-itv">Calculadora de fecha</a>
+        <a href="/calculadora-precio-itv">Comparador de precios</a>
+        <a href="/estaciones-itv">Buscador de estaciones</a>
+        <a href="/checklist-itv">Checklist pre-ITV</a>
+        <a href="/operadores-itv-espana">Operadores ITV</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Gu&iacute;as</h4>
+        <a href="/guia-completa-itv">Gu&iacute;a completa ITV</a>
+        <a href="/guias">Todas las gu&iacute;as</a>
+        <a href="/blog/">Blog</a>
+        <a href="/mecanica">Mec&aacute;nica DIY</a>
+        <a href="/guia-luces">Luces</a>
+        <a href="/guia-neumaticos">Neum&aacute;ticos</a>
+        <a href="/guia-frenos">Frenos</a>
+        <a href="/guia-gases">Gases</a>
+        <a href="/guia-documentacion">Documentaci&oacute;n</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Novedades 2026</h4>
+        <a href="/baliza-v16-obligatoria">Baliza V-16 obligatoria</a>
+        <a href="/itv-camper-furgonetas">ITV para campers</a>
+        <a href="/preparar-coche-viaje-largo">Viaje largo</a>
+        <a href="/mantenimiento-coches-electricos">Mantenimiento el&eacute;ctricos</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Por CCAA</h4>
+        <a href="/itv-por-comunidad">Todas las comunidades</a>
+        <a href="/itv-madrid">ITV Madrid</a>
+        <a href="/itv-cataluna">ITV Catalu&ntilde;a</a>
+        <a href="/itv-andalucia">ITV Andaluc&iacute;a</a>
+        <a href="/itv-valencia">ITV Valencia</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Legal</h4>
+        <a href="/sobre-nosotros">Sobre nosotros</a>
+        <a href="/autor/daniel-vega">Daniel Vega (autor)</a>
+        <a href="/contacto">Contacto</a>
+        <a href="/aviso-legal">Aviso legal</a>
+        <a href="/politica-cookies">Pol&iacute;tica de Cookies</a>
+        <a href="/politica-privacidad">Pol&iacute;tica de Privacidad</a>
+        <a href="/politica-afiliados">Afiliados</a>
+      </div>
+    </div>
+    <div class="itv-footer-bottom">
+      <span>&copy; 2026 ITVCHECK.ES</span>
+      <span>MANUAL DE INSPECCI&Oacute;N &middot; EDICI&Oacute;N 2026</span>
+    </div>
+  </div>
 </footer>
 
+<script src="/js/nav-mobile.js" defer></script>
+<script>
+function toggleMenu(){var n=document.getElementById('menu');if(n)n.classList.toggle('open');}
+window.onload=function(){if(localStorage.getItem('cookiesAceptadas')===null){document.getElementById('cookieBanner').style.display='block';}};
+function aceptarCookies(){localStorage.setItem('cookiesAceptadas','true');loadScripts();document.getElementById('cookieBanner').style.display='none';}
+function rechazarCookies(){localStorage.setItem('cookiesAceptadas','false');document.getElementById('cookieBanner').style.display='none';}
+</script>
 </body>
 </html>
-'@
-
-Set-Content -Path "sobre-nosotros.html" -Value $nuevoSobre -Encoding UTF8 -NoNewline
-Write-Host "sobre-nosotros.html reescrito con acentos correctos" -ForegroundColor Green

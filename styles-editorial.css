@@ -2319,3 +2319,67 @@ main > .btn:hover {
   .mag-data-bar > div > strong { font-size: 40px; }
   .mag-data-bar > div > span { font-size: 12px; }
 }
+
+/* ============================================================
+   HERO SIN ASIDE · Colapsa a una columna
+   Se activa con la clase .sin-aside en el <section>
+   ============================================================ */
+.mag-hero.sin-aside {
+  grid-template-columns: 1fr;
+  max-width: 880px;
+  padding: 40px 32px 56px;
+  gap: 0;
+  align-items: start;
+}
+.mag-hero.sin-aside .mag-hero-text h1,
+.mag-hero.sin-aside .mag-hero-text h1.h1-inline {
+  font-size: 56px;
+  max-width: 100%;
+  white-space: normal;
+}
+.mag-hero.sin-aside .mag-hero-text .lead {
+  max-width: 100%;
+}
+@media (max-width: 1100px) {
+  .mag-hero.sin-aside .mag-hero-text h1,
+  .mag-hero.sin-aside .mag-hero-text h1.h1-inline { font-size: 46px; }
+}
+@media (max-width: 900px) {
+  .mag-hero.sin-aside { padding: 28px 20px 40px; }
+  .mag-hero.sin-aside .mag-hero-text h1,
+  .mag-hero.sin-aside .mag-hero-text h1.h1-inline { font-size: 36px; }
+}
+
+
+/* ============================================================
+   HERO SIN ASIDE · v2 con !important quirurgico
+   EXCEPCION DOCUMENTADA a la regla "nunca !important"
+   Motivo: la regla .mag-hero base tiene grid-template-columns
+   definido en varias media queries y en .hero-blog, y no se
+   puede garantizar el override solo por orden/especificidad.
+   ============================================================ */
+.mag-hero.sin-aside {
+  grid-template-columns: 1fr !important;
+  max-width: 880px !important;
+  padding: 40px 32px 56px !important;
+  gap: 0 !important;
+  align-items: start !important;
+}
+.mag-hero.sin-aside .mag-hero-text h1,
+.mag-hero.sin-aside .mag-hero-text h1.h1-inline {
+  font-size: 56px !important;
+  max-width: 100% !important;
+  white-space: normal !important;
+}
+.mag-hero.sin-aside .mag-hero-text .lead {
+  max-width: 100% !important;
+}
+@media (max-width: 1100px) {
+  .mag-hero.sin-aside .mag-hero-text h1,
+  .mag-hero.sin-aside .mag-hero-text h1.h1-inline { font-size: 46px !important; }
+}
+@media (max-width: 900px) {
+  .mag-hero.sin-aside { padding: 28px 20px 40px !important; }
+  .mag-hero.sin-aside .mag-hero-text h1,
+  .mag-hero.sin-aside .mag-hero-text h1.h1-inline { font-size: 36px !important; }
+}
