@@ -25,7 +25,8 @@ if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"CollectionPage","name":"ITV por Comunidad","url":"https://itvcheck.es/itv-por-comunidad","description":"Guías de ITV de las 17 comunidades autónomas y 2 ciudades autónomas de España, con precios actualizados 2026.","isPartOf":{"@type":"WebSite","name":"ITVcheck","url":"https://itvcheck.es"}}
 </script>
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/styles-v2.css">
+<link rel="stylesheet" href="/styles-editorial.css">
 <link rel="canonical" href="https://itvcheck.es/itv-por-comunidad">
 </head>
 <body>
@@ -38,18 +39,20 @@ if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
 
 <a href="https://api.whatsapp.com/send?text=Estoy%20buscando%20la%20ITV%20de%20mi%20comunidad%20en%20ITVcheck" target="_blank" id="whatsappBtn" aria-label="Contactar por WhatsApp">💬</a>
 
-<header>
- <a href="index" class="logo">ITV<span>check</span></a>
- <button class="hamburger" onclick="toggleMenu()">☰</button>
- <nav id="menu">
- <a href="index">Inicio</a>
- <a href="guias">Guías</a><a href="mecanica">Mecánica DIY</a>
- <a href="itv-por-comunidad">CCAA</a>
- <a href="cuando-me-toca-itv">Calculadora</a>
- <a href="calculadora-precio-itv">Precios</a>
- <a href="estaciones-itv">Estaciones</a>
- <a href="contacto">Contacto</a>
- </nav>
+<header class="mag-header">
+  <div class="mag-header-inner">
+    <a href="/index" class="logo">ITV<span>check</span></a>
+    <button class="hamburger" aria-label="Abrir men&uacute;" aria-expanded="false">&#9776;</button>
+    <nav id="menu" class="mag-nav">
+      <a href="/index">Inicio</a>
+      <a href="/guias">Gu&iacute;as</a>
+      <a href="/mecanica">Mec&aacute;nica</a>
+      <a href="/itv-por-comunidad">CCAA</a>
+      <a href="/cuando-me-toca-itv">Calculadora</a>
+      <a href="/estaciones-itv">Estaciones</a>
+      <a href="/contacto">Contacto</a>
+    </nav>
+  </div>
 </header>
 
 <div class="container">
@@ -245,48 +248,24 @@ if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
  </div>
 </div>
 
-<footer>
- <div class="footer-grid">
- <div class="footer-col">
- <h4>ITVcheck</h4>
- <p style="color:#94A3B8;font-size:14px;">Información independiente y clara para que la ITV nunca sea un problema.</p>
- </div>
- <div class="footer-col">
- <h4>Herramientas</h4>
- <a href="cuando-me-toca-itv">Calculadora de fecha</a>
- <a href="calculadora-precio-itv">Comparador de precios</a>
- <a href="estaciones-itv">Buscador de estaciones</a>
- <a href="checklist-itv">Checklist pre-ITV</a>
- </div>
- <div class="footer-col">
- <h4>Guías</h4>
- <a href="guia-luces">Luces</a>
- <a href="guia-neumaticos">Neumáticos</a>
- <a href="guia-frenos">Frenos</a>
- <a href="guia-gases">Gases</a>
- <a href="guia-documentacion">Documentación</a>
- <a href="seguros-coche">Seguros</a>
- </div>
- <div class="footer-col">
- <h4>Legal</h4>
- <a href="sobre-nosotros">Sobre nosotros</a>
- <a href="contacto">Contacto</a>
- <a href="aviso-legal">Aviso legal</a>
- <a href="politica-cookies">Política de Cookies</a>
- <a href="politica-privacidad">Política de Privacidad</a>
- <a href="politica-afiliados">Afiliados</a>
- </div>
- </div>
- <div class="footer-bottom">
- <p>© 2026 ITVcheck. Todos los derechos reservados.</p>
- </div>
+<footer class="mag-footer">
+  <p><strong>ITVcheck</strong> | Informaci&oacute;n orientativa sobre la ITV en Espa&ntilde;a.</p>
+  <p class="mag-footer-afiliado">Como Afiliado de Amazon, ITVcheck gana por las compras que cumplan los requisitos aplicables.</p>
+  <nav class="mag-footer-nav">
+    <a href="/sobre-nosotros">Sobre nosotros</a>
+    <a href="/contacto">Contacto</a>
+    <a href="/operadores-itv">Operadores ITV</a>
+    <a href="/guia-frenos">Frenos</a>
+    <a href="/guia-gases">Gases</a>
+    <a href="/guia-documentacion">Documentaci&oacute;n</a>
+    <a href="/autor/daniel-vega">Autor: Daniel Vega</a>
+    <a href="/aviso-legal">Aviso legal</a>
+    <a href="/politica-cookies">Cookies</a>
+    <a href="/politica-privacidad">Privacidad</a>
+  </nav>
 </footer>
 
-<script>
-function toggleMenu(){var n=document.getElementById('menu');n.classList.toggle('open');}
-window.onload=function(){if(localStorage.getItem('cookiesAceptadas')===null){document.getElementById('cookieBanner').style.display='block';}};
-function aceptarCookies(){localStorage.setItem('cookiesAceptadas','true');loadScripts();document.getElementById('cookieBanner').style.display='none';}
-function rechazarCookies(){localStorage.setItem('cookiesAceptadas','false');document.getElementById('cookieBanner').style.display='none';}
-</script>
+
+<script src="/js/nav-mobile.js" defer></script>
 </body>
 </html>
