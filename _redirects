@@ -1,0 +1,11 @@
+# Fix 3 - 301 para URLs 404 con destino equivalente
+/afiliados                                   /politica-afiliados     301
+/cookies                                     /politica-cookies       301
+/privacidad                                  /politica-privacidad    301
+/mecanica/politica-cookies                   /politica-cookies       301
+/mecanica/guia-luces                         /guia-luces             301
+/mecanica/guia-bateria                       /guia-bateria           301
+/mecanica/guia-neumaticos                    /guia-neumaticos        301
+/mecanica/dacia-sandero-cambiar-bateria      /mecanica/baterias      301
+/mecanica/hyundai-tucson-cambiar-bateria     /mecanica/baterias      301
+/mecanica/peugeot-3008-cambiar-bombilla      /mecanica/bombillas     301
