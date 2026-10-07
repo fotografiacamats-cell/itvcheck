@@ -18,15 +18,26 @@ if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuánto cuesta la ITV en Gipuzkoa en 2026?","acceptedAnswer":{"@type":"Answer","text":"Turismo gasolina: 59,46€. Diésel: 61,56€. Eléctrico: 57,26€. Motos: 34,42€. Tarifas actualizadas por IPC."}},{"@type":"Question","name":"¿La segunda inspección es gratuita en Gipuzkoa?","acceptedAnswer":{"@type":"Answer","text":"Sí, si el vehículo se presenta antes de 1 mes y en la misma estación. Pasado ese mes, se cobra el 100% de la tarifa."}},{"@type":"Question","name":"¿Cuántas estaciones de ITV hay en Gipuzkoa?","acceptedAnswer":{"@type":"Answer","text":"Gipuzkoa cuenta con 5 estaciones: Irún (Itevelesa, especializada en motos), San Sebastián (Itasua), Eibar (Itasua), Tolosa (Itevelesa) y Beasain (Itasua)."}},{"@type":"Question","name":"¿Puedo pasar la ITV en Bizkaia si vivo en Gipuzkoa?","acceptedAnswer":{"@type":"Answer","text":"Sí. Puedes pasar la ITV en cualquier estación autorizada del País Vasco o de España, sin importar dónde esté matriculado el vehículo."}}]}
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles-v2.css">
+<link rel="stylesheet" href="/styles-editorial.css">
 </head>
 <body>
 <div id="cookieBanner"><p>Utilizamos cookies para mejorar tu experiencia y mostrar anuncios de Google AdSense. <a href="/politica-cookies" style="color:#FACC15;">Más información</a></p><button onclick="aceptarCookies()">Aceptar</button><button class="reject" onclick="rechazarCookies()">Rechazar</button></div>
-<header>
-<a href="/index" class="logo">ITV<span>check</span></a>
-<button class="hamburger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
-<nav id="menu"><a href="/index">Inicio</a><a href="/guias">Guías</a><a href="/mecanica">Mecánica</a><a href="/itv-por-comunidad">CCAA</a><a href="/cuando-me-toca-itv">Calculadora</a><a href="/estaciones-itv">Estaciones</a><a href="/contacto">Contacto</a></nav>
+<header class="mag-header">
+  <div class="mag-header-inner">
+    <a href="/index" class="logo">ITV<span>check</span></a>
+    <button class="hamburger" aria-label="Abrir men&uacute;" aria-expanded="false">&#9776;</button>
+    <nav id="menu" class="mag-nav">
+      <a href="/index">Inicio</a>
+      <a href="/guias">Gu&iacute;as</a>
+      <a href="/mecanica">Mec&aacute;nica</a>
+      <a href="/itv-por-comunidad">CCAA</a>
+      <a href="/cuando-me-toca-itv">Calculadora</a>
+      <a href="/estaciones-itv">Estaciones</a>
+      <a href="/contacto">Contacto</a>
+    </nav>
+  </div>
 </header>
 
 <div class="container">
@@ -156,7 +167,23 @@ if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
 <a href="/index" class="btn">← Volver a la página principal</a>
 </div>
 
-<footer><p><strong>ITVcheck</strong> | Información orientativa sobre la ITV en España.</p><p style="font-size:13px;color:#94A3B8;margin-top:15px;">Como Afiliado de Amazon, ITVcheck gana por las compras que cumplan los requisitos aplicables.</p><p style="margin-top:15px;"><a href="/sobre-nosotros">Sobre nosotros</a> | <a href="/contacto">Contacto</a> | <a href="/autor/daniel-vega">Autor: Daniel Vega</a> | <a href="/aviso-legal">Aviso legal</a> | <a href="/politica-cookies">Cookies</a> | <a href="/politica-privacidad">Privacidad</a></p></footer>
-<script>function toggleMenu(){document.getElementById('menu').classList.toggle('open');}</script>
+<footer class="mag-footer">
+  <p><strong>ITVcheck</strong> | Informaci&oacute;n orientativa sobre la ITV en Espa&ntilde;a.</p>
+  <p class="mag-footer-afiliado">Como Afiliado de Amazon, ITVcheck gana por las compras que cumplan los requisitos aplicables.</p>
+  <nav class="mag-footer-nav">
+    <a href="/sobre-nosotros">Sobre nosotros</a>
+    <a href="/contacto">Contacto</a>
+    <a href="/operadores-itv">Operadores ITV</a>
+    <a href="/guia-frenos">Frenos</a>
+    <a href="/guia-gases">Gases</a>
+    <a href="/guia-documentacion">Documentaci&oacute;n</a>
+    <a href="/autor/daniel-vega">Autor: Daniel Vega</a>
+    <a href="/aviso-legal">Aviso legal</a>
+    <a href="/politica-cookies">Cookies</a>
+    <a href="/politica-privacidad">Privacidad</a>
+  </nav>
+</footer>
+
+<script src="/js/nav-mobile.js" defer></script>
 </body>
 </html>

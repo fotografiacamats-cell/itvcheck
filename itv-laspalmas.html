@@ -18,15 +18,26 @@ if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuánto cuesta la ITV en Las Palmas en 2026?","acceptedAnswer":{"@type":"Answer","text":"Tarifas máximas: motos 25,62€, turismo gasolina 42,07€, turismo diésel 51,44€, vehículo ligero 57,84€. Las tarifas son máximas y cada operador puede aplicar descuentos."}},{"@type":"Question","name":"¿Qué islas cubre la provincia de Las Palmas?","acceptedAnswer":{"@type":"Answer","text":"La provincia de Las Palmas incluye Gran Canaria, Lanzarote y Fuerteventura. También tiene 3 islas menores: La Graciosa (perteneciente a Lanzarote), y los islotes de Alegranza y Montaña Clara."}},{"@type":"Question","name":"¿Quién gestiona la ITV en Las Palmas?","acceptedAnswer":{"@type":"Answer","text":"Empresas privadas: Applus gestiona varias estaciones en Gran Canaria y Lanzarote. SGS gestiona Las Palmas I y II, Puerto de Las Palmas, La Pardilla, Arrecife (Lanzarote), Puerto del Rosario (Fuerteventura)."}},{"@type":"Question","name":"¿Las estaciones móviles cubren las islas menores?","acceptedAnswer":{"@type":"Answer","text":"Sí, algunos operadores disponen de unidades móviles para vehículos agrícolas y ligeros en zonas rurales y en las islas menores."}},{"@type":"Question","name":"¿Cómo afecta el salitre a la ITV en Las Palmas?","acceptedAnswer":{"@type":"Answer","text":"El ambiente marino acelera la corrosión de bajos, carrocería y componentes metálicos. Revisa los puntos de oxidación antes de la ITV, especialmente si vives en la costa."}}]}
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles-v2.css">
+<link rel="stylesheet" href="/styles-editorial.css">
 </head>
 <body>
 <div id="cookieBanner"><p>Utilizamos cookies para mejorar tu experiencia y mostrar anuncios de Google AdSense. <a href="/politica-cookies" style="color:#FACC15;">Más información</a></p><button onclick="aceptarCookies()">Aceptar</button><button class="reject" onclick="rechazarCookies()">Rechazar</button></div>
-<header>
-<a href="/index" class="logo">ITV<span>check</span></a>
-<button class="hamburger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
-<nav id="menu"><a href="/index">Inicio</a><a href="/guias">Guías</a><a href="/mecanica">Mecánica</a><a href="/itv-por-comunidad">CCAA</a><a href="/cuando-me-toca-itv">Calculadora</a><a href="/estaciones-itv">Estaciones</a><a href="/contacto">Contacto</a></nav>
+<header class="mag-header">
+  <div class="mag-header-inner">
+    <a href="/index" class="logo">ITV<span>check</span></a>
+    <button class="hamburger" aria-label="Abrir men&uacute;" aria-expanded="false">&#9776;</button>
+    <nav id="menu" class="mag-nav">
+      <a href="/index">Inicio</a>
+      <a href="/guias">Gu&iacute;as</a>
+      <a href="/mecanica">Mec&aacute;nica</a>
+      <a href="/itv-por-comunidad">CCAA</a>
+      <a href="/cuando-me-toca-itv">Calculadora</a>
+      <a href="/estaciones-itv">Estaciones</a>
+      <a href="/contacto">Contacto</a>
+    </nav>
+  </div>
 </header>
 
 <div class="container">
@@ -129,7 +140,23 @@ if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
 <a href="/index" class="btn">← Volver a la página principal</a>
 </div>
 
-<footer><p><strong>ITVcheck</strong> | Información orientativa sobre la ITV en España.</p><p style="font-size:13px;color:#94A3B8;margin-top:15px;">Como Afiliado de Amazon, ITVcheck gana por las compras que cumplan los requisitos aplicables.</p><p style="margin-top:15px;"><a href="/sobre-nosotros">Sobre nosotros</a> | <a href="/contacto">Contacto</a> | <a href="/autor/daniel-vega">Autor: Daniel Vega</a> | <a href="/aviso-legal">Aviso legal</a> | <a href="/politica-cookies">Cookies</a> | <a href="/politica-privacidad">Privacidad</a></p></footer>
-<script>function toggleMenu(){document.getElementById('menu').classList.toggle('open');}</script>
+<footer class="mag-footer">
+  <p><strong>ITVcheck</strong> | Informaci&oacute;n orientativa sobre la ITV en Espa&ntilde;a.</p>
+  <p class="mag-footer-afiliado">Como Afiliado de Amazon, ITVcheck gana por las compras que cumplan los requisitos aplicables.</p>
+  <nav class="mag-footer-nav">
+    <a href="/sobre-nosotros">Sobre nosotros</a>
+    <a href="/contacto">Contacto</a>
+    <a href="/operadores-itv">Operadores ITV</a>
+    <a href="/guia-frenos">Frenos</a>
+    <a href="/guia-gases">Gases</a>
+    <a href="/guia-documentacion">Documentaci&oacute;n</a>
+    <a href="/autor/daniel-vega">Autor: Daniel Vega</a>
+    <a href="/aviso-legal">Aviso legal</a>
+    <a href="/politica-cookies">Cookies</a>
+    <a href="/politica-privacidad">Privacidad</a>
+  </nav>
+</footer>
+
+<script src="/js/nav-mobile.js" defer></script>
 </body>
 </html>

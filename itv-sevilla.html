@@ -18,15 +18,26 @@ if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuánto cuesta la ITV en Sevilla en 2026?","acceptedAnswer":{"@type":"Answer","text":"Turismo gasolina <1.600cc: 24,05€. Turismo gasolina >1.600cc: 32,51€. Diésel <1.600cc: 26,12€. Diésel >1.600cc: 36,73€. Eléctrico: 20,60€. Son los precios más bajos de España."}},{"@type":"Question","name":"¿Hay bonificación en la ITV de Sevilla?","acceptedAnswer":{"@type":"Answer","text":"Sí. Si presentas el vehículo antes de la fecha de vencimiento, obtienes una reducción del 10%. Si lo presentas más de un mes después, la tarifa se incrementa un 12%."}},{"@type":"Question","name":"¿Cómo pido cita previa para la ITV en Sevilla?","acceptedAnswer":{"@type":"Answer","text":"A través de www.itvcita.com o llamando al 959 999 999. Si el vehículo no está matriculado en Andalucía, solo puedes pedir cita por teléfono."}},{"@type":"Question","name":"¿Cuántas estaciones de ITV hay en Sevilla?","acceptedAnswer":{"@type":"Answer","text":"Sevilla cuenta con más de 15 estaciones distribuidas por la provincia, la mayoría gestionadas por VEIASA (empresa pública andaluza) más algunas concesionarias privadas."}},{"@type":"Question","name":"¿Qué particularidades tiene la ITV en Sevilla por el clima?","acceptedAnswer":{"@type":"Answer","text":"El calor extremo del verano sevillano (con temperaturas que superan los 40°C) castiga especialmente la batería, el aire acondicionado y el sistema de refrigeración. Revisa estos puntos antes de la ITV, especialmente si la pasas en verano."}}]}
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles-v2.css">
+<link rel="stylesheet" href="/styles-editorial.css">
 </head>
 <body>
 <div id="cookieBanner"><p>Utilizamos cookies para mejorar tu experiencia y mostrar anuncios de Google AdSense. <a href="/politica-cookies" style="color:#FACC15;">Más información</a></p><button onclick="aceptarCookies()">Aceptar</button><button class="reject" onclick="rechazarCookies()">Rechazar</button></div>
-<header>
-<a href="/index" class="logo">ITV<span>check</span></a>
-<button class="hamburger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
-<nav id="menu"><a href="/index">Inicio</a><a href="/guias">Guías</a><a href="/mecanica">Mecánica</a><a href="/itv-por-comunidad">CCAA</a><a href="/cuando-me-toca-itv">Calculadora</a><a href="/estaciones-itv">Estaciones</a><a href="/contacto">Contacto</a></nav>
+<header class="mag-header">
+  <div class="mag-header-inner">
+    <a href="/index" class="logo">ITV<span>check</span></a>
+    <button class="hamburger" aria-label="Abrir men&uacute;" aria-expanded="false">&#9776;</button>
+    <nav id="menu" class="mag-nav">
+      <a href="/index">Inicio</a>
+      <a href="/guias">Gu&iacute;as</a>
+      <a href="/mecanica">Mec&aacute;nica</a>
+      <a href="/itv-por-comunidad">CCAA</a>
+      <a href="/cuando-me-toca-itv">Calculadora</a>
+      <a href="/estaciones-itv">Estaciones</a>
+      <a href="/contacto">Contacto</a>
+    </nav>
+  </div>
 </header>
 
 <div class="container">
@@ -144,7 +155,23 @@ Solicita cita con antelación en <a href="https://www.itvcita.com" target="_blan
 <a href="/index" class="btn">← Volver a la página principal</a>
 </div>
 
-<footer><p><strong>ITVcheck</strong> | Información orientativa sobre la ITV en España.</p><p style="font-size:13px;color:#94A3B8;margin-top:15px;">Como Afiliado de Amazon, ITVcheck gana por las compras que cumplan los requisitos aplicables.</p><p style="margin-top:15px;"><a href="/sobre-nosotros">Sobre nosotros</a> | <a href="/contacto">Contacto</a> | <a href="/autor/daniel-vega">Autor: Daniel Vega</a> | <a href="/aviso-legal">Aviso legal</a> | <a href="/politica-cookies">Cookies</a> | <a href="/politica-privacidad">Privacidad</a></p></footer>
-<script>function toggleMenu(){document.getElementById('menu').classList.toggle('open');}</script>
+<footer class="mag-footer">
+  <p><strong>ITVcheck</strong> | Informaci&oacute;n orientativa sobre la ITV en Espa&ntilde;a.</p>
+  <p class="mag-footer-afiliado">Como Afiliado de Amazon, ITVcheck gana por las compras que cumplan los requisitos aplicables.</p>
+  <nav class="mag-footer-nav">
+    <a href="/sobre-nosotros">Sobre nosotros</a>
+    <a href="/contacto">Contacto</a>
+    <a href="/operadores-itv">Operadores ITV</a>
+    <a href="/guia-frenos">Frenos</a>
+    <a href="/guia-gases">Gases</a>
+    <a href="/guia-documentacion">Documentaci&oacute;n</a>
+    <a href="/autor/daniel-vega">Autor: Daniel Vega</a>
+    <a href="/aviso-legal">Aviso legal</a>
+    <a href="/politica-cookies">Cookies</a>
+    <a href="/politica-privacidad">Privacidad</a>
+  </nav>
+</footer>
+
+<script src="/js/nav-mobile.js" defer></script>
 </body>
 </html>
