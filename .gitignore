@@ -23,3 +23,4 @@ node_modules/
 # Git
 .git/
 temp/
+scripts/report-*.csv
