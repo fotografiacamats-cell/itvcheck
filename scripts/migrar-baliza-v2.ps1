@@ -1,0 +1,393 @@
+$base = "C:\Users\Usuario\Desktop\ITVcheck"
+$destino = Join-Path $base "baliza-v16-obligatoria.html"
+$ts = Get-Date -Format "yyyyMMdd-HHmmss"
+$bk = Join-Path $base "temp\backups\$ts"
+New-Item -ItemType Directory -Path $bk -Force | Out-Null
+Copy-Item $destino (Join-Path $bk "baliza-v16-obligatoria.html") -Force
+
+$html = @'
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Baliza V-16 conectada 2026: obligatoria desde el 1 de enero, multa de 80 &euro;, comparativa real de los 11 modelos homologados (estudio CTAG) y c&oacute;mo verificar que la tuya sigue siendo v&aacute;lida.">
+<title>Baliza V-16 Conectada 2026: Obligatoria, Multas y Comparativa Real | ITVcheck</title>
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles-v2.css">
+<link rel="stylesheet" href="/styles-editorial.css">
+<link rel="canonical" href="https://itvcheck.es/baliza-v16-obligatoria">
+<script>
+function loadScripts(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-T1PZZHFJ4E';s.async=true;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});gtag('js',new Date());gtag('config','G-T1PZZHFJ4E');var a=document.createElement('script');a.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7947218272068445';a.async=true;a.crossOrigin='anonymous';document.head.appendChild(a);}
+if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
+</script>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"Article",
+ "headline":"Baliza V-16 Conectada 2026: Obligatoria, Multas y Comparativa Real",
+ "description":"Gu&iacute;a completa sobre la baliza V-16 conectada: obligatoriedad desde enero de 2026, multas, comparativa CTAG y verificaci&oacute;n de modelos homologados.",
+ "datePublished":"2025-11-15",
+ "dateModified":"2026-10-03",
+ "author":{"@type":"Person","name":"Daniel Vega","jobTitle":"T&eacute;cnico Superior en Automoci&oacute;n","url":"https://itvcheck.es/autor/daniel-vega"},
+ "publisher":{"@type":"Organization","name":"ITVcheck","url":"https://itvcheck.es"},
+ "mainEntityOfPage":{"@type":"WebPage","@id":"https://itvcheck.es/baliza-v16-obligatoria"}
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+ {"@type":"Question","name":"\u00bfCu\u00e1nto es la multa por no llevar la baliza V-16 en 2026?","acceptedAnswer":{"@type":"Answer","text":"La multa por no llevar la baliza V-16 conectada es de 80 \u20ac, que se quedan en 40 \u20ac con pronto pago en 20 d\u00edas. No resta puntos del carn\u00e9."}},
+ {"@type":"Question","name":"\u00bfC\u00f3mo s\u00e9 si mi baliza V-16 est\u00e1 homologada y conectada?","acceptedAnswer":{"@type":"Answer","text":"Debe aparecer en el listado oficial de la DGT. Busca el c\u00f3digo de homologaci\u00f3n LCOE o IDIADA en la tulipa, la caja y el manual. Tambi\u00e9n debe indicar la fecha de caducidad de la conectividad (m\u00ednimo 12 a\u00f1os)."}},
+ {"@type":"Question","name":"\u00bfCu\u00e1l es la baliza V-16 que m\u00e1s ilumina?","acceptedAnswer":{"@type":"Answer","text":"Seg\u00fan el estudio del Centro Tecnol\u00f3gico de Automoci\u00f3n de Galicia (CTAG), la Help Flash IoT+ es la que mayor intensidad efectiva en 360\u00ba logra: 299 candelas en el primer minuto y 209 tras 30 minutos."}},
+ {"@type":"Question","name":"\u00bfC\u00f3mo funciona la baliza V-16 conectada con la DGT?","acceptedAnswer":{"@type":"Answer","text":"Integra una eSIM y se conecta autom\u00e1ticamente a la plataforma DGT 3.0. Cien segundos despu\u00e9s de activarla, env\u00eda tu posici\u00f3n exacta y la repite cada 100 segundos hasta que se apaga."}},
+ {"@type":"Question","name":"\u00bfLos tri\u00e1ngulos siguen siendo v\u00e1lidos en 2026?","acceptedAnswer":{"@type":"Answer","text":"No. Desde el 1 de enero de 2026, la baliza V-16 conectada es el \u00fanico dispositivo legal de prese\u00f1alizaci\u00f3n. Los tri\u00e1ngulos ya no valen."}}
+ ]
+}
+</script>
+</head>
+<body>
+
+<div id="cookieBanner">
+  <p>Utilizamos cookies para mejorar tu experiencia y mostrar anuncios de Google AdSense. <a href="politica-cookies">M&aacute;s informaci&oacute;n</a></p>
+  <button onclick="aceptarCookies()">Aceptar</button>
+  <button class="reject" onclick="rechazarCookies()">Rechazar</button>
+</div>
+
+<a href="https://api.whatsapp.com/send?text=Estoy%20consultando%20la%20normativa%20de%20la%20baliza%20V-16%20con%20ITVcheck" target="_blank" id="whatsappBtn" aria-label="Contactar por WhatsApp">&#128172;</a>
+
+<div class="itv-topbar">
+  <div class="itv-topbar-inner">
+    <span><span class="dot"></span>ITVCHECK &middot; EDICI&Oacute;N 2026</span>
+    <span>GU&Iacute;A 16 &middot; SEGURIDAD VIAL</span>
+  </div>
+</div>
+
+<header class="itv-header">
+  <div class="itv-header-inner">
+    <a href="/index" class="itv-logo">
+      <span class="itv-logo-mark">ITV</span>
+      ITVcheck
+    </a>
+    <button class="itv-nav-toggle" aria-label="Abrir men&uacute;" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="itv-nav">
+      <a href="/guias">Gu&iacute;as</a>
+      <a href="/estaciones-itv">Estaciones</a>
+      <a href="/operadores-itv-espana">Operadores</a>
+      <a href="/calculadora-precio-itv">Precios</a>
+      <a href="/checklist-itv">Checklist</a>
+    </nav>
+  </div>
+</header>
+
+<div class="mag-issue-bar">
+  <span>ITVcheck &middot; Manual de inspecci&oacute;n t&eacute;cnica</span>
+  <span>GU&Iacute;A 16 &middot; <strong>Edici&oacute;n 2026</strong></span>
+</div>
+
+<section class="mag-hero hero-blog">
+  <div class="mag-hero-text">
+    <span class="kicker">Actualizado Octubre 2026 &middot; 8 min de lectura</span>
+    <h1 class="h1-inline">Baliza V-16 <em>y la DGT 3.0.</em></h1>
+    <p class="lead">Desde el <strong>1 de enero de 2026</strong>, la baliza V-16 conectada es el &uacute;nico dispositivo legal para se&ntilde;alizar un veh&iacute;culo averiado. Los tri&aacute;ngulos han quedado obsoletos. No llevarla supone una <strong>multa de 80 &euro;</strong> y comprar una baliza sin conexi&oacute;n es como no llevar nada: sigue leyendo antes de gastarte el dinero.</p>
+    <div class="mag-hero-ctas">
+      <a href="#multas" class="btn-hero">&iquest;Cu&aacute;nto me cuesta? &rarr;</a>
+      <a href="#comparativa" class="btn-hero-secondary">Ver comparativa &rarr;</a>
+    </div>
+  </div>
+  <aside class="mag-hero-aside">
+    <span class="label">Datos clave</span>
+    <div class="stat-row">
+      <span class="n">1<small>ENE 2026</small></span>
+      <span class="l">Entrada en vigor<br>obligatoria</span>
+    </div>
+    <div class="stat-row">
+      <span class="n">80<small>&euro;</small></span>
+      <span class="l">Multa si no<br>la llevas</span>
+    </div>
+    <div class="stat-row">
+      <span class="n">12<small>a&ntilde;os</small></span>
+      <span class="l">Conectividad incluida<br>en el precio</span>
+    </div>
+  </aside>
+</section>
+
+<div class="mag-data-bar">
+  <div>
+    <span class="n">1<small>ENE</small></span>
+    <span class="l">Entrada en vigor<br>de la obligaci&oacute;n</span>
+  </div>
+  <div>
+    <span class="n">80<small>&euro;</small></span>
+    <span class="l">Multa por no<br>llevarla</span>
+  </div>
+  <div>
+    <span class="n">299<small>cd</small></span>
+    <span class="l">Baliza m&aacute;s luminosa<br>(estudio CTAG)</span>
+  </div>
+  <div>
+    <span class="n">12<small>a&ntilde;os</small></span>
+    <span class="l">Conectividad DGT 3.0<br>incluida</span>
+  </div>
+</div>
+
+<div class="container">
+
+<p>Desde el <strong>1 de enero de 2026</strong>, la baliza V-16 conectada es el &uacute;nico dispositivo legal para se&ntilde;alizar un veh&iacute;culo averiado o accidentado en carretera. Los tri&aacute;ngulos de emergencia han quedado definitivamente obsoletos. No llevarla supone una <strong>multa de 80 &euro;</strong> (40 &euro; con pronto pago), y llevar una baliza antigua sin conexi&oacute;n es como no llevar nada. En esta gu&iacute;a te explicamos <strong>qu&eacute; exige la normativa, cu&aacute;nto te puede costar el error y cu&aacute;l es la baliza que m&aacute;s ilumina</strong>, seg&uacute;n el estudio independiente del CTAG.</p>
+
+<div class="mag-notice-inner">
+  <h3>Aviso de afiliaci&oacute;n</h3>
+  <p>Esta gu&iacute;a contiene enlaces de afiliado de Amazon. Si compras a trav&eacute;s de ellos, ganamos una peque&ntilde;a comisi&oacute;n sin coste adicional para ti. <a href="politica-afiliados">M&aacute;s informaci&oacute;n &rarr;</a></p>
+</div>
+
+<h2>&iquest;Qu&eacute; es la baliza V-16 conectada y por qu&eacute; es obligatoria?</h2>
+
+<p>La baliza V-16 es un dispositivo luminoso que emite una <strong>luz &aacute;mbar intermitente de 360&deg;</strong> y que se coloca sobre el techo del veh&iacute;culo sin necesidad de bajar del habit&aacute;culo. Su gran diferencia con los tri&aacute;ngulos es la seguridad: el conductor no tiene que caminar por el arc&eacute;n, reduciendo dr&aacute;sticamente el riesgo de atropello.</p>
+
+<p>La versi&oacute;n <strong>conectada</strong> incorpora un chip GPS y una eSIM que se comunican de forma autom&aacute;tica con la plataforma <strong>DGT 3.0</strong>. Cien segundos despu&eacute;s de activarla, la baliza env&iacute;a la posici&oacute;n exacta del veh&iacute;culo a Tr&aacute;fico y la repite cada 100 segundos hasta que se apaga.</p>
+
+<div class="mag-notice-inner">
+  <h3>Dato clave</h3>
+  <p>No necesitas m&oacute;vil, ni registrarte, ni descargar ninguna app. La baliza funciona de forma aut&oacute;noma y an&oacute;nima. La conectividad est&aacute; incluida durante un m&iacute;nimo de <strong>12 a&ntilde;os</strong> en el precio del dispositivo.</p>
+</div>
+
+<h2 id="multas">Multas y sanciones: lo que realmente dice la DGT</h2>
+
+<p>La normativa distingue varias infracciones seg&uacute;n lo que haya ocurrido. Esta tabla es la referencia definitiva:</p>
+
+<table class="defect-table">
+<tr><th>Infracci&oacute;n</th><th>Multa</th><th>Pronto pago</th><th>Puntos</th></tr>
+<tr><td>No llevar baliza V-16 homologada</td><td><strong>80 &euro;</strong></td><td>40 &euro; (20 d&iacute;as)</td><td>No</td></tr>
+<tr><td>No se&ntilde;alizar el veh&iacute;culo en aver&iacute;a</td><td>200 &euro;</td><td>100 &euro; (20 d&iacute;as)</td><td>S&iacute;</td></tr>
+<tr><td>Llevar baliza sin conexi&oacute;n (antigua)</td><td><strong style="color:var(--red);">80 &euro;</strong></td><td>40 &euro;</td><td>No</td></tr>
+</table>
+
+<div class="mag-notice-inner">
+  <h3>Ojo con las balizas antiguas</h3>
+  <p>Si compraste una baliza V-16 antes de 2026 que no se conecta a la DGT 3.0, <strong>ya no es v&aacute;lida</strong>. Puede que tenga la forma y la luz, pero legalmente es como no llevar nada. Verifica que tu modelo aparezca en el <a href="https://www.dgt.es" target="_blank" rel="nofollow noopener">listado oficial de la DGT</a>.</p>
+</div>
+
+<div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7947218272068445" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins></div>
+
+<h2 id="comparativa">El estudio del CTAG: no todas las balizas iluminan igual</h2>
+
+<p>El <strong>Centro Tecnol&oacute;gico de Automoci&oacute;n de Galicia (CTAG)</strong> ha realizado el an&aacute;lisis m&aacute;s riguroso hasta la fecha. Utilizando un goniofot&oacute;metro de &uacute;ltima generaci&oacute;n en una sala oscura de 300 m&sup2; con temperatura controlada, midi&oacute; la <strong>intensidad luminosa real en 360&deg;</strong> de 11 balizas V-16 homologadas por la DGT.</p>
+
+<p>El resultado es revelador: aunque todas cumplen el m&iacute;nimo legal (40 candelas), hay diferencias abismales entre modelos. La gran ganadora fue la <strong>Help Flash IoT+</strong>, con cifras que casi triplican a sus competidoras m&aacute;s directas.</p>
+
+<h3>Comparativa de intensidad luminosa (estudio CTAG)</h3>
+
+<table class="defect-table">
+<tr><th>Baliza V-16</th><th>Al encender (cd)</th><th>A los 30 min (cd)</th></tr>
+<tr><td><strong>Help Flash IoT+</strong></td><td><strong style="color:var(--success);">299</strong></td><td><strong style="color:var(--success);">209</strong></td></tr>
+<tr><td>Sos Traffic</td><td>210</td><td>157</td></tr>
+<tr><td>SOS Road</td><td>117</td><td>95</td></tr>
+<tr><td>Flashled</td><td>115</td><td>77</td></tr>
+<tr><td>Faselight</td><td>109</td><td>77</td></tr>
+<tr><td>OSRAM Led Guardian</td><td>105</td><td>104</td></tr>
+<tr><td>Carlite GEO</td><td>69</td><td>67</td></tr>
+<tr><td>SOOS V-16</td><td>55</td><td>55</td></tr>
+<tr><td>Challux</td><td>52</td><td>54</td></tr>
+<tr><td>Ledone</td><td>48</td><td>72</td></tr>
+<tr><td>PMK</td><td>47</td><td>47</td></tr>
+</table>
+
+<p><em>Fuente: Centro Tecnol&oacute;gico de Automoci&oacute;n de Galicia (CTAG), enero 2026. Intensidad efectiva en 360&deg;.</em></p>
+
+<div class="mag-notice-inner">
+  <h3>Ganadora clara</h3>
+  <p>La Help Flash IoT+ no solo es la que m&aacute;s brilla, sino que mantiene mejor su potencia con el tiempo (209 cd a los 30 min). Esto es importante porque la normativa exige una autonom&iacute;a m&iacute;nima de 30 minutos, y muchas balizas pierden m&aacute;s de la mitad de su intensidad en ese periodo.</p>
+</div>
+
+<h2>Por qu&eacute; recomendamos la Help Flash IoT+</h2>
+
+<p>M&aacute;s all&aacute; de los datos del CTAG, la Help Flash IoT+ tiene otras ventajas que la convierten en la opci&oacute;n m&aacute;s completa:</p>
+
+<ul>
+<li><strong>Fabricaci&oacute;n espa&ntilde;ola:</strong> dise&ntilde;ada en Pontevedra y fabricada en Zaragoza. Es una de las pocas balizas que no viene de China.</li>
+<li><strong>Conectividad incluida hasta 2038:</strong> la eSIM viene preinstalada con plan de datos incluido durante 12 a&ntilde;os.</li>
+<li><strong>Compatible con app Incidence:</strong> opcionalmente, puedes vincularla con tu seguro o servicios de emergencia.</li>
+<li><strong>F&aacute;cil de usar:</strong> se coloca en el techo con im&aacute;n o ventosa, sin bajar del coche. Funciona con pilas.</li>
+<li><strong>Garant&iacute;a y soporte:</strong> al ser una marca espa&ntilde;ola, el soporte y la garant&iacute;a son mucho m&aacute;s &aacute;giles.</li>
+</ul>
+
+<!-- AMAZON-CARDS-BLOCK -->
+<div class="afiliados-aviso">Enlace de afiliado &middot; Si compras, ganamos una comisi&oacute;n sin coste para ti.</div>
+<div class="amazon-card">
+  <div style="width:140px;height:140px;background:#F1F5F9;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:42px;">&#128722;</div>
+  <div class="amazon-card-body">
+    <h4>Help Flash IoT+ (baliza V-16 conectada)</h4>
+    <p>La baliza m&aacute;s luminosa del estudio CTAG: 299 cd al encender y 209 cd a los 30 minutos. Fabricaci&oacute;n espa&ntilde;ola, conectividad DGT 3.0 durante 12 a&ntilde;os.</p>
+    <a href="https://www.amazon.es/dp/B0FHBDDBNT?tag=itvcheck-21&linkCode=ll1" target="_blank" rel="nofollow sponsored" class="btn-amazon">Ver precio en Amazon</a>
+  </div>
+</div>
+<!-- /AMAZON-CARDS-BLOCK -->
+
+<p><a href="https://www.amazon.es/dp/B0FHBDDBNT?tag=itvcheck-21&linkCode=ll1" target="_blank" rel="nofollow noopener" class="btn-hero">Ver Help Flash IoT+ en Amazon &rarr;</a></p>
+<p style="font-size:12px;color:var(--ink-3);text-align:center;font-style:italic;">Enlace de afiliado &middot; El precio no cambia para ti</p>
+
+<div class="mag-notice-inner">
+  <h3>Cuidado con las imitaciones</h3>
+  <p>Hay balizas en el mercado por 15-20 &euro; que se anuncian como &laquo;V16 conectadas&raquo; pero que no est&aacute;n homologadas o no tienen conectividad real. Si el precio es sospechosamente bajo, desconf&iacute;a. La conectividad durante 12 a&ntilde;os tiene un coste, y una baliza homologada ronda los 30-50 &euro;.</p>
+</div>
+
+<h2>C&oacute;mo verificar que tu baliza es v&aacute;lida</h2>
+
+<p>Antes de fiarte de cualquier baliza, comprueba estos tres puntos. Si falla uno, no vale:</p>
+
+<ol>
+<li><strong>C&oacute;digo de homologaci&oacute;n:</strong> debe empezar por &laquo;LCOE&raquo; o &laquo;IDIADA&raquo; y aparecer en la tulipa, la caja y el manual.</li>
+<li><strong>Fecha de caducidad de la conectividad:</strong> debe ser de al menos 12 a&ntilde;os desde la fabricaci&oacute;n.</li>
+<li><strong>Listado oficial de la DGT:</strong> consulta en la web de la DGT si el modelo exacto aparece en la relaci&oacute;n de dispositivos certificados.</li>
+</ol>
+
+<h2>C&oacute;mo y cu&aacute;ndo usar la baliza</h2>
+
+<ul>
+<li><strong>Cu&aacute;ndo:</strong> siempre que tengas que detener el veh&iacute;culo en la calzada o el arc&eacute;n por una aver&iacute;a o accidente.</li>
+<li><strong>D&oacute;nde:</strong> sobre el techo del veh&iacute;culo, en el punto m&aacute;s alto posible.</li>
+<li><strong>C&oacute;mo:</strong> act&iacute;vala sin salir del coche.</li>
+<li><strong>Cu&aacute;nto tiempo:</strong> mant&eacute;nla encendida hasta que llegue la asistencia.</li>
+</ul>
+
+<h2>Preguntas frecuentes sobre la baliza V-16</h2>
+
+<h3>&iquest;Cu&aacute;nto es la multa por no llevar la baliza V-16 en 2026?</h3>
+<p>La multa es de <strong>80 &euro;</strong>, que se quedan en <strong>40 &euro;</strong> con pronto pago en 20 d&iacute;as.</p>
+
+<h3>&iquest;C&oacute;mo s&eacute; si mi baliza V-16 est&aacute; homologada y conectada?</h3>
+<p>Debe aparecer en el listado oficial de la DGT. Busca el c&oacute;digo de homologaci&oacute;n <strong>LCOE o IDIADA</strong> en la tulipa, la caja y el manual.</p>
+
+<h3>&iquest;Cu&aacute;l es la baliza V-16 que m&aacute;s ilumina?</h3>
+<p>Seg&uacute;n el CTAG, la <strong>Help Flash IoT+</strong> es la que mayor intensidad efectiva en 360&deg; logra: <strong>299 candelas</strong> al encender y <strong>209</strong> tras 30 minutos.</p>
+
+<h3>&iquest;C&oacute;mo funciona la baliza V-16 conectada con la DGT?</h3>
+<p>Integra una eSIM y se conecta autom&aacute;ticamente a la plataforma DGT 3.0. Cien segundos despu&eacute;s de activarla, env&iacute;a tu posici&oacute;n exacta.</p>
+
+<h3>&iquest;Los tri&aacute;ngulos siguen siendo v&aacute;lidos en 2026?</h3>
+<p>No. Desde el 1 de enero de 2026, la baliza V-16 conectada es el &uacute;nico dispositivo legal.</p>
+
+<div class="mag-notice-inner">
+  <h3>Resumen r&aacute;pido</h3>
+  <p>Desde el <strong>1 de enero de 2026</strong> la baliza V-16 conectada es obligatoria y sustituye definitivamente a los tri&aacute;ngulos. La multa por no llevarla es de <strong>80 &euro;</strong>. No todas las balizas iluminan igual: seg&uacute;n el estudio del CTAG, la <strong>Help Flash IoT+</strong> es la m&aacute;s potente (299 cd al encender, 209 cd a los 30 min). Antes de comprar, verifica que el modelo aparezca en el listado oficial de la DGT y que la conectividad est&eacute; incluida durante al menos 12 a&ntilde;os.</p>
+</div>
+
+<div class="related-guides">
+  <h3>Gu&iacute;as relacionadas</h3>
+  <a href="/itv-camper-furgonetas">ITV para furgonetas camper y autocaravanas</a>
+  <a href="/guia-documentacion">Documentaci&oacute;n obligatoria para la ITV</a>
+  <a href="/que-pasa-si-suspendo-la-itv">Qu&eacute; hacer si suspendes la ITV</a>
+  <a href="/preparar-coche-viaje-largo">Preparar coche para viaje largo</a>
+  <a href="/mejores-gadgets-coche">Gadgets para el coche</a>
+  <a href="/checklist-itv">Checklist pre-ITV (25 puntos)</a>
+</div>
+
+<div class="mag-notice-inner">
+  <h3>Sobre el autor</h3>
+  <p><strong>Daniel Vega</strong>, T&eacute;cnico Superior en Automoci&oacute;n con 12 a&ntilde;os de experiencia en inspecci&oacute;n y mantenimiento de veh&iacute;culos. Especialista en inspecci&oacute;n t&eacute;cnica y mec&aacute;nica DIY. <a href="/autor/daniel-vega">Ver perfil del autor &rarr;</a></p>
+</div>
+
+<div class="other-ccaa">
+  <h3>ITV por comunidades</h3>
+  <a href="/itv-madrid">ITV Madrid</a>
+  <a href="/itv-cataluna">ITV Catalu&ntilde;a</a>
+  <a href="/itv-andalucia">ITV Andaluc&iacute;a</a>
+  <a href="/itv-valencia">ITV Comunidad Valenciana</a>
+  <a href="/itv-por-comunidad">Ver todas las CCAA &rarr;</a>
+</div>
+
+<p><a href="/index" class="btn">&larr; Volver a la p&aacute;gina principal</a></p>
+
+</div>
+
+<footer class="itv-footer">
+  <div class="itv-footer-inner">
+    <div class="itv-footer-top">
+      <div class="itv-footer-brand">
+        <a href="/index" class="itv-logo">
+          <span class="itv-logo-mark">ITV</span>
+          ITVcheck
+        </a>
+        <p>Manual de inspecci&oacute;n t&eacute;cnica independiente sobre la ITV en Espa&ntilde;a. Gu&iacute;as t&eacute;cnicas, mapa de estaciones y datos verificados.</p>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Herramientas</h4>
+        <a href="/cuando-me-toca-itv">Calculadora de fecha</a>
+        <a href="/calculadora-precio-itv">Comparador de precios</a>
+        <a href="/estaciones-itv">Buscador de estaciones</a>
+        <a href="/checklist-itv">Checklist pre-ITV</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Gu&iacute;as</h4>
+        <a href="/guia-completa-itv">Gu&iacute;a completa ITV</a>
+        <a href="/guias">Todas las gu&iacute;as</a>
+        <a href="/blog/">Blog</a>
+        <a href="/mecanica">Mec&aacute;nica DIY</a>
+        <a href="/guia-luces">Luces</a>
+        <a href="/guia-neumaticos">Neum&aacute;ticos</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Novedades 2026</h4>
+        <a href="/baliza-v16-obligatoria">Baliza V-16 obligatoria</a>
+        <a href="/itv-camper-furgonetas">ITV para campers</a>
+        <a href="/preparar-coche-viaje-largo">Viaje largo</a>
+        <a href="/mantenimiento-coches-electricos">Mantenimiento el&eacute;ctricos</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Por CCAA</h4>
+        <a href="/itv-por-comunidad">Todas las comunidades</a>
+        <a href="/itv-madrid">ITV Madrid</a>
+        <a href="/itv-cataluna">ITV Catalu&ntilde;a</a>
+        <a href="/itv-andalucia">ITV Andaluc&iacute;a</a>
+        <a href="/itv-valencia">ITV Valencia</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Legal</h4>
+        <a href="/sobre-nosotros">Sobre nosotros</a>
+        <a href="/contacto">Contacto</a>
+        <a href="/aviso-legal">Aviso legal</a>
+        <a href="/politica-cookies">Pol&iacute;tica de Cookies</a>
+        <a href="/politica-privacidad">Pol&iacute;tica de Privacidad</a>
+        <a href="/politica-afiliados">Afiliados</a>
+      </div>
+    </div>
+    <div class="itv-footer-bottom">
+      <span>&copy; 2026 ITVCHECK.ES</span>
+      <span>MANUAL DE INSPECCI&Oacute;N &middot; GU&Iacute;A 16 &middot; EDICI&Oacute;N 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/nav-mobile.js" defer></script>
+<script>
+function toggleMenu(){var n=document.getElementById('menu');if(n)n.classList.toggle('open');}
+window.onload=function(){if(localStorage.getItem('cookiesAceptadas')===null){document.getElementById('cookieBanner').style.display='block';}};
+function aceptarCookies(){localStorage.setItem('cookiesAceptadas','true');loadScripts();document.getElementById('cookieBanner').style.display='none';}
+function rechazarCookies(){localStorage.setItem('cookiesAceptadas','false');document.getElementById('cookieBanner').style.display='none';}
+</script>
+</body>
+</html>
+'@
+
+[System.IO.File]::WriteAllText($destino, $html, [System.Text.UTF8Encoding]::new($false))
+
+Write-Host ""
+Write-Host "OK. Backup: $bk" -ForegroundColor Green
+Write-Host "Guardado: $destino" -ForegroundColor Green
+Write-Host ""
+Write-Host "Verificacion:" -ForegroundColor Cyan
+Write-Host "  styles-v2 (debe ser 1): $((Select-String -Path $destino -Pattern 'styles-v2').Count)"
+Write-Host "  styles.css (debe ser 0): $((Select-String -Path $destino -Pattern 'styles\.css').Count)"
+Write-Host "  <style> embebido (debe ser 0): $((Select-String -Path $destino -Pattern '<style>').Count)"
+Write-Host "  mojibake (debe ser 0): $((Select-String -Path $destino -Pattern ([char]0x00C3)).Count)"
+Write-Host ""
+Start-Process "http://localhost:8000/baliza-v16-obligatoria.html"
