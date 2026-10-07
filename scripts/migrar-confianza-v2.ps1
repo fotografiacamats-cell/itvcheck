@@ -1,0 +1,816 @@
+$base = "C:\Users\Usuario\Desktop\ITVcheck"
+$ts = Get-Date -Format "yyyyMMdd-HHmmss"
+$bk = Join-Path $base "temp\backups\$ts"
+New-Item -ItemType Directory -Path $bk -Force | Out-Null
+
+# =========================================================================
+# 1. SOBRE NOSOTROS
+# =========================================================================
+$sobreHtml = @'
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ITVcheck es un proyecto editorial independiente especializado en la Inspecci&oacute;n T&eacute;cnica de Veh&iacute;culos en Espa&ntilde;a. Conoce qui&eacute;n est&aacute; detr&aacute;s, en qu&eacute; fuentes nos basamos y c&oacute;mo se financia.">
+<title>Sobre nosotros | ITVcheck</title>
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles-v2.css">
+<link rel="stylesheet" href="/styles-editorial.css">
+<link rel="canonical" href="https://itvcheck.es/sobre-nosotros">
+<script>
+function loadScripts(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-T1PZZHFJ4E';s.async=true;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});gtag('js',new Date());gtag('config','G-T1PZZHFJ4E');var a=document.createElement('script');a.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7947218272068445';a.async=true;a.crossOrigin='anonymous';document.head.appendChild(a);}
+if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
+</script>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@graph":[
+  {
+   "@type":"AboutPage",
+   "name":"Sobre ITVcheck",
+   "url":"https://itvcheck.es/sobre-nosotros",
+   "inLanguage":"es-ES",
+   "isPartOf":{"@type":"WebSite","name":"ITVcheck","url":"https://itvcheck.es"}
+  },
+  {
+   "@type":"Organization",
+   "name":"ITVcheck",
+   "url":"https://itvcheck.es",
+   "description":"Portal editorial independiente sobre la Inspecci\u00f3n T\u00e9cnica de Veh\u00edculos en Espa\u00f1a.",
+   "founder":{
+    "@type":"Person",
+    "name":"Daniel Vega",
+    "jobTitle":"T\u00e9cnico Superior en Automoci\u00f3n",
+    "url":"https://itvcheck.es/autor/daniel-vega"
+   },
+   "knowsAbout":["ITV","Inspecci\u00f3n T\u00e9cnica de Veh\u00edculos","Mantenimiento de autom\u00f3viles","Normativa DGT","Real Decreto 920/2017"]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<div id="cookieBanner">
+  <p>Utilizamos cookies para mejorar tu experiencia y mostrar anuncios de Google AdSense. <a href="politica-cookies">M&aacute;s informaci&oacute;n</a></p>
+  <button onclick="aceptarCookies()">Aceptar</button>
+  <button class="reject" onclick="rechazarCookies()">Rechazar</button>
+</div>
+
+<div class="itv-topbar">
+  <div class="itv-topbar-inner">
+    <span><span class="dot"></span>ITVCHECK &middot; EDICI&Oacute;N 2026</span>
+    <span>EDITORIAL &middot; SOBRE NOSOTROS</span>
+  </div>
+</div>
+
+<header class="itv-header">
+  <div class="itv-header-inner">
+    <a href="/index" class="itv-logo">
+      <span class="itv-logo-mark">ITV</span>
+      ITVcheck
+    </a>
+    <button class="itv-nav-toggle" aria-label="Abrir men&uacute;" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="itv-nav">
+      <a href="/guias">Gu&iacute;as</a>
+      <a href="/estaciones-itv">Estaciones</a>
+      <a href="/operadores-itv-espana">Operadores</a>
+      <a href="/calculadora-precio-itv">Precios</a>
+      <a href="/checklist-itv">Checklist</a>
+    </nav>
+  </div>
+</header>
+
+<div class="mag-issue-bar">
+  <span>ITVcheck &middot; Manual de inspecci&oacute;n t&eacute;cnica</span>
+  <span>EDITORIAL &middot; <strong>Edici&oacute;n 2026</strong></span>
+</div>
+
+<section class="mag-hero">
+  <div class="mag-hero-text">
+    <span class="kicker">Editorial &middot; Qu&eacute; es ITVcheck</span>
+    <h1 class="h1-inline">Informaci&oacute;n <em>independiente</em> sobre la ITV.</h1>
+    <p class="lead">ITVcheck es un proyecto editorial independiente especializado en la Inspecci&oacute;n T&eacute;cnica de Veh&iacute;culos en Espa&ntilde;a. Publicamos gu&iacute;as t&eacute;cnicas basadas en normativa oficial, comparativas de precios por comunidad aut&oacute;noma y herramientas gratuitas. Sin publicidad intrusiva, sin patrocinios encubiertos, sin contenido generado sin revisi&oacute;n.</p>
+  </div>
+</section>
+
+<div class="container">
+
+<div class="mag-notice-inner">
+  <h3>Qu&eacute; encontrar&aacute;s en esta p&aacute;gina</h3>
+  <p>Qui&eacute;n est&aacute; detr&aacute;s del proyecto, en qu&eacute; fuentes nos basamos, c&oacute;mo se financia el sitio y cu&aacute;l es nuestro compromiso editorial. Si detectas un error o quieres sugerir una mejora, escr&iacute;benos: <a href="/contacto">p&aacute;gina de contacto</a>.</p>
+</div>
+
+<h2>Qu&eacute; es ITVcheck</h2>
+
+<p>ITVcheck naci&oacute; con un objetivo concreto: <strong>desmitificar la ITV</strong>. La normativa cambia, las tarifas var&iacute;an enormemente entre comunidades aut&oacute;nomas, y las estaciones no siempre explican con claridad por qu&eacute; rechazan un veh&iacute;culo. Nuestro trabajo es traducir esa complejidad a un lenguaje claro, con datos verificables y procedimientos paso a paso.</p>
+
+<p>Publicamos tres tipos de contenido:</p>
+
+<ul>
+<li><strong>Gu&iacute;as t&eacute;cnicas:</strong> sobre defectos, documentos obligatorios, tipos de inspecci&oacute;n y normativa vigente.</li>
+<li><strong>Datos comparativos:</strong> precios por comunidad aut&oacute;noma, mapas de estaciones y estad&iacute;sticas de rechazo.</li>
+<li><strong>Herramientas gratuitas:</strong> calculadoras de fecha de ITV, comparadores de precios y checklists descargables.</li>
+</ul>
+
+<h2>Qui&eacute;n est&aacute; detr&aacute;s de ITVcheck</h2>
+
+<div style="display:flex;gap:24px;align-items:flex-start;margin:24px 0;flex-wrap:wrap;">
+  <div style="flex:0 0 160px;">
+    <img src="https://ui-avatars.com/api/?name=Daniel+Vega&size=360&background=14171C&color=FFB800&bold=true&font-size=0.4" alt="Daniel Vega, editor principal de ITVcheck" style="width:160px;height:160px;border-radius:4px;">
+  </div>
+  <div style="flex:1;min-width:280px;">
+    <h3 style="margin-top:0;">Daniel Vega</h3>
+    <p style="font-size:14px;color:#5A6169;font-weight:600;margin-top:-6px;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:0.05em;">T&eacute;cnico Superior en Automoci&oacute;n &middot; Editor principal</p>
+    <p>T&eacute;cnico Superior en Automoci&oacute;n con m&aacute;s de <strong>doce a&ntilde;os de experiencia</strong> en mantenimiento preventivo y diagnosis de veh&iacute;culos. Ha trabajado en talleres multimarca y ha colaborado en proyectos de divulgaci&oacute;n mec&aacute;nica para publicaciones del sector.</p>
+    <p>Especializado en preparaci&oacute;n de veh&iacute;culos para la ITV, diagnosis electr&oacute;nica y mec&aacute;nica DIY orientada a conductores sin formaci&oacute;n t&eacute;cnica.</p>
+    <p><a href="/autor/daniel-vega">Ver perfil completo y metodolog&iacute;a &rarr;</a></p>
+  </div>
+</div>
+
+<h2>En qu&eacute; fuentes nos basamos</h2>
+
+<p>Todo el contenido t&eacute;cnico de ITVcheck se apoya exclusivamente en fuentes oficiales y verificables:</p>
+
+<table class="defect-table">
+<tr><th>Fuente</th><th>Uso en ITVcheck</th></tr>
+<tr><td><strong>Manual de Procedimiento de Inspecci&oacute;n de las Estaciones ITV</strong> (Ministerio de Industria)</td><td>Criterios t&eacute;cnicos de rechazo y clasificaci&oacute;n de defectos</td></tr>
+<tr><td><strong>Real Decreto 920/2017</strong></td><td>Normativa base de la ITV en Espa&ntilde;a</td></tr>
+<tr><td><strong>Instrucciones t&eacute;cnicas de la DGT</strong> (ej. PROT 2026/04)</td><td>Cambios normativos puntuales y periodicidad</td></tr>
+<tr><td><strong>Boletines oficiales de las CCAA</strong></td><td>Tarifas oficiales y particularidades regionales</td></tr>
+<tr><td><strong>Consulta directa con estaciones autorizadas</strong></td><td>Verificaci&oacute;n de precios, plazos y sistemas de cita</td></tr>
+</table>
+
+<p>Cada gu&iacute;a incluye la fecha de &uacute;ltima actualizaci&oacute;n y, cuando aplica, enlace directo a la fuente citada. Cuando publicamos una cifra (precio, plazo legal, m&aacute;ximo legal de emisiones), es porque la hemos confirmado con una fuente oficial.</p>
+
+<h2>C&oacute;mo se financia el sitio</h2>
+
+<p>ITVcheck es gratuito para el lector y se financia a trav&eacute;s de dos v&iacute;as, identificadas de forma clara en todas las p&aacute;ginas donde aparecen:</p>
+
+<table class="defect-table">
+<tr><th>Fuente</th><th>C&oacute;mo funciona</th><th>C&oacute;mo te afecta</th></tr>
+<tr><td><strong>Google AdSense</strong></td><td>Anuncios discretos gestionados por Google</td><td>Cero. No altera el contenido ni la redacci&oacute;n</td></tr>
+<tr><td><strong>Programa de Afiliados de Amazon EU</strong></td><td>Comisi&oacute;n por compras realizadas a trav&eacute;s de nuestros enlaces</td><td>Cero. El precio no cambia para ti</td></tr>
+</table>
+
+<p>Nunca vendemos datos personales, no publicamos rese&ntilde;as falsas y no alteramos nuestras opiniones por motivos comerciales. Puedes consultar todos los detalles en nuestra <a href="/politica-afiliados">Pol&iacute;tica de Afiliados</a>.</p>
+
+<h2>Compromiso editorial</h2>
+
+<ul>
+<li><strong>No inventamos datos.</strong> Si no tenemos una fuente verificable para una cifra, no la publicamos.</li>
+<li><strong>No publicamos contenido generado autom&aacute;ticamente sin revisi&oacute;n humana.</strong> Todas las gu&iacute;as pasan por edici&oacute;n manual.</li>
+<li><strong>Priorizamos la claridad sobre la complejidad.</strong> Si algo se puede explicar en 3 p&aacute;rrafos, no lo alargamos a 30.</li>
+<li><strong>Solo recomendamos productos que consideramos &uacute;tiles.</strong> Y solo cuando tiene sentido en el contexto del art&iacute;culo.</li>
+<li><strong>Identificamos siempre los enlaces de afiliado.</strong> Con avisos visibles antes y despu&eacute;s del bloque.</li>
+<li><strong>Actualizamos las gu&iacute;as cuando cambia la normativa.</strong> Con fecha visible de &uacute;ltima actualizaci&oacute;n.</li>
+<li><strong>Corregimos errores r&aacute;pidamente.</strong> Si nos avisas de un error, lo revisamos en menos de 48h.</li>
+</ul>
+
+<div class="mag-notice-inner">
+  <h3>Un compromiso con la transparencia</h3>
+  <p>Si en alg&uacute;n momento detectas contenido que no cumple estos principios, escr&iacute;benos a <a href="mailto:soporte@itvcheck.es">soporte@itvcheck.es</a>. Nos tomamos muy en serio las correcciones.</p>
+</div>
+
+<h2>Contacto</h2>
+
+<p>Para dudas, sugerencias, correcciones o propuestas de colaboraci&oacute;n:</p>
+
+<p><a href="mailto:soporte@itvcheck.es">soporte@itvcheck.es</a> &mdash; respondemos en un plazo m&aacute;ximo de 48-72 horas laborables.</p>
+
+<p>Tambi&eacute;n puedes usar nuestra <a href="/contacto">p&aacute;gina de contacto</a>.</p>
+
+<div class="related-guides">
+  <h3>Enlaces &uacute;tiles</h3>
+  <a href="/autor/daniel-vega">Perfil del autor</a>
+  <a href="/contacto">Contacto</a>
+  <a href="/politica-afiliados">Pol&iacute;tica de afiliados</a>
+  <a href="/politica-privacidad">Pol&iacute;tica de privacidad</a>
+  <a href="/aviso-legal">Aviso legal</a>
+</div>
+
+<p><a href="/index" class="btn">&larr; Volver a la p&aacute;gina principal</a></p>
+
+</div>
+
+<footer class="itv-footer">
+  <div class="itv-footer-inner">
+    <div class="itv-footer-top">
+      <div class="itv-footer-brand">
+        <a href="/index" class="itv-logo">
+          <span class="itv-logo-mark">ITV</span>
+          ITVcheck
+        </a>
+        <p>Manual de inspecci&oacute;n t&eacute;cnica independiente sobre la ITV en Espa&ntilde;a. Gu&iacute;as t&eacute;cnicas, mapa de estaciones y datos verificados.</p>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Herramientas</h4>
+        <a href="/cuando-me-toca-itv">Calculadora de fecha</a>
+        <a href="/calculadora-precio-itv">Comparador de precios</a>
+        <a href="/estaciones-itv">Buscador de estaciones</a>
+        <a href="/checklist-itv">Checklist pre-ITV</a>
+        <a href="/operadores-itv-espana">Operadores ITV</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Gu&iacute;as</h4>
+        <a href="/guia-completa-itv">Gu&iacute;a completa ITV</a>
+        <a href="/guias">Todas las gu&iacute;as</a>
+        <a href="/blog/">Blog</a>
+        <a href="/mecanica">Mec&aacute;nica DIY</a>
+        <a href="/guia-luces">Luces</a>
+        <a href="/guia-neumaticos">Neum&aacute;ticos</a>
+        <a href="/guia-frenos">Frenos</a>
+        <a href="/guia-gases">Gases</a>
+        <a href="/guia-documentacion">Documentaci&oacute;n</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Novedades 2026</h4>
+        <a href="/baliza-v16-obligatoria">Baliza V-16 obligatoria</a>
+        <a href="/itv-camper-furgonetas">ITV para campers</a>
+        <a href="/preparar-coche-viaje-largo">Viaje largo</a>
+        <a href="/mantenimiento-coches-electricos">Mantenimiento el&eacute;ctricos</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Por CCAA</h4>
+        <a href="/itv-por-comunidad">Todas las comunidades</a>
+        <a href="/itv-madrid">ITV Madrid</a>
+        <a href="/itv-cataluna">ITV Catalu&ntilde;a</a>
+        <a href="/itv-andalucia">ITV Andaluc&iacute;a</a>
+        <a href="/itv-valencia">ITV Valencia</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Legal</h4>
+        <a href="/sobre-nosotros">Sobre nosotros</a>
+        <a href="/autor/daniel-vega">Daniel Vega (autor)</a>
+        <a href="/contacto">Contacto</a>
+        <a href="/aviso-legal">Aviso legal</a>
+        <a href="/politica-cookies">Pol&iacute;tica de Cookies</a>
+        <a href="/politica-privacidad">Pol&iacute;tica de Privacidad</a>
+        <a href="/politica-afiliados">Afiliados</a>
+      </div>
+    </div>
+    <div class="itv-footer-bottom">
+      <span>&copy; 2026 ITVCHECK.ES</span>
+      <span>MANUAL DE INSPECCI&Oacute;N &middot; EDICI&Oacute;N 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/nav-mobile.js" defer></script>
+<script>
+function toggleMenu(){var n=document.getElementById('menu');if(n)n.classList.toggle('open');}
+window.onload=function(){if(localStorage.getItem('cookiesAceptadas')===null){document.getElementById('cookieBanner').style.display='block';}};
+function aceptarCookies(){localStorage.setItem('cookiesAceptadas','true');loadScripts();document.getElementById('cookieBanner').style.display='none';}
+function rechazarCookies(){localStorage.setItem('cookiesAceptadas','false');document.getElementById('cookieBanner').style.display='none';}
+</script>
+</body>
+</html>
+'@
+
+# =========================================================================
+# 2. CONTACTO
+# =========================================================================
+$contactoHtml = @'
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contacta con el equipo editorial de ITVcheck para dudas, sugerencias, correcciones o propuestas de colaboraci&oacute;n. Respondemos en 48-72 horas laborables.">
+<title>Contacto | ITVcheck</title>
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles-v2.css">
+<link rel="stylesheet" href="/styles-editorial.css">
+<link rel="canonical" href="https://itvcheck.es/contacto">
+<script>
+function loadScripts(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-T1PZZHFJ4E';s.async=true;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});gtag('js',new Date());gtag('config','G-T1PZZHFJ4E');var a=document.createElement('script');a.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7947218272068445';a.async=true;a.crossOrigin='anonymous';document.head.appendChild(a);}
+if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
+</script>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"ContactPage",
+ "name":"Contacto",
+ "url":"https://itvcheck.es/contacto",
+ "inLanguage":"es-ES",
+ "isPartOf":{"@type":"WebSite","name":"ITVcheck","url":"https://itvcheck.es"}
+}
+</script>
+</head>
+<body>
+
+<div id="cookieBanner">
+  <p>Utilizamos cookies para mejorar tu experiencia y mostrar anuncios de Google AdSense. <a href="politica-cookies">M&aacute;s informaci&oacute;n</a></p>
+  <button onclick="aceptarCookies()">Aceptar</button>
+  <button class="reject" onclick="rechazarCookies()">Rechazar</button>
+</div>
+
+<div class="itv-topbar">
+  <div class="itv-topbar-inner">
+    <span><span class="dot"></span>ITVCHECK &middot; EDICI&Oacute;N 2026</span>
+    <span>EDITORIAL &middot; CONTACTO</span>
+  </div>
+</div>
+
+<header class="itv-header">
+  <div class="itv-header-inner">
+    <a href="/index" class="itv-logo">
+      <span class="itv-logo-mark">ITV</span>
+      ITVcheck
+    </a>
+    <button class="itv-nav-toggle" aria-label="Abrir men&uacute;" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="itv-nav">
+      <a href="/guias">Gu&iacute;as</a>
+      <a href="/estaciones-itv">Estaciones</a>
+      <a href="/operadores-itv-espana">Operadores</a>
+      <a href="/calculadora-precio-itv">Precios</a>
+      <a href="/checklist-itv">Checklist</a>
+    </nav>
+  </div>
+</header>
+
+<div class="mag-issue-bar">
+  <span>ITVcheck &middot; Informaci&oacute;n legal</span>
+  <span>EDITORIAL &middot; <strong>Contacto</strong></span>
+</div>
+
+<section class="mag-hero">
+  <div class="mag-hero-text">
+    <span class="kicker">Editorial &middot; Respuesta en 48-72h</span>
+    <h1 class="h1-inline">Contacta <em>con nosotros.</em></h1>
+    <p class="lead">&iquest;Tienes dudas sobre alguna gu&iacute;a? &iquest;Has detectado una tarifa desactualizada en tu comunidad? &iquest;Quieres proponer una colaboraci&oacute;n o una correcci&oacute;n? Escr&iacute;benos. Leemos todos los mensajes y respondemos en un plazo m&aacute;ximo de <strong>48-72 horas laborables</strong>.</p>
+  </div>
+</section>
+
+<div class="container">
+
+<div class="mag-notice-inner">
+  <h3>Canal principal</h3>
+  <p>El correo electr&oacute;nico es nuestro canal de contacto oficial: <a href="mailto:soporte@itvcheck.es">soporte@itvcheck.es</a></p>
+  <p style="margin-top:10px;">Para acelerar la respuesta, incluye en el asunto una palabra clave seg&uacute;n el motivo: <strong>Correcci&oacute;n</strong>, <strong>Colaboraci&oacute;n</strong>, <strong>Prensa</strong> o <strong>Consulta</strong>.</p>
+</div>
+
+<h2>V&iacute;as de contacto</h2>
+
+<table class="defect-table">
+<tr><th>Motivo</th><th>C&oacute;mo proceder</th><th>Plazo de respuesta</th></tr>
+<tr><td><strong>Correcci&oacute;n de contenido</strong></td><td>Escribe a soporte@itvcheck.es con asunto "Correcci&oacute;n" e incluye el enlace de la p&aacute;gina y el dato a revisar</td><td>24-48 horas</td></tr>
+<tr><td><strong>Consulta t&eacute;cnica</strong></td><td>Escribe a soporte@itvcheck.es con asunto "Consulta" y describe tu caso con el m&aacute;ximo detalle</td><td>48-72 horas</td></tr>
+<tr><td><strong>Colaboraci&oacute;n comercial</strong></td><td>Escribe a soporte@itvcheck.es con asunto "Colaboraci&oacute;n" indicando empresa y propuesta</td><td>48-72 horas</td></tr>
+<tr><td><strong>Prensa y medios</strong></td><td>Escribe a soporte@itvcheck.es con asunto "Prensa", indicando medio y fecha l&iacute;mite</td><td>24 horas</td></tr>
+</table>
+
+<h2>Correo directo</h2>
+
+<p><a href="mailto:soporte@itvcheck.es?subject=Consulta%20desde%20ITVcheck" class="mag-mec-cta">Enviar correo a soporte@itvcheck.es</a></p>
+
+<h2>Nuestro compromiso</h2>
+
+<ul>
+<li>Respondemos a <strong>todos</strong> los correos, sin excepci&oacute;n.</li>
+<li>Las correcciones de contenido t&eacute;cnico tienen prioridad sobre cualquier otra consulta.</li>
+<li>Si un dato es incorrecto, lo actualizamos en menos de 72 horas y a&ntilde;adimos una nota de revisi&oacute;n.</li>
+<li>No compartimos tu direcci&oacute;n de correo con terceros.</li>
+<li>No hacemos spam ni enviamos newsletters no solicitadas.</li>
+</ul>
+
+<div class="mag-notice-inner">
+  <h3>Antes de escribir</h3>
+  <p>Muchas dudas sobre la ITV ya est&aacute;n resueltas en nuestras gu&iacute;as. Antes de enviar tu consulta, te recomendamos consultar:</p>
+  <ul style="margin-top:10px;">
+    <li><a href="/guia-completa-itv">Gu&iacute;a completa de la ITV</a></li>
+    <li><a href="/tipos-defectos-itv">Tipos de defectos y c&oacute;mo evitarlos</a></li>
+    <li><a href="/que-pasa-si-suspendo-la-itv">Qu&eacute; hacer si suspendes la ITV</a></li>
+    <li><a href="/checklist-itv">Checklist pre-ITV (25 puntos)</a></li>
+    <li><a href="/como-interpretar-informe-itv">C&oacute;mo interpretar el informe de la ITV</a></li>
+  </ul>
+</div>
+
+<h2>Colaboraciones y prensa</h2>
+
+<p>Si eres una empresa del sector automovil&iacute;stico y quieres proponer una colaboraci&oacute;n, o si eres periodista y necesitas informaci&oacute;n o datos del sector, escr&iacute;benos al mismo correo indicando <strong>"Colaboraci&oacute;n"</strong> o <strong>"Prensa"</strong> en el asunto.</p>
+
+<p>Podemos aportar:</p>
+
+<ul>
+<li>Datos actualizados de precios de ITV por comunidad aut&oacute;noma.</li>
+<li>An&aacute;lisis normativos (Real Decreto 920/2017, Instrucciones DGT).</li>
+<li>Estad&iacute;sticas de rechazo por tipo de defecto.</li>
+<li>Contexto sobre cambios recientes (baliza V-16, ITV para campers, etc.).</li>
+</ul>
+
+<div class="related-guides">
+  <h3>Enlaces &uacute;tiles</h3>
+  <a href="/sobre-nosotros">Sobre ITVcheck</a>
+  <a href="/autor/daniel-vega">Perfil del autor</a>
+  <a href="/politica-privacidad">Pol&iacute;tica de privacidad</a>
+  <a href="/aviso-legal">Aviso legal</a>
+</div>
+
+<p><a href="/index" class="btn">&larr; Volver a la p&aacute;gina principal</a></p>
+
+</div>
+
+<footer class="itv-footer">
+  <div class="itv-footer-inner">
+    <div class="itv-footer-top">
+      <div class="itv-footer-brand">
+        <a href="/index" class="itv-logo">
+          <span class="itv-logo-mark">ITV</span>
+          ITVcheck
+        </a>
+        <p>Manual de inspecci&oacute;n t&eacute;cnica independiente sobre la ITV en Espa&ntilde;a. Gu&iacute;as t&eacute;cnicas, mapa de estaciones y datos verificados.</p>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Herramientas</h4>
+        <a href="/cuando-me-toca-itv">Calculadora de fecha</a>
+        <a href="/calculadora-precio-itv">Comparador de precios</a>
+        <a href="/estaciones-itv">Buscador de estaciones</a>
+        <a href="/checklist-itv">Checklist pre-ITV</a>
+        <a href="/operadores-itv-espana">Operadores ITV</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Gu&iacute;as</h4>
+        <a href="/guia-completa-itv">Gu&iacute;a completa ITV</a>
+        <a href="/guias">Todas las gu&iacute;as</a>
+        <a href="/blog/">Blog</a>
+        <a href="/mecanica">Mec&aacute;nica DIY</a>
+        <a href="/guia-luces">Luces</a>
+        <a href="/guia-neumaticos">Neum&aacute;ticos</a>
+        <a href="/guia-frenos">Frenos</a>
+        <a href="/guia-gases">Gases</a>
+        <a href="/guia-documentacion">Documentaci&oacute;n</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Novedades 2026</h4>
+        <a href="/baliza-v16-obligatoria">Baliza V-16 obligatoria</a>
+        <a href="/itv-camper-furgonetas">ITV para campers</a>
+        <a href="/preparar-coche-viaje-largo">Viaje largo</a>
+        <a href="/mantenimiento-coches-electricos">Mantenimiento el&eacute;ctricos</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Por CCAA</h4>
+        <a href="/itv-por-comunidad">Todas las comunidades</a>
+        <a href="/itv-madrid">ITV Madrid</a>
+        <a href="/itv-cataluna">ITV Catalu&ntilde;a</a>
+        <a href="/itv-andalucia">ITV Andaluc&iacute;a</a>
+        <a href="/itv-valencia">ITV Valencia</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Legal</h4>
+        <a href="/sobre-nosotros">Sobre nosotros</a>
+        <a href="/autor/daniel-vega">Daniel Vega (autor)</a>
+        <a href="/contacto">Contacto</a>
+        <a href="/aviso-legal">Aviso legal</a>
+        <a href="/politica-cookies">Pol&iacute;tica de Cookies</a>
+        <a href="/politica-privacidad">Pol&iacute;tica de Privacidad</a>
+        <a href="/politica-afiliados">Afiliados</a>
+      </div>
+    </div>
+    <div class="itv-footer-bottom">
+      <span>&copy; 2026 ITVCHECK.ES</span>
+      <span>MANUAL DE INSPECCI&Oacute;N &middot; EDICI&Oacute;N 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/nav-mobile.js" defer></script>
+<script>
+function toggleMenu(){var n=document.getElementById('menu');if(n)n.classList.toggle('open');}
+window.onload=function(){if(localStorage.getItem('cookiesAceptadas')===null){document.getElementById('cookieBanner').style.display='block';}};
+function aceptarCookies(){localStorage.setItem('cookiesAceptadas','true');loadScripts();document.getElementById('cookieBanner').style.display='none';}
+function rechazarCookies(){localStorage.setItem('cookiesAceptadas','false');document.getElementById('cookieBanner').style.display='none';}
+</script>
+</body>
+</html>
+'@
+
+# =========================================================================
+# 3. AUTOR / DANIEL VEGA
+# =========================================================================
+$autorHtml = @'
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Perfil de Daniel Vega, editor principal de ITVcheck. T&eacute;cnico Superior en Automoci&oacute;n con m&aacute;s de 12 a&ntilde;os de experiencia en mantenimiento, diagnosis y divulgaci&oacute;n mec&aacute;nica.">
+<title>Daniel Vega &mdash; Autor de ITVcheck</title>
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles-v2.css">
+<link rel="stylesheet" href="/styles-editorial.css">
+<link rel="canonical" href="https://itvcheck.es/autor/daniel-vega">
+<script>
+function loadScripts(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-T1PZZHFJ4E';s.async=true;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});gtag('js',new Date());gtag('config','G-T1PZZHFJ4E');var a=document.createElement('script');a.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7947218272068445';a.async=true;a.crossOrigin='anonymous';document.head.appendChild(a);}
+if(localStorage.getItem('cookiesAceptadas')==='true'){loadScripts();}
+</script>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@graph":[
+  {
+   "@type":"ProfilePage",
+   "name":"Daniel Vega \u2014 Autor de ITVcheck",
+   "url":"https://itvcheck.es/autor/daniel-vega",
+   "inLanguage":"es-ES",
+   "mainEntity":{
+    "@type":"Person",
+    "name":"Daniel Vega",
+    "jobTitle":"T\u00e9cnico Superior en Automoci\u00f3n",
+    "url":"https://itvcheck.es/autor/daniel-vega",
+    "worksFor":{"@type":"Organization","name":"ITVcheck","url":"https://itvcheck.es"},
+    "knowsAbout":[
+     "Mantenimiento de autom\u00f3viles",
+     "Diagnosis de veh\u00edculos",
+     "Inspecci\u00f3n T\u00e9cnica de Veh\u00edculos (ITV)",
+     "Mec\u00e1nica DIY",
+     "Restauraci\u00f3n de cl\u00e1sicos",
+     "Real Decreto 920/2017"
+    ],
+    "alumniOf":"Ciclo Formativo de Grado Superior en Automoci\u00f3n",
+    "description":"T\u00e9cnico Superior en Automoci\u00f3n con m\u00e1s de doce a\u00f1os de experiencia en mantenimiento, diagnosis y divulgaci\u00f3n mec\u00e1nica. Editor principal de ITVcheck."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<div id="cookieBanner">
+  <p>Utilizamos cookies para mejorar tu experiencia y mostrar anuncios de Google AdSense. <a href="politica-cookies">M&aacute;s informaci&oacute;n</a></p>
+  <button onclick="aceptarCookies()">Aceptar</button>
+  <button class="reject" onclick="rechazarCookies()">Rechazar</button>
+</div>
+
+<div class="itv-topbar">
+  <div class="itv-topbar-inner">
+    <span><span class="dot"></span>ITVCHECK &middot; EDICI&Oacute;N 2026</span>
+    <span>EDITORIAL &middot; AUTOR</span>
+  </div>
+</div>
+
+<header class="itv-header">
+  <div class="itv-header-inner">
+    <a href="/index" class="itv-logo">
+      <span class="itv-logo-mark">ITV</span>
+      ITVcheck
+    </a>
+    <button class="itv-nav-toggle" aria-label="Abrir men&uacute;" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="itv-nav">
+      <a href="/guias">Gu&iacute;as</a>
+      <a href="/estaciones-itv">Estaciones</a>
+      <a href="/operadores-itv-espana">Operadores</a>
+      <a href="/calculadora-precio-itv">Precios</a>
+      <a href="/checklist-itv">Checklist</a>
+    </nav>
+  </div>
+</header>
+
+<div class="mag-issue-bar">
+  <span>ITVcheck &middot; Manual de inspecci&oacute;n t&eacute;cnica</span>
+  <span>EDITORIAL &middot; <strong>Autor</strong></span>
+</div>
+
+<section class="mag-hero hero-blog">
+  <div class="mag-hero-text">
+    <span class="kicker">Perfil editorial &middot; Autor principal</span>
+    <h1 class="h1-inline">Daniel Vega, <em>autor de ITVcheck.</em></h1>
+    <p class="lead">T&eacute;cnico Superior en Automoci&oacute;n con m&aacute;s de <strong>doce a&ntilde;os de experiencia</strong> en mantenimiento preventivo, diagnosis y divulgaci&oacute;n mec&aacute;nica. Editor principal de ITVcheck, responsable de la verificaci&oacute;n t&eacute;cnica y editorial de todas las gu&iacute;as publicadas en el sitio.</p>
+  </div>
+  <aside class="mag-hero-aside">
+    <span class="label">Trayectoria</span>
+    <div class="stat-row">
+      <span class="n">12<small>a&ntilde;os</small></span>
+      <span class="l">De experiencia<br>en el sector</span>
+    </div>
+    <div class="stat-row">
+      <span class="n">200+<small>gu&iacute;as</small></span>
+      <span class="l">Verificadas<br>y firmadas</span>
+    </div>
+    <div class="stat-row">
+      <span class="n">48<small>h</small></span>
+      <span class="l">Compromiso de<br>correcci&oacute;n</span>
+    </div>
+  </aside>
+</section>
+
+<div class="container">
+
+<nav class="breadcrumbs" aria-label="Migas de pan">
+  <a href="/index">Inicio</a> &raquo;
+  <a href="/sobre-nosotros">Sobre nosotros</a> &raquo;
+  <span>Daniel Vega</span>
+</nav>
+
+<div class="mag-notice-inner">
+  <h3>Nota de transparencia</h3>
+  <p>Daniel Vega es el nombre editorial con el que firma el autor principal de ITVcheck. El titular legal del sitio figura en el <a href="/aviso-legal">aviso legal</a>, en cumplimiento de la Ley 34/2002 (LSSI-CE). Esta separaci&oacute;n entre firma editorial y titularidad legal es habitual en medios digitales especializados.</p>
+</div>
+
+<h2>Biograf&iacute;a</h2>
+
+<p>Daniel Vega es T&eacute;cnico Superior en Automoci&oacute;n y editor principal de ITVcheck. Lleva m&aacute;s de <strong>doce a&ntilde;os</strong> trabajando en el sector del autom&oacute;vil, primero en talleres multimarca y despu&eacute;s como t&eacute;cnico especializado en diagnosis electr&oacute;nica y mantenimiento preventivo.</p>
+
+<p>A lo largo de su carrera ha visto cientos de casos de conductores que perd&iacute;an la cita de la ITV por fallos simples que pod&iacute;an haberse detectado en casa en menos de diez minutos: una bombilla fundida, un neum&aacute;tico con presi&oacute;n baja, un limpiaparabrisas gastado. Esa frustraci&oacute;n es la que le llev&oacute; a crear ITVcheck como proyecto editorial independiente.</p>
+
+<p>Fuera del trabajo, es aficionado a la restauraci&oacute;n de cl&aacute;sicos y a la mec&aacute;nica DIY. Ha desmontado y vuelto a montar motores, ha cambiado cientos de bater&iacute;as, bombillas y escobillas, y sigue aprendiendo cada d&iacute;a. Su enfoque: la mec&aacute;nica no es magia, es m&eacute;todo, herramientas adecuadas y saber d&oacute;nde mirar.</p>
+
+<h2>Formaci&oacute;n</h2>
+
+<ul>
+<li><strong>Ciclo Formativo de Grado Superior en Automoci&oacute;n</strong> &mdash; especialidad en mantenimiento y diagnosis.</li>
+<li><strong>Formaci&oacute;n complementaria en sistemas de diagnosis OBD</strong> y electr&oacute;nica embarcada.</li>
+<li><strong>Formaci&oacute;n espec&iacute;fica en normativa de ITV</strong> (Real Decreto 920/2017 y actualizaciones posteriores).</li>
+<li><strong>Actualizaci&oacute;n continua</strong> en sistemas ADAS, veh&iacute;culos el&eacute;ctricos e h&iacute;bridos.</li>
+</ul>
+
+<h2>Metodolog&iacute;a editorial</h2>
+
+<p>Todas las gu&iacute;as publicadas en ITVcheck siguen el mismo proceso de verificaci&oacute;n:</p>
+
+<table class="defect-table">
+<tr><th>Fase</th><th>Qu&eacute; se hace</th></tr>
+<tr><td><strong>1. Documentaci&oacute;n</strong></td><td>Revisi&oacute;n del Manual de Procedimiento de Inspecci&oacute;n, Real Decreto 920/2017 e instrucciones t&eacute;cnicas de la DGT</td></tr>
+<tr><td><strong>2. Verificaci&oacute;n pr&aacute;ctica</strong></td><td>Contacto directo con estaciones autorizadas para confirmar precios, plazos y procedimientos</td></tr>
+<tr><td><strong>3. Redacci&oacute;n t&eacute;cnica</strong></td><td>Redacci&oacute;n clara, orientada a conductores sin formaci&oacute;n mec&aacute;nica, con datos concretos y cifras verificables</td></tr>
+<tr><td><strong>4. Revisi&oacute;n y publicaci&oacute;n</strong></td><td>Verificaci&oacute;n final de fuentes, fecha de publicaci&oacute;n y enlaces internos</td></tr>
+<tr><td><strong>5. Actualizaci&oacute;n peri&oacute;dica</strong></td><td>Revisi&oacute;n cuando cambia la normativa o los precios; fecha de actualizaci&oacute;n visible en cada gu&iacute;a</td></tr>
+</table>
+
+<h2>&Aacute;reas de especialidad</h2>
+
+<ul>
+<li>Mantenimiento preventivo y preparaci&oacute;n para la ITV.</li>
+<li>Diagnosis electr&oacute;nica y sistemas OBD.</li>
+<li>Mec&aacute;nica DIY para conductores sin formaci&oacute;n t&eacute;cnica.</li>
+<li>Interpretaci&oacute;n de normativa de ITV y requisitos por comunidad aut&oacute;noma.</li>
+<li>Sistemas de propulsi&oacute;n alternativos: el&eacute;ctricos e h&iacute;bridos.</li>
+<li>Restauraci&oacute;n de veh&iacute;culos cl&aacute;sicos.</li>
+</ul>
+
+<h2>Compromiso con el lector</h2>
+
+<div class="mag-notice-inner">
+  <h3>Lo que puedes esperar del contenido firmado por Daniel Vega</h3>
+  <ul style="margin-top:10px;">
+    <li>Datos verificables con fuente citada.</li>
+    <li>Sin contenido generado autom&aacute;ticamente sin revisi&oacute;n humana.</li>
+    <li>Correcci&oacute;n de errores en menos de 48 horas desde su detecci&oacute;n.</li>
+    <li>Actualizaci&oacute;n cuando cambia la normativa o los precios.</li>
+    <li>Transparencia total sobre enlaces de afiliado y financiaci&oacute;n.</li>
+  </ul>
+</div>
+
+<h2>Gu&iacute;as destacadas del autor</h2>
+
+<div class="related-guides">
+  <h3>Gu&iacute;as firmadas por Daniel Vega</h3>
+  <a href="/guia-completa-itv">Gu&iacute;a completa de la ITV</a>
+  <a href="/tipos-defectos-itv">Tipos de defectos y c&oacute;mo evitarlos</a>
+  <a href="/baliza-v16-obligatoria">Baliza V-16 conectada: obligatoria y comparativa</a>
+  <a href="/mantenimiento-coches-electricos">Mantenimiento de coches el&eacute;ctricos</a>
+  <a href="/seguros-coche">Seguros de coche: precios y coberturas</a>
+  <a href="/itv-camper-furgonetas">ITV para furgonetas camper</a>
+  <a href="/checklist-itv">Checklist pre-ITV (25 puntos)</a>
+  <a href="/que-pasa-si-suspendo-la-itv">Qu&eacute; hacer si suspendes la ITV</a>
+</div>
+
+<h2>Contacto</h2>
+
+<p>Si tienes dudas sobre alguna gu&iacute;a, quieres sugerir un tema, o crees que ha cometido un error, puedes escribirle a <a href="mailto:soporte@itvcheck.es">soporte@itvcheck.es</a>.</p>
+
+<p><a href="/sobre-nosotros">&larr; Volver a Sobre nosotros</a></p>
+
+<p><a href="/index" class="btn">&larr; Volver a la p&aacute;gina principal</a></p>
+
+</div>
+
+<footer class="itv-footer">
+  <div class="itv-footer-inner">
+    <div class="itv-footer-top">
+      <div class="itv-footer-brand">
+        <a href="/index" class="itv-logo">
+          <span class="itv-logo-mark">ITV</span>
+          ITVcheck
+        </a>
+        <p>Manual de inspecci&oacute;n t&eacute;cnica independiente sobre la ITV en Espa&ntilde;a. Gu&iacute;as t&eacute;cnicas, mapa de estaciones y datos verificados.</p>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Herramientas</h4>
+        <a href="/cuando-me-toca-itv">Calculadora de fecha</a>
+        <a href="/calculadora-precio-itv">Comparador de precios</a>
+        <a href="/estaciones-itv">Buscador de estaciones</a>
+        <a href="/checklist-itv">Checklist pre-ITV</a>
+        <a href="/operadores-itv-espana">Operadores ITV</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Gu&iacute;as</h4>
+        <a href="/guia-completa-itv">Gu&iacute;a completa ITV</a>
+        <a href="/guias">Todas las gu&iacute;as</a>
+        <a href="/blog/">Blog</a>
+        <a href="/mecanica">Mec&aacute;nica DIY</a>
+        <a href="/guia-luces">Luces</a>
+        <a href="/guia-neumaticos">Neum&aacute;ticos</a>
+        <a href="/guia-frenos">Frenos</a>
+        <a href="/guia-gases">Gases</a>
+        <a href="/guia-documentacion">Documentaci&oacute;n</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Novedades 2026</h4>
+        <a href="/baliza-v16-obligatoria">Baliza V-16 obligatoria</a>
+        <a href="/itv-camper-furgonetas">ITV para campers</a>
+        <a href="/preparar-coche-viaje-largo">Viaje largo</a>
+        <a href="/mantenimiento-coches-electricos">Mantenimiento el&eacute;ctricos</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Por CCAA</h4>
+        <a href="/itv-por-comunidad">Todas las comunidades</a>
+        <a href="/itv-madrid">ITV Madrid</a>
+        <a href="/itv-cataluna">ITV Catalu&ntilde;a</a>
+        <a href="/itv-andalucia">ITV Andaluc&iacute;a</a>
+        <a href="/itv-valencia">ITV Valencia</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Legal</h4>
+        <a href="/sobre-nosotros">Sobre nosotros</a>
+        <a href="/autor/daniel-vega">Daniel Vega (autor)</a>
+        <a href="/contacto">Contacto</a>
+        <a href="/aviso-legal">Aviso legal</a>
+        <a href="/politica-cookies">Pol&iacute;tica de Cookies</a>
+        <a href="/politica-privacidad">Pol&iacute;tica de Privacidad</a>
+        <a href="/politica-afiliados">Afiliados</a>
+      </div>
+    </div>
+    <div class="itv-footer-bottom">
+      <span>&copy; 2026 ITVCHECK.ES</span>
+      <span>MANUAL DE INSPECCI&Oacute;N &middot; EDICI&Oacute;N 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/nav-mobile.js" defer></script>
+<script>
+function toggleMenu(){var n=document.getElementById('menu');if(n)n.classList.toggle('open');}
+window.onload=function(){if(localStorage.getItem('cookiesAceptadas')===null){document.getElementById('cookieBanner').style.display='block';}};
+function aceptarCookies(){localStorage.setItem('cookiesAceptadas','true');loadScripts();document.getElementById('cookieBanner').style.display='none';}
+function rechazarCookies(){localStorage.setItem('cookiesAceptadas','false');document.getElementById('cookieBanner').style.display='none';}
+</script>
+</body>
+</html>
+'@
+
+# =========================================================================
+# GUARDAR
+# =========================================================================
+$paginas = @(
+  @{ Archivo = "sobre-nosotros.html";      Html = $sobreHtml },
+  @{ Archivo = "contacto.html";            Html = $contactoHtml },
+  @{ Archivo = "autor\daniel-vega.html";   Html = $autorHtml }
+)
+
+foreach ($p in $paginas) {
+  $destino = Join-Path $base $p.Archivo
+  if (Test-Path $destino) {
+    $bkFile = Join-Path $bk $p.Archivo
+    New-Item -ItemType Directory -Path (Split-Path $bkFile) -Force | Out-Null
+    Copy-Item $destino $bkFile -Force
+  }
+  [System.IO.File]::WriteAllText($destino, $p.Html, [System.Text.UTF8Encoding]::new($false))
+
+  Write-Host ""
+  Write-Host "=== $($p.Archivo) ===" -ForegroundColor Cyan
+  Write-Host "  styles-v2 (debe ser 1): $((Select-String -Path $destino -Pattern 'styles-v2').Count)"
+  Write-Host "  styles.css (debe ser 0): $((Select-String -Path $destino -Pattern 'styles\.css').Count)"
+  Write-Host "  <style> embebido (debe ser 0): $((Select-String -Path $destino -Pattern '<style>').Count)"
+  Write-Host "  mojibake (debe ser 0): $((Select-String -Path $destino -Pattern ([char]0x00C3)).Count)"
+}
+
+Write-Host ""
+Write-Host "Backup: $bk" -ForegroundColor Green
+Write-Host ""
+Start-Process "http://localhost:8000/sobre-nosotros.html"
+Start-Process "http://localhost:8000/contacto.html"
+Start-Process "http://localhost:8000/autor/daniel-vega.html"
