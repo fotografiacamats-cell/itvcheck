@@ -803,7 +803,9 @@ function aplicarFiltros(actualizarURL){
  var filtradas = estaciones.filter(function(e){
  var coincideTexto = texto === '' ||
  e.nombre.toLowerCase().includes(texto) ||
- e.ciudad.toLowerCase().includes(texto);
+ e.ciudad.toLowerCase().includes(texto) ||
+ e.ccaa.toLowerCase().includes(texto) ||
+ e.operador.toLowerCase().includes(texto);
  var coincideCCAA = ccaaFiltro === '' || e.ccaa === ccaaFiltro;
  var coincideOperador = operadorFiltro === '' || e.operador === operadorFiltro;
  var coincideTipo = tipoFiltro === '' || e.tipo === 'todos' || e.tipo === tipoFiltro;
