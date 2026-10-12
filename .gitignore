@@ -1,26 +1,31 @@
-# Backups de PowerShell
-_backup_*
+# Backups (locales, no van al repo)
+*.backup-*
+estaciones-backup-*/
+estaciones-backup-force-*/
 
-# Sistema operativo
-.DS_Store
-Thumbs.db
-desktop.ini
+# CSVs intermedios (se regeneran con los scripts)
+estaciones-actuales.csv
+estaciones-dgt-limpio.csv
+cruce-resultado.csv
+nuevas-a-crear.csv
+existentes-a-corregir.csv
+plan-saneamiento.csv
+plan-saneamiento-filtrado.csv
+inconsistencias-array-ficha.csv
+aplicar-correcciones-log.csv
+force-update-log.csv
 
-# Editores
-.vscode/
-.idea/
-*.swp
-*~
-
-# Archivos temporales
-*.tmp
-*.bak
+# Logs
 *.log
 
-# Node (por si algún día se añade)
-node_modules/
+# Sistema
+Thumbs.db
+.DS_Store
 
-# Git
-.git/
+# Editor
+.vscode/
+.idea/
+
+# .bak y temporales
+*.bak
 temp/
-scripts/report-*.csv
