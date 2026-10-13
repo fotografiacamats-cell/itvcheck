@@ -151,7 +151,7 @@
                            "tipo":  "todos",
                            "tel":  "950 104 020",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Alcalá de Guadaíra",
@@ -181,7 +181,7 @@
                            "tipo":  "todos",
                            "tel":  "953 102 076",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA ALGARROBO",
@@ -196,7 +196,7 @@
                            "tipo":  "todos",
                            "tel":  "951 707 108",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Algeciras",
@@ -226,7 +226,7 @@
                            "tipo":  "todos",
                            "tel":  "953 103 124",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Antequera",
@@ -286,7 +286,7 @@
                            "tipo":  "todos",
                            "tel":  "953 109 075",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA BERJA",
@@ -301,7 +301,7 @@
                            "tipo":  "todos",
                            "tel":  "950 800 229",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA CÁDIZ",
@@ -316,7 +316,7 @@
                            "tipo":  "todos",
                            "tel":  "856 103 214",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA CARMONA",
@@ -331,7 +331,7 @@
                            "tipo":  "todos",
                            "tel":  "955 132 190",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA CAZALLA DE LA SIERRA",
@@ -346,7 +346,7 @@
                            "tipo":  "todos",
                            "tel":  "955 133 021",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA CHIPIONA",
@@ -361,7 +361,7 @@
                            "tipo":  "todos",
                            "tel":  "856 588 507",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Córdoba Las Quemadas",
@@ -391,7 +391,7 @@
                            "tipo":  "todos",
                            "tel":  "957 749 548",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA ECIJA",
@@ -406,7 +406,7 @@
                            "tipo":  "todos",
                            "tel":  "955 134 027",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA EL PALO",
@@ -421,7 +421,7 @@
                            "tipo":  "todos",
                            "tel":  "951 770 097",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Estepona",
@@ -451,7 +451,7 @@
                            "tipo":  "todos",
                            "tel":  "959 996 011",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Gelves",
@@ -481,7 +481,7 @@
                            "tipo":  "todos",
                            "tel":  "958 564 013",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Guadix",
@@ -511,7 +511,7 @@
                            "tipo":  "todos",
                            "tel":  "953 038 653",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA HUELVA",
@@ -526,7 +526,7 @@
                            "tipo":  "todos",
                            "tel":  "959 033 616",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Almería El Alquián",
@@ -556,7 +556,7 @@
                            "tipo":  "todos",
                            "tel":  "950 037 458",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA HUÉSCAR",
@@ -571,7 +571,7 @@
                            "tipo":  "todos",
                            "tel":  "958 104 004",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA JAÉN",
@@ -586,7 +586,7 @@
                            "tipo":  "todos",
                            "tel":  "953 036 756",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Jerez de la Frontera",
@@ -616,7 +616,7 @@
                            "tipo":  "todos",
                            "tel":  "959 079 201",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV La Rinconada",
@@ -646,7 +646,7 @@
                            "tipo":  "todos",
                            "tel":  "958 104 003",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA MIJAS",
@@ -661,7 +661,7 @@
                            "tipo":  "todos",
                            "tel":  "951 917 065",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA LAS TRES VILLAS",
@@ -676,7 +676,7 @@
                            "tipo":  "todos",
                            "tel":  "950 886 166",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA LEBRIJA",
@@ -691,7 +691,7 @@
                            "tipo":  "todos",
                            "tel":  "955 139 098",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Loja",
@@ -721,7 +721,7 @@
                            "tipo":  "todos",
                            "tel":  "957 117 453",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV El Palo",
@@ -796,7 +796,7 @@
                            "tipo":  "todos",
                            "tel":  "951 917 072",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "duplicate-of-itv-el-viso"
                        },
                        {
                            "nombre":  "ITV VEIASA MARTOS",
@@ -811,7 +811,7 @@
                            "tipo":  "todos",
                            "tel":  "953 331 036",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA MONTORO",
@@ -826,7 +826,7 @@
                            "tipo":  "todos",
                            "tel":  "957 113 424",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Morón de la Frontera",
@@ -856,7 +856,7 @@
                            "tipo":  "todos",
                            "tel":  "958 109 078",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA NÍJAR",
@@ -871,7 +871,7 @@
                            "tipo":  "todos",
                            "tel":  "950 802 004",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA ÓRGIVA",
@@ -886,7 +886,7 @@
                            "tipo":  "todos",
                            "tel":  "858 108 229",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA OSUNA",
@@ -901,7 +901,7 @@
                            "tipo":  "todos",
                            "tel":  "955 137 102",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Palma del Río",
@@ -961,7 +961,7 @@
                            "tipo":  "todos",
                            "tel":  "957 116 972",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA PRIEGO DE CÓRDOBA",
@@ -976,7 +976,7 @@
                            "tipo":  "todos",
                            "tel":  "957 117058",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Puente Genil",
@@ -1006,7 +1006,7 @@
                            "tipo":  "todos",
                            "tel":  "856 100 376",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA QUESADA",
@@ -1021,7 +1021,7 @@
                            "tipo":  "todos",
                            "tel":  "953 105 077",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Ronda",
@@ -1051,7 +1051,7 @@
                            "tipo":  "todos",
                            "tel":  "856 580 013",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA SAN JUAN DEL PUERTO",
@@ -1066,7 +1066,7 @@
                            "tipo":  "todos",
                            "tel":  "959 033 745",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Marbella",
@@ -1096,7 +1096,7 @@
                            "tipo":  "todos",
                            "tel":  "955 022 567",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Sevilla El Pino",
@@ -1156,7 +1156,7 @@
                            "tipo":  "todos",
                            "tel":  "959 034 563",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA ÚBEDA",
@@ -1171,7 +1171,7 @@
                            "tipo":  "todos",
                            "tel":  "953 108 145",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA UTRERA",
@@ -1186,7 +1186,7 @@
                            "tipo":  "todos",
                            "tel":  "955 139 086",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA Vélez Rubio",
@@ -1201,7 +1201,7 @@
                            "tipo":  "todos",
                            "tel":  "950 108 013",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA VERA",
@@ -1216,7 +1216,7 @@
                            "tipo":  "todos",
                            "tel":  "950 109 128",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA VÍCAR",
@@ -1231,7 +1231,7 @@
                            "tipo":  "todos",
                            "tel":  "950 037 111",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA VILLAMARTIN",
@@ -1246,7 +1246,7 @@
                            "tipo":  "todos",
                            "tel":  "856 586 055",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV VEIASA ZALAMEA LA REAL",
@@ -1261,7 +1261,7 @@
                            "tipo":  "todos",
                            "tel":  "959 079 012",
                            "horario":  "amplio",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV BARBASTRO AINSA",
