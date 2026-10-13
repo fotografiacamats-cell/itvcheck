@@ -1,0 +1,134 @@
+# regenerar-404.ps1
+# Regenera 404.html con el diseno v2 del sitio
+
+$ErrorActionPreference = 'Stop'
+$base = 'C:\Users\Usuario\Desktop\ITVcheck'
+$file404 = Join-Path $base '404.html'
+
+Copy-Item $file404 "$file404.backup-$(Get-Date -Format 'yyyyMMdd-HHmmss')" -Force
+
+$html = @'
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagina no encontrada - ITVcheck.es</title>
+<meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="preload" as="style" href="/styles-v2.css"><link rel="stylesheet" href="/styles-v2.css">
+<link rel="preload" as="style" href="/styles-editorial.css"><link rel="stylesheet" href="/styles-editorial.css">
+<style>
+  .e404-container { max-width: 700px; margin: 0 auto; padding: 80px 24px; text-align: center; }
+  .e404-num { font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 160px; line-height: 1; letter-spacing: -0.05em; color: #FFB800; margin-bottom: 20px; }
+  .e404-title { font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 42px; letter-spacing: -0.02em; color: #14171C; margin-bottom: 20px; }
+  .e404-text { font-size: 17px; line-height: 1.6; color: #5A6169; margin-bottom: 40px; }
+  .e404-links { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 40px 0; }
+  .e404-card { display: block; padding: 24px 20px; background: #FFF; border: 1px solid #DDD6C5; border-left: 4px solid #FFB800; text-decoration: none; text-align: left; transition: transform 0.15s; }
+  .e404-card:hover { transform: translateY(-2px); }
+  .e404-card strong { display: block; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 16px; color: #14171C; margin-bottom: 6px; }
+  .e404-card span { font-size: 13px; color: #5A6169; }
+  @media (max-width: 700px) { .e404-links { grid-template-columns: 1fr; } .e404-num { font-size: 100px; } .e404-title { font-size: 28px; } }
+</style>
+</head>
+<body>
+
+<div class="itv-topbar"><div class="itv-topbar-inner"><span><span class="dot"></span>ITVCHECK &middot; EDICION 2026</span><span>ERROR 404</span></div></div>
+
+<header class="itv-header">
+  <div class="itv-header-inner">
+    <a href="/index" class="itv-logo">
+      <span class="itv-logo-mark">ITV</span>
+      ITVcheck
+    </a>
+    <button class="itv-nav-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="itv-nav">
+      <a href="/guias">Guias</a>
+      <a href="/estaciones-itv">Estaciones</a>
+      <a href="/operadores-itv-espana">Operadores</a>
+      <a href="/calculadora-precio-itv">Precios</a>
+      <a href="/checklist-itv">Checklist</a>
+    </nav>
+  </div>
+</header>
+
+<div class="e404-container">
+  <div class="e404-num">404</div>
+  <h1 class="e404-title">Esta pagina no existe</h1>
+  <p class="e404-text">La URL que buscas no esta disponible. Puede que se haya movido o que el enlace que has seguido este roto. Aqui tienes 4 formas de encontrar lo que necesitas:</p>
+
+  <div class="e404-links">
+    <a href="/estaciones-itv" class="e404-card">
+      <strong>&#128205; Mapa de estaciones</strong>
+      <span>293 estaciones de ITV con telefono, horario y como llegar.</span>
+    </a>
+    <a href="/calculadora-precio-itv" class="e404-card">
+      <strong>&#128176; Precios por CCAA</strong>
+      <span>Consulta cuanto cuesta la ITV en tu comunidad autonoma.</span>
+    </a>
+    <a href="/cuando-me-toca-itv" class="e404-card">
+      <strong>&#128197; Calculadora de fecha</strong>
+      <span>Descubre cuando te toca pasar la proxima ITV.</span>
+    </a>
+    <a href="/checklist-itv" class="e404-card">
+      <strong>&#9989; Checklist pre-ITV</strong>
+      <span>Todo lo que debes revisar antes de ir a la estacion.</span>
+    </a>
+  </div>
+
+  <p style="font-size: 14px; color: #5A6169;">
+    <a href="/" style="color: #C48B00; font-weight: 600;">&larr; Volver a la pagina principal</a>
+  </p>
+</div>
+
+<footer class="itv-footer">
+  <div class="itv-footer-inner">
+    <div class="itv-footer-top">
+      <div class="itv-footer-brand">
+        <a href="/index" class="itv-logo">
+          <span class="itv-logo-mark">ITV</span>
+          ITVcheck
+        </a>
+        <p>Manual de inspeccion tecnica independiente sobre la ITV en Espana.</p>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Secciones</h4>
+        <a href="/guias">Guias</a>
+        <a href="/estaciones-itv">Estaciones</a>
+        <a href="/calculadora-precio-itv">Precios</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Herramientas</h4>
+        <a href="/cuando-me-toca-itv">Calculadora ITV</a>
+        <a href="/checklist-itv">Checklist</a>
+        <a href="/estaciones-itv">Mapa interactivo</a>
+      </div>
+      <div class="itv-footer-col">
+        <h4>Legal</h4>
+        <a href="/aviso-legal">Aviso legal</a>
+        <a href="/politica-privacidad">Privacidad</a>
+        <a href="/politica-cookies">Cookies</a>
+      </div>
+    </div>
+    <div class="itv-footer-bottom">
+      <span>&copy; 2026 ITVCHECK.ES</span>
+      <span>ERROR 404 &middot; PAGINA NO ENCONTRADA</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/nav-mobile.js" defer></script>
+</body>
+</html>
+'@
+
+Set-Content -Path $file404 -Value $html -Encoding UTF8 -NoNewline
+Write-Host "404.html regenerado con diseno v2" -ForegroundColor Green
+Write-Host "Backup guardado" -ForegroundColor Cyan

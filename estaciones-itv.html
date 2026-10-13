@@ -882,7 +882,9 @@ function actualizarMapa(filtradas){
  var telLimpio = e.tel.replace(/\D/g,'');
  botones += '<a href="tel:' + e.tel + '" class="btn-popup btn-llamar">📞 ' + e.tel + '</a>';
  botones += '<a href="https://wa.me/' + telLimpio + '" target="_blank" rel="nofollow noopener" class="btn-popup btn-whatsapp">💬 WhatsApp</a>';
- botones += '<a href="estaciones/' + e.nombre.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9\s-]/g, "").trim().replace(/\s+/g, "-") + '.html" class="btn-popup" style="background:var(--signal);color:#fff;margin-top:6px;">&#128196; Ver ficha completa</a>';
+ if(e.source === 'site' || e.source === 'site-orphan'){
+    botones += '<a href="estaciones/' + e.slug + '.html" class="btn-popup" style="background:var(--signal);color:#fff;margin-top:6px;">&#128196; Ver ficha completa</a>';
+}
  }
  function slugify(s){
     s = s.toLowerCase();
@@ -1030,7 +1032,7 @@ var popup = '<div style="padding:16px; min-width:260px;">' +
  '<div style="font-size:12px; margin-bottom:10px;">' + (abierta ? '<span style="color:var(--signal-dark);font-weight:700;">● Abierto ahora</span>' : '<span style="color:#EF4444;font-weight:700;">● Cerrado</span>') + '</div>' +
  '<a href="' + mapsUrl + '" target="_blank" rel="nofollow noopener" class="btn-popup btn-como-llegar">🧭 Cómo llegar</a>' +
  (telLimpio ? '<a href="tel:' + e.tel + '" class="btn-popup btn-llamar">📞 Llamar</a>' : '') +
-'<a href="estaciones/' + slugify(e.nombre) + '.html" class="btn-popup" style="background:var(--signal);color:#fff;margin-top:6px;">📄 Ver ficha completa</a>' +
+((e.source === 'site' || e.source === 'site-orphan') ? '<a href="estaciones/' + e.slug + '.html" class="btn-popup" style="background:var(--signal);color:#fff;margin-top:6px;">&#128196; Ver ficha completa</a>' : '') +
  '</div>';
  var marker = L.marker([e.lat, e.lng], { icon: crearIcono(e.tipo) }).bindPopup(popup);
  markersLayer.addLayer(marker);
