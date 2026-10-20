@@ -2641,7 +2641,7 @@
                            "tipo":  "todos",
                            "tel":  "902 01 17 74",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Aranda de Duero",
@@ -2671,7 +2671,7 @@
                            "tipo":  "todos",
                            "tel":  "902 011 774",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ITEVELESA ARÉVALO",
@@ -2686,7 +2686,7 @@
                            "tipo":  "todos",
                            "tel":  "920 303 358",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ITEVELESA ASTORGA",
@@ -2701,7 +2701,7 @@
                            "tipo":  "todos",
                            "tel":  "987 60 27 88",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ITEVELESA ÁVILA",
@@ -2716,7 +2716,7 @@
                            "tipo":  "todos",
                            "tel":  "920 221 112",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Béjar",
@@ -2746,7 +2746,7 @@
                            "tipo":  "todos",
                            "tel":  "947 58 50 32",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ITEVELESA BENAVENTE",
@@ -2761,7 +2761,7 @@
                            "tipo":  "todos",
                            "tel":  "980 63 67 99",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ATISAE BRIVIESCA",
@@ -2776,7 +2776,7 @@
                            "tipo":  "todos",
                            "tel":  "947 59 39 23",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Burgos",
@@ -2806,7 +2806,7 @@
                            "tipo":  "todos",
                            "tel":  "923 19 02 74",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV León",
@@ -2836,7 +2836,7 @@
                            "tipo":  "todos",
                            "tel":  "979 87 07 77",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ITEVELESA CISTIERNA",
@@ -2851,7 +2851,7 @@
                            "tipo":  "todos",
                            "tel":  "902 01 17 74",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ITEVELESA CIUDAD RODRIGO",
@@ -2866,7 +2866,7 @@
                            "tipo":  "todos",
                            "tel":  "923 46 30 14",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ATISAE CUÉLLAR",
@@ -2881,7 +2881,7 @@
                            "tipo":  "todos",
                            "tel":  "921 14 24 29",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ITEVELESA BURGO DE OSMA",
@@ -2896,7 +2896,7 @@
                            "tipo":  "todos",
                            "tel":  "975 36 02 17",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ATISAE EL ESPINAR",
@@ -2911,7 +2911,7 @@
                            "tipo":  "todos",
                            "tel":  "921 18 31 73",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ITEVELESA LAS NAVAS DEL MARQUÉS",
@@ -2926,7 +2926,7 @@
                            "tipo":  "todos",
                            "tel":  "918 979 020",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ITEVELESA MEDINA DE RIOSECO",
@@ -2941,7 +2941,7 @@
                            "tipo":  "todos",
                            "tel":  "983 72 05 79",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Miranda de Ebro",
@@ -2971,7 +2971,7 @@
                            "tipo":  "todos",
                            "tel":  "980 57 40 32",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ITEVELESA ONZONILLA",
@@ -2986,7 +2986,7 @@
                            "tipo":  "todos",
                            "tel":  "987 21 82 25",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ITEVELESA PALENCIA",
@@ -3001,7 +3001,7 @@
                            "tipo":  "todos",
                            "tel":  "979 72 75 08",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ITEVELESA PEÑAFIEL",
@@ -3016,7 +3016,7 @@
                            "tipo":  "todos",
                            "tel":  "902 011 774",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ITEVELESA PEÑARANDA DE BRACAMONTE",
@@ -3031,7 +3031,7 @@
                            "tipo":  "todos",
                            "tel":  "923 54 17 32",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Ponferrada",
@@ -3061,7 +3061,7 @@
                            "tipo":  "todos",
                            "tel":  "902 011 774",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Salamanca",
@@ -3091,7 +3091,7 @@
                            "tipo":  "todos",
                            "tel":  "902 01 17 74",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ITEVELESA SORIA",
@@ -3106,7 +3106,7 @@
                            "tipo":  "todos",
                            "tel":  "975 227 140",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ITEVECASA TORDESILLAS",
@@ -3121,7 +3121,7 @@
                            "tipo":  "todos",
                            "tel":  "983 77 11 51",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ITEVELESA TORO",
@@ -3136,7 +3136,7 @@
                            "tipo":  "todos",
                            "tel":  "980 69 32 94",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ITEVELESA VALLADOLID ARGALES",
@@ -3151,7 +3151,7 @@
                            "tipo":  "todos",
                            "tel":  "983 23 13 01",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Valladolid",
@@ -3181,7 +3181,7 @@
                            "tipo":  "todos",
                            "tel":  "921 49 00 23",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ITEVELESA VILLABLINO",
@@ -3196,7 +3196,7 @@
                            "tipo":  "todos",
                            "tel":  "902 01 17 74",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ATISAE VILLASANTE DE MONTIJA",
@@ -3211,7 +3211,7 @@
                            "tipo":  "todos",
                            "tel":  "947 14 02 39",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ITEVELESA VITIGUDINO",
@@ -3226,7 +3226,7 @@
                            "tipo":  "todos",
                            "tel":  "902 011 774",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Albacete",
@@ -3256,7 +3256,7 @@
                            "tipo":  "todos",
                            "tel":  "967 210 974",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV MACO ALBACETE",
@@ -3271,7 +3271,7 @@
                            "tipo":  "todos",
                            "tel":  "967 194 000",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV NUTECAB ALBACETE",
@@ -3286,7 +3286,7 @@
                            "tipo":  "todos",
                            "tel":  "967 668 926",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ATISAE ALCÁZAR DE SAN JUAN",
@@ -3301,7 +3301,7 @@
                            "tipo":  "todos",
                            "tel":  "926 546 650",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ALCOLEA DEL PINAR®",
@@ -3316,7 +3316,7 @@
                            "tipo":  "todos",
                            "tel":  "949 300 380",
                            "horario":  "extendido",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV LA SAGRA ALMADEN",
@@ -3331,7 +3331,7 @@
                            "tipo":  "todos",
                            "tel":  "926 60 52 00",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ALMANSA®",
@@ -3346,7 +3346,7 @@
                            "tipo":  "todos",
                            "tel":  "967 311 386",
                            "horario":  "extendido",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Azuqueca de Henares",
@@ -3376,7 +3376,7 @@
                            "tipo":  "todos",
                            "tel":  "918 170 989",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV LA SAGRA CAZALEGAS",
@@ -3391,7 +3391,7 @@
                            "tipo":  "todos",
                            "tel":  "925 764 377",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Ciudad Real",
@@ -3436,7 +3436,7 @@
                            "tipo":  "todos",
                            "tel":  "926 855 052",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Guadalajara",
@@ -3466,7 +3466,7 @@
                            "tipo":  "todos",
                            "tel":  "949 202 986",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV HELLIN®",
@@ -3481,7 +3481,7 @@
                            "tipo":  "todos",
                            "tel":  "967 305 410",
                            "horario":  "extendido",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ATISAE ILLESCAS",
@@ -3496,7 +3496,7 @@
                            "tipo":  "todos",
                            "tel":  "925 511 527",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Illescas",
@@ -3526,7 +3526,7 @@
                            "tipo":  "todos",
                            "tel":  "967 548 271",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ATISAE LOS YEBENES",
@@ -3541,7 +3541,7 @@
                            "tipo":  "todos",
                            "tel":  "925 320 876",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV MANZANARES®",
@@ -3556,7 +3556,7 @@
                            "tipo":  "todos",
                            "tel":  "926 612 393",
                            "horario":  "extendido",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV DOSANCHEZ MAQUEDA",
@@ -3571,7 +3571,7 @@
                            "tipo":  "todos",
                            "tel":  "925 790 991",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ITEVELESA MARCHAMALO",
@@ -3586,7 +3586,7 @@
                            "tipo":  "todos",
                            "tel":  "949 325 515",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV MIGUELTURRA",
@@ -3601,7 +3601,7 @@
                            "tipo":  "todos",
                            "tel":  "926 233 802",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Motilla del Palancar",
@@ -3616,7 +3616,7 @@
                            "tipo":  "todos",
                            "tel":  "969 332 033",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV MOTILLA®",
@@ -3631,7 +3631,7 @@
                            "tipo":  "todos",
                            "tel":  "969 333 400",
                            "horario":  "extendido",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV OCAÑA",
@@ -3646,7 +3646,7 @@
                            "tipo":  "todos",
                            "tel":  "925 131 402",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV GRUPO IDV OLIAS DEL REY",
@@ -3661,7 +3661,7 @@
                            "tipo":  "todos",
                            "tel":  "925 491 534",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Puertollano",
@@ -3691,7 +3691,7 @@
                            "tipo":  "todos",
                            "tel":  "925 560 161",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV QUINTANAR DEL REY",
@@ -3706,7 +3706,7 @@
                            "tipo":  "todos",
                            "tel":  "967 544 900",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV SESEÑA NUEVO",
@@ -3721,7 +3721,7 @@
                            "tipo":  "todos",
                            "tel":  "918 391 107",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Talavera de la Reina",
@@ -3751,7 +3751,7 @@
                            "tipo":  "todos",
                            "tel":  "925 801 990",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV TORREHIERRO TALAVERA DE LA REINA",
@@ -3766,7 +3766,7 @@
                            "tipo":  "todos",
                            "tel":  "925 841 201",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Tarancón",
@@ -3796,7 +3796,7 @@
                            "tipo":  "todos",
                            "tel":  "925 230 063",
                            "horario":  "extendido",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Toledo",
@@ -3841,7 +3841,7 @@
                            "tipo":  "todos",
                            "tel":  "681 276 218",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Valdepeñas",
@@ -3871,7 +3871,7 @@
                            "tipo":  "todos",
                            "tel":  "607 606 750",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV LA SAGRA YUNCLER",
@@ -3886,7 +3886,7 @@
                            "tipo":  "todos",
                            "tel":  "925 531 930",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ATISAE AMPOSTA",
@@ -3901,7 +3901,7 @@
                            "tipo":  "todos",
                            "tel":  "977 087 243",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV APPLUS ARGENTONA",
@@ -3916,7 +3916,7 @@
                            "tipo":  "todos",
                            "tel":  "902 930 200",
                            "horario":  "extendido",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV APPLUS ARTESA DE SEGRE",
@@ -3931,7 +3931,7 @@
                            "tipo":  "todos",
                            "tel":  "902 930 200",
                            "horario":  "extendido",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Badalona",
@@ -3961,7 +3961,7 @@
                            "tipo":  "todos",
                            "tel":  "902 930 200",
                            "horario":  "extendido",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Àvila",
@@ -4066,7 +4066,7 @@
                            "tipo":  "todos",
                            "tel":  "977 184105",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV CERTIO BERGA",
@@ -4081,7 +4081,7 @@
                            "tipo":  "todos",
                            "tel":  "902 790 791",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV PREVENCONTROL BLANES",
@@ -4096,7 +4096,7 @@
                            "tipo":  "todos",
                            "tel":  "972 492 912",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV PREVENCONTROL CELRÀ",
@@ -4111,7 +4111,7 @@
                            "tipo":  "todos",
                            "tel":  "972 492 912",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV APPLUS CORNELLÀ",
@@ -4126,7 +4126,7 @@
                            "tipo":  "todos",
                            "tel":  "902 930 200",
                            "horario":  "extendido",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ITEVELESA PONT DE SUERT",
@@ -4141,7 +4141,7 @@
                            "tipo":  "todos",
                            "tel":  "973 690356",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV APPLUS GRANYANELLA",
@@ -4156,7 +4156,7 @@
                            "tipo":  "todos",
                            "tel":  "902 930 200",
                            "horario":  "extendido",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV PREVENCONTROL GIRONA",
@@ -4171,7 +4171,7 @@
                            "tipo":  "todos",
                            "tel":  "972 492 912",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Granollers",
@@ -4201,7 +4201,7 @@
                            "tipo":  "todos",
                            "tel":  "902 930 200",
                            "horario":  "extendido",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV ATISAE LES BORGES BLANQUES",
@@ -4216,7 +4216,7 @@
                            "tipo":  "todos",
                            "tel":  "973 102 046",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV APPLUS LLEIDA",
@@ -4231,7 +4231,7 @@
                            "tipo":  "todos",
                            "tel":  "902 930 200",
                            "horario":  "extendido",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Manresa",
@@ -4261,7 +4261,7 @@
                            "tipo":  "todos",
                            "tel":  "902 930 200",
                            "horario":  "extendido",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV APPLUS MONTBLANC",
@@ -4276,7 +4276,7 @@
                            "tipo":  "todos",
                            "tel":  "902 930 200",
                            "horario":  "extendido",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV CERTIO MONTFERRER",
@@ -4291,7 +4291,7 @@
                            "tipo":  "todos",
                            "tel":  "902 790 791",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV APPLUS MÓRA LA NOVA",
@@ -4306,7 +4306,7 @@
                            "tipo":  "todos",
                            "tel":  "902 930 200",
                            "horario":  "extendido",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV PREVENCONTROL OLOT",
@@ -4321,7 +4321,7 @@
                            "tipo":  "todos",
                            "tel":  "972 492 912",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV PREVENCONTROL PALAMÓS",
@@ -4336,7 +4336,7 @@
                            "tipo":  "todos",
                            "tel":  "972 492 912",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV APPLUS PUIGCERDA",
@@ -4351,7 +4351,7 @@
                            "tipo":  "todos",
                            "tel":  "902 930 200",
                            "horario":  "extendido",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV APPLUS REUS",
@@ -4366,7 +4366,7 @@
                            "tipo":  "todos",
                            "tel":  "902 93 02 00",
                            "horario":  "extendido",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV PREVENCONTROL RIPOLL",
@@ -4381,7 +4381,7 @@
                            "tipo":  "todos",
                            "tel":  "972 492 912",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Sabadell",
@@ -4441,7 +4441,7 @@
                            "tipo":  "todos",
                            "tel":  "902 790 791",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Sant Fruitós de Bages",
@@ -4471,7 +4471,7 @@
                            "tipo":  "todos",
                            "tel":  "902 930 200",
                            "horario":  "extendido",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Sant Just Desvern",
@@ -4501,7 +4501,7 @@
                            "tipo":  "todos",
                            "tel":  "902 930 200",
                            "horario":  "extendido",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV CERTIO STA. PERPETUA DE LA MOGODA",
@@ -4516,7 +4516,7 @@
                            "tipo":  "todos",
                            "tel":  "902 790 791",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV CERTIO SOLSONA",
@@ -4531,7 +4531,7 @@
                            "tipo":  "todos",
                            "tel":  "902 790 791",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV APPLUS TARRAGONA",
@@ -4546,7 +4546,7 @@
                            "tipo":  "todos",
                            "tel":  "902 930 200",
                            "horario":  "extendido",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV APPLUS TORTOSA",
@@ -4561,7 +4561,7 @@
                            "tipo":  "todos",
                            "tel":  "902 930 200",
                            "horario":  "extendido",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV APPLUS TREMP",
@@ -4576,7 +4576,7 @@
                            "tipo":  "todos",
                            "tel":  "902 93 02 00",
                            "horario":  "extendido",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV PREVENCONTROL VIC",
@@ -4591,7 +4591,7 @@
                            "tipo":  "todos",
                            "tel":  "937 399 191",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV APPLUS VIELHA-MIJARAN",
@@ -4606,7 +4606,7 @@
                            "tipo":  "todos",
                            "tel":  "902 930 200",
                            "horario":  "extendido",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Terrassa",
@@ -4636,7 +4636,7 @@
                            "tipo":  "todos",
                            "tel":  "972 492 912",
                            "horario":  "estandar",
-                           "source":  "dgt-new"
+                           "source":  "site"
                        },
                        {
                            "nombre":  "ITV Vilanova i la Geltrú",
