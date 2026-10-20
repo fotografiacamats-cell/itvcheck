@@ -32,3 +32,7 @@ temp/
 
 # Auditorias (locales)
 aud-*.csv
+
+estado-fichas.csv
+
+pendientes-por-ccaa.csv
