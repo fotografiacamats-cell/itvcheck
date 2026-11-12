@@ -36,3 +36,6 @@ aud-*.csv
 estado-fichas.csv
 
 pendientes-por-ccaa.csv
+
+backup-enlaces*/
+backup-sitemap*/
